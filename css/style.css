@@ -388,7 +388,8 @@ select:focus { border-color: var(--accent); }
 }
 
 .matrix-table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 0.8rem;
     width: 100%;
 }

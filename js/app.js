@@ -93,6 +93,15 @@
             renderCandidates();
             renderThreats();
             if (state.candidates.length === 0) addCandidateRow();
+            // Convert vertical mouse wheel to horizontal scroll on the matrix
+            var matrixScroll = document.getElementById('matrixScroll');
+            matrixScroll.addEventListener('wheel', function(e) {
+                if (matrixScroll.scrollWidth > matrixScroll.clientWidth) {
+                    e.preventDefault();
+                    matrixScroll.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
+
             document.getElementById('loadingOverlay').classList.add('hidden');
         });
     }
