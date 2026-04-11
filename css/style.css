@@ -282,10 +282,9 @@ select:focus { border-color: var(--accent); }
 
 .candidate-table .nickname-input {
     text-align: left;
-    min-width: 100px;
 }
 
-.candidate-table .iv-input { width: 60px; }
+.candidate-table .iv-input { width: 70px; }
 
 .candidate-table .computed {
     font-size: 0.8rem;
@@ -343,6 +342,27 @@ select:focus { border-color: var(--accent); }
 
 .candidate-table tr.drag-over {
     border-top: 2px solid var(--accent);
+}
+
+/* Excluded candidate row */
+.candidate-table tr.candidate-excluded td {
+    opacity: 0.35;
+}
+
+.candidate-table tr.candidate-excluded .exclude-cell,
+.candidate-table tr.candidate-excluded .drag-handle,
+.candidate-table tr.candidate-excluded .ref-pin {
+    opacity: 1;
+}
+
+.exclude-cell {
+    text-align: center;
+    padding: 4px !important;
+}
+
+.btn-exclude {
+    font-size: 0.7rem !important;
+    padding: 1px 5px !important;
 }
 
 /* Matrix Section */
@@ -424,7 +444,7 @@ select:focus { border-color: var(--accent); }
 }
 
 .matrix-table tbody th {
-    background: var(--bg-card);
+    background: #1f2b47;
     text-align: left;
     font-weight: 500;
     cursor: pointer;
@@ -557,7 +577,10 @@ select:focus { border-color: var(--accent); }
 .win-count {
     font-weight: 700;
     color: var(--accent);
-    background: var(--bg-card);
+    background: #1f2b47;
+    position: sticky;
+    left: 140px;
+    z-index: 4;
 }
 
 /* Differences Section */

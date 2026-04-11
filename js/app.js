@@ -322,7 +322,7 @@
         state.candidates.push({
             id: id, nickname: nickname || ('Candidate ' + (state.candidates.length + 1)),
             atk: atk === '' ? '' : Number(atk), def: def === '' ? '' : Number(def),
-            sta: sta === '' ? '' : Number(sta), form: form || '',
+            sta: sta === '' ? '' : Number(sta), form: form || '', excluded: false,
         });
         renderCandidates();
         saveState();
@@ -344,6 +344,7 @@
             tr.draggable = true;
             var isRef = c.id === refId;
             if (isRef) tr.classList.add('reference');
+            if (c.excluded) tr.classList.add('candidate-excluded');
             var computed = computeCandidate(c);
 
             tr.innerHTML =
@@ -351,6 +352,7 @@
                 '<td class="ref-pin' + (isRef ? ' active' : '') + '" title="Click to set as reference">' +
                     (isRef ? '&#9733;' : '&#9734;') +
                 '</td>' +
+                '<td class="exclude-cell"><button class="btn-exclude" title="' + (c.excluded ? 'Include in simulation' : 'Exclude from simulation') + '">' + (c.excluded ? '&#x25cb;' : '&#x25cf;') + '</button></td>' +
                 '<td><input type="text" class="nickname-input" value="' + escHtml(c.nickname) + '" data-field="nickname"></td>' +
                 '<td><input type="number" class="iv-input iv-atk" min="0" max="15" value="' + (c.atk === '' ? '' : c.atk) + '" data-field="atk" placeholder="0-15"></td>' +
                 '<td><input type="number" class="iv-input iv-def" min="0" max="15" value="' + (c.def === '' ? '' : c.def) + '" data-field="def" placeholder="0-15"></td>' +
@@ -410,6 +412,21 @@
                 if (c) {
                     addCandidateRow(Math.min(15, (c.atk || 0) + 2), Math.min(15, (c.def || 0) + 2),
                         Math.min(15, (c.sta || 0) + 2), 'purified', c.nickname + ' (Purified)');
+                }
+            });
+        }
+
+        // Exclude toggle buttons
+        var exBtns = body.querySelectorAll('.btn-exclude');
+        for (var i = 0; i < exBtns.length; i++) {
+            exBtns[i].addEventListener('click', function() {
+                var tr = this.closest('tr');
+                var id = Number(tr.dataset.id);
+                var c = state.candidates.find(function(c) { return c.id === id; });
+                if (c) {
+                    c.excluded = !c.excluded;
+                    renderCandidates();
+                    saveState();
                 }
             });
         }
@@ -706,7 +723,7 @@
 
     function runSimulation() {
         if (!state.species) { alert('Select a species first.'); return; }
-        var validCandidates = state.candidates.filter(function(c) { return c.atk !== '' && c.def !== '' && c.sta !== ''; });
+        var validCandidates = state.candidates.filter(function(c) { return c.atk !== '' && c.def !== '' && c.sta !== '' && !c.excluded; });
         if (validCandidates.length === 0) { alert('Enter at least one candidate with IVs.'); return; }
         if (state.threats.length === 0) { alert('Add threats or load meta first.'); return; }
 
