@@ -98,9 +98,26 @@
     <div class="matrix-section" id="matrixSection" style="display:none">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px">
             <h2>Matchups</h2>
-            <div class="matrix-tabs">
-                <button class="active">Battle Rating</button>
-                <button id="btnExportCSV">Export to CSV</button>
+            <div style="display:flex; align-items:center; gap:12px">
+                <div class="shield-legend">
+                    <span class="shield-legend-label">Shield grid:</span>
+                    <span class="shield-legend-grid">
+                        <span class="shield-legend-col-headers">
+                            <span></span><span>0</span><span>1</span><span>2</span>
+                        </span>
+                        <span class="shield-legend-row"><span>0</span><span class="shield-dot win"></span><span class="shield-dot loss"></span><span class="shield-dot loss"></span></span>
+                        <span class="shield-legend-row"><span>1</span><span class="shield-dot win"></span><span class="shield-dot win"></span><span class="shield-dot loss"></span></span>
+                        <span class="shield-legend-row"><span>2</span><span class="shield-dot win"></span><span class="shield-dot win"></span><span class="shield-dot win"></span></span>
+                    </span>
+                    <span class="shield-legend-axes">
+                        <span>Rows = your shields</span>
+                        <span>Cols = their shields</span>
+                    </span>
+                </div>
+                <div class="matrix-tabs">
+                    <button class="active">Battle Rating</button>
+                    <button id="btnExportCSV">Export to CSV</button>
+                </div>
             </div>
         </div>
         <div style="overflow-x:auto">
