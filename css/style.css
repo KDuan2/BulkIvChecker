@@ -1,0 +1,581 @@
+/*
+ * PvP IV Comparison Tool — Styles
+ */
+
+:root {
+    --bg: #1a1a2e;
+    --bg-surface: #16213e;
+    --bg-card: #1f2b47;
+    --bg-input: #0f1729;
+    --text: #e0e0e0;
+    --text-dim: #8892a4;
+    --text-bright: #ffffff;
+    --accent: #4fc3f7;
+    --accent-hover: #29b6f6;
+    --border: #2d3a54;
+    --win-strong: #2e7d32;
+    --win-light: #4caf50;
+    --tie: #ffc107;
+    --loss-light: #e57373;
+    --loss-strong: #c62828;
+    --pill-gain: #388e3c;
+    --pill-loss: #c62828;
+    --priority-border: #ff9800;
+    --excluded-bg: #1a1a2e80;
+    --scrollbar-track: #0f1729;
+    --scrollbar-thumb: #2d3a54;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
+
+/* Layout */
+.app-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+}
+
+.app-header h1 {
+    font-size: 1.3rem;
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+/* Controls Section */
+.controls-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.controls-row:last-child { margin-bottom: 0; }
+
+label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+/* Species Search */
+.species-search-wrapper {
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+}
+
+.species-search-wrapper input {
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.species-search-wrapper input:focus {
+    border-color: var(--accent);
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0 0 6px 6px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.search-dropdown.visible { display: block; }
+
+.search-dropdown .search-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.search-dropdown .search-item:hover,
+.search-dropdown .search-item.selected {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Buttons */
+button, .btn {
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+button:hover { border-color: var(--accent); color: var(--text-bright); }
+
+button.active, .btn.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+button.btn-danger { border-color: var(--loss-light); }
+button.btn-danger:hover { background: var(--loss-strong); color: white; }
+
+/* Select / Form Dropdown */
+select {
+    padding: 6px 10px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus { border-color: var(--accent); }
+
+/* League Tabs */
+.league-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+.league-tabs button {
+    padding: 6px 16px;
+    font-weight: 500;
+}
+
+/* Toggle Switch */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggle.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: var(--text);
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle.active::after {
+    transform: translateX(18px);
+    background: var(--bg);
+}
+
+/* Candidate Table */
+.candidates-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.candidates-section h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-bright);
+}
+
+.candidate-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.candidate-table th {
+    text-align: left;
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+}
+
+.candidate-table td {
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.candidate-table input[type="text"],
+.candidate-table input[type="number"] {
+    width: 100%;
+    padding: 5px 6px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.85rem;
+    text-align: center;
+    outline: none;
+}
+
+.candidate-table input:focus {
+    border-color: var(--accent);
+}
+
+.candidate-table .nickname-input {
+    text-align: left;
+    min-width: 100px;
+}
+
+.candidate-table .iv-input { width: 48px; }
+
+.candidate-table .computed {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
+.candidate-table .computed .cp { color: var(--text-bright); font-weight: 600; }
+.candidate-table .computed .rank { color: var(--accent); }
+
+.candidate-table .row-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.candidate-table .row-actions button {
+    padding: 2px 6px;
+    font-size: 0.75rem;
+}
+
+.candidate-table tr.reference td {
+    background: rgba(79, 195, 247, 0.08);
+}
+
+/* Matrix Section */
+.matrix-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+}
+
+.matrix-section h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-bright);
+}
+
+.matrix-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.matrix-table {
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.matrix-table th, .matrix-table td {
+    padding: 4px 6px;
+    text-align: center;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.matrix-table thead th {
+    background: var(--bg-card);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    cursor: pointer;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.matrix-table thead th:hover {
+    color: var(--text-bright);
+}
+
+.matrix-table thead th.excluded {
+    opacity: 0.4;
+}
+
+.matrix-table tbody th {
+    background: var(--bg-card);
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    min-width: 140px;
+}
+
+.matrix-table tbody th:hover { color: var(--accent); }
+
+.matrix-table tbody tr.reference th {
+    border-left: 3px solid var(--accent);
+}
+
+/* Battle rating cells */
+.br-cell {
+    font-weight: 600;
+    font-size: 0.8rem;
+    min-width: 50px;
+    cursor: default;
+    position: relative;
+}
+
+.br-cell.win-strong { background: var(--win-strong); color: white; }
+.br-cell.win { background: rgba(76, 175, 80, 0.4); color: #a5d6a7; }
+.br-cell.tie { background: rgba(255, 193, 7, 0.25); color: #ffd54f; }
+.br-cell.loss { background: rgba(229, 115, 115, 0.3); color: #ef9a9a; }
+.br-cell.loss-strong { background: var(--loss-strong); color: white; }
+.br-cell.excluded { opacity: 0.3; }
+
+/* Shield scenario indicator */
+.shield-indicator {
+    display: inline-flex;
+    gap: 2px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.shield-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.shield-dot.win { background: var(--win-light); }
+.shield-dot.loss { background: var(--loss-light); }
+.shield-dot.tie { background: var(--tie); }
+
+.shield-expanded {
+    display: none;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+.br-cell.expanded .shield-expanded { display: block; }
+.br-cell.expanded .shield-indicator { display: none; }
+.br-cell.expanded .br-main { display: none; }
+
+/* Win count column */
+.win-count {
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--bg-card);
+}
+
+/* Differences Section */
+.differences-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.differences-section h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-bright);
+}
+
+.diff-candidate {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.diff-candidate:last-child { border-bottom: none; }
+
+.diff-candidate-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-bright);
+}
+
+.diff-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.diff-pill {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+}
+
+.diff-pill.gain {
+    background: var(--pill-gain);
+    color: white;
+}
+
+.diff-pill.loss-pill {
+    background: var(--pill-loss);
+    color: white;
+}
+
+.diff-pill.excluded {
+    opacity: 0.35;
+}
+
+.diff-pill.priority {
+    border-color: var(--priority-border);
+    border-width: 2px;
+}
+
+.diff-pill:hover {
+    opacity: 0.8;
+}
+
+/* Threat Management */
+.threat-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.threat-section h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-bright);
+}
+
+.threat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.threat-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.threat-tag:hover { border-color: var(--accent); }
+.threat-tag.priority { border-color: var(--priority-border); }
+.threat-tag.excluded { opacity: 0.4; }
+
+.threat-tag .remove {
+    cursor: pointer;
+    color: var(--loss-light);
+    font-size: 0.8rem;
+    margin-left: 2px;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-size: 1.2rem;
+    color: var(--text-dim);
+}
+
+.loading-overlay.hidden { display: none; }
+
+/* Status bar */
+.status-bar {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    padding: 8px 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .controls-row { flex-direction: column; align-items: flex-start; }
+    .matrix-table { font-size: 0.7rem; }
+}

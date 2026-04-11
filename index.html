@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PvP IV Comparison Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loading-overlay" id="loadingOverlay">Loading game data...</div>
+
+<div class="app-container">
+    <!-- Header -->
+    <div class="app-header">
+        <h1>PvP IV Comparison Tool</h1>
+        <button id="btnClearSession" class="btn-danger">Clear Session</button>
+    </div>
+
+    <!-- Controls: Species, Form -->
+    <div class="controls-section">
+        <div class="controls-row">
+            <label>Species</label>
+            <div class="species-search-wrapper">
+                <input type="text" id="speciesSearch" placeholder="Search Pokemon..." autocomplete="off">
+                <div class="search-dropdown" id="speciesDropdown"></div>
+            </div>
+            <label>Form</label>
+            <select id="formSelect">
+                <option value="normal">Normal</option>
+                <option value="shadow">Shadow</option>
+                <option value="purified">Purified</option>
+            </select>
+        </div>
+
+        <!-- League, Best Buddy -->
+        <div class="controls-row">
+            <label>League</label>
+            <div class="league-tabs">
+                <button class="league-btn active" data-league="1500">Great</button>
+                <button class="league-btn" data-league="2500">Ultra</button>
+                <button class="league-btn" data-league="10000">Master</button>
+            </div>
+            <div class="toggle-wrapper">
+                <label>Best Buddy</label>
+                <div class="toggle" id="bestBuddyToggle" title="Level 51 cap"></div>
+            </div>
+        </div>
+
+        <!-- Moveset Override -->
+        <div class="controls-row">
+            <label>Moveset</label>
+            <select id="fastMoveSelect"><option value="">Auto</option></select>
+            <select id="chargedMove1Select"><option value="">Auto</option></select>
+            <select id="chargedMove2Select"><option value="">Auto</option></select>
+            <button id="btnResetMoves">Reset to Auto</button>
+        </div>
+    </div>
+
+    <!-- Candidates -->
+    <div class="candidates-section">
+        <h2>Candidates</h2>
+        <table class="candidate-table">
+            <thead>
+                <tr>
+                    <th style="width:30px">#</th>
+                    <th>Nickname</th>
+                    <th style="width:55px">ATK</th>
+                    <th style="width:55px">DEF</th>
+                    <th style="width:55px">STA</th>
+                    <th style="width:90px">Form</th>
+                    <th style="width:160px">CP / Level / Rank</th>
+                    <th style="width:80px">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="candidateBody"></tbody>
+        </table>
+        <button id="btnAddRow" style="margin-top:8px">+ Add Row</button>
+        <button id="btnRunSim" style="margin-top:8px; margin-left:8px; font-weight:600">Run Simulation</button>
+    </div>
+
+    <!-- Threat List -->
+    <div class="threat-section">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">
+            <h2>Threat List</h2>
+            <div style="display:flex; gap:8px; align-items:center">
+                <div class="species-search-wrapper" style="max-width:200px">
+                    <input type="text" id="threatSearch" placeholder="Add threat..." autocomplete="off">
+                    <div class="search-dropdown" id="threatDropdown"></div>
+                </div>
+                <button id="btnLoadMeta">Load Meta</button>
+            </div>
+        </div>
+        <div class="threat-list" id="threatList"></div>
+    </div>
+
+    <!-- Results Matrix -->
+    <div class="matrix-section" id="matrixSection" style="display:none">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px">
+            <h2>Matchups</h2>
+            <div class="matrix-tabs">
+                <button class="active">Battle Rating</button>
+            </div>
+        </div>
+        <div style="overflow-x:auto">
+            <table class="matrix-table" id="matrixTable">
+                <thead id="matrixHead"></thead>
+                <tbody id="matrixBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Differences -->
+    <div class="differences-section" id="diffSection" style="display:none">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">
+            <h2>Differences <span id="diffRefLabel" style="font-weight:400; color:var(--text-dim); font-size:0.85rem">(vs Candidate 1)</span></h2>
+            <label style="display:flex; align-items:center; gap:6px; cursor:pointer">
+                <input type="checkbox" id="diffPriorityOnly"> Priority only
+            </label>
+        </div>
+        <div id="diffContent"></div>
+    </div>
+
+    <div class="status-bar" id="statusBar"></div>
+</div>
+
+<script src="data/gamemaster-data.js"></script>
+<script src="data/meta-groups.js"></script>
+<script src="js/types.js"></script>
+<script src="js/gamemaster.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
