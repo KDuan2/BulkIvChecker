@@ -71,6 +71,34 @@ var PvPIV = PvPIV || {};
     }
 
     /**
+     * Look up the ranking-recommended moveset for a species at a given CP cap.
+     * Returns [fastMoveId, charged1Id, charged2Id] or null.
+     */
+    function getRankingMoveset(speciesId, cpCap) {
+        if (typeof RANKING_MOVESETS === 'undefined') return null;
+        var league = RANKING_MOVESETS[cpCap];
+        if (!league) return null;
+        return league[speciesId] || null;
+    }
+
+    /**
+     * Set moves on a Pokemon from: explicit override > ranking data > auto-select.
+     */
+    function setMovesFromSource(poke, speciesId, explicitMoves, cpCap) {
+        var moves = explicitMoves;
+        if (!moves) {
+            moves = getRankingMoveset(speciesId, cpCap);
+        }
+        if (moves) {
+            if (moves[0]) poke.selectMove("fast", moves[0]);
+            if (moves[1]) poke.selectMove("charged", moves[1], 0);
+            if (moves[2]) poke.selectMove("charged", moves[2], 1);
+        } else {
+            poke.autoSelectMoves(2);
+        }
+    }
+
+    /**
      * Run a single battle simulation using PvPoke's engine.
      */
     ns.simulateBattle = function(speciesA, ivsA, speciesB, ivsB, shields1, shields2, cpCap, levelCap, shadowA, shadowB, movesA, movesB) {
@@ -96,22 +124,9 @@ var PvPIV = PvPIV || {};
         pokeB.shields = shields2;
         pokeB.startingShields = shields2;
 
-        // Set moves if specified, otherwise auto-select
-        if (movesA) {
-            if (movesA[0]) pokeA.selectMove("fast", movesA[0]);
-            if (movesA[1]) pokeA.selectMove("charged", movesA[1], 0);
-            if (movesA[2]) pokeA.selectMove("charged", movesA[2], 1);
-        } else {
-            pokeA.autoSelectMoves(2);
-        }
-
-        if (movesB) {
-            if (movesB[0]) pokeB.selectMove("fast", movesB[0]);
-            if (movesB[1]) pokeB.selectMove("charged", movesB[1], 0);
-            if (movesB[2]) pokeB.selectMove("charged", movesB[2], 1);
-        } else {
-            pokeB.autoSelectMoves(2);
-        }
+        // Set moves: explicit override > ranking moveset > auto-select
+        setMovesFromSource(pokeA, speciesA, movesA, cpCap);
+        setMovesFromSource(pokeB, speciesB, movesB, cpCap);
 
         // Set Pokemon into battle
         battle.setNewPokemon(pokeA, 0, false);

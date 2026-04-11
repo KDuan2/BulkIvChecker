@@ -527,6 +527,21 @@ select:focus { border-color: var(--accent); }
     opacity: 0.8;
 }
 
+.diff-pill .shield-indicator {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.diff-pill .shield-dot {
+    width: 7px;
+    height: 7px;
+}
+
+.diff-pill .shield-dot.flipped {
+    outline: 1.5px solid white;
+    outline-offset: 0.5px;
+}
+
 /* Threat Management */
 .threat-section {
     background: var(--bg-surface);

@@ -155,33 +155,41 @@
 
     // ============ MOVE SELECTS ============
 
-    // Compute what auto-select would pick for a species (general, no specific opponent).
-    // Fast: best DPS*EPS (damage-per-turn * energy-per-turn). Charged: best DPE (damage / energy).
+    // Get the recommended moveset for a species: ranking data first, then DPE-based fallback.
     function getAutoMoves(speciesData) {
+        // Check ranking data first
+        if (typeof RANKING_MOVESETS !== 'undefined') {
+            var league = RANKING_MOVESETS[state.league];
+            if (league && league[speciesData.speciesId]) {
+                var ranked = league[speciesData.speciesId];
+                return {
+                    fast: ns.getMoveById(ranked[0]),
+                    charged1: ns.getMoveById(ranked[1]),
+                    charged2: ranked[2] ? ns.getMoveById(ranked[2]) : null,
+                };
+            }
+        }
+
+        // Fallback: score by DPE
         var types = speciesData.types || [];
         var stabMult = 1.2000000476837158203125;
 
-        // Score fast moves
         var bestFast = null, bestFastScore = -1;
         (speciesData.fastMoves || []).forEach(function(moveId) {
             var m = ns.getMoveById(moveId);
             if (!m) return;
             var stab = (m.type === types[0] || m.type === types[1]) ? stabMult : 1;
             var turns = m.cooldown / 500;
-            var dps = (m.power * stab) / turns;
-            var eps = m.energyGain / turns;
-            var score = dps * eps;
+            var score = (m.power * stab / turns) * (m.energyGain / turns);
             if (score > bestFastScore) { bestFastScore = score; bestFast = m; }
         });
 
-        // Score charged moves — pick top 2
         var chargedScored = [];
         (speciesData.chargedMoves || []).forEach(function(moveId) {
             var m = ns.getMoveById(moveId);
             if (!m) return;
             var stab = (m.type === types[0] || m.type === types[1]) ? stabMult : 1;
             var dpe = (m.power * stab) / m.energy;
-            // Buff bonus (same as initializeMove)
             if (m.buffs) {
                 var buffEffect = 0;
                 if (m.buffTarget === "self" && m.buffs[0] > 0) buffEffect = m.buffs[0] * (80 / m.energy);
@@ -770,8 +778,8 @@
                     cellContent += '<span class="shield-dot ' + (w1 ? 'win' : 'loss') + '"></span>';
                     cellContent += '<span class="shield-dot ' + (w2 ? 'win' : 'loss') + '"></span>';
                     cellContent += '</span>';
-                    cellContent += '<span class="shield-expanded">0v0:' + results["0v0"].battleRating + ' 1v1:' + br + ' 2v2:' + results["2v2"].battleRating + '</span>';
                 }
+                cellContent += '<span class="shield-expanded">0v0:' + results["0v0"].battleRating + ' 1v1:' + br + ' 2v2:' + results["2v2"].battleRating + '</span>';
                 html += '<td class="br-cell ' + colorClass + (excluded ? ' excluded' : '') + '">' + cellContent + '</td>';
             }
             tr.innerHTML = html;
@@ -805,6 +813,38 @@
     }
 
     // ============ DIFFERENCES ============
+
+    // Create a diff pill with shield scenario dots
+    function createDiffPill(prefix, entry, isGain) {
+        var pill = document.createElement('span');
+        pill.className = 'diff-pill ' + (isGain ? 'gain' : 'loss-pill') +
+            (entry.excluded ? ' excluded' : '') + (entry.priority ? ' priority' : '');
+
+        var text = document.createElement('span');
+        text.textContent = prefix + ' ' + entry.name;
+        pill.appendChild(text);
+
+        // Add shield dots showing candidate's win/loss per scenario
+        var dots = document.createElement('span');
+        dots.className = 'shield-indicator';
+        var labels = ['0', '1', '2'];
+        for (var i = 0; i < 3; i++) {
+            var dot = document.createElement('span');
+            dot.className = 'shield-dot ' + (entry.candResults[i] ? 'win' : 'loss');
+            // Highlight dots that flipped vs reference
+            if (entry.flipped.indexOf(i) > -1) {
+                dot.classList.add('flipped');
+            }
+            dot.title = labels[i] + 'v' + labels[i] + ': ' + (entry.candResults[i] ? 'Win' : 'Loss') +
+                (entry.flipped.indexOf(i) > -1 ? ' (flipped)' : '');
+            dots.appendChild(dot);
+        }
+        pill.appendChild(dots);
+
+        pill.addEventListener('click', function() { toggleThreatExclusion(entry.speciesId); });
+        return pill;
+    }
+
     function renderDifferences() {
         if (!state.results) return;
         var matrix = state.results.matrix, candidates = state.results.candidates,
@@ -814,6 +854,8 @@
         var refIdx = Math.min(state.referenceIdx, candidatePokemon.length - 1);
         document.getElementById('diffRefLabel').textContent = '(vs ' + (candidates[refIdx] ? candidates[refIdx].nickname : 'Candidate 1') + ')';
         container.innerHTML = '';
+
+        var scenarios = ["0v0", "1v1", "2v2"];
 
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             if (ci === refIdx) continue;
@@ -828,15 +870,33 @@
                 }
                 if (priorityOnly && !priority) continue;
 
-                var candWins = matrix[ci][ti]["1v1"].battleRating >= 500;
-                var refWins = matrix[refIdx][ti]["1v1"].battleRating >= 500;
-                if (candWins && !refWins) {
-                    var data = ns.getPokemonById(speciesId.replace('_shadow', ''));
-                    gains.push({ name: data ? data.speciesName : speciesId, speciesId: speciesId, excluded: excluded, priority: priority });
-                } else if (!candWins && refWins) {
-                    var data = ns.getPokemonById(speciesId.replace('_shadow', ''));
-                    losses.push({ name: data ? data.speciesName : speciesId, speciesId: speciesId, excluded: excluded, priority: priority });
+                // Check all 3 shield scenarios for flips
+                var hasGain = false, hasLoss = false;
+                var candResults = []; // win/loss per scenario for candidate
+                var refResults = [];  // win/loss per scenario for reference
+                var flipped = [];     // which scenarios flipped
+
+                for (var si = 0; si < scenarios.length; si++) {
+                    var s = scenarios[si];
+                    var cw = matrix[ci][ti][s].battleRating >= 500;
+                    var rw = matrix[refIdx][ti][s].battleRating >= 500;
+                    candResults.push(cw);
+                    refResults.push(rw);
+                    if (cw && !rw) { hasGain = true; flipped.push(si); }
+                    if (!cw && rw) { hasLoss = true; flipped.push(si); }
                 }
+
+                if (!hasGain && !hasLoss) continue;
+
+                var data = ns.getPokemonById(speciesId.replace('_shadow', ''));
+                var entry = {
+                    name: data ? data.speciesName : speciesId,
+                    speciesId: speciesId, excluded: excluded, priority: priority,
+                    candResults: candResults, refResults: refResults, flipped: flipped
+                };
+
+                if (hasGain) gains.push(entry);
+                if (hasLoss) losses.push(entry);
             }
 
             if (gains.length === 0 && losses.length === 0) continue;
@@ -849,17 +909,11 @@
             pillsDiv.className = 'diff-pills';
 
             gains.forEach(function(g) {
-                var pill = document.createElement('span');
-                pill.className = 'diff-pill gain' + (g.excluded ? ' excluded' : '') + (g.priority ? ' priority' : '');
-                pill.textContent = '+ ' + g.name;
-                pill.addEventListener('click', function() { toggleThreatExclusion(g.speciesId); });
+                var pill = createDiffPill('+', g, true);
                 pillsDiv.appendChild(pill);
             });
             losses.forEach(function(l) {
-                var pill = document.createElement('span');
-                pill.className = 'diff-pill loss-pill' + (l.excluded ? ' excluded' : '') + (l.priority ? ' priority' : '');
-                pill.textContent = '- ' + l.name;
-                pill.addEventListener('click', function() { toggleThreatExclusion(l.speciesId); });
+                var pill = createDiffPill('-', l, false);
                 pillsDiv.appendChild(pill);
             });
             div.appendChild(pillsDiv);
