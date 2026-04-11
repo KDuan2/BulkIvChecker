@@ -37,6 +37,27 @@ var GameMaster = (function() {
                     copy[key] = move[key];
                 }
             }
+
+            // Derive buff classification properties (same as PvPoke's GameMaster.js lines 849-876)
+            if (copy.buffs) {
+                copy.buffApplyChance = parseFloat(copy.buffApplyChance);
+
+                if (copy.buffTarget == "both") {
+                    copy.buffsSelf = move.buffsSelf ? move.buffsSelf.slice() : [0, 0];
+                    copy.buffsOpponent = move.buffsOpponent ? move.buffsOpponent.slice() : [0, 0];
+                }
+
+                if (copy.buffTarget == "self" && copy.buffApplyChance >= 0.5 && copy.moveId != "DRAGON_ASCENT" && (copy.buffs[0] < 0 || copy.buffs[1] < 0)) {
+                    copy.selfDebuffing = true;
+                    if (copy.buffs[0] < 0) copy.selfAttackDebuffing = true;
+                    if (copy.buffs[1] < 0) copy.selfDefenseDebuffing = true;
+                }
+
+                if (copy.buffApplyChance == 1 && (copy.buffTarget == "opponent" || (copy.buffTarget == "self" && (copy.buffs[0] > 0 || copy.buffs[1] > 0)) || (copy.buffTarget == "both" && copy.buffsSelf && (copy.buffsSelf[0] > 0 || copy.buffsSelf[1] > 0)))) {
+                    copy.selfBuffing = true;
+                }
+            }
+
             return copy;
         };
 
