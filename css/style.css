@@ -421,11 +421,12 @@ select:focus { border-color: var(--accent); }
 .br-cell.loss-strong { background: var(--loss-strong); color: white; }
 .br-cell.excluded { opacity: 0.3; }
 
-/* Shield scenario indicator */
-.shield-indicator {
-    display: inline-flex;
+/* Shield scenario indicator — 3x3 grid */
+.shield-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 7px);
     gap: 2px;
-    margin-left: 3px;
+    margin-left: 4px;
     vertical-align: middle;
 }
 
@@ -440,15 +441,32 @@ select:focus { border-color: var(--accent); }
 .shield-dot.loss { background: var(--loss-light); }
 .shield-dot.tie { background: var(--tie); }
 
+/* Expanded view — 3x3 BR table */
 .shield-expanded {
     display: none;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: #ffffff;
     margin-top: 2px;
 }
 
+.shield-expanded-grid {
+    display: inline-grid;
+    grid-template-columns: auto repeat(3, 1fr);
+    gap: 1px 3px;
+    text-align: center;
+}
+
+.shield-expanded-grid .seg-header {
+    font-weight: 600;
+    color: var(--text-dim);
+    font-size: 0.6rem;
+}
+
+.shield-expanded-grid .seg-win { color: #a5d6a7; }
+.shield-expanded-grid .seg-loss { color: #ef9a9a; }
+
 .br-cell.expanded .shield-expanded { display: block; }
-.br-cell.expanded .shield-indicator { display: none; }
+.br-cell.expanded .shield-grid { display: none; }
 .br-cell.expanded .br-main { display: none; }
 
 /* Win count column */
