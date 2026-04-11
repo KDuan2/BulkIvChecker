@@ -583,9 +583,66 @@
         document.getElementById('btnRunSim').addEventListener('click', runSimulation);
         document.getElementById('btnLoadMeta').addEventListener('click', loadMetaThreats);
         document.getElementById('btnClearSession').addEventListener('click', clearSession);
+        document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
             if (state.results) renderDifferences();
         });
+    }
+
+    function exportCSV() {
+        if (!state.results) { alert('Run a simulation first.'); return; }
+        var matrix = state.results.matrix, candidates = state.results.candidates,
+            candidatePokemon = state.results.candidatePokemon, threatPokemon = state.results.threatPokemon;
+
+        var rows = [];
+
+        // Header row
+        var header = ['Candidate', 'IVs', 'CP', 'Level'];
+        for (var ti = 0; ti < threatPokemon.length; ti++) {
+            var t = threatPokemon[ti];
+            var shadow = t.shadowType === 'shadow' ? ' (Shadow)' : '';
+            header.push(t.speciesName + shadow);
+        }
+        rows.push(header);
+
+        // One row per candidate per shield scenario
+        var scenarios = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+        for (var ci = 0; ci < candidatePokemon.length; ci++) {
+            var c = candidates[ci];
+            var cp = candidatePokemon[ci];
+            for (var si = 0; si < scenarios.length; si++) {
+                var row = [
+                    c.nickname + ' (' + scenarios[si] + ')',
+                    c.atk + '/' + c.def + '/' + c.sta,
+                    cp.cp,
+                    cp.level
+                ];
+                for (var ti = 0; ti < threatPokemon.length; ti++) {
+                    row.push(matrix[ci][ti][scenarios[si]].battleRating);
+                }
+                rows.push(row);
+            }
+        }
+
+        // Build CSV string
+        var csv = rows.map(function(row) {
+            return row.map(function(cell) {
+                var s = String(cell);
+                if (s.indexOf(',') > -1 || s.indexOf('"') > -1) {
+                    return '"' + s.replace(/"/g, '""') + '"';
+                }
+                return s;
+            }).join(',');
+        }).join('\n');
+
+        // Download
+        var blob = new Blob([csv], { type: 'text/csv' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = (state.species ? state.species.speciesName : 'battle') + '_matrix.csv';
+        a.click();
+        URL.revokeObjectURL(url);
     }
 
     function runSimulation() {
@@ -643,7 +700,8 @@
 
         // Run simulations using PvPoke's engine
         var matrix = [];
-        var totalSims = candidatePokemon.length * threatPokemon.length * 3;
+        var ALL_SCENARIOS = [[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]];
+        var totalSims = candidatePokemon.length * threatPokemon.length * ALL_SCENARIOS.length;
 
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             var row = [];
@@ -664,13 +722,12 @@
                 }
 
                 var results = {};
-                var scenarios = [[0,0],[1,1],[2,2]];
-                for (var s = 0; s < scenarios.length; s++) {
-                    var sKey = scenarios[s][0] + 'v' + scenarios[s][1];
+                for (var s = 0; s < ALL_SCENARIOS.length; s++) {
+                    var sKey = ALL_SCENARIOS[s][0] + 'v' + ALL_SCENARIOS[s][1];
                     results[sKey] = ns.simulateBattle(
                         cand.speciesId, [cand.ivs.atk, cand.ivs.def, cand.ivs.hp],
                         threat.speciesId, [threat.ivs.atk, threat.ivs.def, threat.ivs.hp],
-                        scenarios[s][0], scenarios[s][1],
+                        ALL_SCENARIOS[s][0], ALL_SCENARIOS[s][1],
                         state.league, levelCap,
                         cand.shadowType, threat.shadowType,
                         movesA, movesB
@@ -768,18 +825,43 @@
                 var excluded = !!state.excludedThreats[threatPokemon[ti].threatData.speciesId];
                 var br = results["1v1"].battleRating;
                 var colorClass = getBRColorClass(br);
-                var w0 = results["0v0"].battleRating >= 500, w1 = br >= 500, w2 = results["2v2"].battleRating >= 500;
-                var differs = !(w0 === w1 && w1 === w2);
+
+                // Check if any of the 9 scenarios differs from the 1v1 outcome
+                var w1v1 = br >= 500;
+                var scenarioKeys = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+                var differs = false;
+                for (var sk = 0; sk < scenarioKeys.length; sk++) {
+                    if ((results[scenarioKeys[sk]].battleRating >= 500) !== w1v1) { differs = true; break; }
+                }
 
                 var cellContent = '<span class="br-main">' + br + '</span>';
                 if (differs) {
-                    cellContent += '<span class="shield-indicator">';
-                    cellContent += '<span class="shield-dot ' + (w0 ? 'win' : 'loss') + '"></span>';
-                    cellContent += '<span class="shield-dot ' + (w1 ? 'win' : 'loss') + '"></span>';
-                    cellContent += '<span class="shield-dot ' + (w2 ? 'win' : 'loss') + '"></span>';
+                    cellContent += '<span class="shield-grid">';
+                    for (var row = 0; row < 3; row++) {
+                        for (var col = 0; col < 3; col++) {
+                            var key = row + 'v' + col;
+                            var win = results[key].battleRating >= 500;
+                            cellContent += '<span class="shield-dot ' + (win ? 'win' : 'loss') + '" title="' + key + ': ' + results[key].battleRating + '"></span>';
+                        }
+                    }
                     cellContent += '</span>';
                 }
-                cellContent += '<span class="shield-expanded">0v0:' + results["0v0"].battleRating + ' 1v1:' + br + ' 2v2:' + results["2v2"].battleRating + '</span>';
+
+                // Expanded view: 3x3 table with all BRs
+                cellContent += '<span class="shield-expanded">';
+                cellContent += '<span class="shield-expanded-grid">';
+                cellContent += '<span class="seg-header"></span><span class="seg-header">0s</span><span class="seg-header">1s</span><span class="seg-header">2s</span>';
+                for (var row = 0; row < 3; row++) {
+                    cellContent += '<span class="seg-header">' + row + 's</span>';
+                    for (var col = 0; col < 3; col++) {
+                        var key = row + 'v' + col;
+                        var sBR = results[key].battleRating;
+                        var sClass = sBR >= 500 ? 'seg-win' : 'seg-loss';
+                        cellContent += '<span class="' + sClass + '">' + sBR + '</span>';
+                    }
+                }
+                cellContent += '</span></span>';
+
                 html += '<td class="br-cell ' + colorClass + (excluded ? ' excluded' : '') + '">' + cellContent + '</td>';
             }
             tr.innerHTML = html;
@@ -814,7 +896,7 @@
 
     // ============ DIFFERENCES ============
 
-    // Create a diff pill with shield scenario dots
+    // Create a diff pill with 3x3 shield scenario grid
     function createDiffPill(prefix, entry, isGain) {
         var pill = document.createElement('span');
         pill.className = 'diff-pill ' + (isGain ? 'gain' : 'loss-pill') +
@@ -824,22 +906,21 @@
         text.textContent = prefix + ' ' + entry.name;
         pill.appendChild(text);
 
-        // Add shield dots showing candidate's win/loss per scenario
-        var dots = document.createElement('span');
-        dots.className = 'shield-indicator';
-        var labels = ['0', '1', '2'];
-        for (var i = 0; i < 3; i++) {
+        // Add 3x3 shield grid showing candidate's win/loss per scenario
+        var grid = document.createElement('span');
+        grid.className = 'shield-grid';
+        for (var i = 0; i < 9; i++) {
             var dot = document.createElement('span');
             dot.className = 'shield-dot ' + (entry.candResults[i] ? 'win' : 'loss');
-            // Highlight dots that flipped vs reference
             if (entry.flipped.indexOf(i) > -1) {
                 dot.classList.add('flipped');
             }
-            dot.title = labels[i] + 'v' + labels[i] + ': ' + (entry.candResults[i] ? 'Win' : 'Loss') +
+            var row = Math.floor(i / 3), col = i % 3;
+            dot.title = row + 'v' + col + ': ' + (entry.candResults[i] ? 'Win' : 'Loss') +
                 (entry.flipped.indexOf(i) > -1 ? ' (flipped)' : '');
-            dots.appendChild(dot);
+            grid.appendChild(dot);
         }
-        pill.appendChild(dots);
+        pill.appendChild(grid);
 
         pill.addEventListener('click', function() { toggleThreatExclusion(entry.speciesId); });
         return pill;
@@ -855,7 +936,7 @@
         document.getElementById('diffRefLabel').textContent = '(vs ' + (candidates[refIdx] ? candidates[refIdx].nickname : 'Candidate 1') + ')';
         container.innerHTML = '';
 
-        var scenarios = ["0v0", "1v1", "2v2"];
+        var allScenarios = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
 
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             if (ci === refIdx) continue;
@@ -870,14 +951,14 @@
                 }
                 if (priorityOnly && !priority) continue;
 
-                // Check all 3 shield scenarios for flips
+                // Check all 9 shield scenarios for flips
                 var hasGain = false, hasLoss = false;
-                var candResults = []; // win/loss per scenario for candidate
-                var refResults = [];  // win/loss per scenario for reference
-                var flipped = [];     // which scenarios flipped
+                var candResults = [];
+                var refResults = [];
+                var flipped = [];
 
-                for (var si = 0; si < scenarios.length; si++) {
-                    var s = scenarios[si];
+                for (var si = 0; si < allScenarios.length; si++) {
+                    var s = allScenarios[si];
                     var cw = matrix[ci][ti][s].battleRating >= 500;
                     var rw = matrix[refIdx][ti][s].battleRating >= 500;
                     candResults.push(cw);
