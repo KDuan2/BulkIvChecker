@@ -545,14 +545,14 @@ select:focus { border-color: var(--accent); }
     opacity: 0.8;
 }
 
-.diff-pill .shield-indicator {
+.diff-pill .shield-grid {
     margin-left: 5px;
     vertical-align: middle;
 }
 
 .diff-pill .shield-dot {
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
 }
 
 .diff-pill .shield-dot.flipped {
