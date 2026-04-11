@@ -473,13 +473,18 @@ select:focus { border-color: var(--accent); }
 .shield-legend {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
     font-size: 0.7rem;
     color: var(--text-dim);
 }
 
-.shield-legend-label {
+.shield-legend-vertical-label {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 0.6rem;
     font-weight: 500;
+    color: var(--text-dim);
+    letter-spacing: 1px;
 }
 
 .shield-legend-grid {
@@ -506,12 +511,11 @@ select:focus { border-color: var(--accent); }
     color: var(--text-dim);
 }
 
-.shield-legend-axes {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.6rem;
-    line-height: 1.3;
+.shield-legend-top-label {
+    font-size: 0.55rem;
     color: var(--text-dim);
+    text-align: center;
+    padding-left: 10px;
 }
 
 /* Win count column */
