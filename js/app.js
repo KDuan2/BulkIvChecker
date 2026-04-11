@@ -669,8 +669,18 @@
         document.getElementById('btnLoadMeta').addEventListener('click', loadMetaThreats);
         document.getElementById('btnClearSession').addEventListener('click', clearSession);
         document.getElementById('btnClearCandidates').addEventListener('click', clearCandidates);
+        document.getElementById('btnResetCandidateExclusions').addEventListener('click', function() {
+            for (var i = 0; i < state.candidates.length; i++) {
+                state.candidates[i].excluded = false;
+            }
+            renderCandidates();
+            saveState();
+        });
         document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
+            if (state.results) renderDifferences();
+        });
+        document.getElementById('diffHideExcluded').addEventListener('change', function() {
             if (state.results) renderDifferences();
         });
         document.getElementById('btnResetExclusions').addEventListener('click', function() {
@@ -1027,6 +1037,7 @@
             candidatePokemon = state.results.candidatePokemon, threatPokemon = state.results.threatPokemon;
         var container = document.getElementById('diffContent');
         var priorityOnly = document.getElementById('diffPriorityOnly').checked;
+        var hideExcluded = document.getElementById('diffHideExcluded').checked;
         var refIdx = Math.min(state.referenceIdx, candidatePokemon.length - 1);
         document.getElementById('diffRefLabel').textContent = '(vs ' + (candidates[refIdx] ? candidates[refIdx].nickname : 'Candidate 1') + ')';
         container.innerHTML = '';
@@ -1045,6 +1056,7 @@
                     if (state.threats[j].speciesId === speciesId) { priority = state.threats[j].priority || false; break; }
                 }
                 if (priorityOnly && !priority) continue;
+                if (hideExcluded && excluded) continue;
 
                 // Check all 9 shield scenarios for flips
                 var hasGain = false, hasLoss = false;
