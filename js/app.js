@@ -330,17 +330,27 @@
         if (row) { var atkInput = row.querySelector('.iv-atk'); if (atkInput) atkInput.focus(); }
     }
 
+    var dragSrcIdx = null; // Track which row is being dragged
+
     function renderCandidates() {
         var body = document.getElementById('candidateBody');
         body.innerHTML = '';
+        // Track reference by candidate ID so reordering preserves it
+        var refId = state.candidates[state.referenceIdx] ? state.candidates[state.referenceIdx].id : null;
+
         state.candidates.forEach(function(c, idx) {
             var tr = document.createElement('tr');
             tr.dataset.id = c.id;
-            if (idx === state.referenceIdx) tr.classList.add('reference');
+            tr.draggable = true;
+            var isRef = c.id === refId;
+            if (isRef) tr.classList.add('reference');
             var computed = computeCandidate(c);
 
             tr.innerHTML =
-                '<td style="text-align:center; color:var(--text-dim); font-size:0.8rem">' + (idx + 1) + '</td>' +
+                '<td class="drag-handle" title="Drag to reorder">&#x2630;</td>' +
+                '<td class="ref-pin' + (isRef ? ' active' : '') + '" title="Click to set as reference">' +
+                    (isRef ? '&#9733;' : '&#9734;') +
+                '</td>' +
                 '<td><input type="text" class="nickname-input" value="' + escHtml(c.nickname) + '" data-field="nickname"></td>' +
                 '<td><input type="number" class="iv-input iv-atk" min="0" max="15" value="' + (c.atk === '' ? '' : c.atk) + '" data-field="atk" placeholder="0-15"></td>' +
                 '<td><input type="number" class="iv-input iv-def" min="0" max="15" value="' + (c.def === '' ? '' : c.def) + '" data-field="def" placeholder="0-15"></td>' +
@@ -359,7 +369,7 @@
             body.appendChild(tr);
         });
 
-        // Events
+        // Events: inputs
         var inputs = body.querySelectorAll('input, select');
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', onCandidateFieldChange);
@@ -404,11 +414,10 @@
             });
         }
 
-        // Click row number to set reference
-        var firstCells = body.querySelectorAll('td:first-child');
-        for (var i = 0; i < firstCells.length; i++) {
-            firstCells[i].style.cursor = 'pointer';
-            firstCells[i].addEventListener('click', function() {
+        // Reference pin click
+        var pins = body.querySelectorAll('.ref-pin');
+        for (var i = 0; i < pins.length; i++) {
+            pins[i].addEventListener('click', function() {
                 var tr = this.closest('tr');
                 var id = Number(tr.dataset.id);
                 var idx = state.candidates.findIndex(function(c) { return c.id === id; });
@@ -418,6 +427,55 @@
                     if (state.results) renderDifferences();
                     saveState();
                 }
+            });
+        }
+
+        // Drag-to-reorder handlers
+        var rows = body.querySelectorAll('tr');
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].addEventListener('dragstart', function(e) {
+                var tr = this;
+                dragSrcIdx = state.candidates.findIndex(function(c) { return c.id === Number(tr.dataset.id); });
+                tr.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+            });
+
+            rows[i].addEventListener('dragover', function(e) {
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+                // Highlight drop position
+                var allRows = body.querySelectorAll('tr');
+                for (var j = 0; j < allRows.length; j++) allRows[j].classList.remove('drag-over');
+                this.classList.add('drag-over');
+            });
+
+            rows[i].addEventListener('dragleave', function() {
+                this.classList.remove('drag-over');
+            });
+
+            rows[i].addEventListener('drop', function(e) {
+                e.preventDefault();
+                var tr = this;
+                var dropIdx = state.candidates.findIndex(function(c) { return c.id === Number(tr.dataset.id); });
+                if (dragSrcIdx !== null && dragSrcIdx !== dropIdx) {
+                    // Move candidate in array
+                    var moved = state.candidates.splice(dragSrcIdx, 1)[0];
+                    state.candidates.splice(dropIdx, 0, moved);
+                    // Update referenceIdx to follow the reference candidate by ID
+                    var refCandidate = state.candidates.find(function(c) { return c.id === refId; });
+                    if (refCandidate) {
+                        state.referenceIdx = state.candidates.indexOf(refCandidate);
+                    }
+                    renderCandidates();
+                    saveState();
+                }
+            });
+
+            rows[i].addEventListener('dragend', function() {
+                this.classList.remove('dragging');
+                var allRows = body.querySelectorAll('tr');
+                for (var j = 0; j < allRows.length; j++) allRows[j].classList.remove('drag-over');
+                dragSrcIdx = null;
             });
         }
     }

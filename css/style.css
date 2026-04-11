@@ -310,6 +310,41 @@ select:focus { border-color: var(--accent); }
     background: rgba(79, 195, 247, 0.08);
 }
 
+/* Drag handle */
+.drag-handle {
+    text-align: center;
+    cursor: grab;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    user-select: none;
+    padding: 4px !important;
+}
+
+.drag-handle:hover { color: var(--text-bright); }
+.drag-handle:active { cursor: grabbing; }
+
+/* Reference pin */
+.ref-pin {
+    text-align: center;
+    cursor: pointer;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    user-select: none;
+    padding: 4px !important;
+}
+
+.ref-pin:hover { color: var(--accent); }
+.ref-pin.active { color: var(--accent); font-size: 0.9rem; }
+
+/* Drag states */
+.candidate-table tr.dragging {
+    opacity: 0.4;
+}
+
+.candidate-table tr.drag-over {
+    border-top: 2px solid var(--accent);
+}
+
 /* Matrix Section */
 .matrix-section {
     background: var(--bg-surface);
