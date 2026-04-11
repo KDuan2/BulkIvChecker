@@ -154,15 +154,66 @@
     }
 
     // ============ MOVE SELECTS ============
+
+    // Compute what auto-select would pick for a species (general, no specific opponent).
+    // Fast: best DPS*EPS (damage-per-turn * energy-per-turn). Charged: best DPE (damage / energy).
+    function getAutoMoves(speciesData) {
+        var types = speciesData.types || [];
+        var stabMult = 1.2000000476837158203125;
+
+        // Score fast moves
+        var bestFast = null, bestFastScore = -1;
+        (speciesData.fastMoves || []).forEach(function(moveId) {
+            var m = ns.getMoveById(moveId);
+            if (!m) return;
+            var stab = (m.type === types[0] || m.type === types[1]) ? stabMult : 1;
+            var turns = m.cooldown / 500;
+            var dps = (m.power * stab) / turns;
+            var eps = m.energyGain / turns;
+            var score = dps * eps;
+            if (score > bestFastScore) { bestFastScore = score; bestFast = m; }
+        });
+
+        // Score charged moves — pick top 2
+        var chargedScored = [];
+        (speciesData.chargedMoves || []).forEach(function(moveId) {
+            var m = ns.getMoveById(moveId);
+            if (!m) return;
+            var stab = (m.type === types[0] || m.type === types[1]) ? stabMult : 1;
+            var dpe = (m.power * stab) / m.energy;
+            // Buff bonus (same as initializeMove)
+            if (m.buffs) {
+                var buffEffect = 0;
+                if (m.buffTarget === "self" && m.buffs[0] > 0) buffEffect = m.buffs[0] * (80 / m.energy);
+                else if (m.buffTarget === "opponent" && m.buffs[1] < 0) buffEffect = Math.abs(m.buffs[1]) * (80 / m.energy);
+                if (buffEffect > 0) dpe *= (4 + buffEffect * (parseFloat(m.buffApplyChance) || 1)) / 4;
+            }
+            chargedScored.push({ move: m, score: dpe });
+        });
+        chargedScored.sort(function(a, b) { return b.score - a.score; });
+
+        return {
+            fast: bestFast,
+            charged1: chargedScored[0] ? chargedScored[0].move : null,
+            charged2: chargedScored[1] ? chargedScored[1].move : null,
+        };
+    }
+
     function populateMoveSelects() {
         if (!state.species) return;
         var fm = document.getElementById('fastMoveSelect');
         var cm1 = document.getElementById('chargedMove1Select');
         var cm2 = document.getElementById('chargedMove2Select');
 
-        fm.innerHTML = '<option value="">Auto</option>';
-        cm1.innerHTML = '<option value="">Auto</option>';
-        cm2.innerHTML = '<option value="">Auto</option>';
+        // Compute auto-selected moves
+        var auto = getAutoMoves(state.species);
+        var autoFastName = auto.fast ? auto.fast.name : 'Auto';
+        var autoCharged1Name = auto.charged1 ? auto.charged1.name : 'Auto';
+        var autoCharged2Name = auto.charged2 ? auto.charged2.name : 'Auto';
+
+        fm.innerHTML = '<option value="">' + autoFastName + ' (Auto)</option>';
+        cm1.innerHTML = '<option value="">' + autoCharged1Name + ' (Auto)</option>';
+        cm2.innerHTML = '<option value="">' + autoCharged2Name + ' (Auto)</option>';
 
         (state.species.fastMoves || []).forEach(function(moveId) {
             var move = ns.getMoveById(moveId);
@@ -203,6 +254,7 @@
         document.getElementById('chargedMove2Select').addEventListener('change', handler);
         document.getElementById('btnResetMoves').addEventListener('click', function() {
             state.moveOverride = null;
+            populateMoveSelects(); // Refresh to show auto move names
             document.getElementById('fastMoveSelect').value = '';
             document.getElementById('chargedMove1Select').value = '';
             document.getElementById('chargedMove2Select').value = '';
@@ -537,81 +589,84 @@
         var statusBar = document.getElementById('statusBar');
         statusBar.textContent = 'Simulating...';
         var startTime = performance.now();
+        var levelCap = getLevelCap();
 
-        // Build candidate Pokemon
+        // Build candidate display info using lightweight stat calc
         var candidatePokemon = validCandidates.map(function(c) {
-            try {
-                return ns.createBattlePokemon(state.species.speciesId, c.atk, c.def, c.sta, state.league, getLevelCap(), getEffectiveForm(c));
-            } catch(e) { console.error('Failed to create candidate:', c, e); return null; }
-        }).filter(Boolean);
+            var form = getEffectiveForm(c);
+            var result = ns.findOptimalLevel(state.species.baseStats, c.atk, c.def, c.sta, state.league, levelCap);
+            return {
+                speciesId: state.species.speciesId,
+                speciesName: state.species.speciesName,
+                ivs: { atk: c.atk, def: c.def, hp: c.sta },
+                shadowType: form,
+                cp: result.cp, level: result.level, stats: result.stats,
+            };
+        });
 
-        // Build threat Pokemon
+        // Build threat display info
         var threatPokemon = state.threats.map(function(t) {
             var baseId = t.speciesId.replace('_shadow', '');
             var shadowType = t.shadowType || (t.speciesId.indexOf('_shadow') > -1 ? 'shadow' : 'normal');
-            try {
-                var tp = ns.createBattlePokemon(baseId, 0, 0, 0, state.league, getLevelCap(), shadowType);
-                tp.threatData = t;
-                return tp;
-            } catch(e) { console.error('Failed to create threat:', t, e); return null; }
+            var data = ns.getPokemonById(baseId);
+            if (!data) return null;
+
+            // Use default IVs from gamemaster (prefer shadow-specific entry)
+            var gmEntry = ns.getPokemonById(t.speciesId) || data;
+            var ivs = { atk: 0, def: 0, hp: 0 };
+            var key = 'cp' + state.league;
+            if (gmEntry.defaultIVs && gmEntry.defaultIVs[key]) {
+                var combo = gmEntry.defaultIVs[key];
+                ivs = { atk: combo[1], def: combo[2], hp: combo[3] };
+            }
+            var result = ns.findOptimalLevel(data.baseStats, ivs.atk, ivs.def, ivs.hp, state.league, levelCap);
+
+            return {
+                speciesId: baseId,
+                speciesName: data.speciesName,
+                ivs: ivs,
+                shadowType: shadowType,
+                cp: result.cp, level: result.level, stats: result.stats,
+                threatData: t,
+                preferredFastMove: t.fastMove || null,
+                preferredChargedMoves: t.chargedMoves || [],
+            };
         }).filter(Boolean);
 
-        // Apply default IVs from gamemaster
-        for (var i = 0; i < threatPokemon.length; i++) {
-            var tp = threatPokemon[i];
-            var data = ns.getPokemonById(tp.threatData.speciesId) || ns.getPokemonById(tp.speciesId);
-            if (data && data.defaultIVs) {
-                var key = 'cp' + state.league;
-                var combo = data.defaultIVs[key];
-                if (combo) {
-                    var levelCap = getLevelCap();
-                    var level = Math.min(levelCap, combo[0]);
-                    var cpm = ns.getCPM(level);
-                    tp.ivs = { atk: combo[1], def: combo[2], hp: combo[3] };
-                    tp.level = level; tp.cpm = cpm;
-                    tp.stats = {
-                        atk: cpm * (data.baseStats.atk + combo[1]),
-                        def: cpm * (data.baseStats.def + combo[2]),
-                        hp: Math.max(Math.floor(cpm * (data.baseStats.hp + combo[3])), 10),
-                    };
-                    tp.hp = tp.stats.hp;
-                    tp.statProduct = tp.stats.atk * tp.stats.def * tp.stats.hp;
-                    tp.cp = ns.calculateCP(data.baseStats.atk, data.baseStats.def, data.baseStats.hp, combo[1], combo[2], combo[3], cpm);
-                }
-            }
-            if (tp.threatData.fastMove) {
-                var fm = ns.getMoveById(tp.threatData.fastMove);
-                if (fm) tp.preferredFastMove = tp.threatData.fastMove;
-            }
-            if (tp.threatData.chargedMoves && tp.threatData.chargedMoves.length > 0) {
-                tp.preferredChargedMoves = tp.threatData.chargedMoves;
-            }
-        }
-
-        // Run simulations
+        // Run simulations using PvPoke's engine
         var matrix = [];
         var totalSims = candidatePokemon.length * threatPokemon.length * 3;
 
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             var row = [];
             for (var ti = 0; ti < threatPokemon.length; ti++) {
-                var cp = candidatePokemon[ci];
-                var tp = threatPokemon[ti];
-                var candMoveOverride = state.moveOverride;
+                var cand = candidatePokemon[ci];
+                var threat = threatPokemon[ti];
 
-                if (tp.preferredFastMove) {
-                    tp._preferredMoves = {
-                        fastMove: tp.preferredFastMove,
-                        chargedMove1: (tp.preferredChargedMoves || [])[0] || null,
-                        chargedMove2: (tp.preferredChargedMoves || [])[1] || null,
-                    };
+                // Build move arrays
+                var movesA = null;
+                if (state.moveOverride && state.moveOverride.fastMove) {
+                    movesA = [state.moveOverride.fastMove, state.moveOverride.chargedMove1, state.moveOverride.chargedMove2];
+                }
+                var movesB = null;
+                if (threat.preferredFastMove) {
+                    movesB = [threat.preferredFastMove,
+                        (threat.preferredChargedMoves || [])[0] || null,
+                        (threat.preferredChargedMoves || [])[1] || null];
                 }
 
                 var results = {};
                 var scenarios = [[0,0],[1,1],[2,2]];
                 for (var s = 0; s < scenarios.length; s++) {
-                    var key = scenarios[s][0] + 'v' + scenarios[s][1];
-                    results[key] = ns.simulateBattle(cp, tp, scenarios[s][0], scenarios[s][1], candMoveOverride);
+                    var sKey = scenarios[s][0] + 'v' + scenarios[s][1];
+                    results[sKey] = ns.simulateBattle(
+                        cand.speciesId, [cand.ivs.atk, cand.ivs.def, cand.ivs.hp],
+                        threat.speciesId, [threat.ivs.atk, threat.ivs.def, threat.ivs.hp],
+                        scenarios[s][0], scenarios[s][1],
+                        state.league, levelCap,
+                        cand.shadowType, threat.shadowType,
+                        movesA, movesB
+                    );
                 }
                 row.push(results);
             }
@@ -643,11 +698,31 @@
             var tp = threatPokemon[ti];
             var data = ns.getPokemonById(tp.speciesId);
             var name = data ? data.speciesName : tp.speciesId;
-            var shadow = tp.shadowType === 'shadow' ? '(S)' : '';
+            var shadow = tp.shadowType === 'shadow' ? ' (S)' : '';
             var excluded = state.excludedThreats[tp.threatData.speciesId] ? ' excluded' : '';
+
+            // Build move abbreviation string like PvPoke: "FM+CM1/CM2"
+            var moveStr = '';
             var fmData = ns.getMoveById(tp.preferredFastMove || '');
-            var fastName = fmData ? fmData.name.split(' ')[0] : '';
-            headerHtml += '<th class="' + excluded + '" data-threat-idx="' + ti + '" title="' + name + ' ' + shadow + '\n' + fastName + '">' + name.substring(0, 8) + (shadow ? ' S' : '') + '</th>';
+            if (fmData) {
+                moveStr = abbreviateMove(fmData.name);
+                var cms = tp.preferredChargedMoves || [];
+                var cmParts = [];
+                for (var mi = 0; mi < cms.length; mi++) {
+                    var cmData = ns.getMoveById(cms[mi]);
+                    if (cmData) cmParts.push(abbreviateMove(cmData.name));
+                }
+                if (cmParts.length > 0) moveStr += '+' + cmParts.join('/');
+            }
+
+            // IVs and level
+            var ivStr = tp.ivs.atk + '/' + tp.ivs.def + '/' + tp.ivs.hp;
+
+            headerHtml += '<th class="' + excluded + '" data-threat-idx="' + ti + '" title="' + name + shadow + '\n' + moveStr + '\n' + ivStr + '">' +
+                '<span class="threat-name">' + name + shadow + '</span>' +
+                '<span class="threat-moves">' + moveStr + '</span>' +
+                '<span class="threat-ivs">' + ivStr + '</span>' +
+                '</th>';
         }
         headerHtml += '</tr>';
         thead.innerHTML = headerHtml;
@@ -807,6 +882,23 @@
         var div = document.createElement('div');
         div.textContent = s;
         return div.innerHTML;
+    }
+
+    // Abbreviate a move name like PvPoke does — take first letters of each word.
+    // "Dragon Claw" -> "DrC", "Ice Beam" -> "IB", "Blast Burn" -> "BlB"
+    function abbreviateMove(name) {
+        if (!name) return '?';
+        var words = name.split(/[\s\-]+/);
+        if (words.length === 1) {
+            // Single word: take first 2-3 chars
+            return words[0].substring(0, 3);
+        }
+        // Multi-word: first 2 chars of first word + first char of remaining words
+        var abbr = words[0].substring(0, 2);
+        for (var i = 1; i < words.length; i++) {
+            abbr += words[i].charAt(0).toUpperCase();
+        }
+        return abbr;
     }
 
     // ============ BOOT ============
