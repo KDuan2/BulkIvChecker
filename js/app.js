@@ -583,6 +583,7 @@
         document.getElementById('btnRunSim').addEventListener('click', runSimulation);
         document.getElementById('btnLoadMeta').addEventListener('click', loadMetaThreats);
         document.getElementById('btnClearSession').addEventListener('click', clearSession);
+        document.getElementById('btnClearCandidates').addEventListener('click', clearCandidates);
         document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
             if (state.results) renderDifferences();
@@ -1007,6 +1008,18 @@
     }
 
     // ============ SESSION / UTILS ============
+    function clearCandidates() {
+        state.candidates = [];
+        state.referenceIdx = 0;
+        state.nextCandidateId = 1;
+        state.results = null;
+        document.getElementById('matrixSection').style.display = 'none';
+        document.getElementById('diffSection').style.display = 'none';
+        document.getElementById('statusBar').textContent = '';
+        addCandidateRow();
+        saveState();
+    }
+
     function clearSession() {
         if (!confirm('Clear all data and start fresh?')) return;
         localStorage.removeItem(STORAGE_KEY);
