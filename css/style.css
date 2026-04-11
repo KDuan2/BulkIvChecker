@@ -443,7 +443,7 @@ select:focus { border-color: var(--accent); }
 .shield-expanded {
     display: none;
     font-size: 0.7rem;
-    color: var(--text-dim);
+    color: #ffffff;
     margin-top: 2px;
 }
 

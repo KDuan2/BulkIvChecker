@@ -35,37 +35,27 @@ var PvPIV = PvPIV || {};
 
         if (!poke || !poke.speciesId) return null;
 
-        // Set IVs and mark as custom so initialize() uses them
-        poke.ivs = { atk: atkIV, def: defIV, hp: hpIV };
-        poke.isCustom = true;
-        poke.autoLevel = true;
-        poke.setLevel(levelCap, false);
-
-        // Find optimal level under CP cap
-        var bestLevel = 1;
-        for (var level = 1; level <= levelCap; level += 0.5) {
-            poke.setLevel(level, false);
-            var testCP = poke.calculateCP();
-            if (testCP <= cpCap) {
-                bestLevel = level;
-            } else {
-                break;
-            }
-        }
-        poke.setLevel(bestLevel, false);
-
-        // Set stats
-        poke.stats.atk = poke.cpm * (poke.baseStats.atk + atkIV);
-        poke.stats.def = poke.cpm * (poke.baseStats.def + defIV);
-        poke.stats.hp = Math.max(Math.floor(poke.cpm * (poke.baseStats.hp + hpIV)), 10);
-        poke.hp = poke.stats.hp;
-        poke.startHp = poke.hp;
-        poke.cp = poke.calculateCP();
-
-        // Set shadow type
+        // Set shadow type before leveling
         if (shadowType === "shadow") {
             poke.setShadowType("shadow");
         }
+
+        // Set IVs directly, then find optimal level under CP cap (same as PvPoke's autoLevel)
+        poke.ivs.atk = atkIV;
+        poke.ivs.def = defIV;
+        poke.ivs.hp = hpIV;
+
+        var level = levelCap;
+        poke.cp = 100000;
+        while (poke.cp > cpCap) {
+            poke.setLevel(level, false);
+            poke.cp = poke.calculateCP();
+            level -= 0.5;
+        }
+
+        // Initialize stats and moves at the found level
+        poke.isCustom = true;
+        poke.initialize(false);
 
         return poke;
     }
