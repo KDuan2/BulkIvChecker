@@ -433,6 +433,7 @@
                 var id = Number(tr.dataset.id);
                 var c = state.candidates.find(function(c) { return c.id === id; });
                 if (c) {
+                    if (state.candidates.indexOf(c) === state.referenceIdx) return;
                     c.excluded = !c.excluded;
                     renderCandidates();
                     saveState();
@@ -671,6 +672,15 @@
         document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
             if (state.results) renderDifferences();
+        });
+        document.getElementById('btnResetExclusions').addEventListener('click', function() {
+            state.excludedThreats = {};
+            for (var i = 0; i < state.threats.length; i++) {
+                state.threats[i].priority = false;
+            }
+            renderThreats();
+            if (state.results) { renderMatrix(); renderDifferences(); }
+            saveState();
         });
     }
 
@@ -1055,8 +1065,9 @@
                 if (!hasGain && !hasLoss) continue;
 
                 var data = ns.getPokemonById(speciesId.replace('_shadow', ''));
+                var shadowLabel = speciesId.indexOf('_shadow') > -1 ? ' (S)' : '';
                 var entry = {
-                    name: data ? data.speciesName : speciesId,
+                    name: (data ? data.speciesName : speciesId) + shadowLabel,
                     speciesId: speciesId, excluded: excluded, priority: priority,
                     candResults: candResults, refResults: refResults, flipped: flipped
                 };
