@@ -75,6 +75,7 @@
             setupFormSelect();
             setupMoveSelects();
             setupButtons();
+            populateMetaSelect();
 
             if (hadState) {
                 if (state.species) {
@@ -116,7 +117,9 @@
             var q = input.value.toLowerCase().trim();
             if (q.length < 2) { dropdown.classList.remove('visible'); return; }
             var all = ns.getAllPokemon().filter(function(p) {
-                return p.released && p.speciesId.indexOf('_mega') === -1 &&
+                return p.released &&
+                    p.speciesId.indexOf('_mega') === -1 &&
+                    p.speciesId.indexOf('_shadow') === -1 &&
                     (p.speciesName.toLowerCase().indexOf(q) > -1 ||
                      p.speciesId.toLowerCase().indexOf(q) > -1 ||
                      (p.nicknames && p.nicknames.some(function(n) { return n.toLowerCase().indexOf(q) > -1; })));
@@ -153,13 +156,50 @@
     }
 
     function selectSpecies(speciesId) {
-        var data = ns.getPokemonById(speciesId);
-        if (!data) return;
-        state.species = data;
-        document.getElementById('speciesSearch').value = data.speciesName;
+        // If a shadow entry was selected, strip to base and set form to shadow
+        if (speciesId.indexOf('_shadow') > -1) {
+            var baseId = speciesId.replace('_shadow', '');
+            var baseData = ns.getPokemonById(baseId);
+            if (baseData) {
+                state.species = baseData;
+                state.form = 'shadow';
+            } else {
+                // No base entry found, use shadow entry directly
+                state.species = ns.getPokemonById(speciesId);
+                if (!state.species) return;
+                state.form = 'shadow';
+            }
+        } else {
+            var data = ns.getPokemonById(speciesId);
+            if (!data) return;
+            state.species = data;
+            state.form = 'normal';
+        }
+
+        document.getElementById('speciesSearch').value = state.species.speciesName;
+        document.getElementById('formSelect').value = state.form;
+        updateFormOptions();
         populateMoveSelects();
         updateAllCandidateComputedFields();
         saveState();
+    }
+
+    function updateFormOptions() {
+        var formSelect = document.getElementById('formSelect');
+        var shadowOption = formSelect.querySelector('option[value="shadow"]');
+        if (!shadowOption) return;
+
+        var isShadowEligible = state.species &&
+            state.species.tags &&
+            (state.species.tags.indexOf('shadoweligible') > -1 || state.species.tags.indexOf('shadow') > -1);
+
+        shadowOption.disabled = !isShadowEligible;
+
+        // If shadow is selected but not eligible, reset to normal
+        if (!isShadowEligible && state.form === 'shadow') {
+            state.form = 'normal';
+            formSelect.value = 'normal';
+        }
     }
 
     // ============ MOVE SELECTS ============
@@ -293,6 +333,10 @@
                 document.getElementById('diffSection').style.display = 'none';
                 document.getElementById('statusBar').textContent = 'League changed \u2014 run simulation to update results.';
                 updateAllCandidateComputedFields();
+                // Set meta dropdown to default for the new league
+                var defaultMap = { 500: 'little', 1500: 'great', 2500: 'ultra', 10000: 'master' };
+                var metaSel = document.getElementById('metaSelect');
+                if (defaultMap[state.league]) metaSel.value = defaultMap[state.league];
                 saveState();
             });
         }
@@ -361,7 +405,7 @@
                 '<td class="ref-pin' + (isRef ? ' active' : '') + '" title="Click to set as reference">' +
                     (isRef ? '&#9733;' : '&#9734;') +
                 '</td>' +
-                '<td class="exclude-cell"><button class="btn-exclude" title="' + (c.excluded ? 'Include in simulation' : 'Exclude from simulation') + '">' + (c.excluded ? '&#x25cb;' : '&#x25cf;') + '</button></td>' +
+                '<td class="exclude-cell"><button class="btn-exclude ' + (c.excluded ? 'excluded' : 'included') + '" title="' + (c.excluded ? 'Include in simulation' : 'Exclude from simulation') + '"></button></td>' +
                 '<td><input type="text" class="nickname-input" value="' + escHtml(c.nickname) + '" data-field="nickname"></td>' +
                 '<td><input type="number" class="iv-input iv-atk" min="0" max="15" value="' + (c.atk === '' ? '' : c.atk) + '" data-field="atk" placeholder="0-15"></td>' +
                 '<td><input type="number" class="iv-input iv-def" min="0" max="15" value="' + (c.def === '' ? '' : c.def) + '" data-field="def" placeholder="0-15"></td>' +
@@ -609,10 +653,82 @@
         renderThreats(); saveState();
     }
 
+    function populateMetaSelect() {
+        var select = document.getElementById('metaSelect');
+        select.innerHTML = '';
+
+        // Build format list from gamemaster, grouped by CP
+        var formats = GAMEMASTER_DATA.formats || [];
+        var cpGroups = { 500: [], 1500: [], 2500: [], 10000: [] };
+
+        for (var i = 0; i < formats.length; i++) {
+            var f = formats[i];
+            if (!f.meta || !f.showMeta) continue;
+            // Only include formats that have a corresponding group file
+            if (typeof META_GROUPS !== 'undefined' && !META_GROUPS[f.meta]) continue;
+            var cp = f.cp || 1500;
+            if (!cpGroups[cp]) cpGroups[cp] = [];
+            cpGroups[cp].push({ title: f.title, meta: f.meta, cp: cp });
+        }
+
+        // Also add base leagues if not already present
+        var baseMetas = [
+            { title: 'Great League', meta: 'great', cp: 1500 },
+            { title: 'Ultra League', meta: 'ultra', cp: 2500 },
+            { title: 'Master League', meta: 'master', cp: 10000 }
+        ];
+        for (var i = 0; i < baseMetas.length; i++) {
+            var bm = baseMetas[i];
+            var exists = cpGroups[bm.cp].some(function(f) { return f.meta === bm.meta; });
+            if (!exists) cpGroups[bm.cp].unshift(bm);
+        }
+
+        var cpLabels = { 500: 'Little League (500)', 1500: 'Great League (1500)', 2500: 'Ultra League (2500)', 10000: 'Master League (10000)' };
+        var cpOrder = [500, 1500, 2500, 10000];
+
+        for (var ci = 0; ci < cpOrder.length; ci++) {
+            var cp = cpOrder[ci];
+            var group = cpGroups[cp];
+            if (!group || group.length === 0) continue;
+
+            var optgroup = document.createElement('optgroup');
+            optgroup.label = cpLabels[cp] || ('CP ' + cp);
+
+            for (var fi = 0; fi < group.length; fi++) {
+                var opt = document.createElement('option');
+                opt.value = group[fi].meta;
+                opt.textContent = group[fi].title;
+                opt.dataset.cp = group[fi].cp;
+                optgroup.appendChild(opt);
+            }
+            select.appendChild(optgroup);
+        }
+
+        // Default selection based on current league
+        var defaultMap = { 1500: 'great', 2500: 'ultra', 10000: 'master' };
+        select.value = defaultMap[state.league] || 'great';
+    }
+
     function loadMetaThreats() {
-        var leagueMap = { 1500: 'great', 2500: 'ultra', 10000: 'master' };
-        var league = leagueMap[state.league] || 'great';
-        ns.loadMetaGroup(league).then(function(meta) {
+        var select = document.getElementById('metaSelect');
+        var metaKey = select.value;
+        var selectedOption = select.options[select.selectedIndex];
+        var metaCp = selectedOption ? Number(selectedOption.dataset.cp) : state.league;
+
+        // Auto-switch league if the format's CP cap differs
+        if (metaCp && metaCp !== state.league) {
+            state.league = metaCp;
+            var btns = document.querySelectorAll('.league-btn');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.toggle('active', Number(btns[i].dataset.league) === state.league);
+            }
+            state.results = null;
+            document.getElementById('matrixSection').style.display = 'none';
+            document.getElementById('diffSection').style.display = 'none';
+            updateAllCandidateComputedFields();
+        }
+
+        ns.loadMetaGroup(metaKey).then(function(meta) {
             state.threats = meta.map(function(t) {
                 return {
                     speciesId: t.speciesId, fastMove: t.fastMove, chargedMoves: t.chargedMoves || [],
@@ -843,7 +959,11 @@
             matrix.push(row);
         }
 
-        state.results = { matrix: matrix, candidates: validCandidates, candidatePokemon: candidatePokemon, threatPokemon: threatPokemon };
+        // Store the reference candidate's ID so we can find it in the filtered list
+        var refCandidate = state.candidates[state.referenceIdx];
+        var refId = refCandidate ? refCandidate.id : null;
+
+        state.results = { matrix: matrix, candidates: validCandidates, candidatePokemon: candidatePokemon, threatPokemon: threatPokemon, refId: refId };
 
         var elapsed = ((performance.now() - startTime) / 1000).toFixed(2);
         statusBar.textContent = totalSims + ' simulations completed in ' + elapsed + 's';
@@ -904,11 +1024,19 @@
             })(i));
         }
 
+        // Find reference index within the filtered candidates
+        var matrixRefIdx = 0;
+        if (state.results.refId != null) {
+            for (var ri = 0; ri < candidates.length; ri++) {
+                if (candidates[ri].id === state.results.refId) { matrixRefIdx = ri; break; }
+            }
+        }
+
         tbody.innerHTML = '';
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             var cp = candidatePokemon[ci], c = candidates[ci];
             var tr = document.createElement('tr');
-            if (ci === state.referenceIdx) tr.classList.add('reference');
+            if (ci === matrixRefIdx) tr.classList.add('reference');
 
             var form = getEffectiveForm(c);
             var formLabel = form === 'shadow' ? ' (S)' : form === 'purified' ? ' (P)' : '';
@@ -979,13 +1107,18 @@
             cells[i].addEventListener('click', function() { this.classList.toggle('expanded'); });
         }
 
-        // Row header click to set reference
+        // Row header click to set reference — map filtered index back to state.candidates index
         var rowHeaders = tbody.querySelectorAll('th');
         for (var i = 0; i < rowHeaders.length; i++) {
-            rowHeaders[i].addEventListener('click', (function(idx) {
+            rowHeaders[i].addEventListener('click', (function(filteredIdx) {
                 return function() {
-                    state.referenceIdx = idx;
-                    renderMatrix(); renderDifferences(); saveState();
+                    var candId = candidates[filteredIdx].id;
+                    var fullIdx = state.candidates.findIndex(function(c) { return c.id === candId; });
+                    if (fullIdx >= 0) {
+                        state.referenceIdx = fullIdx;
+                        state.results.refId = candId;
+                        renderMatrix(); renderDifferences(); saveState();
+                    }
                 };
             })(i));
         }
@@ -1038,7 +1171,13 @@
         var container = document.getElementById('diffContent');
         var priorityOnly = document.getElementById('diffPriorityOnly').checked;
         var hideExcluded = document.getElementById('diffHideExcluded').checked;
-        var refIdx = Math.min(state.referenceIdx, candidatePokemon.length - 1);
+        // Find reference index within the filtered candidates by ID
+        var refIdx = 0;
+        if (state.results.refId != null) {
+            for (var ri = 0; ri < candidates.length; ri++) {
+                if (candidates[ri].id === state.results.refId) { refIdx = ri; break; }
+            }
+        }
         document.getElementById('diffRefLabel').textContent = '(vs ' + (candidates[refIdx] ? candidates[refIdx].nickname : 'Candidate 1') + ')';
         container.innerHTML = '';
 
@@ -1088,14 +1227,26 @@
                 if (hasLoss) losses.push(entry);
             }
 
-            if (gains.length === 0 && losses.length === 0) continue;
-
             var div = document.createElement('div');
             div.className = 'diff-candidate';
             var c = candidates[ci];
-            div.innerHTML = '<div class="diff-candidate-label">' + escHtml(c.nickname) + ' (' + c.atk + '/' + c.def + '/' + c.sta + ')</div>';
+            // Find the full candidate to check excluded state
+            var fullCand = state.candidates.find(function(fc) { return fc.id === c.id; });
+            var isExcluded = fullCand ? fullCand.excluded : false;
+            if (isExcluded) div.classList.add('diff-excluded');
+            var labelHtml = '<div class="diff-candidate-label">' +
+                '<button class="btn-exclude diff-exclude ' + (isExcluded ? 'excluded' : 'included') + '" data-cand-id="' + c.id + '" title="' + (isExcluded ? 'Include in simulation' : 'Exclude from simulation') + '"></button> ' +
+                escHtml(c.nickname) + ' (' + c.atk + '/' + c.def + '/' + c.sta + ')</div>';
+            div.innerHTML = labelHtml;
             var pillsDiv = document.createElement('div');
             pillsDiv.className = 'diff-pills';
+
+            if (gains.length === 0 && losses.length === 0) {
+                pillsDiv.innerHTML = '<span style="color:var(--text-dim); font-size:0.8rem">No differences</span>';
+                div.appendChild(pillsDiv);
+                container.appendChild(div);
+                continue;
+            }
 
             gains.forEach(function(g) {
                 var pill = createDiffPill('+', g, true);
@@ -1111,6 +1262,23 @@
 
         if (container.children.length === 0) {
             container.innerHTML = '<div style="color:var(--text-dim); font-size:0.85rem">No differences found between candidates.</div>';
+        }
+
+        // Exclude toggle handlers in differences section
+        var diffExBtns = container.querySelectorAll('.diff-exclude');
+        for (var i = 0; i < diffExBtns.length; i++) {
+            diffExBtns[i].addEventListener('click', function() {
+                var candId = Number(this.dataset.candId);
+                var cand = state.candidates.find(function(c) { return c.id === candId; });
+                if (cand) {
+                    // Don't allow excluding the reference
+                    if (state.candidates.indexOf(cand) === state.referenceIdx) return;
+                    cand.excluded = !cand.excluded;
+                    renderCandidates();
+                    renderDifferences();
+                    saveState();
+                }
+            });
         }
     }
 

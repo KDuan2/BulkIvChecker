@@ -62,10 +62,22 @@ def normalize_name(name):
     return '_'.join(species_parts)
 
 def main():
-    if len(sys.argv) >= 3:
+    if len(sys.argv) >= 3 and not sys.argv[1].startswith("-"):
+        # Full paths provided
         our_file = sys.argv[1]
         pvp_file = sys.argv[2]
         threshold = int(sys.argv[3]) if len(sys.argv) > 3 else 0
+    elif len(sys.argv) >= 3 and sys.argv[1] == "-n":
+        # Filenames only — look in Downloads folder
+        our_file = os.path.join(DOWNLOADS, sys.argv[2])
+        pvp_file = os.path.join(DOWNLOADS, sys.argv[3]) if len(sys.argv) > 3 else None
+        threshold = int(sys.argv[4]) if len(sys.argv) > 4 else 0
+        if not pvp_file or not os.path.exists(pvp_file):
+            print(f"File not found: {pvp_file}")
+            sys.exit(1)
+        if not os.path.exists(our_file):
+            print(f"File not found: {our_file}")
+            sys.exit(1)
     else:
         # Auto-find latest CSVs in Downloads
         our_file = find_latest("*_matrix.csv")
