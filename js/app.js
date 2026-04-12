@@ -782,6 +782,7 @@
     function setupButtons() {
         document.getElementById('btnAddRow').addEventListener('click', function() { addCandidateRow(); });
         document.getElementById('btnRunSim').addEventListener('click', runSimulation);
+        document.getElementById('btnRunSimDiff').addEventListener('click', runSimulation);
         document.getElementById('btnLoadMeta').addEventListener('click', loadMetaThreats);
         document.getElementById('btnClearSession').addEventListener('click', clearSession);
         document.getElementById('btnClearCandidates').addEventListener('click', clearCandidates);
@@ -793,6 +794,8 @@
             saveState();
         });
         document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
+        document.getElementById('btnExportCSV0v0').addEventListener('click', function() { exportCSV('0v0'); });
+        document.getElementById('btnExportCSV1v1').addEventListener('click', function() { exportCSV('1v1'); });
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
             if (state.results) renderDifferences();
         });
@@ -810,7 +813,7 @@
         });
     }
 
-    function exportCSV() {
+    function exportCSV(singleScenario) {
         if (!state.results) { alert('Run a simulation first.'); return; }
         var matrix = state.results.matrix, candidates = state.results.candidates,
             candidatePokemon = state.results.candidatePokemon, threatPokemon = state.results.threatPokemon;
@@ -826,14 +829,13 @@
         }
         rows.push(header);
 
-        // One row per candidate per shield scenario
-        var scenarios = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+        var scenarios = singleScenario ? [singleScenario] : ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             var c = candidates[ci];
             var cp = candidatePokemon[ci];
             for (var si = 0; si < scenarios.length; si++) {
                 var row = [
-                    c.nickname + ' (' + scenarios[si] + ')',
+                    singleScenario ? c.nickname : c.nickname + ' (' + scenarios[si] + ')',
                     c.atk + '/' + c.def + '/' + c.sta,
                     cp.cp,
                     cp.level

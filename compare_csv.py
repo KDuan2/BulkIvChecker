@@ -102,28 +102,63 @@ def main():
     our_header, our_rows = load_csv(our_file)
     pvp_header, pvp_rows = load_csv(pvp_file)
 
-    # Build threat name -> column index maps
+    # Build column index lists for threats
     # Our CSV: columns 0-3 are Candidate/IVs/CP/Level, then threats
-    our_threats = {}
+    our_threat_cols = []  # list of (normalized_name, raw_name, col_index)
     for i in range(4, len(our_header)):
-        our_threats[normalize_name(our_header[i])] = i
+        our_threat_cols.append((normalize_name(our_header[i]), our_header[i], i))
 
-    # PvPoke CSV: figure out which column has threat names
-    # PvPoke matrix CSV typically has the first column as the Pokemon name,
-    # then battle ratings for each opponent
-    pvp_threats = {}
+    # PvPoke CSV: first column is Pokemon name, then threats
+    pvp_threat_cols = []
     for i in range(1, len(pvp_header)):
-        pvp_threats[normalize_name(pvp_header[i])] = i
+        pvp_threat_cols.append((normalize_name(pvp_header[i]), pvp_header[i], i))
 
     # Filter our rows to 1v1 only
+    # If rows have scenario suffixes like "(1v1)", filter for those; otherwise use all rows
     our_1v1_rows = [r for r in our_rows if '(1v1)' in r[0]]
+    if not our_1v1_rows:
+        our_1v1_rows = our_rows  # Single-scenario export, use all rows
 
-    # Match threats between both CSVs
-    common_threats = set(our_threats.keys()) & set(pvp_threats.keys())
-    our_only = set(our_threats.keys()) - set(pvp_threats.keys())
-    pvp_only = set(pvp_threats.keys()) - set(our_threats.keys())
+    # Match columns by position — both CSVs should have threats in the same order
+    # First try positional matching, falling back to name matching for non-duplicates
+    matched_cols = []  # list of (display_name, our_col, pvp_col)
 
-    print(f"Common threats: {len(common_threats)}")
+    # Track which names appear multiple times
+    our_name_counts = {}
+    for norm, raw, col in our_threat_cols:
+        our_name_counts[norm] = our_name_counts.get(norm, 0) + 1
+    pvp_name_counts = {}
+    for norm, raw, col in pvp_threat_cols:
+        pvp_name_counts[norm] = pvp_name_counts.get(norm, 0) + 1
+
+    # For unique names: match by name
+    # For duplicate names: match by occurrence order (1st with 1st, 2nd with 2nd)
+    our_name_seen = {}
+    pvp_by_name = {}
+    for norm, raw, col in pvp_threat_cols:
+        if norm not in pvp_by_name:
+            pvp_by_name[norm] = []
+        pvp_by_name[norm].append(col)
+
+    for norm, raw, col in our_threat_cols:
+        if norm not in pvp_by_name or not pvp_by_name[norm]:
+            continue
+        occurrence = our_name_seen.get(norm, 0)
+        our_name_seen[norm] = occurrence + 1
+
+        if occurrence < len(pvp_by_name[norm]):
+            pvp_col = pvp_by_name[norm][occurrence]
+            suffix = f" #{occurrence+1}" if our_name_counts.get(norm, 1) > 1 else ""
+            matched_cols.append((norm + suffix, col, pvp_col))
+
+    # Report matching stats
+    our_names = set(n for n, r, c in our_threat_cols)
+    pvp_names = set(n for n, r, c in pvp_threat_cols)
+    common = our_names & pvp_names
+    our_only = our_names - pvp_names
+    pvp_only = pvp_names - our_names
+
+    print(f"Common threats: {len(matched_cols)}")
     if our_only:
         print(f"Only in ours ({len(our_only)}): {sorted(our_only)[:10]}...")
     if pvp_only:
@@ -155,10 +190,7 @@ def main():
             print(f"No PvPoke match for: {candidate_name}")
             continue
 
-        for threat_name in common_threats:
-            our_col = our_threats[threat_name]
-            pvp_col = pvp_threats[threat_name]
-
+        for display_name, our_col, pvp_col in matched_cols:
             try:
                 our_br = int(our_row[our_col])
                 pvp_br = int(pvp_row[pvp_col])
@@ -173,7 +205,7 @@ def main():
             else:
                 diffs.append({
                     'candidate': candidate_name,
-                    'threat': threat_name,
+                    'threat': display_name,
                     'ours': our_br,
                     'pvpoke': pvp_br,
                     'diff': our_br - pvp_br,
