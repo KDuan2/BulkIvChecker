@@ -660,15 +660,18 @@
         // Build format list from gamemaster, grouped by CP
         var formats = GAMEMASTER_DATA.formats || [];
         var cpGroups = { 500: [], 1500: [], 2500: [], 10000: [] };
+        var addedMetas = {};
 
         for (var i = 0; i < formats.length; i++) {
             var f = formats[i];
             if (!f.meta || !f.showMeta) continue;
-            // Only include formats that have a corresponding group file
-            if (typeof META_GROUPS !== 'undefined' && !META_GROUPS[f.meta]) continue;
+            // Only include formats that have a pre-built group file
+            var hasGroup = typeof META_GROUPS !== 'undefined' && META_GROUPS[f.meta];
+            if (!hasGroup) continue;
             var cp = f.cp || 1500;
             if (!cpGroups[cp]) cpGroups[cp] = [];
             cpGroups[cp].push({ title: f.title, meta: f.meta, cp: cp });
+            addedMetas[f.meta] = true;
         }
 
         // Also add base leagues if not already present
