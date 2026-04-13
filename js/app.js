@@ -418,7 +418,8 @@
                 '</select></td>' +
                 '<td class="computed">' + computed + '</td>' +
                 '<td class="row-actions">' +
-                    (getEffectiveForm(c) === 'shadow' ? '<button class="btn-purify" title="Create purified copy">Purify</button>' : '') +
+                    (getEffectiveForm(c) === 'shadow' ? '<button class="btn-purify" title="Purify (adds +2 to each IV)">Purify</button>' : '') +
+                    (getEffectiveForm(c) === 'purified' && c._shadowIVs ? '<button class="btn-unpurify" title="Revert to shadow IVs">Shadow</button>' : '') +
                     '<button class="btn-del" title="Remove">&#x2715;</button>' +
                 '</td>';
             body.appendChild(tr);
@@ -455,16 +456,38 @@
             });
         }
 
-        // Purify buttons
+        // Purify toggle — shadow → purified (adds +2 IVs, stores originals)
         var purBtns = body.querySelectorAll('.btn-purify');
         for (var i = 0; i < purBtns.length; i++) {
             purBtns[i].addEventListener('click', function() {
                 var tr = this.closest('tr');
                 var id = Number(tr.dataset.id);
                 var c = state.candidates.find(function(c) { return c.id === id; });
-                if (c) {
-                    addCandidateRow(Math.min(15, (c.atk || 0) + 2), Math.min(15, (c.def || 0) + 2),
-                        Math.min(15, (c.sta || 0) + 2), 'purified', c.nickname + ' (Purified)');
+                if (c && c.atk !== '' && c.def !== '' && c.sta !== '') {
+                    c._shadowIVs = { atk: c.atk, def: c.def, sta: c.sta };
+                    c.atk = Math.min(15, c.atk + 2);
+                    c.def = Math.min(15, c.def + 2);
+                    c.sta = Math.min(15, c.sta + 2);
+                    c.form = 'purified';
+                    renderCandidates(); saveState();
+                }
+            });
+        }
+
+        // Unpurify toggle — purified → shadow (restores original IVs)
+        var unpurBtns = body.querySelectorAll('.btn-unpurify');
+        for (var i = 0; i < unpurBtns.length; i++) {
+            unpurBtns[i].addEventListener('click', function() {
+                var tr = this.closest('tr');
+                var id = Number(tr.dataset.id);
+                var c = state.candidates.find(function(c) { return c.id === id; });
+                if (c && c._shadowIVs) {
+                    c.atk = c._shadowIVs.atk;
+                    c.def = c._shadowIVs.def;
+                    c.sta = c._shadowIVs.sta;
+                    delete c._shadowIVs;
+                    c.form = 'shadow';
+                    renderCandidates(); saveState();
                 }
             });
         }
