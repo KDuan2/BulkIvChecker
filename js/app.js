@@ -1065,11 +1065,12 @@
                 var colorClass = getBRColorClass(br);
 
                 // Check if any of the 9 scenarios differs from the 1v1 outcome
-                var w1v1 = br >= 500;
+                function brOutcome(val) { return val === 500 ? 0 : (val > 500 ? 1 : -1); }
+                var w1v1 = brOutcome(br);
                 var scenarioKeys = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
                 var differs = false;
                 for (var sk = 0; sk < scenarioKeys.length; sk++) {
-                    if ((results[scenarioKeys[sk]].battleRating >= 500) !== w1v1) { differs = true; break; }
+                    if (brOutcome(results[scenarioKeys[sk]].battleRating) !== w1v1) { differs = true; break; }
                 }
 
                 var cellContent = '<span class="br-main">' + br + '</span>';
@@ -1078,8 +1079,9 @@
                     for (var row = 0; row < 3; row++) {
                         for (var col = 0; col < 3; col++) {
                             var key = row + 'v' + col;
-                            var win = results[key].battleRating >= 500;
-                            cellContent += '<span class="shield-dot ' + (win ? 'win' : 'loss') + '" title="' + key + ': ' + results[key].battleRating + '"></span>';
+                            var sBR = results[key].battleRating;
+                            var dotClass = sBR === 500 ? 'tie' : (sBR > 500 ? 'win' : 'loss');
+                            cellContent += '<span class="shield-dot ' + dotClass + '" title="' + key + ': ' + sBR + '"></span>';
                         }
                     }
                     cellContent += '</span>';
@@ -1094,7 +1096,7 @@
                     for (var col = 0; col < 3; col++) {
                         var key = row + 'v' + col;
                         var sBR = results[key].battleRating;
-                        var sClass = sBR >= 500 ? 'seg-win' : 'seg-loss';
+                        var sClass = sBR === 500 ? 'seg-tie' : (sBR > 500 ? 'seg-win' : 'seg-loss');
                         cellContent += '<span class="' + sClass + '">' + sBR + '</span>';
                     }
                 }
@@ -1131,8 +1133,9 @@
 
     function getBRColorClass(br) {
         if (br >= 700) return 'win-strong';
-        if (br >= 500) return 'win';
-        if (br >= 480) return 'tie';
+        if (br === 500) return 'tie';
+        if (br > 500) return 'win';
+        if (br >= 480) return 'loss';
         if (br >= 400) return 'loss';
         return 'loss-strong';
     }
@@ -1154,12 +1157,15 @@
         grid.className = 'shield-grid';
         for (var i = 0; i < 9; i++) {
             var dot = document.createElement('span');
-            dot.className = 'shield-dot ' + (entry.candResults[i] ? 'win' : 'loss');
+            var cBR = entry.candResults[i];
+            var dotClass = cBR === 500 ? 'tie' : (cBR > 500 ? 'win' : 'loss');
+            dot.className = 'shield-dot ' + dotClass;
             if (entry.flipped.indexOf(i) > -1) {
                 dot.classList.add('flipped');
             }
             var row = Math.floor(i / 3), col = i % 3;
-            dot.title = row + 'v' + col + ': ' + (entry.candResults[i] ? 'Win' : 'Loss') +
+            var outcomeLabel = cBR === 500 ? 'Tie' : (cBR > 500 ? 'Win' : 'Loss');
+            dot.title = row + 'v' + col + ': ' + outcomeLabel + ' (' + cBR + ')' +
                 (entry.flipped.indexOf(i) > -1 ? ' (flipped)' : '');
             grid.appendChild(dot);
         }
@@ -1210,12 +1216,14 @@
 
                 for (var si = 0; si < allScenarios.length; si++) {
                     var s = allScenarios[si];
-                    var cw = matrix[ci][ti][s].battleRating >= 500;
-                    var rw = matrix[refIdx][ti][s].battleRating >= 500;
-                    candResults.push(cw);
-                    refResults.push(rw);
-                    if (cw && !rw) { hasGain = true; flipped.push(si); }
-                    if (!cw && rw) { hasLoss = true; flipped.push(si); }
+                    var cBR = matrix[ci][ti][s].battleRating;
+                    var rBR = matrix[refIdx][ti][s].battleRating;
+                    var cOutcome = cBR === 500 ? 0 : (cBR > 500 ? 1 : -1);
+                    var rOutcome = rBR === 500 ? 0 : (rBR > 500 ? 1 : -1);
+                    candResults.push(cBR);
+                    refResults.push(rBR);
+                    if (cOutcome > rOutcome) { hasGain = true; flipped.push(si); }
+                    if (cOutcome < rOutcome) { hasLoss = true; flipped.push(si); }
                 }
 
                 if (!hasGain && !hasLoss) continue;

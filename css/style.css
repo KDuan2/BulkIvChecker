@@ -538,6 +538,7 @@ select:focus { border-color: var(--accent); }
 
 .shield-expanded-grid .seg-win { color: #a5d6a7; }
 .shield-expanded-grid .seg-loss { color: #ef9a9a; }
+.shield-expanded-grid .seg-tie { color: #ffd54f; }
 
 .br-cell.expanded .shield-expanded { display: block; }
 .br-cell.expanded .shield-grid { display: none; }
