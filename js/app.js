@@ -736,6 +736,9 @@
                     priority: false, excluded: false,
                 };
             });
+            state.threats.sort(function(a, b) {
+                return (a.speciesId > b.speciesId) ? 1 : ((b.speciesId > a.speciesId) ? -1 : 0);
+            });
             state.excludedThreats = {};
             renderThreats(); saveState();
         });
