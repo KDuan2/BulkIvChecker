@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/js/battle/DamageCalculator.js\" -OutFile \"js\\\\pvpoke\\\\DamageCalculator.js\"; \\(Get-Item \"js\\\\pvpoke\\\\DamageCalculator.js\"\\).Length)"
+    ]
+  }
+}

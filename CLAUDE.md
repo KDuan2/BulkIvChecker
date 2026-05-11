@@ -67,6 +67,8 @@ If a battle rating doesn't match PvPoke's matrix:
 
 ## Updating from PvPoke
 
+Last synced: 2026-05-11 against PvPoke `master` @ `cadac33d11d39c272b813d5f005d071a2315a61a`.
+
 To re-sync with a newer PvPoke release:
 
 1. Copy the 7 verbatim source files from your local PvPoke clone into `js/pvpoke/`.

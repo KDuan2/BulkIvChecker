@@ -1,1 +1,3302 @@
-var ARCHIVED_CUPS = {"adl":{"name":"adl","title":"Arrohh Draft League","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["mew","registeel","bastiodon","azumarill","stunfisk_galarian","sableye","trevenant","swampert","medicham","walrein","nidoqueen","scrafty","kommo_o","diggersby","talonflame","pachirisu","lickitung","mandibuzz","ninetales_alolan","regirock","altaria","cofagrigus","deoxys_defense","marowak_alolan","primeape","araquanid","vigoroth","jellicent","skarmory","galvantula","wigglytuff","drapion","tropius","umbreon","greedent","froslass","cresselia","zweilous","toxicroak","granbull","hakamo_o","wobbuffet"]}]},"alchemy":{"name":"alchemy","title":"Silph Factions Alchemy Field","include":[{"filterType":"type","values":["fire","flying","ghost","ground","psychic","steel"]}],"exclude":[{"filterType":"type","values":["water","dark"]},{"filterType":"id","values":["altaria","bastiodon","cresselia","diggersby","golem","graveler","medicham","mew","probopass","registeel","stunfisk_galarian"]},{"filterType":"tag","values":["mega"]}]},"amor":{"name":"amor","title":"Amor Cup","link":"https://devon.gg","include":[{"filterType":"id","name":"Species","values":["ariados","armarouge","audino","bewear","bisharp","blaziken","blaziken_shadow","bruxish","buzzwole","camerupt","camerupt_shadow","castform_sunny","centiskorch","charizard","charizard_shadow","cherrim_sunny","chimecho","clefable","crobat","crobat_shadow","crustle","crustle_shadow","darmanitan_standard","darmanitan_standard_shadow","deoxys_defense","druddigon","electrode","electrode_hisuian","electrode_shadow","espeon","frosmoth","gallade","gallade_shadow","gardevoir","gardevoir_shadow","heatmor","incineroar","krookodile","latias","latias_shadow","latios","latios_shadow","leavanny","ledian","ledian_shadow","lickitung","lopunny","lucario","lurantis","magcargo","magmar","magmar_shadow","magmortar","magmortar_shadow","medicham","mesprit","mew","milotic","milotic_shadow","miltank","moltres","moltres_shadow","nidoking","nidoking_shadow","nidoqueen","nidoqueen_shadow","pawniard","rapidash_galarian","rotom","rotom_fan","rotom_frost","rotom_heat","rotom_mow","rotom_wash","scolipede","scolipede_shadow","scrafty","seaking","simisear","skeledirge","slowbro","slowbro_galarian","slowbro_shadow","slowking","slowking_galarian","slowking_shadow","slowpoke","slowpoke_shadow","slurpuff","snorlax","snorlax_shadow","solrock","spinda","swoobat","sylveon","talonflame","talonflame_shadow","tatsugiri_curly","tatsugiri_droopy","tatsugiri_stretchy","tinkaton","tinkatuff","turtonator","tyrantrum","tyrantrum_shadow","umbreon","vileplume","vileplume_shadow","wormadam_trash","wugtrio"]}],"exclude":[{"filterType":"move","name":"Move","values":["charm","incinerate","mud_slap","smack_down"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"excludeLowPokemon":1,"cup":"amor"},"arcana":{"name":"arcana","title":"Silph Factions (Arcana)","include":[{"filterType":"type","name":"Type","values":["ghost","grass","psychic","rock"]},{"filterType":"id","name":"Species","values":["pelipper","gyarados","scyther","vespiquen","honchkrow"],"includeShadows":true}],"exclude":[{"filterType":"type","name":"Type","values":["electric","fairy","ice","normal"]},{"filterType":"id","name":"Species","values":["hawlucha"]},{"filterType":"id","name":"Species","values":["bastiodon","probopass","regirock","trevenant","sableye","articuno_galarian","tropius"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"allowSameSpecies":true},"architect":{"name":"architect","title":"Silph Architect Cup","include":[{"filterType":"id","includeShadows":true,"values":["marowak_alolan","froslass","drapion","skuntank","qwilfish","muk_alolan","muk","lapras","sealeo","cradily","sudowoodo","munchlax","snorlax","golbat","poliwrath","pelipper","beedrill","milotic","charizard","bewear","trevenant","castform","ariados","linoone","venomoth","gyarados","malamar","lickilicky","shiftry","jumpluff","typhlosion","gengar","haunter","glalie","donphan","sandslash","scolipede","banette","slowbro_galarian","dusclops"]}],"exclude":[]},"ascension":{"name":"ascension","title":"Devon Corp (Ascension Cup)","include":[{"filterType":"type","name":"Type","values":["electric","fire","psychic"]},{"filterType":"id","name":"Species","values":["lapras","starmie"]}],"exclude":[{"filterType":"type","name":"Type","values":["dragon","ghost","ground","rock","steel","water","normal"]},{"filterType":"tag","name":"Tag","values":["shadow","mega"]},{"filterType":"id","name":"Species","values":["bellibolt","furret","morpeko_full_belly","dedenne","malamar"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"excludeLowPokemon":1},"aurora":{"name":"aurora","title":"Aurora Cup","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"type","values":["fire","poison","steel"]},{"filterType":"id","values":["carbink","chansey","pachirisu","zapdos_galarian","moltres_galarian","articuno_galarian","jumpluff","araquanid","corsola_galarian","bellibolt","dedenne","morpeko_full_belly","wigglytuff"]},{"filterType":"moveType","values":["fire","poison","steel"]},{"filterType":"move","values":["HIDDEN_POWER_WATER"]}]},"battlefrontiergreat":{"name":"battlefrontiergreat","title":"Battle Frontier (Great)","include":[],"exclude":[{"filterType":"tag","values":["mega"]}],"tierRules":{"max":2,"floor":0,"tiers":[{"points":1,"pokemon":["altaria","azumarill","blastoise","charjabug","clefable","corviknight","cradily","empoleon","furret","gastrodon","gourgeist_average","gourgeist_large","gourgeist_small","gourgeist_super","jellicent","lapras","ludicolo","malamar","marowak","moltres_galarian","ninetales_alolan","scizor","steelix","stunfisk"]}]},"allowSameSpecies":true},"battlefrontierultra":{"name":"battlefrontierultra","title":"Battle Frontier (Ultra League)","include":[],"exclude":[{"filterType":"id","values":["lapras","gastrodon","feraligatr","corviknight","dusknoir","cradily","forretress","blastoise"]}]},"calamity":{"name":"calamity","title":"Calamity Cup","include":[{"filterType":"type","values":["flying","fire","poison","normal"]},{"filterType":"id","values":[]}],"exclude":[{"filterType":"tag","values":["mega","shadow","legendary"]},{"filterType":"type","values":["rock","ground","water","electric","steel","dark"]},{"filterType":"id","values":["dunsparce","lickilicky","miltank","altaria","dragalge","turtonator","spinda","fletchinder","rufflet","talonflame","oranguru","chansey","blissey","wigglytuff","furret","dudunsparce"]},{"filterType":"move","values":["MUD_SLAP"]}]},"cascade":{"name":"cascade","title":"Cascade Cup","include":[{"filterType":"type","values":["dragon","ice","water","poison","psychic"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"type","values":["fairy","fighting","steel"]},{"filterType":"id","values":["gastrodon","malamar","araquanid","clodsire","toxapex","lanturn","zweilous","hydreigon","guzzlord","cresselia","drapion","feraligatr","skuntank","muk_alolan","grimer_alolan","stunky","qwilfish_hisuian","overqwil","giratina_origin","suicune","zygarde","zygarde_10","amaura","aurorus","lapras","grumpig","blastoise","wailmer","armarouge","jellicent","ariados"]}]},"catacomb":{"name":"catacomb","title":"Silph Factions (Catacomb)","include":[{"filterType":"type","name":"Type","values":["bug","ice","dark","rock","grass"]},{"filterType":"id","name":"Species","values":["samurott","seaking","milotic","qwilfish"]}],"exclude":[{"filterType":"type","name":"Type","values":["steel"]},{"filterType":"id","name":"Species","values":["hawlucha"]},{"filterType":"id","name":"Species","values":["bulbasaur","ivysaur","venusaur","oddish","gloom","vileplume","bellsprout","weepinbell","victreebel","roselia","budew","roserade","foongus","amoonguss"]},{"filterType":"tag","name":"Tag","values":["legendary","mythical","shadow","mega","regional"]},{"filterType":"id","name":"Species","values":["scrafty","obstagoon","dewgong","ninetales_alolan","crustle","aurorus","amaura","walrein","qwilfish_hisuian","overqwil","araquanid","trevenant","magcargo","dwebble"]}],"allowSameSpecies":true},"catchgofest":{"name":"catchgofest","title":"Catch Cup (GO Fest)","include":[{"filterType":"id","values":["magnemite","magneton","magnezone","grimer_alolan","muk_alolan","hitmonchan","baltoy","claydol","wormadam_trash","bronzor","bronzong","pidove","tranquill","unfezant","trubbish","garbador","gothita","gothorita","gothitelle","golett","golurk","litten","torracat","incineroar","pikachu","raichu","weezing_galarian","girafarig","dunsparce","larvitar","pupitar","tyranitar","numel","camerupt","trapinch","vibrava","flygon","buizel","floatzel","patrat","watchog","drilbur","excadrill","shelmet","accelgor","rufflet","braviary","litleo","pyroar","axew","fraxure","haxorus","mudkip","marshtomp","swampert","seedot","nuzleaf","shiftry","shroomish","breloom","slakoth","vigoroth","slaking","turtwig","grotle","torterra","chimchar","monferno","infernape","venipede","whirlipede","scolipede","karrablast","escavalier","binacle","skrelp","dragalge","rowlet","dartrix","decidueye","pancham","pangoro","omanyte","omastar","swinub","piloswine","mamoswine","wingull","pelipper","meditite","medicham","wailmer","wailord","spheal","sealeo","walrein","piplup","prinplup","empoleon","vanillite","vanillish","vanilluxe","bergmite","avalugg","popplio","brionne","primarina","darumaka_galarian","darmanitan_galarian_standard","rockruff","lycanroc","lycanroc_midnight","druddigon","geodude","graveler","golem","poliwag","poliwhirl","poliwrath","politoed","vulpix","ninetales","hippopotas","hippowdon","snover","abomasnow","diglett","diglett_alolan","dugtrio","dugtrio_alolan","magikarp","gyarados","dratini","dragonair","bagon","shelgon","murkrow","honchkrow","hoppip","skiploom","jumpluff","yanma","yanmega","mantine","umbreon","espeon","vaporeon","jolteon","flareon","sylveon","leafeon","glaceon","sudowoodo","rhyhorn","rhydon","rhyperior","ralts","kirlia","gardevoir","gallade","beldum","metang","metagross","anorith","armaldo","lileep","cradily","snubbull","granbull","onix","steelix","spinda","gible","gabite","bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","treecko","grovyle","sceptile","torchic","combusken","blaziken","koffing","weezing","venonat","venomoth","joltik","galvantula","kabuto","kabutops","aerodactyl","grimer","muk","hitmonlee","bunnelby","diggersby","chinchou","lanturn","stunfisk","vullaby","mandibuzz","pawniard","bisharp","scraggy","scrafty","sandile","krokorok","deino","zweilous","skorupi","drapion","salandit","salazzle","absol","starly","staravia","golbat","stunky","skuntank","raticate_alolan","beedrill","forretress","nidorino","granbull_shadow","machamp_shadow","sableye","electrode","bibarel","gardevoir_shadow","mr_mime_galarian","unown","torkoal","tropius","klink","klang","klinklang","garbodor"]}],"exclude":[],"partySize":3},"celestial":{"name":"celestial","title":"Silph Factions Celestial Field","include":[{"filterType":"type","values":["dragon","flying","normal","ghost","psychic","rock","water"]},{"filterType":"id","includeShadows":true,"values":["scizor","durant","muk_alolan","skuntank","drapion","overqwil"]}],"exclude":[{"filterType":"type","values":["fairy","fire","fighting"]},{"filterType":"id","values":["swampert","quagsire","gastrodon","whiscash","seismitoad","marshtomp","giratina_altered","obstagoon","walrein","trevenant","mandibuzz","deoxys_defense","dubwool","guzzlord"]},{"filterType":"tag","values":["mega"]}]},"championship":{"name":"championship","title":"2022 Championship Series","include":[],"exclude":[{"filterType":"tag","values":["mega"]}]},"chaos":{"name":"chaos","title":"Devon Chaos Cup","include":[{"filterType":"id","name":"Species","values":["giratina_origin","malamar","tentacruel","tentacruel_shadow","seaking","gyarados","gyarados_shadow","zapdos","zapdos_shadow","milotic","kingdra","kingdra_shadow","lapras","lapras_shadow","flygon","flygon_shadow","charizard","charizard_shadow","articuno","articuno_shadow","moltres","moltres_shadow","lugia","lugia_shadow","aurorus","barbaracle","tyrunt","cradily","cradily_shadow","runerigus","golisopod","relicanth","armaldo","armaldo_shadow","cloyster","cloyster_shadow","omastar","omastar_shadow","kabutops","kabutops_shadow","regirock","regirock_shadow","dusclops","dusclops_shadow","mew","arctibax","regice","regice_shadow","abomasnow","abomasnow_shadow","gliscor","gliscor_shadow","blastoise","blastoise_shadow","sceptile","sceptile_shadow","golduck","golduck_shadow","suicune","suicune_shadow","scyther","scyther_shadow","nidoqueen","nidoqueen_shadow","nidoking","nidoking_shadow","tangrowth","tangrowth_shadow","ninjask","piloswine","piloswine_shadow","octillery","dragapult","samurott_hisuian","arcanine_hisuian","lileep","lileep_shadow","uxie","mesprit","azelf","groudon_shadow","kyogre_shadow","heatran","heatran_shadow","archeops","archeops_shadow","cresselia","cresselia_shadow","jumpluff","jumpluff_shadow","nidorina","nidorina_shadow"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"tag","name":"Tag","values":[]}],"levelCap":50,"includeLowStatProduct":true},"cliffhanger":{"name":"cliffhanger","title":"Cliffhanger","include":[],"exclude":[],"tierRules":{"max":17,"floor":0,"tiers":[{"points":9,"pokemon":["altaria","azumarill","bastiodon","lanturn","lickitung","medicham","noctowl","registeel","sableye","stunfisk_galarian","trevenant"]},{"points":5,"pokemon":["abomasnow","araquanid","aurorus","charizard","cofagrigus","cresselia","deoxys_defense","diggersby","drapion","dubwool","froslass","gliscor","jellicent","jumpluff","mandibuzz","ninetales_alolan","obstagoon","pelipper","pidgeot","regirock","runerigus","scrafty","skarmory","swampert","tapu_fini","toxapex","tropius","umbreon","venusaur","vigoroth","walrein"]},{"points":1,"pokemon":["beedrill","bronzong","buzzwole","chansey","chesnaught","dragalge","dewgong","dragonair","dragonite","dunsparce","empoleon","ferrothorn","galvantula","gligar","golbat","granbull","greedent","grimer_alolan","guzzlord","hakamo_o","qwilfish_hisuian","hypno","jirachi","kommo_o","lapras","lugia","lurantis","machamp","magcargo","mantine","meganium","marowak_alolan","miltank","mew","muk_alolan","ninetales","nidoqueen","overqwil","pachirisu","politoed","probopass","roserade","sandslash_alolan","serperior","sirfetchd","skuntank","sneasler","steelix","talonflame","tentacruel","stunfisk","toxicroak","victini","victreebel","whiscash","wigglytuff","wobbuffet","zweilous"]}]}},"colony":{"name":"colony","title":"Silph Factions Colony Field","include":[{"filterType":"type","values":["bug","electric","ground","ice","psychic","water"]}],"exclude":[{"filterType":"type","values":["fairy","fighting","flying"]},{"filterType":"id","values":["abomasnow","deoxys_defense","diggersby","escavalier","forretress","genesect","jellicent","pachirisu","steelix","stunfisk_galarian","swampert","whiscash","walrein","wobbuffet","wormadam_trash","tapu_fini","araquanid"]},{"filterType":"tag","values":["mega","shadow"]}]},"color":{"name":"color","title":"Color Cup","include":[{"filterType":"type","values":["fire","water","grass","electric"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"continentals":{"name":"continentals","title":"Silph Continentals","include":[{"filterType":"id","values":["charizard","samurott","grovyle","blaziken","swampert","empoleon","marshtomp","ivysaur","blastoise","quilladin","venusaur","chesnaught","delphox","dewott","combusken","feraligatr","serperior","bayleef","monferno","emboar","braixen","wartortle","pignite","croconaw","prinplup","grotle","quilava","typhlosion","servine","meganium","charmeleon","greninja","chespin","sceptile","torterra","turtwig","piplup","infernape","frogadier","bulbasaur","totodile","raichu_alolan","ninetales","golbat","venomoth","magneton","noctowl","xatu","azumarill","quagsire","forretress","skarmory","gardevoir","vigoroth","medicham","flygon","altaria","whiscash","tropius","bastiodon","lucario","toxicroak","beedrill","sandslash_alolan","ninetales_alolan","wigglytuff","poliwrath","graveler_alolan","muk_alolan","marowak_alolan","lapras","snorlax","dragonair","sudowoodo","jumpluff","umbreon","kingdra","shiftry","dusclops","bibarel","wormadam_trash","vespiquen","skuntank","bronzong","gliscor","probopass","scrafty","galvantula","ferrothorn","raichu","nidoqueen","primeape","victreebel","dewgong","hypno","lanturn","politoed","mantine","sableye","cradily","castform","castform_rainy","drifblim","munchlax","gallade","froslass","whimsicott","escavalier","jellicent","stunfisk_galarian","stunfisk","mandibuzz","talonflame","pidgeot","machamp","muk","lickitung","dragonite","steelix","heracross","magcargo","pelipper","milotic","walrein","drapion","abomasnow","crustle","cofagrigus","zweilous","litleo","slurpuff","malamar","dragalge","dedenne","gourgeist_super","gourgeist_small","gourgeist_large","gourgeist_average","lurantis","bewear","oranguru","greedent","obstagoon","articuno","articuno_galarian","zapdos","zapdos_galarian","moltres","moltres_galarian","mew","mewtwo","raikou","entei","suicune","lugia","ho_oh","celebi","regirock","regice","latias","latios","kyogre","groudon","rayquaza","jirachi","deoxys_defense","deoxys_speed","deoxys_attack","deoxys","uxie","mesprit","azelf","dialga","palkia","heatran","regigigas","giratina_altered","giratina_origin","cresselia","darkrai","shaymin_land","shaymin_sky","cobalion","terrakion","virizion","tornadus_incarnate","tornadus_therian","thundurus_incarnate","thundurus_therian","landorus_therian","landorus_incarnate","kyurem","victini","keldeo_ordinary","genesect","meloetta_aria","xerneas","yveltal","hoopa_unbound","hoopa_confined","tapu_fini","tapu_bulu","tapu_koko","tapu_lele","cosmog","cosmoem","solgaleo","lunala","nihilego","buzzwole","pheromosa","xurkitree","celesteela","kartana","guzzlord","meltan","melmetal","zacian_hero","zamazenta_hero","regieleki","regidrago","zarude"],"includeShadows":true}],"exclude":[],"slots":[{"pokemon":["charizard","samurott","grovyle","blaziken","swampert","empoleon","marshtomp","ivysaur","blastoise","quilladin","venusaur","chesnaught","delphox","dewott","combusken","feraligatr","serperior","bayleef","monferno","emboar","braixen","wartortle","pignite","croconaw","prinplup","grotle","quilava","typhlosion","servine","meganium","charmeleon","greninja","chespin","sceptile","torterra","turtwig","piplup","infernape","frogadier","bulbasaur","totodile"]},{"pokemon":["raichu_alolan","ninetales","golbat","venomoth","magneton","noctowl","xatu","azumarill","quagsire","forretress","skarmory","gardevoir","vigoroth","medicham","flygon","altaria","whiscash","tropius","bastiodon","lucario","toxicroak"]},{"pokemon":["beedrill","sandslash_alolan","ninetales_alolan","wigglytuff","poliwrath","graveler_alolan","muk_alolan","marowak_alolan","lapras","snorlax","dragonair","sudowoodo","jumpluff","umbreon","kingdra","shiftry","dusclops","bibarel","wormadam_trash","vespiquen","skuntank","bronzong","gliscor","probopass","scrafty","galvantula","ferrothorn"]},{"pokemon":["raichu","nidoqueen","primeape","victreebel","dewgong","hypno","lanturn","politoed","mantine","sableye","cradily","castform","castform_rainy","drifblim","munchlax","gallade","froslass","whimsicott","escavalier","jellicent","stunfisk_galarian","stunfisk","mandibuzz","talonflame"]},{"pokemon":["pidgeot","machamp","muk","lickitung","dragonite","steelix","heracross","magcargo","pelipper","milotic","walrein","drapion","abomasnow","crustle","cofagrigus","zweilous","litleo","slurpuff","malamar","dragalge","dedenne","gourgeist_super","gourgeist_small","gourgeist_large","gourgeist_average","lurantis","bewear","oranguru","greedent","obstagoon"]},{"pokemon":["articuno","articuno_galarian","zapdos","zapdos_galarian","moltres","moltres_galarian","mew","mewtwo","raikou","entei","suicune","lugia","ho_oh","celebi","regirock","regice","latias","latios","kyogre","groudon","rayquaza","jirachi","deoxys_defense","deoxys_speed","deoxys_attack","deoxys","uxie","mesprit","azelf","dialga","palkia","heatran","regigigas","giratina_altered","giratina_origin","cresselia","darkrai","shaymin_land","shaymin_sky","cobalion","terrakion","virizion","tornadus_incarnate","tornadus_therian","thundurus_incarnate","thundurus_therian","landorus_therian","landorus_incarnate","kyurem","victini","keldeo_ordinary","genesect","meloetta_aria","xerneas","yveltal","hoopa_unbound","hoopa_confined","tapu_fini","tapu_bulu","tapu_koko","tapu_lele","cosmog","cosmoem","solgaleo","lunala","nihilego","buzzwole","pheromosa","xurkitree","celesteela","kartana","guzzlord","meltan","melmetal","zacian_hero","zamazenta_hero","regieleki","regidrago","zarude"]}]},"crucible":{"name":"crucible","title":"Crucible Cup","include":[{"filterType":"type","values":["normal","fighting","ghost","dark","fairy","steel","grass","bug","ice","fire","ground","flying","psychic","poison"]},{"filterType":"id","values":["lairon","lairon_shadow","kleavor","armaldo","armaldo_shadow","avalugg_hisuian","empoleon","empoleon_shadow","ludicolo","golisopod","araquanid","lapras","lapras_shadow","walrein","walrein_shadow","dewgong","cloyster","cloyster_shadow","sealeo","sealeo_shadow","dialga","dialga_origin","dialga_shadow","duraludon","dipplin","hydrapple","appletun","flapple","exeggutor_alolan","exeggutor_alolan_shadow","kyurem","arctibax","baxcalibur","kyurem_black","kyurem_white","magnezone","magnezone_shadow","magneton","magneton_shadow","togedemaru","electrode_hisuian","rotom_mow","galvantula","galvantula_shadow","vikavolt","vikavolt_shadow","rotom_frost","volcarona","volcanion","reshiram","zapdos","zapdos_shadow","zekrom","raikou","raikou_shadow","tapu_koko","thundurus_therian","thundurus_incarnate","thundurus_incarnate_shadow","regieleki"]}],"exclude":[{"filterType":"type","values":["rock","water","dragon","electric"]},{"filterType":"move","values":["ROCK_THROW","SMACK_DOWN"]},{"filterType":"id","values":["moltres_galarian","umbreon","florges","mewtwo_armored"]}]},"crypt":{"name":"crypt","title":"Devon Crypt Cup","restrictedPicks":1,"restrictedPokemon":["lokix","sableye","sableye_shadow","weezing_galarian","marowak_alolan","marowak_alolan_shadow","runerigus","lapras","lapras_shadow","jellicent","jellicent_shadow","vespiquen"],"include":[{"filterType":"type","name":"Type","values":["bug","fairy","ghost","ground"]},{"filterType":"id","name":"Species","values":["ninjask","yanma","cacturne","cacturne_shadow","amoonguss","amoonguss_shadow","magmar","magmar_shadow","magmortar","magmortar_shadow","lapras","lapras_shadow","vespiquen","marowak_alolan_shadow","marowak_alolan","jellicent_shadow","jellicent"]}],"exclude":[{"filterType":"type","name":"Type","values":["flying","normal","steel","water","fire"]},{"filterType":"id","name":"Species","values":["leavanny","clodsire","azumarill","carbink","whimsicott","whiscash","gastrodon","quagsire","swampert","ninetales_alolan","ninetales_alolan_shadow","tapu_fini","primarina"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"levelCap":50,"includeLowStatProduct":true},"cups":[{"name":"all","title":"All Pokemon","include":[],"exclude":[{"filterType":"tag","values":["mega"]}]},{"name":"custom","title":"Custom","include":[],"exclude":[]},{"name":"gen-5","title":"Generation 5","include":[],"exclude":[]},{"name":"gobattleleague","title":"GO Battle League","include":[],"exclude":[],"partySize":3},{"name":"boulder","title":"Boulder Cup","include":[{"filterType":"type","values":["rock","steel","fighting","ground"]}],"exclude":[],"link":"https://silph.gg/t/gyqx"},{"name":"twilight","title":"Twilight Cup","include":[{"filterType":"type","values":["dark","poison","fairy","ghost"]}],"exclude":[]},{"name":"twilightfactions","title":"Twilight Cup","include":[{"filterType":"type","values":["dark","poison","fairy","ghost"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["nidoqueen","pawniard"]}]},{"name":"tempest","title":"Tempest Cup","include":[{"filterType":"type","values":["electric","ice","flying","ground"]}],"exclude":[]},{"name":"kingdom","title":"Kingdom Cup","include":[{"filterType":"type","values":["fire","ice","dragon","steel"]}],"exclude":[]},{"name":"nightmare","title":"Nightmare Cup","include":[{"filterType":"type","values":["psychic","dark","fighting"]}],"exclude":[{"filterType":"tag","values":["mythical","legendary"]},{"filterType":"id","values":["medicham","sableye"]}]},{"name":"regionals-1","title":"Season 1 Regionals","include":[{"filterType":"type","values":["rock","steel","fighting","ground","dark","poison","fairy","ghost","electric","ice","flying","fire","dragon"]}],"exclude":[]},{"name":"championships-1","title":"Season 1 Championships","include":[],"exclude":[{"filterType":"tag","values":["mythical","legendary"]}]},{"name":"rainbow","title":"Rainbow Cup","include":[{"filterType":"type","values":["fire","water","electric","grass","bug"]},{"filterType":"dex","values":[1,251]}],"exclude":[{"filterType":"tag","values":["alolan"]}]},{"name":"jungle","title":"Jungle Cup","include":[{"filterType":"type","values":["normal","grass","bug","electric"]}],"exclude":[{"filterType":"id","values":["tropius","wormadam_trash","wormadam_sandy","wormadam_plant","mothim"]}]},{"name":"safari","title":"Safari Cup","restrictedPicks":2,"restrictedPokemon":["steelix","swampert","swampert_shadow","bastiodon","bastiodon_xs","vigoroth","stunfisk_galarian","azumarill","azumarill_xs","skarmory","skarmory_shadow","altaria","abomasnow","abomasnow_shadow","dragalge"],"include":[{"filterType":"type","values":["grass","ground","rock","bug","normal","poison","flying","water"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"link":"https://www.challengermode.com/tournaments/5f92f3d5-ef90-4b52-bf88-08d98fb816d9"},{"name":"fantasy","title":"Fantasy Cup","restrictedPicks":1,"include":[{"filterType":"type","values":["bug","dark","fighting","poison","fairy","ghost","psychic"]}],"exclude":[]},{"name":"cliffhanger","title":"Cliffhanger","include":[],"exclude":[],"tierRules":{"max":17,"floor":0,"tiers":[{"points":9,"pokemon":["altaria","azumarill","bastiodon","deoxys_defense","lickitung","skarmory","medicham","stunfisk_galarian"]},{"points":5,"pokemon":["abomasnow","chansey","cofagrigus","cresselia","dewgong","diggersby","ferrothorn","galvantula","hypno","jellicent","lapras","marowak_alolan","machamp","mandibuzz","meganium","nidoqueen","ninetales_alolan","pidgeot","politoed","registeel","sableye","scrafty","serperior","swampert","talonflame","tropius","umbreon","venusaur","whiscash","wobbuffet","zweilous"]},{"points":1,"pokemon":["aromatisse","beedrill","bronzong","castform_rainy","castform_sunny","chesnaught","clefable","drapion","drifblim","empoleon","froslass","gardevoir","granbull","greedent","gengar","golbat","grimer_alolan","haunter","jirachi","jumpluff","lanturn","lugia","mantine","melmetal","mew","muk_alolan","ninetales","noctowl","obstagoon","pachirisu","pelipper","probopass","regirock","raichu_alolan","roserade","shiftry","sirfetchd","skuntank","slurpuff","spritzee","stunfisk","sylveon","toxicroak","victreebel","vigoroth","whimsicott","wigglytuff","zapdos"]}]}},{"name":"sinister","title":"Sinister Cup","include":[{"filterType":"type","values":["ghost","psychic","fighting","steel"]}],"exclude":[{"filterType":"id","values":["skarmory","hypno"]},{"filterType":"tag","values":["mythical","shadow"]},{"filterType":"type","values":["dark"]}]},{"name":"sinister-mirror","title":"Sinister Cup","include":[{"filterType":"type","values":["ghost","psychic","fighting","steel"]},{"filterType":"id","values":["shiftry","honchkrow","murkrow","crawdaunt","sharpedo"]}],"exclude":[{"filterType":"id","values":["skarmory","hypno","drifblim","beheeyem"]},{"filterType":"tag","values":["legendary","mythical","shadow","galarian","mega"]},{"filterType":"type","values":["dark"]}]},{"name":"ferocious","title":"Ferocious Cup","include":[{"filterType":"id","values":["absol","aggron","ampharos","arcanine","aron","bagon","bibarel","bidoof","blitzle","buizel","buneary","camerupt","cranidos","cubone","delcatty","donphan","drillbur","eevee","electrike","entei","espeon","excadrill","exploud","flaaffy","flareon","floatzel","furret","gabite","garchomp","gible","girafarig","glaceon","glameow","granbull","growlithe","grumpig","heatmor","herdier","hippopotas","hippowdon","houndoom","houndour","jolteon","kangaskhan","lairon","larvitar","lickilicky","lickitung","liepard","lillipup","linoone","lopunny","luxio","luxray","mamoswine","manectric","mareep","marowak","marowak_alolan","meowth","meowth_alolan","mightyena","miltank","minun","nidoking","nidoqueen","nidoran_female","nidoran_male","nidorina","nidorino","ninetales","ninetales_alolan","numel","pachirisu","patrat","persian","persian_alolan","phanpy","pichu","pikachu","piloswine","plusle","ponyta","poochyena","pupitar","purrloin","purugly","raichu","raichu_alolan","raikou","rampardos","rapidash","raticate","raticate_alolan","rattata","rattata_alolan","rhydon","rhyhorn","rhyperior","sandslash","sandslash_alolan","sandshrew","sandshrew_alolan","sentret","shelgon","shinx","skitty","skuntank","smeargle","sneasel","spoink","stantler","stoutland","stunky","suicune","swinub","tauros","teddiursa","torkoal","tyranitar","umbreon","ursaring","vaporeon","vulpix","vulpix_alolan","watchog","weavile","zangoose","zebstrika","zigzagoon"]}],"exclude":[]},{"name":"ferocious-mirror","title":"Ferocious Cup","include":[{"filterType":"id","values":["absol","aggron","ampharos","arcanine","aron","bagon","bibarel","bidoof","blitzle","buizel","buneary","camerupt","cranidos","cubone","delcatty","donphan","drillbur","eevee","electrike","entei","espeon","excadrill","exploud","flaaffy","flareon","floatzel","furret","gabite","garchomp","gible","girafarig","glaceon","glameow","granbull","growlithe","grumpig","heatmor","herdier","hippopotas","hippowdon","houndoom","houndour","jolteon","kangaskhan","lairon","larvitar","lickilicky","lickitung","liepard","lillipup","linoone","lopunny","luxio","luxray","mamoswine","manectric","mareep","marowak","marowak_alolan","meowth","meowth_alolan","mightyena","miltank","minun","nidoking","nidoqueen","nidoran_female","nidoran_male","nidorina","nidorino","ninetales","ninetales_alolan","numel","pachirisu","patrat","persian","persian_alolan","phanpy","pichu","pikachu","piloswine","plusle","ponyta","poochyena","pupitar","purrloin","purugly","raichu","raichu_alolan","raikou","rampardos","rapidash","raticate","raticate_alolan","rattata","rattata_alolan","rhydon","rhyhorn","rhyperior","sandslash","sandslash_alolan","sandshrew","sandshrew_alolan","sentret","shelgon","shinx","skitty","skuntank","smeargle","sneasel","spoink","stantler","stoutland","stunky","suicune","swinub","tauros","teddiursa","torkoal","tyranitar","ursaring","vaporeon","vulpix","vulpix_alolan","watchog","weavile","zebstrika","zigzagoon","linoone_galarian","perrserker","beartic","gabite","garchomp","aerodactyl","articuno","moltres","zapdos","lugia","ho_oh","salamence"]}],"exclude":[]},{"name":"timeless","title":"Timeless Cup","restrictedPicks":1,"restrictedPokemon":["bulbasaur","ivysaur","venusaur","squirtle","wartortle","blastoise","charmander","charmeleon","charizard","chikorita","bayleef","meganium","totodile","croconaw","feraligatr","cyndaquil","quilava","typhlosion","treecko","grovyle","sceptile","mudkip","marshtomp","swampert","torchic","combusken","blaziken","turtwig","grotle","torterra","piplup","prinplup","empoleon","chimchar","monferno","infernape"],"include":[{"filterType":"dex","values":[1,488]},{"filterType":"id","values":["blaziken","charizard","charizard_shadow","infernape","empoleon","monferno","prinplup","combusken"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","alolan","shadow"]},{"filterType":"type","values":["fighting","flying","normal","psychic","steel","fairy"]},{"filterType":"id","values":["umbreon","sableye","sableye_shadow"]}]},{"name":"timeless-mirror","title":"Timeless Cup","restrictedPicks":1,"restrictedPokemon":["bulbasaur","ivysaur","venusaur","squirtle","wartortle","blastoise","charmander","charmeleon","charizard","chikorita","bayleef","meganium","totodile","croconaw","feraligatr","cyndaquil","quilava","typhlosion","treecko","grovyle","sceptile","mudkip","marshtomp","swampert","torchic","combusken","blaziken","turtwig","grotle","torterra","piplup","prinplup","empoleon","chimchar","monferno","infernape"],"include":[{"filterType":"dex","values":[1,488]},{"filterType":"id","values":["blaziken","charizard","infernape","empoleon","monferno","prinplup","combusken"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","alolan","shadow","mega"]},{"filterType":"type","values":["fighting","flying","normal","psychic","steel","fairy"]},{"filterType":"id","values":["umbreon","kingdra","abomasnow","castform_snowy","froslass","rotom_wash","rotom_wash"]}]},{"name":"fusion","title":"Fusion Cup","include":[],"exclude":[{"filterType":"tag","values":["legendary","mythical","shadow"]},{"filterType":"type","values":["none"]},{"filterType":"id","values":["azumarill","medicham","dewgong","wormadam_trash","wormadam_plant","wormadam_sandy","hypno","munchlax","linoone","onix","hitmonlee","hitmonchan","chansey","mr.mime","scyther","jynx","electabuzz","magmar","magmar_shadow","pinsir","lapras","eevee","vaporeon","jolteon","flareon","omanyte","omastar","omastar_shadow","kabuto","kabutops","aerodactyl","snorlax","dratini","dragonair","dragonite","mareep","flaafy","ampharos","sudowoodo","espeon","umbreon","pineco","forretress","gligar","steelix","scizor","delibird","mantine","skarmory","hitmontop","miltank","blissey","larvitar","pupitar","tyranitar","ralts","kirlia","gardevoir","slakoth","vigoroth","slaking","nincada","ninjask","sableye","mawile","trapinch","vibrava","flygon","milotic","castform","castform_sunny","castform_rainy","castform_snowy","tropius","chimecho","absol","absol_shadow","relicanth","bagon","shelgon","salamence","metang","metagross","shinx","luxio","luxray","cranidos","rampardos","shieldon","bastiodon","pachirisu","drifloon","drifblim","chatot","spiritomb","gible","gabite","garchomp","lucario","skorupi","drapion","carnivine","electivire","magmortar","leafeon","glaceon","gliscor","gallade","ferroseed","ferrothorn","klink","klang","klinklang","litwick","lampent","chandelure","golett","golurk","deino","zweilous","hydreigon","mr_mime","tirtouga","carracosta","archeops","archen","stunfisk","alomomola","timburr","gurdurr","conkeldurr","rufflet","braviary","cryogonal","axew","haxorus","fraxure","sigilyph","tirtouga","carracosta"]}]},{"name":"fusionfactions","title":"Fusion Cup","include":[{"filterType":"cost","values":[10000,50000]}],"exclude":[{"filterType":"id","values":["azumarill","medicham","dewgong","scrafty","jellicent","nidoqueen","diggersby","walrein","electrode_hisuian","oricorio_baile","oricorio_pau","oricorio_pom_pom","oricorio_sensu"]},{"filterType":"tag","values":["mega"]},{"filterType":"type","values":["none"]}]},{"name":"rose","title":"Rose Cup","include":[{"filterType":"id","values":["charmander","charmeleon","charizard","vileplume","paras","parasect","voltorb","electrode","jynx","magmar","flareon","ledyba","ledian","ariados","yanma","scizor","slugma","magcargo","delibird","porygon2","magby","torchic","combusken","blaziken","wurmple","medicham","camerupt","solrock","castform_sunny","kricketot","kricketune","wormadam_trash","magmortar","porygon_z","tepig","pignite","emboar","pansear","simisear","heatmor","rattata","ekans","arbok","nidoran_male","nidorino","nidoking","zubat","golbat","venonat","venomoth","grimer","muk","gastly","haunter","gengar","marowak_alolan","koffing","weezing","aerodactyl","crobat","aipom","espeon","forretress","gligar","granbull","tyrogue","cascoon","delcatty","sableye","illumise","swalot","grumpig","lileep","cherrim_overcast","ambipom","drifloon","drifblim","mismagius","stunky","skuntank","spiritomb","skorupi","gliscor","purrloin","liepard","clefairy","clefable","jigglypuff","wigglytuff","exeggcute","mr_mime","porygon","cleffa","igglybuff","flaaffy","hoppip","snubbull","smoochum","miltank","blissey","whismur","skitty","cherubi","cherrim_sunny","happiny","lickilicky","drapion","lickitung","throh","venipede","whirlipede","scolipede","throh","dwebble","crustle","shelmet","accelgor","machoke","machop","machamp","geodude_alolan","graveler_alolan","golem_alolan","magnemite","magneton","onix","weezing_galarian","rhyhorn","rhydon","misdreavus","pineco","steelix","remoraid","skarmory","donphan","pupitar","poochyena","mightyena","nincada","nosepass","aron","lairon","aggron","volbeat","anorith","armaldo","castform","snorunt","glalie","glameow","purugly","magnezone","rhyperior","probopass","herdier","stoutland","pidove","tranquill","unfezant","drilbur","excadrill","timburr","gurdurr","whirlipede","escavalier","ferroseed","ferrothorn","klink","klang","klinklang","durant","chansey","minccino","cinccino","darumaka","darmanitan_standard","scrafty"]}],"exclude":[{"filterType":"type","values":["water"]}]},{"name":"toxic","title":"Toxic Cup","include":[{"filterType":"type","values":["bug","poison","normal","ground","grass"]}],"exclude":[{"filterType":"id","values":["noctowl","vigoroth","tropius","whiscash","swampert","quagsire","gastrodon","gastrodon","seismitoad","palpitoad","marshtomp","swampert_shadow","marshtomp_shadow","genesect"]}]},{"name":"voyager","title":"Voyager Cup","restrictedPicks":1,"restrictedPokemon":["altaria","azumarill","bastiodon","cresselia","deoxys_defense","dewgong","gardevoir","gardevoir_shadow","hypno","hypno_shadow","ivysaur","ivysaur_shadow","jellicent","lapras","lapras_shadow","mandibuzz","marowak_alolan","medicham","melmetal","mew","probopass","registeel","scrafty","skarmory","swampert","swampert_shadow","togekiss","tropius","umbreon","venusaur","venusaur_shadow","whiscash","wigglytuff","zweilous"],"include":[],"exclude":[]},{"name":"beam","title":"Get Beamed","include":[{"filterType":"id","values":["meganium","venusaur","mew","wigglytuff","lickitung","grotle","typhlosion","ivysaur","lickilicky","victreebel","ludicolo","snorlax","milotic","leafeon","dragonite","vileplume","wailord","tangrowth","castform_sunny","latios","sunflora","ninetales","torterra","electrode","cherrim_sunny","cherrim_overcast","tangela","bibarel","raticate_alolan","infernape","torkoal","parasect","celebi","simisage","cryogonal","exeggutor_alolan","chansey","ursaring","exeggutor","cinccino","unfezant","gigalith","luxray","aerodactyl","furret","solrock","blissey","roserade","porygon","jumpluff","maractus","porygon2","ho_oh","ambipom","raticate","camerupt","audino","weezing_galarian","porygon_z","lopunny","slaking"]}],"exclude":[{"filterType":"type","values":["steel"]},{"filterType":"tag","values":["shadow"]}]},{"name":"forest","title":"Forest Cup","include":[{"filterType":"type","values":["grass","water","fire","electric","bug"]},{"filterType":"dex","values":[152,649]}],"exclude":[{"filterType":"id","values":["tropius","genesect","raikou"]},{"filterType":"tag","values":["shadow"]}]},{"name":"premier","title":"Premier Cup","include":[],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]}],"partySize":3},{"name":"premierclassic","title":"Premier Classic","include":[],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]}],"partySize":3,"levelCap":40},{"name":"classic","title":"Classic","include":[],"exclude":[{"filterType":"tag","values":["xl","mega"]}],"partySize":3,"levelCap":40},{"name":"grunt","title":"Grunt Cup","restrictedPokemon":["ivysaur","ivysaur_shadow","venusaur","venusaur_shadow","wartortle","wartortle_shadow","blastoise","blastoise_shadow","charmeleon","charmeleon_shadow","charizard","charizard_shadow"],"include":[{"filterType":"id","values":["ferrothorn","alomomola","escavalier","galvantula","victini","serperior","klang","lapras","shiftry","gallade","hypno","sableye","alakazam","muk","grimer","grimer_shadow","muk_shadow","lapras_shadow","shiftry_shadow","gallade_shadow","hypno_shadow","sableye_shadow","alakazam_shadow","exeggutor","exeggutor_shadow","sharpedo","sharpedo_shadow","metagross","metagross_shadow","houndoom","houndoom_shadow","charizard","charizard_shadow","blastoise","blastoise_shadow","fortress","fortress_shadow","dragonite","dragonite_shadow","steelix","crobat","crobat_shadow","mawile","mawile_shadow","scizor","scizor_shadow","zapdos","zapdos_shadow","moltres","moltres_shadow","articuno","articuno_shadow","suicune","suicune_shadow","rhyperior","machamp","machamp_shadow","rhydon","khangaskan","golem_alolan","graveler_alolan","gliscor","gliscor_shadow","victreebel","victreebel_shadow","gyarados","gyarados_shadow","arcanine","arcanine_shadow","venomoth","venomoth_shadow","cradily","lanturn","skuntank","skuntank_shadow","sealeo","beedrill","beedrill_shadow","weezing","weezing_shadow","golbat","arbok","arbok_shadow","wobbuffet","wobbuffet_shadow","lickitung","tentacruel","electrode","haunter","cloyster","gengar","clefable","golbat_shadow","poliwrath","poliwrath_shadow","forretress","forretress_shadow","magneton","magneton_shadow"]}],"exclude":[],"slots":[{"pokemon":["ferrothorn","alomomola","escavalier","galvantula","victini","serperior","klang","muk","grimer","muk_shadow","grimer_shadow"]},{"pokemon":["lapras","lapras_shadow","shiftry","shiftry_shadow","gallade","gallade_shadow","hypno","hypno_shadow","sableye","sableye_shadow","alakazam","alakazam_shadow","exeggutor","exeggutor_shadow","sharpedo","sharpedo_shadow","metagross","metagross_shadow","houndoom","houndoom_shadow"]},{"pokemon":["charizard","charizard_shadow","blastoise","blastoise_shadow","forretress","forretress_shadow","dragonite","dragonite_shadow","magneton","magneton_shadow","steelix","golbat","golbat_shadow","crobat","crobat_shadow","mawile","mawile_shadow","scizor","scizor_shadow"]},{"pokemon":["zapdos","moltres","articuno","zapdos_shadow","moltres_shadow","articuno_shadow","suicune","suicune_shadow","rhyperior","machamp","machamp_shadow","rhydon","khangaskan","graveler_alolan","golem_alolan","gliscor","gliscor_shadow"]},{"pokemon":["victreebel","victreebel_shadow","arcanine","arcanine_shadow","gyarados","gyarados_shadow","venomoth","venomoth_shadow","cradily","weezing","weezing_shadow","lanturn","skuntank","skuntank_shadow","sealeo","beedrill","beedrill_shadow"]},{"pokemon":["wobbuffet","wobbuffet_shadow","arbok","arbok_shadow","lickitung","poliwrath","poliwrath_shadow","tentacruel","electrode","haunter","gengar","cloyster","clefable"]}]},{"name":"sorcerous","title":"Sorcerous Cup","include":[{"filterType":"type","values":["ice","poison","fairy","psychic","normal"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","shadow"]},{"filterType":"id","values":["drapion","mawile","metang","metagross","lapras","dewgong","snorlax","vigoroth","slaking","castform","rufflet","braviary","chansey","blissey","mr_mime","jynx","eevee","espeon","delibird","miltank","gardevoir","gallade","chimecho","chatot","skorupi","sigilyph","cryogonal","glaceon","castform_snowy","raichu_alolan","linoone_galarian","obstagoon"]}]},{"name":"sorcerous-mirror","title":"Sorcerous Cup","include":[{"filterType":"type","values":["ice","poison","fairy","psychic","normal"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","shadow","mega"]},{"filterType":"id","values":["drapion","mawile","lapras","dewgong","vigoroth","slaking","castform","rufflet","braviary","chansey","blissey","mr_mime","jynx","eevee","espeon","delibird","miltank","gardevoir","metang","chimecho","chatot","skorupi","sigilyph","cryogonal","glaceon","castform_snowy","raichu_alolan","obstagoon","bouffalant","whimsicott"]}]},{"name":"goteamup","title":"GOTeamUp","link":"https://www.stadiumgaming.gg/post/gtu6-is-here","include":[],"exclude":[{"filterType":"id","values":["skarmory","skarmory_shadow","altaria","registeel","meganium","abomasnow","abomasnow_shadow"]},{"filterType":"tag","values":["mega"]}]},{"name":"continentals-2","title":"Season 2 continentals","include":[{"filterType":"id","values":["charizard","blaziken","typhlosion","castform_sunny","ninetales","torkoal","heatmor","moltres","bellossom","tangrowth","ludicolo","sceptile","cherrim_sunny","serperior","breloom","exeggutor","grotle","tangela","carnivine","parasect","castform_rainy","blastoise","alomomola","seaking","empoleon","milotic","wailord","prinplup","bibarel","gyarados","feraligatr","golduck","kingler","suicune","entei","crawdaunt","sharpedo","cloyster","vaporeon","marowak_alolan","sableye","froslass","drifblim","banette","dusclops","golurk","munchlax","snorlax","lickitung","lickilicky","zangoose","linoone","raticate_alolan","noctowl","pidgeot","dunsparce","ursaring","castform","furret","porygon","porygon2","porygon_z","delcatty","girafarig","machamp","hitmontop","primeape","lucario","poliwrath","gallade","hitmonchan","perrserker","chansey","blissey","azumarill","altaria","skarmory","zweilous","dragonair","shelgon","wigglytuff","clefable","granbull","mawile","registeel","melmetal","klang","klinklang","muk_alolan","haunter","gengar","golbat","skuntank","drapion","muk","nidoqueen","nidoking","amoonguss","qwilfish","tentacruel","lapras","ninetales_alolan","abomasnow","walrein","piloswine","mamoswine","cryogonal","glaceon","beartic","regice","relicanth","regirock","carracosta","corsola","cradily","graveler_alolan","golem_alolan","sudowoodo","aggron","lairon","magcargo","bonsly","aerodactyl","archen","archeops","victreebel","vileplume","gloom","seviper","swalot","rhyperior","lunatone","solrock","probopass","mantine","zapdos","dragonite","gliscor","gligar","togekiss","honchkrow","electivire","raikou","lanturn","magneton","magnezone","raichu","raichu_alolan","electrode","zebstrika","minun","plusle","ampharos","stunfisk","pachirisu","marshtomp","quagsire","seismitoad","palpitoad","flygon","torterra","steelix","claydol","excadrill","garchomp","gastrodon","gastrodon","hippowdon","camerupt","donphan","jirachi","bronzong","lugia","wobbuffet","celebi","latios","latias","slowbro","slowking","alakazam","gothitelle","metagross","sneasel","weavile","tyranitar","shiftry","escavalier","forretress","heracross","galvantula","crustle","scizor","beedrill","vespiquen","scolipede","ninjask","venomoth","dustox","obstagoon","wormadam_trash","wormadam_plant","wormadam_sandy","durant","hydreigon","mr_mime","metang","pinsir","kricketune","masquerain","yanma","yanmega"]}],"exclude":[],"slots":[{"pokemon":["charizard","blaziken","typhlosion","castform_sunny","ninetales","torkoal","heatmor","moltres","bellossom","tangrowth","ludicolo","sceptile","cherrim_sunny","serperior","breloom","exeggutor","grotle","tangela","carnivine","parasect","castform_rainy","blastoise","alomomola","seaking","empoleon","milotic","wailord","prinplup","bibarel","gyarados","feraligatr","golduck","kingler","suicune","entei","crawdaunt","sharpedo","cloyster","vaporeon"]},{"pokemon":["marowak_alolan","sableye","froslass","drifblim","banette","dusclops","golurk","munchlax","snorlax","lickitung","lickilicky","zangoose","linoone","raticate_alolan","noctowl","pidgeot","dunsparce","ursaring","castform","furret","porygon","porygon2","porygon_z","delcatty","girafarig","machamp","hitmontop","primeape","lucario","poliwrath","gallade","hitmonchan","perrserker","chansey","blissey"]},{"pokemon":["azumarill","altaria","skarmory","zweilous","dragonair","shelgon","wigglytuff","clefable","granbull","mawile","registeel","stunfisk_galarian","melmetal","klang","klinklang"]},{"pokemon":["muk_alolan","haunter","gengar","golbat","skuntank","drapion","muk","nidoqueen","nidoking","amoonguss","qwilfish","tentacruel","lapras","ninetales_alolan","abomasnow","castform_snowy","articuno","walrein","sandslash_alolan","glalie","piloswine","mamoswine","cryogonal","glaceon","beartic","regice","relicanth","regirock","carracosta","corsola","cradily","graveler_alolan","golem_alolan","sudowoodo","aggron","lairon","magcargo","bonsly","aerodactyl","archen","archeops","victreebel","vileplume","gloom","seviper","swalot","toxicroak","rhyperior","lunatone","solrock","probopass"]},{"pokemon":["mantine","zapdos","dragonite","gliscor","gligar","togekiss","honchkrow","electivire","raikou","lanturn","magneton","magnezone","raichu","electrode","zebstrika","minun","plusle","ampharos","stunfisk","pachirisu","marshtomp","quagsire","seismitoad","palpitoad","flygon","torterra","steelix","claydol","excadrill","garchomp","gastrodon","gastrodon","hippowdon","camerupt","donphan"]},{"pokemon":["jirachi","bronzong","lugia","wobbuffet","celebi","latios","latias","slowbro","slowking","alakazam","gothitelle","metagross","raichu_alolan","sneasel","weavile","tyranitar","shiftry","escavalier","forretress","heracross","galvantula","crustle","scizor","beedrill","vespiquen","scolipede","ninjask","venomoth","dustox","linoone_galarian","obstagoon","wormadam_trash","wormadam_plant","wormadam_sandy","durant","hydreigon","mr_mime","metang","pinsir","kricketune","masquerain","yanma","yanmega"]}]},{"name":"catacomb","title":"Catacomb Cup","include":[{"filterType":"type","values":["dark","grass","rock","ice","bug"]}],"exclude":[{"filterType":"id","values":["scrafty","obstagoon","dewgong","ninetales_alolan","crustle"]},{"filterType":"type","values":["steel"]},{"filterType":"tag","values":["legendary","mythical","shadow","regional"]}]},{"name":"scoville","title":"Scoville Cup","include":[],"exclude":[{"filterType":"id","values":["azumarill","registeel","altaria","stunfisk_galarian","deoxys_defense","swampert","mantine","umbreon","tropius","cresselia","swampert_shadow","dewgong","mew","bastiodon","raikou_shadow","zweilous","whiscash","vigoroth","meganium","machamp","venusaur","scrafty","skarmory","castform_rainy","regirock","munchlax","raikou","shiftry_shadow","grotle_shadow","lapras","medicham","sableye_shadow","ferrothorn","wigglytuff","zapdos","perrserker","primeape","zapdos_shadow","snorlax","flygon_shadow","lapras_shadow","gloom_shadow","dragonite_shadow","noctowl","obstagoon","venusaur_shadow","shiftry","clefable","hitmontop","muk_alolan","quagsire","sableye","melmetal","politoed_shadow","bellossom","blastoise","victreebel_shadow","gardevoir_shadow","lickitung","snorlax_shadow","marowak_alolan","dragonair_shadow","grotle","flygon","regice","gliscor","bellossom_shadow","electivire_shadow","lanturn","politoed","raichu_alolan","vileplume_shadow","zangoose","escavalier","ludicolo","stunfisk","lickilicky","magnezone","togekiss","hariyama","seaking","alomomola","hypno","magnezone_shadow","tangtowth","ivysaur","raichu","typhlosion","ninetales_alolan","dragonair","haunter","toxicroak","gloom","torterra_shadow","victreebel","drapion","golbat_shadow","jumpluff","blastoise_shadow"]}]},{"name":"mexico","title":"Mexico Cup","link":"https://silph.gg/t/rrtb","include":[{"filterType":"type","values":["poison","fighting","grass","ghost","flying","ground"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]}]},{"name":"kaiser","title":"Kaiser Invitational","include":[],"exclude":[{"filterType":"id","values":["stunfisk_galarian","bastiodon","registeel","ferrothorn","deoxys_defense","skarmory","altaria"]},{"filterType":"tag","values":["regional","mega"]}]},{"name":"shadow","title":"Shadow Cup","link":"https://silph.gg/t/r4hu/team-rocket-academy-presents-shadow-cup-3-0","include":[{"filterType":"tag","values":["shadow"]}],"exclude":[]},{"name":"flying","title":"Flying Cup","include":[{"filterType":"type","values":["flying"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3},{"name":"circus","title":"Circus Cup","link":"https://silph.gg/players-choice-finalists","include":[{"filterType":"type","name":"Type","values":["fighting","fire","flying","poison","psychic"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["legendary","mythical","alolan"]},{"filterType":"id","name":"Species","values":["altaria"]}]},{"name":"maelstrom","title":"Maelstrom Cup","link":"https://silph.gg/players-choice-finalists","include":[{"filterType":"type","name":"Type","values":["bug","normal","psychic","water"]}],"exclude":[{"filterType":"id","name":"Species","values":["deoxys_defense","wigglytuff"]},{"filterType":"tag","name":"Tag","values":["shadow"]}],"overrides":[],"league":1500},{"name":"origin","title":"Origin Cup","link":"https://silph.gg/players-choice-finalists","include":[{"filterType":"id","name":"Species","values":["bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","eevee","jolteon","vaporeon","flareon","espeon","umbreon","rattata","raticate","raticate_alolan","pidgey","pidgeotto","pidgeot","caterpie","metapod","butterfree","weedle","kakuna","beedrill","ekans","arbok","pichu","pikachu","raichu","raichu_alolan","spearow","fearow","nidoran","nidorino","nidoking","nidorina","nidoqueen","mankey","primeape","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","sentret","furret","hoothoot","noctowl","ledyba","ledian","spinarak","ariados","mareep","flaaffy","ampharos","hoppip","skiploom","jumpluff","wooper","quagsire","bellsprout","weepinbell","victreebel","geodude","graveler","golem","geodude_alolan","graveler_alolan","golem_alolan","dunsparce","onix","steelix","treecko","grovyle","sceptile","torchic","combusken","blaziken","mudkip","marshtomp","swampert","zigzagoon","linoone","linoone_galarian","obstagoon","wurmple","silcoon","beautifly","cascoon","dustox","poochyena","mightyena","seedot","nuzleaf","shiftry","lotad","lombre","ludicolo","ralts","kirlia","gardevoir","gallade","surskit","masquerain","wingull","pelliper","taillow","swellow","shroomish","breloom","slakoth","vigoroth","slaking","makuhita","hariyama","turtwig","grotle","torterra","chimchar","monferno","infernape","piplup","prinplug","empoleon","doduo","dodrio","shinx","luxio","luxray","zubat","golbat","crobat","abra","kadabra","alakazam","cubone","marowak","marowak_alolan","budew","roselia","roserade","ponyta","rapidash","machop","machoke","machamp","bidoof","bibarel","stary","staravia","staraptor","magikarp","gyarados","psyduck","golduck","snivy","servine","serperior","tepig","pignite","emboar","oshawott","dewott","samurott","igglybuff","jigglypuff","wigglytuff","patrat","watchog","lillipup","herdier","stoutland","lickitung","lickilicki","purrloin","liepard","audino","pansear","simisear","pansage","simisage","panpour","simipour"]}],"exclude":[],"overrides":[],"league":1500},{"name":"duet","title":"Duet Cup","link":"https://silph.gg/players-choice-finalists","include":[{"filterType":"id","name":"Species","values":["sneasel","whimsicott","emolga","beheeyem","bouffalant","accelgor","aerodactyl","aipom","alomomola","ambipom","amoonguss","anorith","archen","archeops","ariados","armaldo","audino","basculin","bastiodon","beartic","bibarel","bonsly","braviary","breloom","bronzong","buneary","camerupt","carnivine","carracosta","castform","castform_rainy","castform_snowy","castform_sunny","chatot","cherrim_overcast","cherrim_sunny","chimecho","chinchou","cinccino","clamperl","claydol","cloyster","cofagrigus","corsola","cradily","cranidos","crawdaunt","crustle","cryogonal","darmanitan_standard","darumaka","delcatty","dewgong","dodrio","donphan","drapion","drifblim","drifloon","drilbur","dugtrio","dugtrio_alolan","dunsparce","durant","dwebble","electrode","escavalier","espeon","excadrill","exeggutor_alolan","farfetchd","fearow","ferrothorn","flareon","floatzel","froslass","furret","galvantula","garbodor","gastrodon","gastrodon","girafarig","glaceon","glalie","golett","golurk","gorebyss","granbull","grimer_alolan","grumpig","hariyama","heatmor","heracross","hippopotas","hippowdon","hitmontop","honchkrow","huntail","illumise","jolteon","jynx","kabuto","kabutops","kangaskhan","kingler","krabby","kricketune","lanturn","leafeon","ledian","lickilicky","lickitung","liepard","lileep","lilligant","linoone","lopunny","lucario","lumineon","lunatone","magcargo","manectric","mantine","mantyke","maractus","marowak_alolan","masquerain","mightyena","milotic","miltank","minun","mothim","mr.mime","muk_alolan","munchlax","murkrow","ninetales_alolan","noctowl","nosepass","octillery","onix","pachirisu","parasect","pelipper","persian_alolan","phanpy","pineco","plusle","ponyta","primeape","probopass","purugly","quagsire","qwilfish","rampardos","rapidash","raticate_alolan","relicanth","rotom_wash","rufflet","sandshrew_alolan","sandslash_alolan","sawk","scrafty","scraggy","seaking","sealeo","seviper","shellos_east_sea","shellos_west_sea","sigilyph","simipour","simisage","simisear","slowbro","slowking","slowpoke","smoochum","snubbull","solrock","spinda","spiritomb","spoink","starmie","steelix","stunfisk","sudowoodo","sunflora","swalot","swanna","swellow","swoobat","tangela","tangrowth","tauros","teddiursa","tentacruel","throh","tirtouga","torkoal","toxicroak","umbreon","ursaring","vaporeon","vespiquen","volbeat","wailmer","wailord","walrein","watchog","whiscash","wormadam_plant","wormadam_sandy","wormadam_trash","xatu","yanma","yanmega","zangoose","zebstrika","raticate","sandshrew","sandslash","arbok","persian","ninetales","venomoth","golduck","arcanine","muk","grimer","hypno","exeggutor","marowak","hitmonlee","hitmonchan","weezing","weezing_galarian","chansey","mr_mime","scyther","pinsir","gyarados","lapras","omanyte","omastar","snorlax","misdreavus","wobbuffet","forretress","gligar","scizor","houndoom","stantler","miltank","blissey","ninjask","sableye","mawile","sharpedo","cacturne","banette","absol","farfetchd_galarian","mismagius","skuntank","bronzong","abomasnow","weavile","gliscor","darmanitan_galarian","perrserker"]}],"exclude":[]},{"name":"sunrise","title":"sunrise Cup","include":[{"filterType":"type","values":["fire","flying","grass","ground","normal"]}],"exclude":[{"filterType":"type","values":["rock"]},{"filterType":"tag","values":["mega"]}]},{"name":"marsh","title":"Marsh Cup","link":"https://silph.gg/factions/cycle/liga711-torneo3","include":[{"filterType":"type","values":["poison","ghost","bug","grass","water"]}],"exclude":[{"filterType":"id","values":["abomasnow","abomasnow_shadow","tropius"]},{"filterType":"tag","values":["mega"]}]},{"name":"uber","title":"Uber Tier Cup","link":"https://twitter.com/PoGoKieng/status/1321532380407103493","include":[],"exclude":[]},{"name":"little","title":"Little Cup","include":[{"filterType":"id","includeShadows":1,"values":["abra","aipom","anorith","archen","aron","axew","azurill","bagon","baltoy","barboach","beldum","bellsprout","bidoof","blitzle","bonsly","bronzor","budew","buizel","bulbasaur","buneary","burmy","cacnea","carvanha","caterpie","charmander","cherubi","chikorita","chimchar","chinchou","chingling","cleffa","combee","corphish","cranidos","croagunk","cubchoo","cubone","cyndaquil","darumaka","darumaka_galarian","deerling","deino","diglett","diglett_alolan","doduo","dratini","drifloon","drilbur","drowzee","ducklett","duskull","dwebble","ekans","electrike","elekid","elgyem","exeggcute","farfetchd_galarian","feebas","ferroseed","finneon","foongus","frillish","gastly","geodude","geodude_alolan","gible","glameow","gligar","goldeen","golett","gothita","grimer","grimer_alolan","growlithe","gulpin","happiny","hippopotas","hoothoot","hoppip","horsea","houndour","igglybuff","joltik","kabuto","klink","koffing","krabby","kricketot","larvesta","larvitar","ledyba","lickitung","lileep","lillipup","litwick","lotad","machop","magby","magikarp","magnemite","makuhita","mankey","mantyke","mareep","meditite","meowth","meowth_alolan","meowth_galarian","mienfoo","mime jr.","misdreavus","mudkip","munchlax","munna","murkrow","natu","nidoran_male","nidoran_female","nincada","nosepass","numel","oddish","omanyte","oshawott","pansage","pansear","paras","patrat","phanpy","pichu","pidgey","pidove","pineco","piplup","poliwag","ponyta","ponyta","poochyena","psyduck","purrloin","ralts","rattata","rattata_alolan","remoraid","rhyhorn","riolu","roggenrola","rufflet","sandile","sandshrew","sandshrew_alolan","scraggy","seedot","seel","sentret","sewaddle","shellos_east_sea","shellos_west_sea","shieldon","shinx","shroomish","shuppet","skitty","skorupi","slakoth","slowpoke","","slugma","smoochum","sneasel","snivy","snorunt","snover","snubbull","solosis","spearow","spheal","spinarak","spoink","squirtle","starly","stunky","surskit","swablu","swinub","taillow","tangela","teddiursa","tentacool","tepig","timburr","tirtouga","togepi","torchic","totodile","trapinch","treecko","trubbish","turtwig","tympole","tynamo","tyrogue","vanillite","venipede","venonat","voltorb","vulpix","vulpix_alolan","wailmer","weedle","whismur","wingull","woobat","wooper","wurmple","wynaut","yamask","yanma","zigzagoon","zigzagoon_galarian","zubat","meltan","yamask_galarian","vulpix_shadow","dratini_shadow","stunky_shadow","cubone_shadow","gligar_shadow","mareep_shadow","turtwig_shadow","growlithe_shadow","psyduck_shadow","duskull_shadow","oddish_shadow","hoppip_shadow","houndour_shadow","venonat_shadow","squirtle_shadow","drowzee_shadow","nidoran_male_shadow","seedot_shadow","meowth_shadow","pineco_shadow","sandshrew_shadow","mudkip_shadow","poliwag_shadow","machop_shadow","exeggcute_shadow","slowpoke_shadow","magnemite_shadow","grimer_shadow","zubat_shadow","teddiursa_shadow","charmander_shadow","rattata_shadow","misdreavus_shadow","snover_shadow","bulbusaur_shadow","ralts_shadow","larvitar_shadow","omanyte_shadow","sneasel_shadow","koffing_shadow","carvanha_shadow","bagon_shadow","diglett_shadow","trapinch_shadow","cacnea_shadow","weedle_shadow","nidoran_female_shadow","shuppet_shadow","bellsprout_shadow","ekans_shadow","abra_shadow","beldum_shadow","magikarp_shadow","shellder","shellder_shadow","cottonee","scyther","scyther_shadow","onix","mime_jr","eevee","porygon","sunkern","clamperl","burmy","shellos","panpour","petilil","minccino","karrablast","shelmet","vullaby","pawniard","staryu","chespin","fennekin","froakie","bunnelby","fletchling","litleo","flabebe","pancham","espurr","spritzee","swirlix","inkay","binacle","skrelp","clauncher","helioptile","goomy","phantump","pumpkaboo_small","pumpkaboo_average","pumpkaboo_large","pumpkaboo_super","bergmite","noibat","rowlet","litten","popplio","pikipek","yungoos","rockruff","fomantis","salandit","jangmo_o","skwovet","wooloo","zigzagoon_galarian","farfetchd_galarian","mr_mime_galarian","yamask_galarian"]}],"exclude":[],"partySize":3},{"name":"johto","title":"Johto Cup","include":[{"filterType":"dex","values":[152,251]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},{"name":"sinnoh","title":"Sinnoh Cup","include":[{"filterType":"dex","values":[387,493]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["bastiodon_xs"]}],"partySize":3,"presetOnly":true},{"name":"nightfall","title":"Silph Nightfall Cup","include":[{"filterType":"type","values":["ice","fighting","normal","poison","ground"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["mr_rime","mr_mime_galarian","lickitung","chansey","pidgeot"]}]},{"name":"cerberus","title":"Victory Road Cerberus Cup","link":"https://silph.gg/t/eh4b/the-three-heads-of-cerberus","restrictedPicks":1,"restrictedPokemon":["sableye","sableye_xl","sableye_shadow","sableye_shadow_xl","zweilous","umbreon"],"include":[{"filterType":"type","values":["dragon","ice","fire","psychic","fighting"]},{"filterType":"id","values":["sableye","sableye_xl","sableye_shadow","sableye_shadow_xl","zweilous","umbreon"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]},{"filterType":"id","values":["marowak_alolan","gardevoir_shadow"]},{"filterType":"type","values":["dark"]}]},{"name":"labyrinth","title":"Silph Labyrinth Cup","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["azumarill","azumarill_xl","medicham","medicham_xl","stunfisk_galarian","hypno","hypno_shadow","deoxys_defense","cresselia","umbreon","machamp","machamp_shadow","scrafty","sirfetchd","altaria","bastiodon","bastiodon_xl","primeape","swampert","swampert_shadow","mew","wobbuffet","wobbuffet_shadow","wobbuffet_xl"]}]},{"name":"vortex","title":"Silph Vortex Cup","include":[],"exclude":[{"filterType":"tag","values":["mega","legendary"]},{"filterType":"type","values":["fairy"]},{"filterType":"id","values":["medicham","medicham_xl","deoxys_defense","azumarill_xl","azumarill","altaria","sableye_shadow","sableye","sableye_xl","stunfisk_galarian","swampert","swampert_shadow","scrafty","wobbuffet","wobbuffet_xl","lickitung","lickitung_xl","machamp","machamp_shadow","bastiodon","bastiodon_xl","cresselia","wigglytuff","abomasnow","abomasnow_shadow","skarmory","vigoroth","tropius","marowak_alolan","sirfetchd","obstagoon","umbreon","politoed","politoed_shadow"]}]},{"name":"slitzko","title":"Slitzko Memorial Cup","include":[{"filterType":"id","values":["lapras","steelix","blaziken","bastiodon","lucario","altaria","graveler_alolan","beedrill","vigoroth","forretress","noctowl","heracross","charizard","quagsire","mantine","qwilfish","hypno","mightyena","skuntank","raichu_alolan","toxicroak","skarmory","melmetal","kingdra","registeel","marshtomp","magneton","tropius","ninetales_alolan","houndoom","muk","arbok","absol","azumarill","toxicroak","muk_alolan","noctowl","venusaur","swampert","wigglytuff","golbat","sableye","probopass","scrafty","marowak_alolan","whiscash","shiftry","cloyster","bronzong","steelix","dusclops","drifblim","cresselia","medicham","abomasnow","stunfisk_galarian","ferrothorn","pelipper","dewgong","whimsicott","poliwrath","pidgeot","forretress","munchlax","zweilous","politoed","toxicroak","froslass","umbreon","gliscor","medicham_xl","azumarill_xl","sableye_xl","bastiodon_xl"]}],"exclude":[],"link":"https://silph.gg/t/5wvm"},{"name":"prismatic","title":"Silph Prismatic Cup","include":[{"filterType":"id","values":["ivysaur","weepinbell","victreebel","grimer_alolan","muk_alolan","scyther","bayleef","meganium","xatu","bellossom","tyranitar","celebi","grovyle","sceptile","dustox","ludicolo","breloom","roselia","flygon","cradily","grotle","torterra","roserade","wormadam_plant","bronzong","yanmega","leafeon","servine","serperior","simisage","whimsicott","maractus","gardobor","golurk","quilladin","chesnaught","beedrill","raichu","ninetales","persian","ponyta","rapidash","hypno","exeggutor","electabuzz","jolteon","quilava","typhlosion","ampharos","sunflora","girafarig","dunsparce","pelipper","ninjask","manectric","plusle","minun","lunatone","mothim","vespiquen","electivire","leavanny","archeops","raticate_alolan","snorlax","murkrow","sneasel","houndoom","mawile","claydol","banette","dusclops","honchkrow","munchlax","weavile","zebstrika","chandelure","wartortle","blastoise","sandslash_alolan","nidoqueen","gloom","persian_alolan","tangela","seadra","gyarados","vaporeon","omanyte","omastar","croconaw","feraligatr","lanturn","jumpluff","quagsire","kingdra","suicune","marshtomp","swellow","masquerain","wailmer","wailord","castform_rainy","sealeo","walrein","huntail","metang","metagross","regice","prinplup","empoleon","luxio","luxray","rampardos","gabite","lucario","lumineon","tangrowth","glaceon","dewott","simipour","boldore","gigalith","swoobat","palpitoad","seismitoad","carracosta","cryogonal","frogadier","greninja","charmeleon","charizard","vileplume","parasect","kingler","electrode","seaking","magmar","ledian","ariados","yanma","scizor","magcargo","octillery","porygon2","combusken","blaziken","camerupt","solrock","crawdaunt","castform_sunny","kricketune","wormadam_trash","magmortar","porygon_z","rotom","pignite","emboar","simisear","scolipede","krookodile","darmanitan_standard","crustle","bisharp","braviary","heatmor","braixen","delphox","fletchinder","talonflame","slowbro","porygon","slowking","corsola","milotic","cherrim_sunny","alomomola","butterfree","rapidash_galarian","dewgong","togetic","linoone","gardevoir","zangoose","castform_snowy","shelgon","pachirisu","togekiss","gallade","swanna","emolga","amoonguss","beartic","floette","florges","meowstic","machoke","graveler_alolan","golem_alolan","magneton","rhydon","misdreavus","steelix","qwilfish","donphan","mightyena","lairon","aggron","armaldo","glalie","relicanth","purugly","magnezone","rhyperior","probopass","tranquill","unfezant","excadrill","cinccino","escavalier","ferrothorn","klinklang","durant","arbok","nidoking","golbat","crobat","venomoth","grimer","muk","cloyster","haunter","gengar","weezing","aerodactyl","espeon","forretress","gligar","granbull","mantine","delcatty","swalot","drifblim","mismagius","skuntank","spiritomb","drapion","gliscor","gothitelle","noivern","pidgeot","fearow","raichu_alolan","dugtrio","arcanine","alakazam","graveler","golem","marowak","hitmonchan","kangaskhan","pinsir","kabutops","furret","noctowl","sudowoodo","ursaring","piloswine","hitmontop","shiftry","hariyama","monferno","infernape","staraptor","bibarel","wormadam_sandy","floatzel","hippowdon","mamoswine","litleo_xl","litleo","pyroar","froslass","dragonite","zapdos","garbodor","salamence","liepard","meowstic_female"]}],"exclude":[],"slots":[{"pokemon":["wartortle","blastoise","sandslash_alolan","nidoqueen","gloom","persian_alolan","tangela","seadra","gyarados","vaporeon","omanyte","omastar","croconaw","feraligatr","lanturn","jumpluff","quagsire","kingdra","suicune","marshtomp","swellow","masquerain","wailmer","wailord","castform_rainy","sealeo","walrein","huntail","metang","metagross","regice","prinplup","empoleon","luxio","luxray","rampardos","gabite","lucario","lumineon","tangrowth","glaceon","dewott","simipour","boldore","gigalith","swoobat","palpitoad","seismitoad","carracosta","cryogonal","frogadier","greninja","salamence"]},{"pokemon":["charmeleon","charizard","vileplume","parasect","kingler","electrode","seaking","magmar","ledian","ariados","yanma","scizor","magcargo","octillery","porygon2","combusken","blaziken","camerupt","solrock","crawdaunt","castform_sunny","kricketune","wormadam_trash","magmortar","porygon_z","rotom","pignite","emboar","simisear","scolipede","krookodile","darmanitan_standard","crustle","bisharp","braviary","heatmor","braixen","delphox","fletchinder","talonflame"]},{"pokemon":["beedrill","raichu","ninetales","persian","ponyta","rapidash","hypno","exeggutor","electabuzz","jolteon","quilava","typhlosion","ampharos","sunflora","girafarig","dunsparce","pelipper","ninjask","manectric","plusle","minun","lunatone","mothim","vespiquen","electivire","leavanny","archeops","zapdos","butterfree","rapidash_galarian","dewgong","togetic","linoone","gardevoir","zangoose","castform_snowy","shelgon","pachirisu","togekiss","gallade","swanna","emolga","amoonguss","beartic","floette","florges","meowstic","froslass","meowstic_female"]},{"pokemon":["ivysaur","weepinbell","victreebel","grimer_alolan","muk_alolan","scyther","bayleef","meganium","xatu","bellossom","tyranitar","celebi","grovyle","sceptile","dustox","ludicolo","breloom","roselia","flygon","cradily","grotle","torterra","roserade","wormadam_plant","bronzong","yanmega","leafeon","servine","serperior","simisage","whimsicott","maractus","gardobor","golurk","quilladin","chesnaught","raticate_alolan","snorlax","murkrow","sneasel","houndoom","mawile","claydol","banette","dusclops","honchkrow","munchlax","weavile","zebstrika","chandelure","garbodor"]},{"pokemon":["pidgeot","fearow","raichu_alolan","dugtrio","arcanine","alakazam","graveler","golem","marowak","hitmonchan","kangaskhan","pinsir","kabutops","furret","noctowl","sudowoodo","ursaring","piloswine","hitmontop","shiftry","hariyama","monferno","infernape","staraptor","bibarel","wormadam_sandy","floatzel","hippowdon","mamoswine","litleo","litleo_xl","pyroar","dragonite","slowbro","porygon","slowking","corsola","milotic","cherrim_sunny","alomomola"]},{"pokemon":["arbok","nidoking","golbat","crobat","venomoth","grimer","muk","cloyster","haunter","gengar","weezing","aerodactyl","espeon","forretress","gligar","granbull","mantine","delcatty","swalot","drifblim","mismagius","skuntank","spiritomb","drapion","gliscor","gothitelle","noivern","machoke","graveler_alolan","golem_alolan","magneton","rhydon","misdreavus","steelix","qwilfish","donphan","mightyena","lairon","aggron","armaldo","glalie","relicanth","purugly","magnezone","rhyperior","probopass","tranquill","unfezant","excadrill","cinccino","escavalier","ferrothorn","klinklang","durant","liepard"]}]},{"name":"commander","title":"Silph Commander Cup","restrictedPicks":1,"restrictedPokemon":["munchlax","shiftry","escavalier","steelix","empoleon","jellicent","bronzong","noctowl","marowak_alolan","poliwrath"],"include":[{"filterType":"id","values":["munchlax","shiftry","escavalier","steelix","empoleon","jellicent","bronzong","noctowl","marowak_alolan","poliwrath"]},{"filterType":"type","values":["rock","ice","electric","poison","psychic"]}],"exclude":[{"filterType":"tag","values":["mega","legendary","mythical","shadow"]},{"filterType":"type","values":["steel"]},{"filterType":"id","values":["abomasnow","galvantula","regirock","stunfisk","medicham","wobbuffet","drapion","pachirisu"]}]},{"name":"factions","title":"Silph Factions","include":[{"filterType":"type","values":["bug","dark","dragon","flying","rock"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["bastiodon","probopass","regirock","scrafty","togekiss","heracross","skarmory","altaria","mantine","hakamo_o","kommo_o","lycanroc_midnight","lycanroc_midday","incineroar","dartrix","toucannon","trumbeak","rowlet","oricorio_baile","oricorio_pau","oricorio_pom_pom","oricorio_sensu"]}]},{"name":"floatingcity","title":"Floating City Field","include":[{"filterType":"type","values":["ground","flying","steel","normal"]}],"exclude":[{"filterType":"tag","values":["mega","mythical","shadow","regional"]},{"filterType":"id","values":["stunfisk_galarian","skarmory","altaria","bastiodon","registeel","chansey","pidgeot","salazzle"]}],"partySize":8},{"name":"dungeon","title":"Dungeon Field","include":[{"filterType":"type","values":["bug","dragon","poison","steel","water"]}],"exclude":[{"filterType":"tag","values":["mega","shadow"]},{"filterType":"id","values":["azumarill","stunfisk_galarian","skarmory","altaria","bastiodon","salazzle"]}],"partySize":8},{"name":"comet","title":"Comet Cup","include":[{"filterType":"type","values":["fire","flying","ice","normal","psychic"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["altaria","deoxys_defense","medicham","wobbuffet","chansey","mantine"]}],"link":"https://discord.gg/ybTf7ZYNzt?event=925020319037669387"},{"name":"cometultra","title":"Comet Cup","include":[{"filterType":"type","values":["fire","flying","ice","normal","psychic","electric"]}],"exclude":[{"filterType":"tag","values":["mega","mythical"]},{"filterType":"id","values":["salazzle"]}],"partySize":8},{"name":"venture","title":"Venture Cup","include":[],"exclude":[{"filterType":"type","values":["dark","fairy","steel"]},{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["chansey","pidgeot"]}],"tierRules":{"max":20,"floor":1,"tiers":[{"points":10,"pokemon":["hypno","hypno_shadow","lickitung","altaria","froslass","cresselia","marowak_alolan"]},{"points":6,"pokemon":["dewgong","lapras","snorlax","dragonair","politoed","kingdra","vigoroth","medicham","regirock","deoxys_defense","munchlax","lickilicky","jellicent","galvantula","talonflame","dragalge","lugia"]},{"points":4,"pokemon":["machamp","haunter","gengar","dragonite","mew","lanturn","wobbuffet","mantine","swampert","pelipper","zangoose","whiscash","cradily","dusclops","tropius","sealeo","pachirisu","drifblim","abomasnow","crustle","stunfisk","goodra","graveler_alolan","sirfetchd","nidoqueen","flygon"]}]}},{"name":"bidoof","title":"Bidoof Cup","include":[{"filterType":"id","values":["bidoof","bidoof_shadow"]}],"exclude":[],"partySize":3},{"name":"continentals-3","title":"Silph Season 3 Continentals","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["pidgeot","chansey"]}],"tierRules":{"max":20,"floor":1,"tiers":[{"points":10,"pokemon":["lickitung","mew","hypno","azumarill","skarmory","umbreon","registeel","altaria","sableye","medicham","deoxys_defense","abomasnow","bastiodon","cresselia","jellicent","mandibuzz","stunfisk_galarian","marowak_alolan","talonflame","ninetales_alolan","diggersby"]},{"points":6,"pokemon":["clefable","nidoqueen","machamp","venusaur","dewgong","wigglytuff","meganium","jumpluff","politoed","granbull","lugia","wobbuffet","swampert","tropius","vigoroth","gardevoir","regirock","togekiss","drifblim","froslass","toxicroak","munchlax","lickilicky","ferrothorn","zweilous","whimsicott","stunfisk","scrafty","galvantula","aromatisse","spritzee","raichu_alolan","melmetal","sylveon","slurpuff","muk_alolan"]},{"points":4,"pokemon":["golbat","articuno","beedrill","zapdos","snorlax","seaking","primeape","lapras","quagsire","noctowl","ariados","lanturn","bellossom","raikou","mantine","steelix","castform_rainy","castform_snowy","castform","castform_sunny","regice","whiscash","shiftry","pelipper","skuntank","gliscor","electivire","pachirisu","roserade","empoleon","magnezone","drapion","zebstrika","serperior","fraxure","alomomola","excadrill","escavalier","victini","crustle","chesnaught","dragalge","obstagoon","sirfetchd","pangoro","goodra"]}]}},{"name":"cutie","title":"Cutie Cup","link":"https://silph.gg/t/rk55/regicide-charity-tournament","include":[{"filterType":"type","name":"Type","values":["bug","dragon","electric","fairy","fire","flying","grass","ice","normal","psychic","water"]},{"filterType":"id","name":"Species","values":["jirachi","froslass","wormadam_trash","perrserker","magneton","mawile","magcargo","piloswine","drifblim"]}],"exclude":[{"filterType":"id","name":"Species","values":["vigoroth","deoxys_defense","hypno","venusaur","abomasnow","haxorus","azumarill","altaria","cresselia","chansey","lickitung","pidgeot"]},{"filterType":"type","name":"Type","values":["dark","fighting","ghost","ground","rock","steel"]},{"filterType":"tag","name":"Tag","values":["shadow","mega"]}]},{"name":"worlds","title":"Silph Worlds","include":[],"exclude":[{"filterType":"id","values":["venusaur","lickitung","chansey","azumarill","umbreon","wobbuffet","skarmory","sableye","medicham","altaria","jellicent","ninetales_alolan","stunfisk_galarian"]},{"filterType":"tag","values":["mega"]}]},{"name":"lunar","title":"Lunar Cup","include":[{"filterType":"type","values":["bug","dark","electric","ghost","grass"]}],"exclude":[{"filterType":"id","values":["scrafty","pachirisu","stunfisk","marowak_alolan","whimsicott","vullaby"]},{"filterType":"tag","values":["mega","shadow"]}]},{"name":"brawler","title":"Brawler Cup","include":[{"filterType":"id","includeShadows":1,"values":["haunter","uxie","mesprit","azelf","spritzee","castform","castform_sunny","castform_rainy","castform_snowy","misdreavus","chimecho","jirachi","drifloon","chatot","roselia","murkrow","exeggcute","jumpluff","klefki","espurr","masquerain","qwilfish","victini","plusle","minun","mismagius","corsola","celebi","spinda","emolga","slurpuff","bellossom","magnemite","greedent","weepinbell","wormadam_plant","wormadam_sand","wormadam_trash","whimsicott","swadloon","omanyte","pancham","meltan","cinccino","sunflora","drilbur","meowstic","meowstic_female","gloom","teddiursa","hoopa","cherrim_overcast","cherrim_sunny","weezing","archen","pawniard","swoobat","amoonguss","rufflet","frogadier","sableye","stunfisk","mawile","wigglytuff","ninjask","venomoth","banette","ivysaur","lampent","litleo","dunsparce","galvantula","roserade","dwebble","braixen","farfetch’d","xatu","drifblim","bonsly","tranquill","vibrava","victreebel","aromatisse","bayleef","weezing_galarian","servine","lilligant","dragonair","tirtouga","palpitoad","sliggoo","volbeat","illumise","basculin","raticate","vileplume","charmeleon","quilava","nidorino","machop","combusken","swellow","ninetales","nidorina","poliwhirl","reuniclus","geodude_alolan","ambipom","leavanny","raichu_alolan","grovyle","monferno","eelektrik","wartortle","lanturn","gorebyss","prinplup","mothim","relicanth","sylveon","whiscash","lumineon","swanna","jolteon","dewott","talonflame","staraptor","flareon","croconaw","kricketune","leafeon","raticate_alolan","glaceon","froslass","honchkrow","marshtomp","pelipper","furfrou","perrserker","vaporeon","unfezant","quilladin","beedrill","gastrodon","gastrodon","raichu","grimer","muk","electabuzz","dusclops","bibarel","dustox","alomomola","primeape","furret","porygon2","linoone","linoone_galarian","crawdaunt","escavalier","durant","ariados","politoed","marowak_alolan","weavile","chandelure","omastar","houndoom","ledian","fraxure","sudowoodo","skuntank","togekiss","vespiquen","seaking","delphox","breloom","pidgeot","sandshrew_alolan","clefable","greninja","manectric","zangoose","excadrill","gengar","noctowl","grimer_alolan","luxray","diggersby","gliscor","purugly","gothitelle","toxicroak","magmar","obstagoon","vigoroth","malamar","alakazam","hitmontop","gardevoir","granbull","zweilous","hitmonchan","muk_alolan","blaziken","gallade","sceptile","seviper","zapdos","poliwrath","heracross","lucario","sandslash_alolan","golbat","tentacruel","pinsir","magcargo","ludicolo","infernape","articuno","pignite","piloswine","heatmor","aerodactyl","shiftry","magneton","kingler","cradily","ampharos","drapion","nidoking","seismitoad","falinks","serperior","gligar","electrode","magmortar","bisharp","machoke","slowbro_galarian","crobat","quagsire","cofagrigus","golduck","slowbro","typhlosion","slowking","zebstrika","swalot","rapidash_galarian","eelektross","carracosta","pyroar","dragalge","flygon","empoleon","blastoise","sealeo","feraligatr","sharpedo","chesnaught","charizard","darmanitan_standard","samurott","rapidash","garchomp","barbaracle","krookodile","grotle","venusaur","tropius","meganium","boldore","rampardos","salamence","graveler","munchlax","haxorus","dusknoir","garbodor","claydol","spiritomb","graveler_alolan","ferrothorn","shelgon","rhyhorn","sirfetchd","scizor","dewgong","exeggutor","rhydon","donphan","lairon","darmanitan_galarian_standard","mewtwo","forretress","ursaring","tangrowth","machamp","wailmer","slaking","cloyster","abomasnow","pangoro","electivire","lickilicky","cryogonal","emboar","goodra","walrein","kingdra","solrock","arcanine","hydreigon","milotic","lunatone","regice","raikou","magnezone","suicune","bronzong","entei","ho_oh","crustle","scolipede","tyranitar","metang","rayquaza","onix","dragonite","lugia","lapras","mantine","camerupt","gyarados","hariyama","glalie","gigalith","beartic","rhyperior","mamoswine","golem","hippowdon","torterra","golem_alolan","golurk","probopass","aggron","wailord","steelix","exeggutor_alolan","snorlax","metagross","melmetal"]}],"exclude":[],"slots":[{"pokemon":["haunter","uxie","mesprit","azelf","spritzee","castform","castform_sunny","castform_rainy","castform_snowy","misdreavus","chimecho","jirachi","drifloon","chatot","roselia","murkrow","exeggcute","jumpluff","klefki","espurr","masquerain","qwilfish","victini","plusle","minun","mismagius","corsola","celebi","spinda","emolga","slurpuff","bellossom","magnemite","greedent","weepinbell","wormadam_plant","wormadam_sand","wormadam_trash","whimsicott","swadloon","omanyte","pancham","meltan","cinccino","sunflora","drilbur","meowstic","meowstic_female","gloom","teddiursa","hoopa","cherrim","weezing","archen","cherrim_overcast","cherrim_sunny"]},{"pokemon":["pawniard","swoobat","amoonguss","rufflet","frogadier","sableye","sableye_xs","stunfisk","mawile","wigglytuff","ninjask","venomoth","banette","ivysaur","lampent","litleo","dunsparce","galvantula","roserade","dwebble","braixen","farfetch’d","xatu","drifblim","bonsly","tranquill","vibrava","victreebel","aromatisse","bayleef","weezing_galarian","servine","lilligant","dragonair","tirtouga","palpitoad","sliggoo","volbeat","illumise","basculin","raticate","vileplume","charmeleon","quilava","nidorino","machop","combusken","swellow","ninetales","nidorina","poliwhirl","reuniclus","geodude_alolan","ambipom","leavanny","raichu_alolan","grovyle","monferno","eelektrik","wartortle","lanturn","gorebyss","prinplup","mothim","relicanth","sylveon","whiscash","lumineon","swanna","jolteon","dewott","talonflame","staraptor"]},{"pokemon":["flareon","croconaw","kricketune","leafeon","raticate_alolan","glaceon","froslass","honchkrow","marshtomp","pelipper","furfrou","perrserker","vaporeon","unfezant","quilladin","beedrill","gastrodon","gastrodon","raichu","grimer","muk","electabuzz","dusclops","bibarel","dustox","alomomola","primeape","furret","porygon2","linoone","linoone_galarian","crawdaunt","escavalier","durant","ariados","politoed","marowak_alolan","weavile","chandelure","omastar","houndoom","ledian","fraxure","sudowoodo","skuntank","togekiss","vespiquen","seaking","delphox","breloom","pidgeot","sandshrew_alolan","clefable","greninja","manectric","zangoose","excadrill","gengar","noctowl","grimer_alolan","luxray","diggersby","gliscor","purugly","gothitelle","toxicroak","magmar","obstagoon","vigoroth","malamar","alakazam","hitmontop","gardevoir","granbull"]},{"pokemon":["zweilous","hitmonchan","muk_alolan","blaziken","gallade","sceptile","seviper","zapdos","poliwrath","heracross","lucario","sandslash_alolan","golbat","tentacruel","pinsir","magcargo","ludicolo","infernape","articuno","pignite","piloswine","heatmor","aerodactyl","shiftry","magneton","kingler","cradily","ampharos","drapion","nidoking","seismitoad","falinks","serperior","gligar","electrode","magmortar","bisharp","machoke","slowbro_galarian","crobat","quagsire","cofagrigus","golduck","slowbro","typhlosion","slowking","zebstrika","swalot","rapidash_galarian","eelektross","carracosta","pyroar","dragalge","flygon","empoleon","blastoise","sealeo","feraligatr","sharpedo","chesnaught","charizard","darmanitan_standard","samurott","rapidash","garchomp","barbaracle","krookodile","grotle"]},{"pokemon":["venusaur","tropius","meganium","boldore","rampardos","salamence","graveler","munchlax","haxorus","dusknoir","garbodor","claydol","spiritomb","graveler_alolan","ferrothorn","shelgon","rhyhorn","sirfetchd","scizor","dewgong","exeggutor","rhydon","donphan","lairon","darmanitan_galarian_standard","mewtwo","forretress","ursaring","tangrowth","machamp","wailmer","slaking","cloyster","abomasnow","pangoro","electivire","lickilicky","cryogonal","emboar","goodra","walrein","kingdra","solrock","arcanine","hydreigon","milotic","lunatone","regice","raikou","magnezone","suicune","bronzong","entei","ho_oh"]},{"pokemon":["crustle","scolipede","tyranitar","metang","rayquaza","onix","dragonite","lugia","lapras","mantine","camerupt","gyarados","hariyama","glalie","gigalith","beartic","rhyperior","mamoswine","golem","hippowdon","torterra","golem_alolan","golurk","probopass","aggron","wailord","steelix","exeggutor_alolan","snorlax","metagross","melmetal"]}]},{"name":"unity","title":"Unity Cup","include":[{"filterType":"id","includeShadows":0,"values":["ivysaur","venusaur","charizard","blastoise","beedrill","pidgeot","nidoking","golbat","tentacruel","rapidash","magneton","dewgong","muk","gyarados","lapras","snorlax","dragonair","dragonite","meganium","typhlosion","feraligatr","noctowl","lanturn","ampharos","sudowoodo","politoed","jumpluff","quagsire","forretress","magcargo","piloswine","mantine","kingdra","hitmontop","tyranitar","sceptile","blaziken","swampert","ludicolo","pelipper","vigoroth","flygon","whiscash","cradily","milotic","sealeo","walrein","shelgon","salamence","grotle","torterra","infernape","empoleon","bibarel","roserade","garchomp","lucario","hippowdon","abomasnow","magnezone","lickilicky","rhyperior","tangrowth","electivire","magmortar","mamoswine","probopass","serperior","emboar","samurott","zebstrika","excadrill","seismitoad","scolipede","crustle","garbodor","escavalier","alomomola","galvantula","ferrothorn","eelektross","chesnaught","delphox","greninja","talonflame","pyroar","barbaracle","clawitzer","dedenne","goodra","noivern","raichu_alolan","sandslash_alolan","melmetal","perrserker","greedent","dubwool"]}],"exclude":[],"slots":[{"pokemon":["ivysaur","venusaur","charizard","blastoise","beedrill","pidgeot","nidoking","golbat","tentacruel","rapidash","magneton","dewgong","muk","gyarados","lapras","snorlax","dragonair","dragonite"]},{"pokemon":["meganium","typhlosion","feraligatr","noctowl","lanturn","ampharos","sudowoodo","politoed","jumpluff","quagsire","forretress","magcargo","piloswine","mantine","kingdra","hitmontop","tyranitar"]},{"pokemon":["sceptile","blaziken","swampert","ludicolo","pelipper","vigoroth","flygon","whiscash","cradily","milotic","sealeo","walrein","shelgon","salamence"]},{"pokemon":["grotle","torterra","infernape","empoleon","bibarel","roserade","garchomp","lucario","hippowdon","abomasnow","magnezone","lickilicky","rhyperior","tangrowth","electivire","magmortar","mamoswine","probopass"]},{"pokemon":["serperior","emboar","samurott","zebstrika","excadrill","seismitoad","scolipede","crustle","garbodor","escavalier","alomomola","galvantula","ferrothorn","eelektross"]},{"pokemon":["chesnaught","delphox","greninja","talonflame","pyroar","barbaracle","clawitzer","dedenne","goodra","noivern","raichu_alolan","sandslash_alolan","melmetal","perrserker","greedent","dubwool"]}],"link":"https://twitter.com/SkyDragonsGami1/status/1465726406059569156"},{"name":"glacial","title":"Glacial Cup","include":[{"filterType":"type","values":["dragon","ice","poison","psychic","water"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["altaria","azumarill","jellicent","swampert","deoxys_defense","wobbuffet","cresselia","medicham","ninetales_alolan","sandshrew_alolan","lanturn","gardevoir","toxicroak"]}]},{"name":"guardian","title":"Guardian Cup","include":[{"filterType":"moveType","name":"Move Type","values":["electric","fighting","flying","psychic","fire"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["legendary","mythical","shadow","mega"]},{"filterType":"type","name":"Type","values":["fairy"]},{"filterType":"id","name":"Species","values":["lickitung","medicham","altaria","pachirisu","wobbuffet","stunfisk","umbreon","mandibuzz","scrafty","vullaby","chansey","hypno","obstagoon","cofagrigus","bastiodon","diggersby","tropius","lanturn"]}]},{"name":"obsidian","title":"Obsidian Cup","include":[],"exclude":[{"filterType":"type","name":"Type","values":["fairy","fighting","flying","grass","ground"]},{"filterType":"id","name":"Species","values":["lickitung","bastiodon","pachirisu","vigoroth","registeel","hakamo_o","kommo_o","lycanroc_midnight","lycanroc_midday","incineroar","dartrix","toucannon","trumbeak","rowlet","brionne","torracat","popplio","gumshoos","oricorio_baile","oricorio_pau","oricorio_pom_pom","oricorio_sensu"]},{"filterType":"tag","name":"Tag","values":["mega","shadow"]}]},{"name":"nemesis","title":"Nemesis Cup","restrictedPicks":2,"restrictedPokemon":["obstagoon","gallade","lucario","poliwrath","pangoro","blaziken","chesnaught","quagsire","flygon","excadrill","jumpluff","dedenne","froslass","gourgeist_small","gourgeist_average","gourgeist_large","gourgeist_super","noctowl","gyarados","charizard","gengar","rapidash_galarian","mawile"],"include":[{"filterType":"id","includeShadows":true,"values":["obstagoon","gallade","lucario","poliwrath","pangoro","blaziken","chesnaught","quagsire","flygon","excadrill","jumpluff","dedenne","froslass","gourgeist_small","gourgeist_average","gourgeist_large","gourgeist_super","noctowl","gyarados","charizard","gengar","rapidash_galarian","mawile"]},{"filterType":"type","values":["bug","dark","fire","grass","ice","psychic","water"]}],"exclude":[{"filterType":"id","values":["escavalier","salazzle"]},{"filterType":"type","values":["none","fairy","flying","fighting","ground","ghost","normal"]},{"filterType":"tag","values":["mega"]}]},{"name":"firefly","title":"Firefly Cup","include":[{"filterType":"type","values":["normal","electric","bug","poison","ice"]}],"exclude":[{"filterType":"type","values":["ground"]},{"filterType":"id","values":["escavalier","salazzle","walrein","dragalge","pachirisu"]},{"filterType":"tag","values":["mega"]}]}],"devonchampionship":{"name":"devonchampionship","title":"Devon (Championship Invitational)","include":[{"filterType":"type","name":"Type","values":["electric","ghost","poison","rock"]},{"filterType":"id","name":"Species","values":["feraligatr","feraligatr_shadow","golisopod","typhlosion","typhlosion_shadow","leavanny"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"type","name":"Type","values":["dark","ground","ice","steel"]},{"filterType":"id","name":"Species","values":["boltund","bellibolt","dusknoir","carbink","golurk","corsola_galarian","hakamo_o","dragonair"]}],"levelCap":50},"echo":{"name":"echo","title":"Silph Factions (Echo)","include":[{"filterType":"id","name":"Species","values":["articuno","stunfisk","swampert","ferrothorn","vigoroth","wigglytuff","drifblim","talonflame","zapdos","obstagoon","quagsire","mandibuzz","empoleon","magnezone","probopass","wormadam_trash","ninetales_alolan","whimsicott","nidoqueen","scrafty","whiscash","pelipper","mantine","jellicent","politoed","galvantula","venusaur","golbat","mawile"]},{"filterType":"id","name":"Species","values":["steelix","escavalier","jellicent","dragonite","zweilous","flygon","kommo_o","dragalge","haxorus","roserade","toxicroak","heracross","gyarados","galvantula","mawile","vigoroth","mandibuzz","cresselia","mew","raichu_alolan","obstagoon","diggersby","skarmory","ninetales","magcargo","marowak_alolan","talonflame","lapras","malamar","vespiquen","articuno","umbreon","sableye","drapion","graveler_alolan","golem_alolan","crustle","barbaracle","sudowoodo","relicanth","togetic","scizor","forretress"]},{"filterType":"id","name":"Species","values":["stunfisk","cofagrigus","ninetales","sandslash_alolan","dragonite","gliscor","gligar","deoxys_defense","sandslash","froslass","marowak_alolan","magcargo","flygon","trevenant","perrserker","oranguru","samurott","galvantula","politoed","cresselia","excadrill","quagsire","castform_rainy","mew","donphan","leavanny","torterra","regice","pinsir","hypno","dragonair","goodra","cradily","tapu_fini","greedent","munchlax","snorlax","sceptile","aurorus","lapras","sealeo","skuntank","muk_alolan","grimer_alolan","qwilfish_hisuian","dedenne","sudowoodo","barbaracle","druddigon"]},{"filterType":"id","name":"Species","values":["charizard","poliwrath","piloswine","qwilfish_hisuian","gligar","gliscor","sirfetchd","primeape","machamp","moltres","electivire","zapdos","ampharos","minun","galvantula","victini","pidgeot","cofagrigus","walrein","sealeo","dragonair","regirock","gallade","milotic","muk","relicanth","pelipper","jumpluff","crustle","shiftry","tyrunt","malamar","deoxys_defense","aggron","gengar","haunter","dusclops","runerigus","serperior","ferrothorn"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega","shadow"]},{"filterType":"type","name":"Type","values":["bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost","grass","ground","ice","normal","poison","psychic","rock","steel","water","none"]}],"allowSameSpecies":true,"partySize":8},"element":{"name":"element","title":"Element Cup","include":[{"filterType":"evolution","values":[1]},{"filterType":"type","values":["fire","water","grass"]}],"exclude":[],"partySize":3,"presetOnly":true},"elementremix":{"name":"elementremix","title":"Element Cup Remix","include":[{"filterType":"evolution","values":[1]},{"filterType":"type","values":["grass","water","fire"]}],"exclude":[{"filterType":"id","values":["chinchou","ducklett","cottonee","salandit"]}],"partySize":3,"presetOnly":true},"ember":{"name":"ember","title":"Silph Factions (Ember)","include":[{"filterType":"type","name":"Type","values":["electric","fire","grass","ground"]},{"filterType":"id","name":"Species","values":["muk_alolan","qwilfish_hisuian","honchkrow","machamp","malamar","poliwrath","primeape","sirfetchd"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["shadow","mega"]},{"filterType":"type","name":"Type","values":["dragon","rock","steel"]},{"filterType":"id","name":"Species","values":["swampert","whiscash","quagsire","marshtomp","gastrodon","seismitoad","palpitoad","abomasnow","diggersby","dugtrio","lanturn","nidoqueen","ninetales","pachirisu","salazzle","stunfisk","whimsicott"]}]},"enchanted":{"name":"enchanted","title":"Battle Frontier (Enchanted)","include":[{"filterType":"type","values":["steel","dragon","fairy","dark","normal","ghost","psychic"]},{"filterType":"id","values":["ampharos","ampharos_shadow","golisopod","articuno","articuno_shadow","muk","muk_shadow","zapdos","zapdos_shadow","regice","regice_shadow","sneasler","sneasler_shadow","blastoise","blastoise_shadow"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["stunfisk_galarian","cobalion","registeel","zygarde_complete","giratina_altered","steelix","pidgeot","greedent","skarmory","empoleon"]}]},"euic2026":{"name":"euic2026","title":"EUIC 2026 Championship Series Cup","include":[{"filterType":"type","values":["normal","dark","bug","dragon"]},{"filterType":"id","values":["froslass","froslass_shadow","politoed","politoed_shadow","seaking","milotic","milotic_shadow"]}],"exclude":[{"filterType":"type","values":["steel","flying","fighting"]},{"filterType":"id","values":["araquanid","crustle","morpeko_full_belly","turtonator","wigglytuff","morgrem","ribombee","chansey","diggersby"]},{"filterType":"tag","values":["mega","legendary","mythical","ultrabeast"]}]},"evolution":{"name":"evolution","title":"Evolution Cup","include":[{"filterType":"evolution","values":[2]}],"exclude":[{"filterType":"tag","values":["mega"]}]},"factionsgreat":{"name":"factionsgreat","title":"Silph Factions (Great League)","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["hawlucha"]}],"tierRules":{"max":19,"floor":1,"tiers":[{"points":7,"pokemon":["altaria","medicham","stunfisk_galarian","lanturn","noctowl","registeel"]},{"points":5,"pokemon":["azumarill","ninetales_alolan","bastiodon","deoxys_defense","dewgong","lickitung","sableye","swampert","toxapex","umbreon"]},{"points":2,"pokemon":["abomasnow","araquanid","aurorus","charizard","cresselia","cofagrigus","diggersby","drapion","dunsparce","froslass","machamp","mantine","mandibuzz","obstagoon","pelipper","pidgeot","quagsire","sandslash_alolan","scrafty","skarmory","tapu_fini","toxicroak","trevenant","venusaur","walrein","whiscash"]}]},"allowSameSpecies":true},"factionsmaster":{"name":"factionsmaster","title":"Silph Factions (Master League)","include":[{"filterType":"type","values":["bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost","grass","ground","ice","normal","poison","psychic","rock","steel","water"]},{"filterType":"id","values":["aggron_mega","scizor_mega","salamence_mega","steelix_mega","charizard_mega_x","blastoise_mega","slowbro_mega","venusaur_mega","alakazam_mega","sceptile_mega","blaziken_mega","altaria_mega","abomasnow_mega","beedrill_mega","pidgeot_mega","kangaskhan_mega","aerodactyl_mega","ampharos_mega","houndoom_mega","manectric_mega","absol_mega","banette_mega","lopunny_mega","glalie_mega","pinsir_mega"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["hawlucha"]}],"tierRules":{"max":8,"floor":0,"tiers":[{"points":4,"pokemon":["mewtwo","dialga","zacian_hero","solgaleo","groudon","aggron_mega","scizor_mega","salamence_mega"]},{"points":3,"pokemon":["lugia","ho_oh","kyogre","giratina_origin","giratina_altered","meloetta_aria","zarude","steelix_mega"]},{"points":2,"pokemon":["zekrom","xerneas","yveltal","melmetal","palkia","dragonite","reshiram","rayquaza","charizard_mega_x","blastoise_mega","slowbro_mega"]},{"points":1,"pokemon":["landorus_therian","landorus_incarnate","genesect","genesect_shock","genesect_chill","genesect_burn","genesect_douse","mew","buzzwole","florges","kyurem","venusaur_mega","abomasnow_mega","blaziken_mega","altaria_mega","alakazam_mega"]}]},"allowSameSpecies":true},"factionsultra":{"name":"factionsultra","title":"Silph Factions (Ultra League)","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["hawlucha"]}],"tierRules":{"max":17,"floor":1,"tiers":[{"points":7,"pokemon":["cobalion","swampert","giratina_altered","registeel","stunfisk_galarian","cresselia"]},{"points":5,"pokemon":["trevenant","charizard","steelix","virizion","ninetales_alolan","jellicent","walrein","clefable","tapu_fini"]},{"points":2,"pokemon":["talonflame","deoxys_defense","umbreon","mandibuzz","scrafty","regirock","dragonite","kommo-o","guzzlord","nidoqueen","dubwool","sandslash_alolan","pidgeot"]}]},"allowSameSpecies":true},"fighting":{"name":"fighting","title":"Fighting Cup","include":[{"filterType":"type","values":["fighting"]}],"exclude":[{"filterType":"type","values":["psychic"]},{"filterType":"tag","values":["mega"]}],"link":"https://bit.ly/3OHDut7"},"fightingremix":{"name":"fightingremix","title":"Fighting Cup Remix","include":[{"filterType":"type","values":["fighting"]}],"exclude":[{"filterType":"type","values":["psychic"]},{"filterType":"id","values":["hakamo_o","kommo_o","buzzwole","sneasler"]},{"filterType":"tag","values":["mega"]}]},"firefly":{"name":"firefly","title":"Firefly Cup","include":[{"filterType":"type","values":["normal","electric","bug","poison","ice"]}],"exclude":[{"filterType":"type","values":["ground"]},{"filterType":"id","values":["escavalier","salazzle","walrein","dragalge","pachirisu"]},{"filterType":"tag","values":["mega"]}]},"flying":{"name":"flying","title":"Flying Cup","include":[{"filterType":"type","values":["flying"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3},"forged":{"name":"forged","title":"Silph Forged Cup","include":[{"filterType":"id","includeShadows":true,"values":["nidoqueen","cresselia","wobbuffet","lickitung","diggersby","ninetales_alolan","abomasnow","talonflame","trevenant","cofagrigus","azumarill","jellicent","froslass","chansey","araquanid","tapu_fini","nidorina","golbat","beedrill","hypno","mew","pidgeot","noctowl","lickilicky","snorlax","munchlax","greedent","granbull","wigglytuff","clefable","sylveon","dewgong","lapras","marowak_alolan","ninetales","stunfisk","galvantula","pachirisu","lanturn","mantine","politoed","venusaur","meganium","serperior","jumpluff","muk","grimer","nidorino","scolipede","venomoth","crobat","tentacruel","garbodor","amoonguss","nidoking","arbok","weezing","mewtwo","rapidash_galarian","slowpoke","slowpoke_galarian","slowbro","slowking","slowbro_galarian","slowking_galarian","celebi","uxie","espeon","exeggcute","exeggutor","mr_rime","gothitelle","girafarig","meowstic","meowstic_female","swoobat","alakazam","bouffalant","bibarel","litleo","pyroar","furfrou","porygon2","porygon_z","purugly","toucannon","farfetchd","bewear","florges","floette","togetic","hitmonchan","hitmontop","heracross","machoke","gurdurr","farfetchd_galarian","avalugg","piloswine","mamoswine","cryogonal","glaceon","beartic","cloyster","darmanitan_galarian_standard","charizard","fletchinder","magmortar","rapidash","heatmor","typhlosion","arcanine","darminitan_standard","chandelure","delphox","emboar","infernape","flareon","barbaracle","dwebble","carracosta","omastar","kabutops","aerodactyl","sudowoodo","bonsly","rhyperior","rhydon","gigalith","lycanroc_midday","gengar","haunter","decidueye","golurk","dusknoir","raichu","raichu_alolan","raikou","electivire","electrode","electrode_hisuian","dedenne","emolga","ampharos","zebstrika","eelektross","jolteon","heliolisk","samurott","poliwrath","gyarados","blastoise","seaking","gastrodon","seismitoad","vaporeon","poliwhirl","golduck","feraligatr","kingler","lumineon","prinplup","swanna","chesnaught","quilladin","servine","leafeon","tangrowth","leavanny","cherrim_sunny","wormadam_plant","wormadam_sandy","sandslash","donphan","marowak","hippowdon","vespiquen","pinsir","ledian","kricketune","parasect","scyther","yanmega","qwilfish","roserade","ariados","salazzle","oranguru","victini","lugia","gallade","whimsicott","aromatisse","slurpuff","spritzee","togekiss","primarina","machamp","primeape","sirfetchd","toxicroak","articuno","crustle","graveler_alolan","golem_alolan","geodude_alolan","magcargo","lycanroc","lycanroc_midnight","gourgeist_super","gourgeist_large","gourgeist_average","gourgeist_small","drifblim","drifloon","zapdos","luxray","alomomola","quagsire","lurantis","bellossom","victreebel","weepinbell","gloom","vileplume","oddish","grotle","torterra","bayleef","ivysaur","gligar","gliscor"]}],"exclude":[],"tierRules":{"max":17,"floor":1,"tiers":[{"points":8,"pokemon":["nidoqueen","cresselia","wobbuffet","lickitung","diggersby","ninetales_alolan","abomasnow","talonflame","trevenant","cofagrigus","azumarill","jellicent","froslass","chansey","araquanid","tapu_fini"]},{"points":4,"pokemon":["nidorina","golbat","beedrill","hypno","mew","pidgeot","noctowl","lickilicky","snorlax","munchlax","greedent","granbull","wigglytuff","clefable","sylveon","dewgong","lapras","marowak_alolan","ninetales","stunfisk","galvantula","pachirisu","lanturn","mantine","politoed","venusaur","meganium","serperior","jumpluff"]},{"points":2,"pokemon":["qwilfish","roserade","ariados","salazzle","oranguru","victini","lugia","gallade","whimsicott","aromatisse","slurpuff","spritzee","togekiss","primarina","machamp","primeape","sirfetchd","toxicroak","articuno","crustle","graveler_alolan","golem_alolan","geodude_alolan","magcargo","lycanroc","lycanroc_midnight","gourgeist_super","gourgeist_large","gourgeist_average","gourgeist_small","drifblim","drifloon","zapdos","luxray","alomomola","quagsire","lurantis","bellossom","victreebel","weepinbell","gloom","vileplume","oddish","grotle","torterra","bayleef","ivysaur","gligar","gliscor"]},{"points":1,"pokemon":["muk","grimer","nidorino","scolipede","venomoth","crobat","tentacruel","garbodor","amoonguss","nidoking","arbok","weezing","mewtwo","rapidash_galarian","slowpoke","slowpoke_galarian","slowbro","slowking","slowbro_galarian","slowking_galarian","celebi","uxie","espeon","exeggcute","exeggutor","mr_rime","gothitelle","girafarig","meowstic","meowstic_female","swoobat","alakazam","bouffalant","bibarel","litleo","pyroar","furfrou","porygon2","porygon_z","purugly","toucannon","farfetchd","bewear","florges","floette","togetic","hitmonchan","hitmontop","heracross","machoke","gurdurr","farfetchd_galarian","avalugg","piloswine","mamoswine","cryogonal","glaceon","beartic","cloyster","darmanitan_galarian_standard","charizard","fletchinder","magmortar","rapidash","heatmor","typhlosion","arcanine","darminitan_standard","chandelure","delphox","emboar","infernape","flareon","barbaracle","dwebble","carracosta","omastar","kabutops","aerodactyl","sudowoodo","bonsly","rhyperior","rhydon","gigalith","lycanroc_midday","gengar","haunter","decidueye","golurk","dusknoir","raichu","raichu_alolan","raikou","electivire","electrode","nelectrode_hisuian","dedenne","emolga","ampharos","zebstrika","eelektross","jolteon","heliolisk","samurott","poliwrath","gyarados","blastoise","seaking","gastrodon","seismitoad","vaporeon","poliwhirl","golduck","feraligatr","kingler","lumineon","prinplup","swanna","chesnaught","quilladin","servine","leafeon","tangrowth","leavanny","cherrim_sunny","wormadam_plant","wormadam_sandy","sandslash","donphan","marowak","hippowdon","vespiquen","pinsir","ledian","kricketune","parasect","scyther","yanmega"]}]}},"fossil":{"name":"fossil","title":"Fossil Cup","include":[{"filterType":"type","values":["water","rock","steel"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"galar":{"name":"galar","title":"Galar Cup (Full Pokedex)","include":[{"filterType":"id","includeShadows":true,"values":["grookey","thwackey","rillaboom","scorbunny","raboot","cinderace","sobble","drizzile","inteleon","blipbug","dottler","orbeetle","caterpie","metapod","butterfree","grubbin","charjabug","vikavolt","hoothoot","noctowl","rookidee","corvisquire","corviknight","skwovet","greedent","pidove","tranquill","unfezant","nickit","thievul","zigzagoon_galarian","linoone_galarian","obstagoon","wooloo","dubwool","lotad","lombre","ludicolo","seedot","nuzleaf","shiftry","chewtle","drednaw","purrloin","liepard","yamper","boltund","bunnelby","diggersby","minccino","cinccino","bounsweet","steenee","tsareena","oddish","gloom","vileplume","bellossom","budew","roselia","roserade","wingull","pelipper","joltik","galvantula","electrike","manectric","vulpix","ninetales","growlithe","arcanine","vanillite","vanillish","vanilluxe","swinub","piloswine","mamoswine","delibird","snorunt","glalie","froslass","baltoy","claydol","mudbray","mudsdale","dwebble","crustle","golett","golurk","munna","musharna","natu","xatu","stufful","bewear","snover","abomasnow","krabby","kingler","wooper","quagsire","corphish","crawdaunt","nincada","ninjask","shedinja","tyrogue","hitmonlee","hitmonchan","hitmontop","pancham","pangoro","klink","klang","klinklang","combee","vespiquen","bronzor","bronzong","ralts","kirlia","gardevoir","gallade","drifloon","drifblim","gossifleur","eldegoss","cherubi","cherrim_sunny","stunky","skuntank","tympole","palpitoad","seismitoad","duskull","dusclops","dusknoir","machop","machoke","machamp","gastly","haunter","gengar","magikarp","gyarados","goldeen","seaking","remoraid","octillery","shellder","cloyster","feebas","milotic","basculin","wishiwashi","pyukumuku","trubbish","garbodor","sizzlipede","centiskorch","rolycoly","carkol","coalossal","diglett","dugtrio","drilbur","excadrill","roggenrola","boldore","gigalith","timburr","gurdurr","conkeldurr","woobat","swoobat","noibat","noivern","onix","steelix","arrokuda","barraskewda","meowth_galarian","perrserker","persian","milcery","alcremie","cutiefly","ribombee","ferroseed","ferrothorn","pumpkaboo_super","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","gourgeist_super","gourgeist_average","gourgeist_large","gourgeist_small","pichu","pikachu","raichu","eevee","vaporeon","jolteon","flareon","espeon","umbreon","leafeon","glaceon","sylveon","applin","flapple","appletun","espurr","meowstic_female","meowstic","swirlix","slurpuff","spritzee","aromatisse","dewpider","araquanid","wynaut","wobbuffet","farfetchd_galarian","sirfetchd","chinchou","lanturn","croagunk","toxicroak","scraggy","scrafty","stunfisk_galarian","shuckle","barboach","whiscash","shellos","gastrodon","wimpod","golisopod","binacle","barbaracle","corsola_galarian","cursola","impidimp","morgrem","grimmsnarl","hatenna","hattrem","hatterene","salandit","salazzle","pawniard","bisharp","throh","sawk","koffing","weezing_galarian","bonsly","sudowoodo","cleffa","clefairy","clefable","togepi","togetic","togekiss","munchlax","snorlax","cottonee","whimsicott","rhyhorn","rhydon","rhyperior","gothita","gothorita","gothitelle","solosis","duosion","reuniclus","karrablast","escavalier","shelmet","accelgor","elgyem","beheeyem","cubchoo","beartic","rufflet","braviary","vullaby","mandibuzz","skorupi","drapion","litwick","lampent","chandelure","inkay","malamar","sneasel","weavile","sableye","mawile","maractus","sigilyph","riolu","lucario","torkoal","mimikyu","cufant","copperajah","qwilfish","frillish","jellicent","mareanie","toxapex","cramorant","toxel","toxtricity","silicobra","sandaconda","hippopotas","hippowdon","durant","heatmor","helioptile","heliolisk","hawlucha","trapinch","vibrava","flygon","axew","fraxure","haxorus","yamask_galarian","runerigus","cofagrigus","honedge","doublade","aegislash","ponyta_galarian","rapidash_galarian","sinistea","polteageist","indeedee","phantump","trevenant","morelull","shiinotic","oranguru","passimian","morpeko","falinks","drampa","turtonator","togedemaru","snom","frosmoth","clobbopus","grapploct","pincurchin","mantyke","mantine","wailmer","wailord","bergmite","avalugg","dhelmise","lapras","lunatone","solrock","mime_jr","mr_mime_galarian","mr_rime","darumaka_galarian","darmanitan_galarian_standard","darmanitan_galarian_zen","stonjourner","eiscue","duraludon","rotom_wash","rotom","rotom_fan","rotom_heat","rotom_frost","rotom_mow","dracozolt","arctozolt","dracovish","arctovish","charmander","charmeleon","charizard","type_null","silvally","larvitar","pupitar","tyranitar","deino","zweilous","hydreigon","goomy","sliggoo","goodra","jangmo_o","hakamo_o","kommo_o","dreepy","drakloak","dragapult","vulpix_alolan","ninetales_alolan","diglett_alolan","dugtrio_alolan","raichu_alolan","meowth_alolan","persian_alolan"]}],"exclude":[],"partySize":3,"presetOnly":true},"galar_base":{"name":"galar","title":"Galar Cup (Full Pokedex)","include":[{"filterType":"id","includeShadows":true,"values":["grookey","thwackey","rillaboom","scorbunny","raboot","cinderace","sobble","drizzile","inteleon","blipbug","dottler","orbeetle","caterpie","metapod","butterfree","grubbin","charjabug","vikavolt","hoothoot","noctowl","rookidee","corvisquire","corviknight","skwovet","greedent","pidove","tranquill","unfezant","nickit","thievul","zigzagoon_galarian","linoone_galarian","obstagoon","wooloo","dubwool","lotad","lombre","ludicolo","seedot","nuzleaf","shiftry","chewtle","drednaw","purrloin","liepard","yamper","boltund","bunnelby","diggersby","minccino","cinccino","bounsweet","steenee","tsareena","oddish","gloom","vileplume","bellossom","budew","roselia","roserade","wingull","pelipper","joltik","galvantula","electrike","manectric","vulpix","ninetales","growlithe","arcanine","vanillite","vanillish","vanilluxe","swinub","piloswine","mamoswine","delibird","snorunt","glalie","froslass","baltoy","claydol","mudbray","mudsdale","dwebble","crustle","golett","golurk","munna","musharna","natu","xatu","stufful","bewear","snover","abomasnow","krabby","kingler","wooper","quagsire","corphish","crawdaunt","nincada","ninjask","shedinja","tyrogue","hitmonlee","hitmonchan","hitmontop","pancham","pangoro","klink","klang","klinklang","combee","vespiquen","bronzor","bronzong","ralts","kirlia","gardevoir","gallade","drifloon","drifloon","gossifleur","eldegoss","cherubi","cherrim_sunny","stunky","skuntank","tympole","palpitoad","seismitoad","duskull","dusclops","dusknoir","machop","machoke","machamp","gastly","haunter","gengar","magikarp","gyarados","goldeen","seaking","remoraid","octillery","shellder","cloyster","feebas","milotic","basculin","wishiwashi","pyukumuku","trubbish","garbodor","sizzlipede","centiskorch","rolycoly","carkol","coalossal","diglett","dugtrio","drilbur","excadrill","roggenrola","boldore","gigalith","timburr","gurdurr","conkeldurr","woobat","swoobat","noibat","noivern","onix","steelix","arrokuda","barraskewda","meowth_galarian","perrserker","persian","milcery","alcremie","cutiefly","ribombee","ferroseed","ferrothorn","pumpkaboo_super","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","gourgeist_super","gourgeist_average","gourgeist_large","gourgeist_small","pichu","pikachu","raichu","eevee","vaporeon","jolteon","flareon","espeon","umbreon","leafeon","glaceon","sylveon","applin","flapple","appletun","espurr","meowstic_female","meowstic","swirlix","slurpuff","spritzee","aromatisse","dewpider","araquanid","wynaut","wobbuffet","farfetchd_galarian","sirfetchd","chinchou","lanturn","croagunk","toxicroak","scraggy","scrafty","stunfisk_galarian","shuckle","barboach","whiscash","shellos","gastrodon","wimpod","golisopod","binacle","barbaracle","corsola_galarian","cursola","impidimp","morgrem","grimmsnarl","hatenna","hattrem","hatterene","salandit","salazzle","pawniard","bisharp","throh","sawk","koffing","weezing_galarian","bonsly","sudowoodo","cleffa","clefairy","clefable","togepi","togetic","togekiss","munchlax","snorlax","cottonee","whimsicott","rhyhorn","rhydon","rhyperior","gothita","gothorita","gothitelle","solosis","duosion","reuniclus","karrablast","escavalier","shelmet","accelgor","elgyem","beheeyem","cubchoo","beartic","rufflet","braviary","vullaby","mandibuzz","skorupi","drapion","litwick","lampent","chandelure","inkay","malamar","sneasel","weavile","sableye","mawile","maractus","sigilyph","riolu","lucario","torkoal","mimikyu","cufant","copperajah","qwilfish","frillish","jellicent","mareanie","toxapex","cramorant","toxel","toxtricity","silicobra","sandaconda","hippopotas","hippowdon","durant","heatmor","helioptile","heliolisk","hawlucha","trapinch","vibrava","flygon","axew","fraxure","haxorus","yamask_galarian","runerigus","cofagrigus","honedge","doublade","aegislash","ponyta_galarian","rapidash_galarian","sinistea","polteageist","indeedee","phantump","trevenant","morelull","shiinotic","oranguru","passimian","morpeko","falinks","drampa","turtonator","togedemaru","snom","frosmoth","clobbopus","grapploct","pincurchin","mantyke","mantine","wailmer","wailord","bergmite","avalugg","dhelmise","lapras","lunatone","solrock","mime_jr","mr_mime_galarian","mr_rime","darumaka_galarian","darmanitan_galarian_standard","darmanitan_galarian_zen","stonjourner","eiscue","duraludon","rotom_wash","rotom","rotom_fan","rotom_heat","rotom_frost","rotom_mow","dracozolt","arctozolt","dracovish","arctovish","charmander","charmeleon","charizard","type_null","silvally","larvitar","pupitar","tyranitar","deino","zweilous","hydreigon","goomy","sliggoo","goodra","jangmo_o","hakamo_o","kommo_o","dreepy","drakloak","dragapult","zacian_hero","zacian_crowned_sword","zamazenta_hero","zamazenta_crowned_shield","zamazenta","zacian","eternatus","eternatus_eternamax"]}],"exclude":[],"partySize":3,"presetOnly":true},"gbinvitational":{"name":"gbinvitational","title":"Gymbreakers Invitational Remix","include":[{"filterType":"type","name":"Type","values":["dark","ice","poison","steel","water"]},{"filterType":"id","name":"Species","values":["goodra","lurantis","ursaring","ursaring_shadow","gliscor","gliscor_shadow","dunsparce","charjabug"]}],"exclude":[{"filterType":"type","name":"Type","values":["fighting"]},{"filterType":"id","name":"Species","values":["morpeko","morpeko_full_belly","skarmory","registeel","gastrodon","medicham","corviknight"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50},"genetic":{"name":"genetic","title":"Genetic","include":[{"filterType":"id","name":"Species","values":["alomomola","amoonguss","annihilape","araquanid","arbok","ariados","azumarill","banette","barbaracle","basculin","beedrill","bibarel","blastoise","brionne","bruxish","bulbasaur","carracosta","castform_rainy","ceruledge","chandelure","clamperl","clauncher","clawitzer","cloyster","cofagrigus","corphish","corsola","crawdaunt","crobat","croconaw","decidueye","dewgong","dewott","dragalge","drapion","drifblim","drifloon","dusclops","dusknoir","dustox","empoleon","feraligatr","floatzel","frillish","frogadier","froslass","garbodor","gengar","gholdengo","giratina_origin","gloom","golbat","goldeen","golduck","golisopod","gorebyss","gourgeist_average","gourgeist_large","gourgeist_small","gourgeist_super","greninja","grimer","grimer_alolan","gyarados","haunter","hoopa","houndstone","huntail","ivysaur","jellicent","kabuto","kabutops","kingdra","kingler","koffing","krabby","lampent","lapras","lombre","ludicolo","lumineon","mantine","mantyke","marowak_alolan","milotic","misdreavus","mismagius","muk","muk_alolan","nidorina","nidorino","octillery","oddish","omanyte","omastar","oricorio_sensu","overqwil","pelipper","piplup","poipole","politoed","poliwhirl","poliwrath","popplio","primarina","prinplup","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","quaquaval","quaxwell","qwilfish","qwilfish_hisuian","relicanth","revavroom","roselia","roserade","sableye","salazzle","samurott","samurott_hisuian","scolipede","seadra","seaking","sealeo","seel","seviper","sharpedo","shellos","simipour","skeledirge","skorupi","skrelp","skuntank","slowbro","slowbro_galarian","slowking","slowking_galarian","slowpoke","sneasel","sneasel_shadow","sneasel_hisuian","sneasler","spiritomb","starmie","stunky","suicune","swalot","swanna","tapu_fini","tentacool","tentacruel","tirtouga","totodile","toxapex","toxicroak","trevenant","typhlosion_hisuian","vaporeon","varoom","venomoth","venusaur","victreebel","vileplume","wailmer","wailord","walrein","wartortle","weepinbell","weezing","weezing_galarian","whirlipede","wugtrio","abomasnow","abomasnow_shadow","aerodactyl","aerodactyl_shadow","aggron","aggron_shadow","anorith","anorith_shadow","armaldo","armaldo_shadow","aron","aron_shadow","articuno","articuno_shadow","bastiodon","bastiodon_shadow","blaziken","blaziken_shadow","cacturne","cacturne_shadow","charizard","charizard_shadow","combusken","combusken_shadow","cradily","cradily_shadow","crustle","crustle_shadow","dragonite","dragonite_shadow","dwebble","dwebble_shadow","exeggcute","exeggcute_shadow","exeggutor","exeggutor_alolan","exeggutor_alolan_shadow","exeggutor_shadow","ferroseed","ferroseed_shadow","ferrothorn","ferrothorn_shadow","forretress","forretress_shadow","gallade","gallade_shadow","gardevoir","gardevoir_shadow","girafarig","girafarig_shadow","ho_oh","ho_oh_shadow","honchkrow","honchkrow_shadow","houndoom","houndoom_shadow","houndour","houndour_shadow","infernape","infernape_shadow","jumpluff","jumpluff_shadow","lairon","lairon_shadow","latias","latias_shadow","latios","latios_shadow","ledian","ledian_shadow","lileep","lileep_shadow","lugia","lugia_shadow","mawile","mawile_shadow","metagross","metagross_shadow","metang","metang_shadow","moltres","moltres_shadow","monferno","monferno_shadow","murkrow","murkrow_shadow","ninetales_alolan","ninetales_alolan_shadow","nuzleaf","nuzleaf_shadow","pidgeot","pidgeot_shadow","pidgeotto","pidgeotto_shadow","probopass","probopass_shadow","raticate_alolan","raticate_alolan_shadow","salamence","salamence_shadow","sandshrew_alolan","sandshrew_alolan_shadow","sandslash_alolan","sandslash_alolan_shadow","scizor","scizor_shadow","scyther","scyther_shadow","shiftry","shiftry_shadow","skarmory","skarmory_shadow","snover","snover_shadow","staraptor","staraptor_shadow","staravia","staravia_shadow","tranquill","tranquill_shadow","tyranitar","tyranitar_shadow","unfezant","unfezant_shadow","weavile","weavile_shadow","xatu","xatu_shadow"]}],"exclude":[],"overrides":[],"league":1500,"useDefaultMovesets":1},"geneticremix":{"name":"geneticremix","title":"Genetic Remix","include":[{"filterType":"id","name":"Species","values":["shadow","slowking","slowking_galarian","slowking_shadow","slowpoke","slowpoke_","galarian","slowpoke_shadow","smoochum","sneasel_hisuian","sneasel_hisuian_shadow","sneasler","sneasler_shadow","solosis","solosis_shadow","solrock","spiritomb","spoink","spoink_shadow","starmie","stunky","stunky_shadow","sudowoodo","sudowoodo_shadow","suicune","suicune_shadow","swalot","swanna","swanna_shadow","swoobat","talonflame","tapu_fini","tentacool","tentacool_shadow","tentacruel","tentacruel_shadow","tirtouga","torkoal","torracat","totodile","totodile_shadow","toxapex","trevenant","turtonator","typhlosion","typhlosion_hisuian","typhlosion_shadow","tyranitar","tyranitar_shadow","tyrantrum","tyrunt","unown","uxie","vaporeon","venomoth","venomoth_shadow","venusaur","venusaur_shadow","victini","victreebel","victreebel_shadow","vileplume","vileplume_shadow","wailmer","wailmer_shadow","wailord","wailord_shadow","walrein","walrein_shadow","wartortle","wartortle_shadow","weepinbell","weepinbell_shadow","weezing","weezing_galarian","weezing_shadow","whirlipede","wobbuffet","wobbuffet_shadow","wugtrio","xatu","xatu_shadow","abomasnow","abomasnow_shadow","altaria","arctibax","articuno","articuno_shadow","baxcalibur","beautifly","bombirdier","breloom","butterfree","buzzwole","cacturne","cacturne_shadow","chesnaught","crabominable","dartrix","decidueye_hisuian","dragonite","dragonite_shadow","exeggutor_alolan","exeggutor_alolan_shadow","frigibax","guzzlord","hakamo_o","hawlucha","heracross","honchkrow","honchkrow_shadow","hydreigon","jumpluff","jumpluff_shadow","kommo_o","leavanny","ledian","ledian_shadow","lokix","mandibuzz","masquerain","meowscarada","moltres_galarian","mothim","murkrow","murkrow_shadow","ninetales_alolan","ninetales_alolan_shadow","ninjask","noivern","nuzleaf","nuzleaf_shadow","pangoro","parasect","rayquaza","ribombee","rowlet","salamence","salamence_shadow","scrafty","scraggy","scyther","scyther_shadow","shaymin_sky","shiftry","shiftry_shadow","shiinotic","sneasel","sneasel_shadow","snover","snover_shadow","swadloon","togekiss","togetic","tropius","vespiquen","vivillon","vullaby","weavile","weavile_shadow","whimsicott","wormadam_plant","yanma","yanmega","zapdos_galarian","zweilous","aerodactyl","aerodactyl_shadow","alakazam","alakazam_shadow","alomomola","amaura","amoonguss","amoonguss_shadow","anorith","anorith_shadow","araquanid","arbok","arbok_shadow","arcanine","arcanine_hisuian","arcanine_shadow","archen","archeops","ariados","armaldo","armaldo_shadow","armarouge","articuno_galarian","avalugg_hisuian","azelf","azumarill","banette","banette_shadow","barbaracle","basculin","beedrill","beedrill_shadow","beheeyem","blastoise","blastoise_shadow","blaziken","blaziken_shadow","boldore","bonsly","braixen","brionne","bruxish","bulbasaur","bulbasaur_shadow","carracosta","castform_rainy","castform_sunny","celebi","ceruledge","chandelure","chandelure_shadow","charizard","charizard_shadow","charmeleon","charmeleon_shadow","chimecho","clamperl","clauncher","clawitzer","cloyster","cloyster_shadow","cofagrigus","combusken","combusken_shadow","corphish","corphish_shadow","corsola","cradily","cradily_shadow","crawdaunt","crawdaunt_shadow","crobat","crobat_shadow","crocalor","croconaw","croconaw_shadow","crustle","crustle_shadow","darmanitan_standard","darmanitan_standard_shadow","darumaka","decidueye","delphox","deoxys_speed","dewgong","dewott","diancie","dragalge","drapion","drapion_shadow","drifblim","drifblim_shadow","drifloon","drifloon_shadow","drowzee","drowzee_shadow","duosion","duosion_shadow","dusclops","dusclops_shadow","dusknoir","dusknoir_shadow","dustox","dwebble","dwebble_shadow","elgyem","emboar","entei","entei_shadow","espeon","espurr","exeggcute","exeggcute_shadow","exeggutor","exeggutor_shadow","flareon","fletchinder","floatzel","frillish","frogadier","froslass","froslass_shadow","fuecoco","gallade","gallade_shadow","garbodor","gardevoir","gardevoir_shadow","gengar","gengar_shadow","gigalith","giratina_origin","gloom","gloom_shadow","golbat","golbat_shadow","goldeen","golduck","golduck_shadow","golisopod","gorebyss","gothitelle","gothitelle_shadow","gothorita","gothorita_shadow","gourgeist_average","gourgeist_large","gourgeist_small","gourgeist_super","grimer","grimer_alolan","grimer_alolan_shadow","grimer_shadow","growlithe","growlithe_hisuian","growlithe_shadow","grumpig","grumpig_shadow","gyarados","gyarados_shadow","haunter","haunter_shadow","heatmor","ho_oh","ho_oh_shadow","hoopa","houndoom","houndoom_shadow","houndour","houndour_shadow","houndstone","huntail","hypno","hypno_shadow","incineroar","infernape","infernape_shadow","ivysaur","ivysaur_shadow","jellicent","jynx","kabuto","kabutops","kadabra","kingdra","kingdra_shadow","kingler","kleavor","koffing","koffing_shadow","krabby","kyogre_shadow","lampent","lampent_shadow","lapras","lapras_shadow","larvesta","latias","latias_shadow","latios","latios_shadow","lileep","lileep_shadow","lombre","ludicolo","lugia","lugia_shadow","lumineon","lunatone","lycanroc_dusk","lycanroc_midday","lycanroc_midnight","magby","magcargo","magmar","magmar_shadow","magmortar","magmortar_shadow","malamar","mantine","mantyke","marowak_alolan","marowak_alolan_shadow","medicham","meowstic_female","meowstic","mesprit","mewtwo_shadow","milotic","misdreavus","misdreavus_shadow","mismagius","mismagius_shadow","moltres","moltres_shadow","monferno","monferno_shadow","mr_mime","mr_mime_galarian","mr_rime","muk","muk_alolan","muk_alolan_shadow","muk_shadow","munna","musharna","naganadel","nidorina","nidorina_shadow","nidorino","nidorino_shadow","ninetales","ninetales_shadow","nosepass","nosepass_shadow","octillery","oddish","oddish_shadow","omanyte","omanyte_shadow","omastar","omastar_shadow","oricorio_baile","oricorio_pau","oricorio_sensu","overqwil","pelipper","pignite","piplup","piplup_shadow","poipole","politoed","politoed_shadow","poliwhirl","poliwhirl_shadow","ponyta","ponyta_galarian","popplio","primarina","prinplup","prinplup_shadow","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","quaquaval","quaxwell","quilava","quilava_shadow","qwilfish","qwilfish_hisuian","rampardos","rampardos_shadow","rapidash","rapidash_galarian","regirock","regirock_shadow","relicanth","reuniclus","reuniclus_shadow","roggenrola","roselia","roserade","sableye","sableye_shadow","salazzle","samurott","samurott_hisuian","scolipede","seadra","seadra_shadow","seaking","sealeo","sealeo_shadow","seel","seviper","sharpedo","sharpedo_shadow","shellos","sigilyph","simipour","simisear","skeledirge","skorupi","skorupi_shadow","skrelp","skuntank","skuntank_shadow","slowbro","slowbro_galarian","slowbro_"]}],"exclude":[],"overrides":[],"league":1500,"useDefaultMovesets":1,"excludeLowPokemon":1},"gobattleleague":{"name":"gobattleleague","title":"GO Battle League","include":[],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"gymbreakers":{"name":"gymbreakers","title":"Gymbreakers Invitational 2022","include":[{"filterType":"type","name":"Type","values":["bug","dark","dragon","electric","normal"]}],"exclude":[{"filterType":"id","name":"Species","values":["buzzwole","articuno_galarian","zapdos_galarian","moltres_galarian","xurkitree","pheromosa","shaymin_sky","sneasler","sneasel_hisuian","arcanine_hisuian","growlithe_hisuian","dragalge","altaria","diggersby","wigglytuff","forretress","kommo_o","scrafty","stunfisk","dedenne","hakamo_o"]},{"filterType":"tag","name":"Tag","values":["mega"]}]},"halloween":{"name":"halloween","title":"Halloween Cup","include":[{"filterType":"type","values":["poison","ghost","bug","dark","fairy"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"hisui":{"name":"hisui","title":"Hisui Cup","include":[{"filterType":"dex","values":[387,493]},{"filterType":"id","values":["sneasel_hisuian","sneasel_hisuian_shadow","sneasler","sneasler_shadow","qwilfish_hisuian","overqwil","growlithe_hisuian","arcanine_hisuian","braviary_hisuian","voltorb_hisuian","electrode_hisuian","typhlosion_hisuian","samurott_hisuian","decidueye_hisuian","wyrdeer","kleavor","ursaluna","zoroark_hisuian","lilligant_hisuian","avalugg_hisuian"]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"hoenn":{"name":"hoenn","title":"Hoenn Cup","include":[{"filterType":"dex","name":"Pokedex Number","values":[252,386]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[]},"holiday":{"name":"holiday","title":"Holiday Cup","include":[{"filterType":"type","values":["grass","normal","ice","ghost","flying","electric"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["smeargle","articuno","celebi","ho_oh","hoopa","lugia","moltres","rayquaza","regice","regieleki","regigigas","shaymin","shaymin_sky","zapdos","morpeko_full_belly"],"leagues":[500]}],"partySize":3,"presetOnly":true},"illusion":{"name":"illusion","title":"illusionT","restrictedPicks":1,"restrictedPokemon":["flygon","grumpig","slowbro_galarian","dubwool","goodra","druddigon","cresselia","deoxys_defense","baxcalibur","kingdra","bronzong","drampa"],"include":[{"filterType":"type","name":"Type","values":["dragon","grass","normal","psychic"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","fairy","flying"]},{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["medicham","delphox","turtonator","wobbuffet","zygarde","zygarde_10","grafaiai","arctibax","dragonair","furret","dragalge","pyroar","hakamo_o","kommo_o","litleo","armarouge","lickilicky","lickitung","abomasnow","diggersby","ursaring"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"excludeLowPokemon":0,"levelCap":50,"includeLowStatProduct":true},"ingot":{"name":"ingot","title":"Ingot","include":[{"filterType":"type","name":"Type","values":["dark","electric","fighting","fire","poison","steel"]},{"filterType":"id","name":"Species","values":["rotom_wash","wormadam_sandy","archen","archeops","qwilfish_hisuian","arctibax","tyrunt","stunfisk_galarian","toxapex","tentacruel","cloyster","araquanid","cradily","amaura","avalugg_hisuian","armaldo","lairon","","steelix","nidoking","nidoqueen","piloswine","ursaluna","","camerupt","munchlax","lileep"]}],"exclude":[{"filterType":"type","name":"Type","values":["dragon","ground","rock","water","ghost","fighting"]},{"filterType":"id","name":"Species","values":["gligar","drapion","vikavolt","heliolisk","morpeko_full_belly","marowak_alolan","grimer","malamar","salazzle","nidorina","qwilfish_hisuian","pachirisu","mandibuzz","pangoro","bellibolt","corviknight","grafaiai"]},{"filterType":"tag","name":"Tag","values":["shadow","mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct":true},"innocent":{"name":"innocent","title":"Silph Innocent Cup","include":[{"filterType":"type","name":"Type","values":["dragon","fairy","flying","psychic","water"]},{"filterType":"id","name":"Species","values":["arbok","dragalge","garbodor","swalot"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["shadow","mega"]},{"filterType":"type","name":"Type","values":["fire","ice","poison","steel"]},{"filterType":"id","name":"Species","values":["altaria","articuno_galarian","cresselia","hawlucha","lanturn","mandibuzz","mantine","mew","moltres_galarian","noctowl","pelipper","pidgeot","zapdos_galarian"]}]},"ionic":{"name":"ionic","title":"Silph Ionic Cup","include":[{"filterType":"id","name":"Species","values":["ampharos","dedenne","luxray","electivire","raikou","minun","armaldo","bewear","bibarel","crawdaunt","drapion","garbodor","golisopod","kricketune","lapras","linoone","malamar","milotic","muk","munchlax","nidorina","castform","pangoro","parasect","pinsir","politoed","porygon2","qwilfish","sableye","samurott","scolipede","seaking","seviper","skuntank","snorlax","swalot","umbreon","weavile","zoroark","ariados","barbaracle","beedrill","blastoise","sneasel_hisuian","kricketune","linoone","poliwrath","sealeo","sneasel","raticate_alolan","greedent"],"includeShadows":1}],"exclude":[],"overrides":[]},"iridescent":{"name":"iridescent","title":"Iridescent Cup","include":[{"filterType":"type","values":["bug","fairy","ghost","grass","ground"]},{"filterType":"id","values":["whimsicott","slurpuff","girafarig"]}],"exclude":[{"filterType":"tag","values":["mega","shadow"]},{"filterType":"type","values":["fire","poison","steel","flying","ice","dark"]},{"filterType":"id","values":["diggersby","buzzwole","carbink","annihilape","giratina_origin","gogoat","zygarde","corsola_galarian","azumarill","araquanid","golisopod"]},{"filterType":"move","values":["CHARM"]}]},"justicar":{"name":"justicar","title":"Silph Factions (Justicar)","include":[{"filterType":"type","values":["bug","electric","fairy","fighting","fire","ice","poison"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"type","values":["ground"]},{"filterType":"id","values":["toxicroak","dragalge","aurorus","golem_alolan","lanturn","tapu_fini","hawlucha"]}],"allowSameSpecies":true},"kanto":{"name":"kanto","title":"Kanto Cup","include":[{"filterType":"dex","values":[1,151]}],"exclude":[{"filterType":"tag","values":["mega"]}],"partySize":3},"knockout":{"name":"knockout","title":"Devon Knockout Cup","restrictedPicks":2,"restrictedPokemon":["gastrodon","whiscash","diggersby","runerigus","golisopod","araquanid","tentacruel","ariados","charjabug","vikavolt","galvantula"],"include":[{"filterType":"id","name":"Species","values":["sandslash","machamp","sirfetchd","hitmontop","primeape","poliwrath","gastrodon","whiscash","diggersby","runerigus","golisopod","araquanid","tentacruel","ariados","charjabug","vikavolt","galvantula","donphan","escavalier","politoed","dewgong","walrein","sealeo","lapras","samurott","blastoise","milotic","greninja","castform_rainy","wailmer","seaking","suicune","qwilfish","gengar","haunter","beedrill","swalot","weezing_galarian","grimer","muk","grimer_alolan","muk_alolan","drapion","skuntank","qwilfish_hisuian","overqwil","seviper","scolipede","marshtomp","seismitoad","stunfisk","sanslash","golurk","palossand","piloswine","marowak","hippowdon","rhyperior","rhydon","ampharos","heliolisk","dedenne","raichu_alolan","minun","graveler_alolan","golem_alolan","raichu","minun","luxray"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["shadow","mega"]}],"link":"https://discord.com/invite/MtGA34QM5N"},"laic2025":{"name":"laic2025","title":"LAIC 2025 Championship Series Cup","link":"https://laic.gg/competitor_info/pokemon_go/","include":[{"filterType":"type","values":["dragon","flying","ghost","ice","psychic"]}],"exclude":[{"filterType":"type","values":["dark","rock"]},{"filterType":"tag","values":["mega","legendary","mythical","shadow","ultrabeast"]},{"filterType":"id","values":["sandslash_alolan","sandshrew_alolan","corsola_galarian","corviknight","jellicent","lapras","kingdra","ninetales_alolan","honedge","doublade","aegislash_shield","aegislash_blade"]}]},"littlecatch":{"name":"littlecatch","title":"Little Catch Cup","include":[],"exclude":[{"filterType":"id","values":["articuno","celebi","ho_oh","hoopa","lugia","moltres","rayquaza","regice","regieleki","regigigas","shaymin","shaymin_sky","zapdos","registeel","cresselia","guzzlord","deoxys_defense","mew","tapu_fini","regirock","regice","zygarde_complete","zygarde","victini","raikou_shadow","suicune_shadow","entei_shadow","gengar_shadow"]},{"filterType":"tag","values":["mega"]}],"levelCap":50},"littlejungle":{"name":"littlejungle","title":"Little Jungle Cup","include":[{"filterType":"type","values":["normal","grass","electric","poison","ground","flying","bug","dark"]}],"exclude":[{"filterType":"id","values":["shuckle","shuckle_shadow","smeargle","genesect","celebi","hoopa","hoopa_unbound","aerodactyl_shadow","zarude","genesect_douse","genesect_burn","xerneas","thundurus_therian","yveltal","meloetta_aria","zacian","zamazenta","zacian_hero","zamazenta_hero","genesect_douse","zarude","hoopa_unbound","genesect_shock","tapu_koko","tapu_lele","tapu_bulu","nihilego","genesect_chill","braviary_hisuian","solgaleo","lunala","keldeo_ordinary","avalugg_hisuian","kyogre_primal","groudon_primal","kleavor","guzzlord","gligar","stunfisk_galarian"]},{"filterType":"tag","values":["legendary","mega"]}],"partySize":3},"littlejungleremix":{"name":"littlejungleremix","title":"Little Jungle Cup Remix","include":[{"filterType":"type","values":["bug","dark","electric","flying","grass","ground","normal","poison"]},{"filterType":"id","values":["zapdos_galarian","moltres_galarian","articuno_galarian","suicune","entei","raikou"],"includeShadows":false}],"exclude":[{"filterType":"id","values":["skorupi","cottonee","ducklett","salandit","shuckle","shuckle_shadow","smeargle","aerodactyl_shadow","scizor_shadow"]},{"filterType":"tag","values":["legendary","mythical","mega"]}]},"littleremix":{"name":"littleremix","title":"Little Cup Remix","include":[{"filterType":"id","includeShadows":1,"values":["abra","aipom","anorith","archen","aron","axew","azurill","bagon","baltoy","barboach","beldum","bellsprout","bidoof","blitzle","bonsly","budew","buizel","bulbasaur","buneary","burmy","cacnea","carvanha","caterpie","charmander","cherubi","chikorita","chimchar","chinchou","chingling","cleffa","combee","corphish","cranidos","croagunk","cubchoo","cubone","cyndaquil","darumaka","darumaka_galarian","deerling","diglett","diglett_alolan","doduo","dratini","drifloon","drilbur","drowzee","ducklett","duskull","dwebble","ekans","electrike","elekid","elgyem","exeggcute","farfetchd_galarian","feebas","ferroseed","finneon","foongus","frillish","gastly","geodude","geodude_alolan","gible","glameow","gligar","goldeen","golett","gothita","grimer","grimer_alolan","growlithe","gulpin","happiny","hippopotas","hoothoot","hoppip","horsea","houndour","igglybuff","joltik","kabuto","klink","koffing","krabby","kricketot","larvesta","larvitar","ledyba","lickitung","lileep","lillipup","litwick","lotad","machop","magby","magikarp","magnemite","makuhita","mankey","mantyke","mareep","meditite","meowth","meowth_alolan","meowth_galarian","mienfoo","mime jr.","misdreavus","mudkip","munchlax","munna","murkrow","natu","nidoran_male","nidoran_female","nincada","nosepass","numel","oddish","omanyte","oshawott","pansage","pansear","paras","patrat","phanpy","pichu","pidgey","pidove","pineco","piplup","poliwag","ponyta","ponyta","poochyena","psyduck","purrloin","ralts","rattata","rattata_alolan","remoraid","rhyhorn","riolu","roggenrola","rufflet","sandile","sandshrew","sandshrew_alolan","scraggy","seedot","seel","sentret","sewaddle","shellos_east_sea","shellos_west_sea","shieldon","shinx","shroomish","shuppet","skitty","skorupi","slakoth","slowpoke","","slugma","smoochum","sneasel","snivy","snorunt","snover","snubbull","solosis","spearow","spheal","spinarak","spoink","squirtle","starly","stunky","surskit","swablu","swinub","taillow","tangela","teddiursa","tentacool","tepig","timburr","tirtouga","togepi","torchic","totodile","trapinch","treecko","trubbish","turtwig","tympole","tynamo","tyrogue","vanillite","venipede","venonat","voltorb","vulpix_alolan","wailmer","weedle","whismur","wingull","woobat","wooper","wurmple","wynaut","yamask","yanma","zigzagoon","zigzagoon_galarian","zubat","meltan","yamask_galarian","dratini_shadow","stunky_shadow","cubone_shadow","gligar_shadow","mareep_shadow","turtwig_shadow","growlithe_shadow","psyduck_shadow","duskull_shadow","oddish_shadow","hoppip_shadow","houndour_shadow","venonat_shadow","squirtle_shadow","drowzee_shadow","nidoran_male_shadow","seedot_shadow","meowth_shadow","pineco_shadow","sandshrew_shadow","mudkip_shadow","poliwag_shadow","machop_shadow","exeggcute_shadow","slowpoke_shadow","magnemite_shadow","grimer_shadow","zubat_shadow","teddiursa_shadow","charmander_shadow","rattata_shadow","misdreavus_shadow","snover_shadow","bulbusaur_shadow","ralts_shadow","larvitar_shadow","omanyte_shadow","sneasel_shadow","koffing_shadow","carvanha_shadow","bagon_shadow","diglett_shadow","trapinch_shadow","cacnea_shadow","weedle_shadow","nidoran_female_shadow","shuppet_shadow","bellsprout_shadow","ekans_shadow","abra_shadow","beldum_shadow","magikarp_shadow","shellder","shellder_shadow","scyther","scyther_shadow","onix","mime_jr","eevee","porygon","sunkern","clamperl","burmy","shellos","panpour","petilil","minccino","karrablast","shelmet","vullaby","pawniard","staryu","chespin","fennekin","froakie","bunnelby","fletchling","litleo","flabebe","pancham","espurr","spritzee","swirlix","inkay","binacle","skrelp","clauncher","helioptile","goomy","phantump","pumpkaboo_small","pumpkaboo_average","pumpkaboo_large","pumpkaboo_super","bergmite","noibat","rowlet","litten","popplio","pikipek","yungoos","rockruff","fomantis","salandit","jangmo_o","skwovet","wooloo","zigzagoon_galarian","farfetchd_galarian","mr_mime_galarian","yamask_galarian","dewpider","voltorb_hisuian","wimpod","stufful","amaura","tyrunt"]}],"exclude":[],"partySize":3},"love":{"name":"love","title":"Love Cup","include":[{"filterType":"id","includeShadows":1,"values":["charmander","charmander_shadow","charmeleon","charmeleon_shadow","charizard","charizard_shadow","vileplume","vileplume_shadow","paras","parasect","krabby","kingler","voltorb","electrode","goldeen","seaking","jynx","magmar","magmar_shadow","magikarp","magikarp_shadow","flareon","ledyba","ledian","ariados","yanma","scizor","scizor_shadow","slugma","magcargo","octillery","delibird","porygon2","porygon2_shadow","magby","torchic","combusken","blaziken","wurmple","medicham","medicham_xl","carvanha","carvanha_shadow","camerupt","solrock","corphish","crawdaunt","kricketot","kricketune","burmy_trash","wormadam_trash","magmortar","magmortar_shadow","porygon_z","porygon_z_shadow","rotom_wash","rotom_mow","rotom","rotom_fan","rotom_frost","rotom_heat","tepig","pignite","emboar","pansear","simisear","throh","venipede","scolipede","krookodile","darumaka","darmanitan_standard","dwebble","crustle","deerling","accelgor","pawniard","bisharp","braviary","heatmor","fennekin","braixen","delphox","fletchling","fletchinder","talonflame","vivillon","tyrantrum","litten","torracat","incineroar","oricorio_baile","lycanroc_midnight","turtonator","buzzwole","fuecoco","crocalor","skeledirge","charcadet","armarouge","klawf","wugtrio","tatsugiri_curly","gimmighoul","clefairy","clefable","jigglypuff","wigglytuff","slowpoke","slowpoke_shadow","slowbro","slowbro_shadow","exeggcute","exeggcute_shadow","lickitung","lickitung_xl","happiny","chansey","mr.mime","mimejr.","porygon","porygon_shadow","cleffa","igglybuff","flaaffy","flaaffy_shadow","hoppip","hoppip_shadow","slowking","slowking_shadow","snubbull","corsola","smoochum","miltank","blissey","whismur","skitty","milotic","gorebyss","luvdisc","cherubi","cherrim_sunny","lickilicky","audino","alomomola","scrafty","castform_sunny","mr_mime","druddigon","sylveon","spritzee","aromatisse","musharna","slowbro_galarian","slowking_galarian","slowpoke_galarian","electrode_hisuian","litten","torracat","incineroar","lycanroc_midnight","oricorio_baile","oricorio_pau","fomantis","lurantis","bewear","stufful","latias","latias_shadow","mesprit","bruxish","hatenna","hattrem","hatterene","impidimp","morgrem","tinkatink","tinkatuff","tinkaton","flamigo","tatsugiri_droopy","sizzlipede","centiskorch","groudon","deoxys","deoxys_defense","deoxys_attack","deoxys_speed","moltres_galarian","ho_oh","mew","diancie"]}],"exclude":[],"partySize":3},"majestic":{"name":"majestic","title":"Majestic Cup","include":[{"filterType":"type","values":["fairy","ice","psychic","ghost","water","normal"]},{"filterType":"id","values":[]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"type","values":["dark","none","electric","rock","steel","fire"]},{"filterType":"id","values":["azumarill","oranguru","fearow","toucannon","trumbeak","dodrio","rufflet","toxapex","ninetales_alolan","sealeo","dewgong","wigglytuff","walrein","jellicent","araquanid","girafarig","tentacruel","weezing_galarian","lapras","abomasnow"]}]},"mega":{"name":"mega","title":"All Pokemon","include":[],"exclude":[]},"metamorphosis":{"name":"metamorphosis","title":"Metamorphosis","include":[{"filterType":"type","name":"Type","values":["dragon","flying","psychic"]},{"filterType":"id","name":"Species","values":["togekiss","jellicent","trevenant","marowak_alolan","marowak_alolan_shadow","seaking","primeape","primeape_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","electric","steel","ice"]},{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["corsola_galarian","rapidash_galarian","togetic"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"excludeLowPokemon":1},"mountain":{"name":"mountain","title":"Mountain Cup","include":[{"filterType":"type","values":["ground","ice","rock","steel"]}],"exclude":[{"filterType":"id","values":["swampert"]},{"filterType":"tag","values":["mega"]}]},"naiad":{"name":"naiad","title":"Silph Naiad Cup","include":[{"filterType":"type","name":"Type","values":["bug","dragon","psychic","water"]},{"filterType":"id","name":"Species","values":["greedent","miltank","snorlax","snorlax_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","fairy","rock"]},{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["araquanid","articuno_galarian","cresselia","forretress","lanturn","medicham","toxapex"]}]},"nemesis":{"name":"nemesis","title":"Nemesis Cup","restrictedPicks":2,"restrictedPokemon":["obstagoon","gallade","lucario","poliwrath","pangoro","blaziken","chesnaught","quagsire","flygon","excadrill","jumpluff","dedenne","froslass","gourgeist_small","gourgeist_average","gourgeist_large","gourgeist_super","noctowl","gyarados","charizard","gengar","rapidash_galarian","mawile"],"include":[{"filterType":"id","includeShadows":true,"values":["obstagoon","gallade","lucario","poliwrath","pangoro","blaziken","chesnaught","quagsire","flygon","excadrill","jumpluff","dedenne","froslass","gourgeist_small","gourgeist_average","gourgeist_large","gourgeist_super","noctowl","gyarados","charizard","gengar","rapidash_galarian","mawile"]},{"filterType":"type","values":["bug","dark","fire","grass","ice","psychic","water"]}],"exclude":[{"filterType":"id","values":["escavalier","salazzle"]},{"filterType":"type","values":["none","fairy","flying","fighting","ground","ghost","normal"]},{"filterType":"tag","values":["mega"]}]},"nettle":{"name":"nettle","title":"Devon Nettle Cup","link":"https://devon.gg/nettle-cup","include":[{"filterType":"id","values":["empoleon","empoleon_shadow","escavalier","pawniard","perrserker","tinkaton"]},{"filterType":"type","name":"Type","values":["bug","dark","electric","fairy","fighting","grass","normal","poison","rock","water"]}],"exclude":[{"filterType":"type","name":"Type","values":["dragon","fire","flying","ghost","ground","ice","psychic","steel"]},{"filterType":"id","values":["clodsire","cradily","cradily_shadow","dachsbun","nidoqueen","nidoqueen_shadow","wigglytuff"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"excludeLowPokemon":1},"onyx":{"name":"onyx","title":"Onyx Cup","include":[{"filterType":"type","values":["normal","rock","fire","steel","water","ghost","dark","psychic","bug","ice","dragon","electric","poison"]},{"filterType":"id","values":["onix"]}],"exclude":[{"filterType":"type","values":["ground","flying","fighting","grass","fairy"]},{"filterType":"id","values":["registeel","bastiodon","pachirisu","araquanid","togedemaru","morpeko_full_belly","bellibolt","toxtricity","guzzlord","genesect","forretress","corsola_galarian","malamar","drapion","regidrago","melmetal","lanturn","toxapex","wormadam_trash","spinda","furret","spiritomb","jellicent","dubwool","dunsparce","kangaskhan"]},{"filterType":"tag","values":["mega","shadow"]},{"filterType":"move","values":[]}]},"overused":{"name":"ou","title":"Overused Cup","include":[],"exclude":[{"filterType":"id","values":["dialga","palkia","giratina_altered","giratina_origin","charizard_mega_x","charizard_mega_y","blastoise_mega","gengar_mega","melmetal","kyogre","groudon","zekrom","reshiram","mewtwo","lugia","ho_oh","dragonite","gyarados_mega"]}]},"pillar":{"name":"pillar","title":"Devon Pillar Cup","include":[{"filterType":"id","name":"Species","values":["bibarel","bibarel_shadow","clodsire","feraligatr","feraligatr_shadow","ariados","azumarill","malamar","jumpluff","jumpluff_shadow","drapion","drapion_shadow","lickilicky","samurott","walrein","walrein_shadow","arctibax","goodra","hippowdon","hippowdon_shadow","miltank","ursaring","ursaring_shadow","sableye","sableye_shadow","weezing_galarian","weezing_galarian_shadow","cresselia","cresselia_shadow","regirock","regirock_shadow","stunfisk","gligar","gligar_shadow","sealeo","sealeo_shadow","castform_rainy","froslass","froslass_shadow","lokix","greedent","trevenant","leavanny","nidoqueen","nidoqueen_shadow","golisopod","spiritomb","raticate_alolan","raticate_alolan_shadow","cradily","cradily_shadow","empoleon","empoleon_shadow","altaria","jellicent","politoed","politoed_shadow","furfrou","beedrill","beedrill_shadow","scizor","scizor_shadow","seaking","pelipper","dragapult","typhlosion","typhlosion_shadow","tapu_fini","rapidash","furret","pidgeot","pidgeot_shadow","gyarados","gyarados_shadow","lapras","lapras_shadow","noctowl","zangoose","forretress","forretress_shadow","mienshao","sneasler","sneasler_shadow","sneasel_hisuian","sneasel_hisuian_shadow","qwilfish","qwilfish_hisuian","lunatone","solrock","victini","poliwhirl","poliwhirl_shadow","magmar","magmar_shadow","magmortar","magmortar_shadow","sceptile","sceptile_shadow","marowak_alolan","marowak_alolan_shadow","runerigus","gliscor","gliscor_shadow","regice","regice_shadow","nidoking","nidoking_shadow","flygon","flygon_shadow","sandslash","sandslash_shadow","rapidash_galarian","swalot","aurorus","bewear","starmie","diggersby"]}],"exclude":[],"overrides":[],"levelCap":50,"includeLowStatProduct":true},"pillar3":{"name":"pillar3","title":"Gymbreakers Pillar Cup Remix","include":[{"filterType":"id","name":"Species","values":["bewear","bibarel","bibarel_shadow","starmie","lokix","ariados","leavanny","araquanid","beedrill","golisopod","beedrill_shadow","malamar","malamar_shadow","sableye","sableye_shadow","raticate_alolan","raticate_alolan_shadow","qwilfish_hisuian","goodra","arctibax","dragapult","sceptile","sceptile_shadow","froslass","froslass_shadow","spiritomb","trevenant","cresselia","rapidash_galarian","victini","stunfisk","runerigus","gligar","gligar_shadow","gliscor","gliscor_shadow","flygon","flygon_shadow","sandslash","sandslash_shadow","clodsire","weezing_galarian","weezing_galarian_shadow","drapion","drapion_shadow","swalot","nidoking","nidoking_shadow","nidoqueen","nidoqueen_shadow","regice","lapras","lapras_shadow","walrein","walrein_shadow","sealeo","sealeo_shadow","aurorus","aurorus_shadow","regirock","cradily","cradily_shadow","solrock","lunatone","lickilicky","miltank","ursaring","ursaring_shadow","diggersby","diggersby_shadow","noctowl","pidgeot","pidgeot_shadow","furfrou","greedent","zangoose","azumarill","feraligatr","feraligatr_shadow","castform_rainy","tapu_fini","qwilfish","empoleon","empoleon_shadow","samurott","samurott_shadow","pelipper","jellicent","seaking","poliwhirl","politoed","gyarados","sneasler","sneasler_shadow","gyarados_shadow","sneasel_hisuian","sneasel_hisuian_shadow","mienshao","mienshao_shadow","quagsire","quagsire_shadow","magmar","magmar_shadow","magmortar","magmortar_shadow","araquanid","fearow","crustle","oranguru","turtonator","castform","ninetales","ninetales_shadow","crustle_shadow"]}],"exclude":[]},"polaris":{"name":"polaris","title":"Polaris Cup","include":[{"filterType":"type","values":["bug","ice","dark","electric"]},{"filterType":"id","values":["snorlax","tyrunt","cradily","samurott","snorlax_shadow","cradily_shadow","castform","greedent"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["araquanid","dewgong","ninetales_alolan","arctibax","frigibax","baxcalibur","ariados","malamar","charjabug","guzzlord","umbreon","obstagoon","lanturn","lanturnw","pachirisu","stunfisk","greninja","skuntank","pinsir"]},{"filterType":"type","values":["steel","fighting","fire","rock"]},{"filterType":"move","values":["MUD_SLAP"]}]},"polkadot":{"name":"polkadot","title":"Silph Polkadot Cup","include":[{"filterType":"id","name":"Species","values":["beedrill","venomoth","heracross","masquerain","wormadam_sandy","wormadam_plant","vespiquen","scolipede","galvantula","charjabug","araquanid","raichu","nidoking","golduck","dewgong","wailmer","seviper","sealeo","bibarel","serperior","swoobat","dedenne","primarina","arcanine","rapidash","rapidash_galarian","vaporeon","typhlosion","girafarig","sneasel_hisuian","donphan","blaziken","manectric","leafeon","samurott","zebstrika","luxray","emolga","beartic","quilladin","chesnaught","litleo","pyroar","sylveon","oranguru","xatu","talonflame","togekiss","swanna","clefable","wigglytuff","plusle","minun","florges","aromatisse","slurpuff","raichu_alolan","jumpluff","granbull","castform","glalie","roserade","whimsicott","arbok","staraptor","ledian","scyther","yanmega","toucannon","espeon","glaceon","golisopod","flareon","delphox","heatmor","zangoose","emboar","camerupt","ampharos","vikavolt","jolteon","bewear","sandslash","hippowdon","pinsir","kricketune","lopunny","linoone","furret","ursaluna","wailord","cherrim_sunny","kecleon","stoutland","dustox","braviary","prinplup","darmanitan_standard","darmanitan_galarian_standard","purugly"]}],"exclude":[],"allowSameSpecies":true},"premierclassic":{"name":"premierclassic","title":"Premier Classic","include":[],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]}],"partySize":3,"levelCap":40},"primeval":{"name":"primeval","title":"Silph Factions (Primeval)","include":[{"filterType":"type","name":"Type","values":["dark","dragon","electric","ice","rock"]},{"filterType":"id","name":"Species","values":["greedent","snorlax","munchlax","lickilicky","castform","tapu_fini","milotic","arbok","sceptile"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["shadow","mega"]},{"filterType":"type","name":"Type","values":["fighting","ground","steel"]},{"filterType":"id","name":"Species","values":["ninetales_alolan","obstagoon","raichu","walrein","umbreon","dewgong","regirock","lycanroc_midnight","crustle","dragalge","pachirisu","abomasnow","sableye","drapion","moltres_galarian","lileep","guzzlord"]}]},"primordial":{"name":"primordial","title":"Battle Frontier (Primordial)","include":[{"filterType":"type","values":["dark","dragon","electric","ice","rock"]},{"filterType":"id","values":["snorlax","munchlax","lickilicky","castform","milotic","arbok","sceptile","golisopod","togetic"]}],"exclude":[{"filterType":"tag","values":["mega","shadow"]},{"filterType":"id","values":["ninetales_alolan","raichu","obstagoon","walrein","umbreon","dewgong","regirock","lycanroc_midnight","crustle","dragalge","abomasnow","pachirisu","chansey","carbink","haxorus","meowscarada","beartic","lanturn","diancie","stunfisk","guzzlord","avalugg_hisuian","lanturnw","giratina_origin","lileep"]},{"filterType":"type","values":["steel","fighting"]}]},"psychic":{"name":"psychic","title":"Psychic Cup","include":[{"filterType":"type","values":["psychic"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["mew"]}],"partySize":3,"presetOnly":true},"ragnar":{"name":"ragnar","title":"Silph Factions (Ragnar)","include":[{"filterType":"type","name":"Type","values":["bug","dragon","ice","poison","psychic","water"]},{"filterType":"id","name":"Species","values":["greedent","snorlax","miltank"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","electric","rock"]},{"filterType":"id","name":"Species","values":["altaria","ninetales_alolan","sandshrew_alolan","lanturn","gardevoir","toxicroak","araquanid","articuno_galarian","toxapex","pelipper","sandslash_alolan","medicham","jellicent","golbat","crobat","forretress","sneasler"]},{"filterType":"tag","name":"Tag","values":["mega","shadow"]}],"allowSameSpecies":true,"partySize":8},"ragnargymbreakers":{"name":"ragnargymbreakers","title":"Gymbreakers (Ragnar)","include":[{"filterType":"type","name":"Type","values":["bug","dragon","ice","poison","psychic","water"]},{"filterType":"id","name":"Species","values":["miltank","snorlax","snorlax_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","electric","rock"]},{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["altaria","sandslash_alolan","sandshrew_alolan","ninetales_alolan","lanturn","toxicroak","buzzwole","sneasler","medicham","araquanid","articuno_galarian","toxapex","jellicent","pelipper","golbat","crobat","forretress","genesect"]}],"restrictedPicks":2,"restrictedPokemon":["quagsire","cresselia","miltank","escavalier","mantine","azumarill","mew","weezing_galarian"],"allowSameSpecies":true,"levelCap":50},"rainstorm":{"name":"rainstorm","title":"Devon Rainstorm Cup","include":[{"filterType":"type","name":"Type","values":["dark","flying","water"]},{"filterType":"id","name":"Species","values":["ho_oh_shadow","lugia_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["electric","fairy","fighting"]},{"filterType":"id","name":"Species","values":["obstagoon","mantine","toxapex","whiscash","skarmory","ho_oh","lugia","celesteela","pidgeot"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"levelCap":50},"remix":{"name":"remix","title":"Remix","include":[],"exclude":[{"filterType":"id","values":["blastoise","primeape","marowak","azumarill","dunsparce","scizor","corsola_galarian","altaria","cradily","dusclops","empoleon","bastiodon","gastrodon","togekiss","stunfisk","talonflame","dedenne","corviknight","annihilape"],"leagues":[1500]},{"filterType":"id","values":["venusaur","muk_alolan","umbreon","swampert","empoleon","togekiss","giratina_altered","cresselia","talonflame","obstagoon"],"leagues":[2500]},{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"retro":{"name":"retro","title":"Retro Cup","include":[],"exclude":[{"filterType":"type","values":["dark","fairy","steel"]},{"filterType":"tag","values":["mega"]}],"partySize":3,"presetOnly":true},"rivalry":{"name":"rivalry","title":"Rivalry","include":[{"filterType":"id","name":"Species","values":["aggron","aggron_shadow","araquanid","arctibax","aurorus","barbaracle","bombirdier","clefable","cofagrigus","corviknight","cradily","cradily_shadow","crawdaunt","crawdaunt_shadow","cresselia","cresselia_shadow","deoxys_defense","diggersby","dragalge","dunsparce","dusclops","dusclops_shadow","dusknoir","dusknoir_shadow","electrode","electrode_hisuian","electrode_shadow","electivire","electivire_shadow","ferrothorn","ferrothorn_shadow","froslass","froslass_shadow","furret","galvantula","galvantula_shadow","gengar","giratina_origin","glalie","glalie_shadow","gligar","gligar_shadow","golisopod","goodra","greedent","guzzlord","hitmonchan","hitmonchan_shadow","hitmonlee","hitmonlee_shadow","houndstone","jirachi","lapras","lapras_shadow","linoone","linoone_galarian","linoone_shadow","lunatone","lunatone_shadow","machamp","machamp_shadow","magmortar","magmortar_shadow","magneton","magneton_shadow","magnezone","magnezone_shadow","malamar","mandibuzz","mantine","marowak_alolan","marowak_alolan_shadow","marowak","marowak_shadow","mawile","mawile_shadow","milotic","muk","muk_alolan","muk_alolan_shadow","muk_shadow","nidoking","nidoking_shadow","nidoqueen","nidoqueen_shadow","ninetales","ninetales_alolan","ninetales_alolan_shadow","ninetales_shadow","obstagoon","pelipper","perrserker","politoed","politoed_shadow","poliwrath","poliwrath_shadow","primeape","primeape_shadow","qwilfish","qwilfish_hisuian","raichu","raichu_alolan","rapidash","rapidash_galarian","raticate_alolan","raticate_alolan_shadow","runerigus","sableye","sableye_shadow","sandslash","sandslash_alolan","sandslash_alolan_shadow","sandslash_shadow","seviper","slowbro","slowbro_galarian","slowbro_shadow","solrock","spiritomb","stunfisk","stunfisk_galarian","tapu_fini","tinkaton","tyranitar","tyranitar_shadow","tyrunt","ursaluna","ursaluna_shadow","ursaring","ursaring_shadow","vespiquen","weezing","weezing_galarian","weezing_galarian_shadow","weezing_shadow","whiscash","whiscash_shadow","wormadam_trash","zangoose"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct":true},"river":{"name":"river","title":"Thedanies89's River Cup","link":"https://twitter.com/vaNNiiRL/status/1521861716744810497","restrictedPicks":1,"restrictedPokemon":["malamar","deoxys_defense","melmetal","froslass","luxray","sableye","escavalier"],"include":[{"filterType":"type","name":"Type","values":["fire","grass","ground","normal","poison","water"]},{"filterType":"id","values":["malamar","deoxys_defense","melmetal","froslass","luxray","sableye","sableye_shadow","escavalier"]}],"exclude":[{"filterType":"type","name":"Type","values":["flying"]},{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["walrein","abomasnow","araquanid"]}]},"savannah":{"name":"savannah","title":"Battle Frontier (Savannah)","include":[{"filterType":"id","values":["blaziken","poliwrath","tyrunt","regirock","qwilfish","togetic"]},{"filterType":"type","values":["electric","normal","grass","bug"]}],"exclude":[{"filterType":"tag","values":["mega","shadow"]},{"filterType":"id","values":["diggersby","pidgeot","vigoroth","dubwool","lanturn","stunfisk","noctowl"]}]},"scroll":{"name":"scroll","title":"Scroll Cup","include":[{"filterType":"type","values":["water","fighting","dark"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["primarina"]}],"partySize":3},"serene":{"name":"serene","title":"Battle Frontier (Serene)","include":[{"filterType":"type","values":["water","normal","psychic"]},{"filterType":"id","values":["hitmontop","hitmontop_shadow","haunter","haunter_shadow","conkeldurr","gengar","gengar_shadow"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["araquanid","lanturn","pidgeot","cresselia","medicham","poliwrath","obstagoon","wobbuffet","dubwool","vigoroth","heliolisk","toxapex","chansey","greedent","chinchou","lickitung","mantine","miltank","gardevoir","wigglytuff","primarina","rotom_wash","lanturnw","empoleon","feraligatr","gallade"]},{"filterType":"type","values":["grass"]}]},"single":{"name":"single","title":"Single-Type Cup","include":[{"filterType":"type","values":["none"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["deoxys_defense","deoxys","deoxys_speed","deoxys_attack","cresselia"]}],"partySize":3},"solstice":{"name":"solstice","title":"Solstice Cup","include":[{"filterType":"type","values":["bug","ice","normal","psychic"]},{"filterType":"id","values":["gyarados","gyarados_mega","gyarados_shadow","hippowdon","hippowdon_shadow","muk","muk_shadow","nihilego","samurott","samurott_shadow","swampert","swampert_mega","swampert_shadow","weezing","weezing_shadow"]}],"exclude":[{"filterType":"type","values":["fire","steel"]},{"filterType":"id","values":["aurorus","buzzwole","cresselia","golisopod","greedent","heracross","heracross_mega","leavanny","lickilicky","lokix","malamar","miltank","ninetales_alolan","oranguru","walrein","grumpig","lapras"]}]},"sorcerousfactions":{"name":"sorcerousfactions","title":"Silph Factions (Sorcerous)","include":[{"filterType":"type","values":["ice","poison","fairy","psychic","normal"]}],"exclude":[{"filterType":"tag","values":["legendary","mythical","mega"]},{"filterType":"type","values":["steel"]},{"filterType":"cost","values":[100000,75000]},{"filterType":"id","values":["dewgong","obstagoon","walrein","diggersby","lickitung","nidoqueen","qwilfish_hisuian","overqwil","wobbuffet","medicham","sneasler","litleo","pyroar","articuno_galarian","toxapex"]}]},"sovereign":{"name":"sovereign","title":"Devon Sovereign Cup","include":[{"filterType":"type","name":"Type","values":["electric","fairy","ice","normal","psychic"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["azumarill","litleo","greedent","lickitung","lanturn","cresselia","miltank","froslass","hoopa","munchlax","abomasnow","arctibax","baxcalibur","frigibax","bellibolt","charjabug","zangoose"]},{"filterType":"type","name":"Type","values":["ground","rock","steel"]}]},"spicebowl":{"name":"spicebowl","title":"Spice Bowl Cup","include":[],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["jumpluff","clodsire","mandibuzz","malamar","lapras","corsola_galarian","tinkaton","sableye","dusknoir","feraligatr","corviknight","weezing_galarian","grumpig","diggersby","primeape","carbink","azumarill","pangoro","annihilape","gastrodon","jellicent","machoke","steelix","toxapex","morpeko_full_belly","golurk","bastiodon","tinkatuff","claydol","clefable","furret","stunfisk","togedemaru","golisopod","emolga","marowak","sandslash_alolan","quagsire","drapion","guzzlord","dachsbun","marowak_alolan","cradily","aurorus","medicham","machamp","swalot","spiritomb","runerigus","blastoise","ninetales_alolan","registeel","drifblim","serperior","wigglytuff","talonflame","umbreon","lickitung","dewgong","lickilicky","dunsparce","klefki","gogoat","chansey","skarmory","blissey","mudbray","mudsdale","skiddo"]}]},"stygian":{"name":"stygian","title":"Devon Stygian Cup","include":[{"filterType":"type","name":"Type","values":["dark","water","dragon","ice"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"type","name":"Type","values":["electric","fairy","rock"]},{"filterType":"id","name":"Species","values":["mandibuzz","toxapex","malamar","azumarill","feraligatr","umbreon","moltres_galarian","gastrodon","quagsire","pangoro","obstagoon","scrafty","poliwrath","lapras"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct":true},"summer":{"name":"summer","title":"Summer Cup","include":[{"filterType":"type","values":["normal","grass","fire","water","electric","bug"]}],"exclude":[{"filterType":"tag","values":["mega"]}]},"sunshine":{"name":"sunshine","title":"Sunshine Cup","include":[{"filterType":"type","values":["normal","fire","ground","grass"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["charizard"]}],"partySize":3,"presetOnly":true},"tempo":{"name":"tempo","title":"Tempo Cup","include":[{"filterType":"move","values":["water_shuriken","bullet_seed","geomancy","rollout","snarl","incinerate","volt_switch","double_kick","hex","infestation","present","bubble","charge_beam","astonish","extrasensory","fire_spin","force_palm","ice_shard","magical_leaf","mud_slap","confusion","gust","splash","yawn","air_slash","dragon_tail","hidden_power_bug","smack_down","struggle_bug","take_down","waterfall"]},{"filterType":"id","values":["chatot","minun","plusle","sylveon","vaporeon"]}],"exclude":[{"filterType":"type","values":["dark","dragon","fighting","ground","steel"]},{"filterType":"tag","values":["legendary","mythical","ultrabeast","mega"]},{"filterType":"move","values":["incinerate"]},{"filterType":"id","values":["aipom","anorith","araquanid","ariados","azumarill","bayleef","blastoise","boldore","cetitan","cetoddle","charjabug","chespin","chinchou","clauncher","clefable","comfey","corphish","corsola","corsola_galarian","corvisquire","cradily","cursola","deerling","dhelmise","dolliv","drifblim","drifloon","drowzee","dunsparce","duosion","dusclops","dusknoir","dwebble","elgyem","espeon","espurr","exeggcute","feraligatr","flaaffy","frillish","frogadier","froslass","gardevoir","gengar","geodude_alolan","gigalith","golem_alolan","","gothorita","grafaiai","graveler_alolan","greedent","grimer","grumpig","hatterene","hattrem","haunter","herdier","jellicent","jumpluff","kadabra","kangaskhan","koffing","krabby","lampent","lanturn","lapras","lickilicky","lileep","lombre","magmortar","mantyke","marowak_alolan","meganium","miltank","munna","ninetales","oinkologne","oinkologne_female","pachirisu","piplup","poliwhirl","porygon","prinplup","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","raichu","raichu_alolan","rampardos","roggenrola","roselia","roserade","rotom","rotom_frost","rotom_heat","rotom_mow","rotom_wash","rowlet","seel","shellos","simisear","skorupi","slowpoke","slowpoke_galarian","snover","solosis","spoink","spritzee","swadloon","swalot","tentacool","tranquill","tropius","typhlosion_hisuian","unown","vikavolt","wailmer","walrein","weepinbell","wobbuffet","wugtrio"]}]},"timelessfactions":{"name":"timelessfactions","title":"Silph Factions (Timeless)","restrictedPicks":1,"restrictedPokemon":["bulbasaur","ivysaur","venusaur","squirtle","wartortle","blastoise","charmander","charmeleon","charizard","chikorita","bayleef","meganium","totodile","croconaw","feraligatr","cyndaquil","quilava","typhlosion","treecko","grovyle","sceptile","mudkip","marshtomp","swampert","torchic","combusken","blaziken","turtwig","grotle","torterra","piplup","prinplup","empoleon","chimchar","monferno","infernape","snivy","servine","serperior","tepig","pignite","emboar","oshawott","dewott","samurott"],"include":[{"filterType":"dex","values":[1,649]},{"filterType":"id","values":["blaziken","charizard","infernape","empoleon","monferno","prinplup","combusken","snivy","servine","serperior","tepig","pignite","emboar","oshawott","dewott","samurott"],"includeShadows":false}],"exclude":[{"filterType":"tag","values":["legendary","mythical","shadow","mega","alolan","hisuian","galarian"]},{"filterType":"type","values":["dragon","fairy","fighting","flying","normal","psychic","steel"]},{"filterType":"id","values":["umbreon","sableye","drapion","nidoqueen","walrein","pachirisu","lileep"]}]},"tundra":{"name":"tundra","title":"Tundra","include":[{"filterType":"type","name":"Type","values":["bug","dark","ice","normal","poison"]},{"filterType":"id","name":"Species","values":["goodra","politoed","politoed_shadow","gyarados","gyarados_shadow","ledian","ledian_shadow","armaldo","armaldo_shadow","ninjask","vespiquen","scyther","scyther_shadow","relicanth","tangrowth","tangrowth_shadow","sneasler"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["obstagoon","ursaring","arctibax","araquanid","tyranitar","dwebble","toxicroak","scrafty","vigoroth","lokix","miltank","greedent","dubwool","munchlax","oinkologne","oinkologne_female","castform","aurorus","amaura","crustle","buzzwole","heracross","dunsparce","toxapex","cetoddle"]},{"filterType":"type","name":"Type","values":["electric","fairy","fire","flying","ground","rock","steel"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50},"tundraremix":{"name":"tundraremix","title":"Devon Tundra Cup (Gymbreakers Remix)","include":[{"filterType":"type","name":"Type","values":["bug","dark","ice","normal","poison"]},{"filterType":"id","name":"Species","values":["goodra","politoed","politoed_shadow","tangrowth","tangrowth_shadow","relicanth","gyarados","gyarados_shadow","scyther","scyther_shadow","vespiquen","ninjask","armaldo","armaldo_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["electric","fairy","fire","flying","ground","rock","steel"]},{"filterType":"id","name":"Species","values":["obstagoon","vigoroth","toxicroak","ursaring","heracross","buzzwole","scrafty","miltank","lokix","dubwool","munchlax","castform","dunsparce","araquanid","toxapex","arctibax","oinkologne_female","oinkologne_male","greedent","cetoddle","malamar","pangoro","lickilicky","oinkologne"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"levelCap":50,"includeLowStatProduct":true},"tundraremixv2":{"name":"tundraremixv2","title":"Devon Tundra Cup (Gymbreakers Remix V2)","include":[{"filterType":"type","name":"Type","values":["bug","dark","ice","normal","poison"]},{"filterType":"id","name":"Species","values":["goodra","politoed","politoed_shadow","tangrowth","tangrowth_shadow","relicanth","gyarados","gyarados_shadow","scyther","scyther_shadow","vespiquen","ninjask","armaldo","armaldo_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["electric","fairy","fire","flying","ground","rock","steel"]},{"filterType":"id","name":"Species","values":["dewgong","ariados","oranguru","obstagoon","vigoroth","toxicroak","ursaring","heracross","buzzwole","scrafty","miltank","lokix","dubwool","munchlax","castform","dunsparce","araquanid","toxapex","arctibax","oinkologne_female","oinkologne_male","cetoddle","malamar","pangoro","lickilicky","oinkologne"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct":true},"ufc-untapped-master":{"name":"ufc-untapped-master","title":"UFC Untapped (Master League)","include":[],"exclude":[{"filterType":"id","values":["victini","mew","pidgeot_mega","tyranitar_mega","gengar_mega","swampert_mega","gardevoir_mega","latios_mega","latias_mega","charizard_mega_y","gyarados_mega","groudon_primal","kyogre_primal","zygarde_complete","rayquaza_mega","garchomp_mega","heracross_mega","zygarde_10","solgaleo","aggron_mega","dialga_origin","palkia_origin","xerneas","steelix_mega","groudon","charizard_mega_x","meloetta_aria","salamence_mega","scizor_mega","landorus_therian","lugia","mewtwo_shadow","giratina_altered","palkia","slowbro_mega","mewtwo","reshiram","zekrom","blaziken_mega","kyurem","dragonite","ho_oh","groudon_shadow","zacian_hero","dialga","alakazam_mega","blastoise_mega","heatran","ho_oh_shadow","giratina_origin","lugia_shadow","aerodactyl_mega","zarude","dragonite_shadow","melmetal","kyogre","kyogre_shadow","venusaur_mega","yveltal","zapdos_galarian","enamorus_incarnate","buzzwole","keldeo_ordinary","landorus_incarnate","nihilego","ampharos_mega","regirock","regirock_shadow","garchomp","garchomp_shadow","lunala","diancie_mega","pinsir_mega","jirachi","rayquaza","zygarde","sceptile_mega","celebi","necrozma","necrozma_dawn_wings","necrozma_dusk_mane","marshadow"]}]},"vanguard":{"name":"vanguard","title":"Silph Factions (Vanguard)","include":[{"filterType":"type","name":"Type","values":["dragon","fighting","flying","ghost","ground","ice","poison","rock","water"]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","fairy","steel"]},{"filterType":"id","name":"Species","values":["abomasnow","trevenant","altaria","lanturn","medicham","sneasler","aurorus"]},{"filterType":"tag","name":"Tag","values":["alolan","galarian","hisuian","mega"]},{"filterType":"dex","name":"Pokedex Number","values":[722,898]}]},"vanguardgymbreakers":{"name":"vanguardgymbreakers","title":"Gymbreakers (Vanguard)","include":[{"filterType":"type","name":"Type","values":["dragon","fighting","flying","ghost","ground","ice","poison","rock","water"]},{"filterType":"dex","name":"Pokedex Number","values":[1,721]}],"exclude":[{"filterType":"type","name":"Type","values":["dark","fairy","steel"]},{"filterType":"tag","name":"Tag","values":["galarian","hisuian","mega"]},{"filterType":"id","name":"Species","values":["abomasnow","medicham","lanturn","altaria","cofagrigus","noctowl","pidgeot","aurorus","jellicent","pelipper"]}],"allowSameSpecies":true,"levelCap":50},"wasteland":{"name":"wasteland","title":"Wasteland Cup","include":[{"filterType":"type","values":["poison","ghost","steel","dark","psychic"]},{"filterType":"id","values":["ampharos","gallade","farfetchd_galarian","electrode"]}],"exclude":[{"filterType":"type","values":["ground","electric","fire","dragon","fighting","flying"]},{"filterType":"id","values":["registeel","bastiodon","probopass","weezing_galarian","sableye","klefki","umbreon","overqwil","empoleon","greninja","jellicent","drapion","sandslash_alolan","toxapex","grimer_alolan","stunky","tentacruel","raticate_alolan","forretress","grimer","genesect","mawile","malamar","spiritomb","corsola_galarian","cursola","dusknoir","grumpig","thievul","mightyena","amoonguss","dusclops","tinkatuff","tinkaton","cacturne","swalot"]},{"filterType":"tag","values":["mega","shadow"]},{"filterType":"move","values":["counter","mud_slap"]}]},"weather":{"name":"weather","title":"Weather Cup","include":[{"filterType":"type","values":["fire","water","ice","rock"]}],"exclude":[{"filterType":"tag","values":["mega"]}]},"willpower":{"name":"willpower","title":"Willpower Cup","include":[{"filterType":"type","values":["dark","psychic","fighting"]}],"exclude":[{"filterType":"tag","values":["mega"]},{"filterType":"id","values":["gardevoir","zorua","zoroark"]}],"partySize":3},"zodiac":{"name":"zodiac","title":"Zodiac","include":[{"filterType":"id","name":"Species","values":["starmie","dragonite","dragonite_shadow","seaking","muk_alolan","muk_alolan_shadow","mew","cradily","cradily_shadow","kingdra","kingdra_shadow","bewear","skuntank","skuntank_shadow","munchlax","electivire","electivire_shadow","linoone_galarian","sandslash","sandslash_shadow","cresselia","alakazam","alakazam_shadow","armaldo","armaldo_shadow","zweilous","ursaluna","ursaluna_shadow","castform","gallade","gallade_shadow","malamar","pangoro","qwilfish_hisuian","froslass","froslass_shadow","regice","regice_shadow","slowbro_galarian","barbaracle","donphan","donphan_shadow","girafarig","girafarig_shadow","perrserker","staraptor","staraptor_shadow","sneasler","sneasler_shadow","snorlax","snorlax_shadow","farfetchd_galarian","furret","golduck","golduck_shadow","suicune","suicune_shadow","greedent","excadrill","excadrill_shadow","jumpluff","jumpluff_shadow","roserade","sceptile","sceptile_shadow","sealeo","sealeo_shadow","lapras","lapras_shadow","walrein","walrein_shadow","tentacruel","tentacruel_shadow","pinsir","pinsir_shadow","ariados","electrode_hisuian","rapidash","cetitan"]}],"exclude":[]}};
+var ARCHIVED_CUPS = {"adl":{
+	"name": "adl",
+	"title": "Arrohh Draft League",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["mew", "registeel", "bastiodon", "azumarill", "stunfisk_galarian", "sableye", "trevenant", "swampert", "medicham", "walrein", "nidoqueen", "scrafty", "kommo_o", "diggersby", "talonflame", "pachirisu", "lickitung", "mandibuzz", "ninetales_alolan", "regirock", "altaria", "cofagrigus", "deoxys_defense", "marowak_alolan", "primeape", "araquanid", "vigoroth", "jellicent", "skarmory", "galvantula", "wigglytuff", "drapion", "tropius", "umbreon", "greedent", "froslass", "cresselia", "zweilous", "toxicroak", "granbull", "hakamo_o", "wobbuffet"]
+	}]
+},"alchemy":{
+	"name": "alchemy",
+	"title": "Silph Factions Alchemy Field",
+	"include": [{
+		"filterType": "type",
+		"values":  ["fire", "flying", "ghost", "ground", "psychic", "steel"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["water","dark"]
+	}, {
+		"filterType": "id",
+		"values": ["altaria", "bastiodon", "cresselia", "diggersby", "golem", "graveler", "medicham", "mew", "probopass", "registeel", "stunfisk_galarian"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+},"amor":{
+  "name": "amor",
+  "title": "Amor Cup",
+  "link": "https://devon.gg",
+  "include": [
+    {
+      "filterType": "id",
+      "name": "Species",
+      "values": [
+        "ariados",
+        "armarouge",
+        "audino",
+        "bewear",
+        "bisharp",
+        "blaziken",
+        "blaziken_shadow",
+        "bruxish",
+        "buzzwole",
+        "camerupt",
+        "camerupt_shadow",
+        "castform_sunny",
+        "centiskorch",
+        "charizard",
+        "charizard_shadow",
+        "cherrim_sunny",
+        "chimecho",
+        "clefable",
+        "crobat",
+        "crobat_shadow",
+        "crustle",
+        "crustle_shadow",
+        "darmanitan_standard",
+        "darmanitan_standard_shadow",
+        "deoxys_defense",
+        "druddigon",
+        "electrode",
+        "electrode_hisuian",
+        "electrode_shadow",
+        "espeon",
+        "frosmoth",
+        "gallade",
+        "gallade_shadow",
+        "gardevoir",
+        "gardevoir_shadow",
+        "heatmor",
+        "incineroar",
+        "krookodile",
+        "latias",
+        "latias_shadow",
+        "latios",
+        "latios_shadow",
+        "leavanny",
+        "ledian",
+        "ledian_shadow",
+        "lickitung",
+        "lopunny",
+        "lucario",
+        "lurantis",
+        "magcargo",
+        "magmar",
+        "magmar_shadow",
+        "magmortar",
+        "magmortar_shadow",
+        "medicham",
+        "mesprit",
+        "mew",
+        "milotic",
+        "milotic_shadow",
+        "miltank",
+        "moltres",
+        "moltres_shadow",
+        "nidoking",
+        "nidoking_shadow",
+        "nidoqueen",
+        "nidoqueen_shadow",
+        "pawniard",
+        "rapidash_galarian",
+        "rotom",
+        "rotom_fan",
+        "rotom_frost",
+        "rotom_heat",
+        "rotom_mow",
+        "rotom_wash",
+        "scolipede",
+        "scolipede_shadow",
+        "scrafty",
+        "seaking",
+        "simisear",
+        "skeledirge",
+        "slowbro",
+        "slowbro_galarian",
+        "slowbro_shadow",
+        "slowking",
+        "slowking_galarian",
+        "slowking_shadow",
+        "slowpoke",
+        "slowpoke_shadow",
+        "slurpuff",
+        "snorlax",
+        "snorlax_shadow",
+        "solrock",
+        "spinda",
+        "swoobat",
+        "sylveon",
+        "talonflame",
+        "talonflame_shadow",
+        "tatsugiri_curly",
+        "tatsugiri_droopy",
+        "tatsugiri_stretchy",
+        "tinkaton",
+        "tinkatuff",
+        "turtonator",
+        "tyrantrum",
+        "tyrantrum_shadow",
+        "umbreon",
+        "vileplume",
+        "vileplume_shadow",
+        "wormadam_trash",
+        "wugtrio"
+      ]
+    }
+  ],
+  "exclude": [
+    {
+      "filterType": "move",
+      "name": "Move",
+      "values": [
+        "charm",
+        "incinerate",
+        "mud_slap",
+        "smack_down"
+      ]
+    }
+  ],
+  "overrides": [],
+  "league": 1500,
+  "useDefaultMovesets": 1,
+  "excludeLowPokemon": 1,
+  "cup": "amor"
+},"arcana":{
+    "name": "arcana",
+    "title": "Silph Factions (Arcana)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["ghost", "grass", "psychic", "rock"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["pelipper", "gyarados", "scyther", "vespiquen", "honchkrow"],
+		"includeShadows": true
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "fairy", "ice", "normal"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["hawlucha"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["bastiodon", "probopass", "regirock", "trevenant", "sableye", "articuno_galarian", "tropius"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+	"allowSameSpecies": true
+},"architect":{
+    "name": "architect",
+    "title": "Silph Architect Cup",
+    "include": [{
+        "filterType": "id",
+        "includeShadows": true,
+        "values": ["marowak_alolan", "froslass", "drapion", "skuntank", "qwilfish", "muk_alolan", "muk", "lapras", "sealeo", "cradily", "sudowoodo", "munchlax", "snorlax", "golbat", "poliwrath", "pelipper", "beedrill", "milotic", "charizard", "bewear", "trevenant", "castform", "ariados", "linoone", "venomoth", "gyarados", "malamar", "lickilicky", "shiftry", "jumpluff", "typhlosion", "gengar", "haunter", "glalie", "donphan", "sandslash", "scolipede", "banette", "slowbro_galarian", "dusclops"]
+    }],
+    "exclude": []
+},"ascension":{"name":"ascension","title":"Devon Corp (Ascension Cup)","include":[{"filterType":"type","name":"Type","values":["electric","fire","psychic"]},{"filterType":"id","name":"Species","values":["lapras","starmie"]}],"exclude":[{"filterType":"type","name":"Type","values":["dragon","ghost","ground","rock","steel","water","normal"]},{"filterType":"tag","name":"Tag","values":["shadow","mega"]},{"filterType":"id","name":"Species","values":["bellibolt","furret","morpeko_full_belly","dedenne","malamar"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"excludeLowPokemon":1},"aurora":{
+    "name": "aurora",
+    "title": "Aurora Cup",
+	"include": [],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "type",
+        "values": ["fire","poison","steel"]
+    }, {
+        "filterType": "id",
+        "values": ["carbink","chansey","pachirisu","zapdos_galarian","moltres_galarian","articuno_galarian","jumpluff","araquanid","corsola_galarian","bellibolt","dedenne","morpeko_full_belly","wigglytuff"]
+    }, {
+        "filterType": "moveType",
+        "values": ["fire","poison","steel"]
+    }, {
+        "filterType": "move",
+        "values": ["HIDDEN_POWER_WATER"]
+    }]
+},"battlefrontiergreat":{
+    "name": "battlefrontiergreat",
+    "title": "Battle Frontier (Great)",
+    "include": [],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }],
+    "tierRules": {
+        "max": 2,
+        "floor": 0,
+        "tiers": [{
+            "points": 1,
+            "pokemon": ["altaria","azumarill","blastoise","charjabug","clefable","corviknight","cradily","empoleon","furret","gastrodon", "gourgeist_average", "gourgeist_large", "gourgeist_small", "gourgeist_super","jellicent","lapras","ludicolo","malamar","marowak","moltres_galarian","ninetales_alolan","scizor","steelix","stunfisk"]
+        }]
+    },
+    "allowSameSpecies": true
+},"battlefrontierultra":{
+    "name": "battlefrontierultra",
+    "title": "Battle Frontier (Ultra League)",
+    "include": [],
+    "exclude": [{
+        "filterType": "id",
+        "values": ["lapras","gastrodon","feraligatr","corviknight","dusknoir","cradily","forretress","blastoise"]
+    }]
+},"calamity":{
+    "name": "calamity",
+    "title": "Calamity Cup",
+	"include": [{
+        "filterType": "type",
+        "values": ["flying","fire","poison","normal"]
+    },{
+        "filterType": "id",
+        "values": []
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega","shadow","legendary"]
+    }, {
+        "filterType": "type",
+        "values": ["rock","ground","water","electric","steel","dark"]
+    }, {
+        "filterType": "id",
+        "values": ["dunsparce","lickilicky","miltank","altaria","dragalge","turtonator","spinda","fletchinder","rufflet","talonflame","oranguru","chansey","blissey","wigglytuff","furret","dudunsparce"]
+    }, {
+        "filterType": "move",
+        "values": ["MUD_SLAP"]
+    }]
+},"cascade":{
+    "name": "cascade",
+    "title": "Cascade Cup",
+	"include": [{
+        "filterType": "type",
+        "values": ["dragon","ice","water","poison","psychic"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "type",
+        "values": ["fairy","fighting","steel"]
+    }, {
+        "filterType": "id",
+        "values": ["gastrodon","malamar","araquanid","clodsire","toxapex","lanturn","zweilous","hydreigon","guzzlord","cresselia","drapion","feraligatr","skuntank","muk_alolan","grimer_alolan","stunky","qwilfish_hisuian","overqwil","giratina_origin","suicune","zygarde","zygarde_10","amaura","aurorus","lapras","grumpig","blastoise","wailmer","armarouge","jellicent","ariados"]
+    }]
+},"catacomb":{
+    "name": "catacomb",
+    "title": "Silph Factions (Catacomb)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "ice", "dark", "rock", "grass"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["samurott", "seaking", "milotic", "qwilfish"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["hawlucha"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["bulbasaur", "ivysaur", "venusaur", "oddish", "gloom", "vileplume", "bellsprout", "weepinbell", "victreebel", "roselia", "budew", "roserade", "foongus", "amoonguss"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["legendary", "mythical", "shadow", "mega", "regional"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["scrafty", "obstagoon", "dewgong", "ninetales_alolan", "crustle", "aurorus", "amaura", "walrein", "qwilfish_hisuian", "overqwil", "araquanid", "trevenant", "magcargo", "dwebble"]
+    }],
+	"allowSameSpecies": true
+},"catchgofest":{
+	"name": "catchgofest",
+	"title": "Catch Cup (GO Fest)",
+	"include": [{
+		"filterType": "id",
+		"values": ["magnemite", "magneton", "magnezone", "grimer_alolan", "muk_alolan", "hitmonchan", "baltoy", "claydol", "wormadam_trash", "bronzor", "bronzong", "pidove", "tranquill", "unfezant", "trubbish", "garbador", "gothita", "gothorita", "gothitelle", "golett", "golurk", "litten", "torracat", "incineroar", "pikachu", "raichu", "weezing_galarian", "girafarig", "dunsparce", "larvitar", "pupitar", "tyranitar", "numel", "camerupt", "trapinch", "vibrava", "flygon", "buizel", "floatzel", "patrat", "watchog", "drilbur", "excadrill", "shelmet", "accelgor", "rufflet", "braviary", "litleo", "pyroar", "axew", "fraxure", "haxorus", "mudkip", "marshtomp", "swampert", "seedot", "nuzleaf", "shiftry", "shroomish", "breloom", "slakoth", "vigoroth", "slaking", "turtwig", "grotle", "torterra", "chimchar", "monferno", "infernape", "venipede", "whirlipede", "scolipede", "karrablast", "escavalier", "binacle", "skrelp", "dragalge", "rowlet", "dartrix", "decidueye", "pancham", "pangoro", "omanyte", "omastar", "swinub", "piloswine", "mamoswine", "wingull", "pelipper", "meditite", "medicham", "wailmer", "wailord", "spheal", "sealeo", "walrein", "piplup", "prinplup", "empoleon", "vanillite", "vanillish", "vanilluxe", "bergmite", "avalugg", "popplio", "brionne", "primarina", "darumaka_galarian", "darmanitan_galarian_standard", "rockruff", "lycanroc", "lycanroc_midnight", "druddigon", "geodude", "graveler", "golem", "poliwag", "poliwhirl", "poliwrath", "politoed", "vulpix", "ninetales", "hippopotas", "hippowdon", "snover", "abomasnow", "diglett", "diglett_alolan", "dugtrio", "dugtrio_alolan", "magikarp", "gyarados", "dratini", "dragonair", "bagon", "shelgon", "murkrow", "honchkrow", "hoppip", "skiploom", "jumpluff", "yanma", "yanmega", "mantine", "umbreon", "espeon", "vaporeon", "jolteon", "flareon", "sylveon", "leafeon", "glaceon", "sudowoodo", "rhyhorn", "rhydon", "rhyperior", "ralts", "kirlia", "gardevoir", "gallade", "beldum", "metang", "metagross", "anorith", "armaldo", "lileep", "cradily", "snubbull", "granbull", "onix", "steelix", "spinda", "gible", "gabite", "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "treecko", "grovyle", "sceptile", "torchic", "combusken", "blaziken", "koffing", "weezing", "venonat", "venomoth", "joltik", "galvantula", "kabuto", "kabutops", "aerodactyl", "grimer", "muk", "hitmonlee", "bunnelby", "diggersby", "chinchou", "lanturn", "stunfisk", "vullaby", "mandibuzz", "pawniard", "bisharp", "scraggy", "scrafty", "sandile", "krokorok", "deino", "zweilous", "skorupi", "drapion", "salandit", "salazzle", "absol", "starly", "staravia", "golbat", "stunky", "skuntank", "raticate_alolan", "beedrill", "forretress", "nidorino", "granbull_shadow", "machamp_shadow", "sableye", "electrode", "bibarel", "gardevoir_shadow", "mr_mime_galarian", "unown", "torkoal", "tropius", "klink", "klang", "klinklang", "garbodor"]
+	}],
+	"exclude": [],
+	"partySize": 3
+},"celestial":{
+	"name": "celestial",
+	"title": "Silph Factions Celestial Field",
+	"include": [{
+		"filterType": "type",
+		"values":  ["dragon", "flying", "normal", "ghost", "psychic", "rock", "water"]
+	}, {
+		"filterType": "id",
+		"includeShadows": true,
+		"values":  ["scizor", "durant", "muk_alolan", "skuntank", "drapion", "overqwil"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["fairy","fire","fighting"]
+	}, {
+		"filterType": "id",
+		"values": ["swampert", "quagsire", "gastrodon", "whiscash", "seismitoad", "marshtomp", "giratina_altered", "obstagoon", "walrein", "trevenant", "mandibuzz", "deoxys_defense", "dubwool", "guzzlord"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+},"championship":{
+	"name": "championship",
+	"title": "2022 Championship Series",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+},"chaos":{
+    "name": "chaos",
+    "title": "Devon Chaos Cup",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["giratina_origin", "malamar", "tentacruel", "tentacruel_shadow", "seaking", "gyarados", "gyarados_shadow", "zapdos", "zapdos_shadow", "milotic", "kingdra", "kingdra_shadow", "lapras", "lapras_shadow", "flygon", "flygon_shadow", "charizard", "charizard_shadow", "articuno", "articuno_shadow", "moltres", "moltres_shadow", "lugia", "lugia_shadow", "aurorus", "barbaracle", "tyrunt", "cradily", "cradily_shadow", "runerigus", "golisopod", "relicanth", "armaldo", "armaldo_shadow", "cloyster", "cloyster_shadow", "omastar", "omastar_shadow", "kabutops", "kabutops_shadow", "regirock", "regirock_shadow", "dusclops", "dusclops_shadow", "mew", "arctibax", "regice", "regice_shadow", "abomasnow", "abomasnow_shadow", "gliscor", "gliscor_shadow", "blastoise", "blastoise_shadow", "sceptile", "sceptile_shadow", "golduck", "golduck_shadow", "suicune", "suicune_shadow", "scyther", "scyther_shadow", "nidoqueen", "nidoqueen_shadow", "nidoking", "nidoking_shadow", "tangrowth", "tangrowth_shadow", "ninjask", "piloswine", "piloswine_shadow", "octillery", "dragapult", "samurott_hisuian", "arcanine_hisuian", "lileep", "lileep_shadow", "uxie", "mesprit", "azelf", "groudon_shadow", "kyogre_shadow", "heatran", "heatran_shadow", "archeops", "archeops_shadow", "cresselia", "cresselia_shadow", "jumpluff", "jumpluff_shadow", "nidorina", "nidorina_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": []
+    }],
+    "levelCap": 50,
+    "includeLowStatProduct": true
+},"cliffhanger":{
+	"name": "cliffhanger",
+	"title": "Cliffhanger",
+	"include": [],
+	"exclude": [],
+	"tierRules": {
+		"max": 17,
+		"floor": 0,
+		"tiers": [{
+			"points": 9,
+			"pokemon": ["altaria", "azumarill", "bastiodon", "lanturn", "lickitung", "medicham", "noctowl", "registeel", "sableye", "stunfisk_galarian", "trevenant"]
+		}, {
+			"points": 5,
+			"pokemon": ["abomasnow", "araquanid", "aurorus", "charizard", "cofagrigus", "cresselia", "deoxys_defense", "diggersby", "drapion", "dubwool", "froslass", "gliscor", "jellicent", "jumpluff",  "mandibuzz", "ninetales_alolan", "obstagoon", "pelipper", "pidgeot", "regirock", "runerigus", "scrafty", "skarmory", "swampert", "tapu_fini", "toxapex", "tropius", "umbreon", "venusaur", "vigoroth", "walrein"]
+		}, {
+			"points": 1,
+			"pokemon": ["beedrill", "bronzong", "buzzwole", "chansey", "chesnaught", "dragalge", "dewgong", "dragonair", "dragonite", "dunsparce", "empoleon", "ferrothorn", "galvantula", "gligar", "golbat", "granbull", "greedent", "grimer_alolan", "guzzlord", "hakamo_o", "qwilfish_hisuian", "hypno", "jirachi", "kommo_o", "lapras", "lugia", "lurantis", "machamp", "magcargo", "mantine", "meganium", "marowak_alolan", "miltank", "mew", "muk_alolan", "ninetales", "nidoqueen", "overqwil", "pachirisu", "politoed", "probopass", "roserade", "sandslash_alolan", "serperior", "sirfetchd", "skuntank", "sneasler", "steelix", "talonflame", "tentacruel", "stunfisk", "toxicroak", "victini", "victreebel", "whiscash", "wigglytuff", "wobbuffet", "zweilous"]
+		}]
+	}
+},"colony":{
+	"name": "colony",
+	"title": "Silph Factions Colony Field",
+	"include": [{
+		"filterType": "type",
+		"values":  ["bug", "electric", "ground", "ice", "psychic", "water"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["fairy","fighting","flying"]
+	}, {
+		"filterType": "id",
+		"values": ["abomasnow", "deoxys_defense", "diggersby", "escavalier", "forretress", "genesect", "jellicent", "pachirisu", "steelix", "stunfisk_galarian", "swampert", "whiscash", "walrein", "wobbuffet", "wormadam_trash", "tapu_fini", "araquanid"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega","shadow"]
+	}]
+},"color":{
+    "name": "color",
+    "title": "Color Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["fire", "water", "grass", "electric"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }],
+	"partySize": 3,
+	"presetOnly": true
+},"continentals":{
+	"name": "continentals",
+	"title": "Silph Continentals",
+	"include": [{
+		"filterType": "id",
+		"values": ["charizard", "samurott", "grovyle", "blaziken", "swampert", "empoleon", "marshtomp", "ivysaur", "blastoise", "quilladin", "venusaur", "chesnaught", "delphox", "dewott", "combusken", "feraligatr", "serperior", "bayleef", "monferno", "emboar", "braixen", "wartortle", "pignite", "croconaw", "prinplup", "grotle", "quilava", "typhlosion", "servine", "meganium", "charmeleon", "greninja", "chespin", "sceptile", "torterra", "turtwig", "piplup", "infernape", "frogadier", "bulbasaur", "totodile", "raichu_alolan", "ninetales", "golbat", "venomoth", "magneton", "noctowl", "xatu", "azumarill", "quagsire", "forretress", "skarmory", "gardevoir", "vigoroth", "medicham", "flygon", "altaria", "whiscash", "tropius", "bastiodon", "lucario", "toxicroak", "beedrill", "sandslash_alolan", "ninetales_alolan", "wigglytuff", "poliwrath", "graveler_alolan", "muk_alolan", "marowak_alolan", "lapras", "snorlax", "dragonair", "sudowoodo", "jumpluff", "umbreon", "kingdra", "shiftry", "dusclops", "bibarel", "wormadam_trash", "vespiquen", "skuntank", "bronzong", "gliscor", "probopass", "scrafty", "galvantula", "ferrothorn", "raichu", "nidoqueen", "primeape", "victreebel", "dewgong", "hypno", "lanturn", "politoed", "mantine", "sableye", "cradily", "castform", "castform_rainy", "drifblim", "munchlax", "gallade", "froslass", "whimsicott", "escavalier", "jellicent", "stunfisk_galarian", "stunfisk", "mandibuzz", "talonflame", "pidgeot", "machamp", "muk", "lickitung", "dragonite", "steelix", "heracross", "magcargo", "pelipper", "milotic", "walrein", "drapion", "abomasnow", "crustle", "cofagrigus", "zweilous", "litleo", "slurpuff", "malamar", "dragalge", "dedenne", "gourgeist_super", "gourgeist_small", "gourgeist_large", "gourgeist_average", "lurantis", "bewear", "oranguru", "greedent", "obstagoon", "articuno", "articuno_galarian", "zapdos", "zapdos_galarian", "moltres", "moltres_galarian", "mew", "mewtwo", "raikou", "entei", "suicune", "lugia", "ho_oh", "celebi", "regirock", "regice", "latias", "latios", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys_defense", "deoxys_speed", "deoxys_attack", "deoxys", "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina_altered", "giratina_origin", "cresselia", "darkrai", "shaymin_land", "shaymin_sky", "cobalion", "terrakion", "virizion", "tornadus_incarnate", "tornadus_therian", "thundurus_incarnate", "thundurus_therian", "landorus_therian", "landorus_incarnate", "kyurem", "victini", "keldeo_ordinary", "genesect", "meloetta_aria", "xerneas", "yveltal", "hoopa_unbound", "hoopa_confined", "tapu_fini", "tapu_bulu", "tapu_koko", "tapu_lele", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "meltan", "melmetal", "zacian_hero", "zamazenta_hero", "regieleki", "regidrago", "zarude"],
+		"includeShadows": true
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["charizard", "samurott", "grovyle", "blaziken", "swampert", "empoleon", "marshtomp", "ivysaur", "blastoise", "quilladin", "venusaur", "chesnaught", "delphox", "dewott", "combusken", "feraligatr", "serperior", "bayleef", "monferno", "emboar", "braixen", "wartortle", "pignite", "croconaw", "prinplup", "grotle", "quilava", "typhlosion", "servine", "meganium", "charmeleon", "greninja", "chespin", "sceptile", "torterra", "turtwig", "piplup", "infernape", "frogadier", "bulbasaur", "totodile"]
+	}, {
+		"pokemon": ["raichu_alolan", "ninetales", "golbat", "venomoth", "magneton", "noctowl", "xatu", "azumarill", "quagsire", "forretress", "skarmory", "gardevoir", "vigoroth", "medicham", "flygon", "altaria", "whiscash", "tropius", "bastiodon", "lucario", "toxicroak"]
+	}, {
+		"pokemon": ["beedrill", "sandslash_alolan", "ninetales_alolan", "wigglytuff", "poliwrath", "graveler_alolan", "muk_alolan", "marowak_alolan", "lapras", "snorlax", "dragonair", "sudowoodo", "jumpluff", "umbreon", "kingdra", "shiftry", "dusclops", "bibarel", "wormadam_trash", "vespiquen", "skuntank", "bronzong", "gliscor", "probopass", "scrafty", "galvantula", "ferrothorn"]
+	}, {
+		"pokemon": ["raichu", "nidoqueen", "primeape", "victreebel", "dewgong", "hypno", "lanturn", "politoed", "mantine", "sableye", "cradily", "castform", "castform_rainy", "drifblim", "munchlax", "gallade", "froslass", "whimsicott", "escavalier", "jellicent", "stunfisk_galarian", "stunfisk", "mandibuzz", "talonflame"]
+	}, {
+		"pokemon": ["pidgeot", "machamp", "muk", "lickitung", "dragonite", "steelix", "heracross", "magcargo", "pelipper", "milotic", "walrein", "drapion", "abomasnow", "crustle", "cofagrigus", "zweilous", "litleo", "slurpuff", "malamar", "dragalge", "dedenne", "gourgeist_super", "gourgeist_small", "gourgeist_large", "gourgeist_average", "lurantis", "bewear", "oranguru", "greedent", "obstagoon"]
+	}, {
+		"pokemon": ["articuno", "articuno_galarian", "zapdos", "zapdos_galarian", "moltres", "moltres_galarian", "mew", "mewtwo", "raikou", "entei", "suicune", "lugia", "ho_oh", "celebi", "regirock", "regice", "latias", "latios", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys_defense", "deoxys_speed", "deoxys_attack", "deoxys", "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina_altered", "giratina_origin", "cresselia", "darkrai", "shaymin_land", "shaymin_sky", "cobalion", "terrakion", "virizion", "tornadus_incarnate", "tornadus_therian", "thundurus_incarnate", "thundurus_therian", "landorus_therian", "landorus_incarnate", "kyurem", "victini", "keldeo_ordinary", "genesect", "meloetta_aria", "xerneas", "yveltal", "hoopa_unbound", "hoopa_confined", "tapu_fini", "tapu_bulu", "tapu_koko", "tapu_lele", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "meltan", "melmetal", "zacian_hero", "zamazenta_hero", "regieleki", "regidrago", "zarude"]
+	}]
+},"crucible":{
+	"name": "crucible",
+	"title": "Crucible Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["normal","fighting","ghost","dark","fairy","steel","grass","bug","ice","fire","ground","flying","psychic","poison"]
+	}, {
+		"filterType": "id",
+		"values": ["lairon","lairon_shadow","kleavor","armaldo","armaldo_shadow","avalugg_hisuian","empoleon","empoleon_shadow","ludicolo","golisopod","araquanid","lapras","lapras_shadow","walrein","walrein_shadow","dewgong","cloyster","cloyster_shadow","sealeo","sealeo_shadow","dialga","dialga_origin","dialga_shadow","duraludon","dipplin","hydrapple","appletun","flapple","exeggutor_alolan","exeggutor_alolan_shadow","kyurem","arctibax","baxcalibur","kyurem_black","kyurem_white","magnezone","magnezone_shadow","magneton","magneton_shadow","togedemaru","electrode_hisuian","rotom_mow","galvantula","galvantula_shadow","vikavolt","vikavolt_shadow","rotom_frost","volcarona","volcanion","reshiram","zapdos","zapdos_shadow","zekrom","raikou","raikou_shadow","tapu_koko","thundurus_therian","thundurus_incarnate","thundurus_incarnate_shadow","regieleki"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["rock","water","dragon","electric"]
+	}, {
+		"filterType": "move",
+		"values": ["ROCK_THROW","SMACK_DOWN"]
+	}, {
+		"filterType": "id",
+		"values": ["moltres_galarian","umbreon","florges","mewtwo_armored"]
+	}]
+},"crypt":{
+    "name": "crypt",
+    "title": "Devon Crypt Cup",
+    "restrictedPicks": 1,
+    "restrictedPokemon": ["lokix", "sableye", "sableye_shadow", "weezing_galarian", "marowak_alolan", "marowak_alolan_shadow", "runerigus", "lapras", "lapras_shadow", "jellicent", "jellicent_shadow", "vespiquen"],
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "fairy", "ghost", "ground"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["ninjask", "yanma", "cacturne", "cacturne_shadow", "amoonguss", "amoonguss_shadow", "magmar", "magmar_shadow", "magmortar", "magmortar_shadow", "lapras", "lapras_shadow", "vespiquen", "marowak_alolan_shadow", "marowak_alolan", "jellicent_shadow", "jellicent"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["flying", "normal", "steel", "water", "fire"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["leavanny", "clodsire", "azumarill", "carbink", "whimsicott", "whiscash", "gastrodon", "quagsire", "swampert", "ninetales_alolan", "ninetales_alolan_shadow", "tapu_fini", "primarina"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+    "levelCap": 50,
+	"includeLowStatProduct": true
+},"cups":[{
+	"name": "all",
+	"title": "All Pokemon",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "custom",
+	"title": "Custom",
+	"include": [],
+	"exclude": []
+}, {
+	"name": "gen-5",
+	"title": "Generation 5",
+	"include": [],
+	"exclude": []
+}, {
+	"name": "gobattleleague",
+	"title": "GO Battle League",
+	"include": [],
+	"exclude": [],
+	"partySize": 3
+}, {
+	"name": "boulder",
+	"title": "Boulder Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["rock", "steel", "fighting", "ground"]
+	}],
+	"exclude": [],
+	"link": "https://silph.gg/t/gyqx"
+}, {
+	"name": "twilight",
+	"title": "Twilight Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["dark", "poison", "fairy", "ghost"]
+	}],
+	"exclude": []
+}, {
+	"name": "twilightfactions",
+	"title": "Twilight Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["dark", "poison", "fairy", "ghost"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["nidoqueen", "pawniard"]
+	}]
+}, {
+	"name": "tempest",
+	"title": "Tempest Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["electric", "ice", "flying", "ground"]
+	}],
+	"exclude": []
+}, {
+	"name": "kingdom",
+	"title": "Kingdom Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["fire", "ice", "dragon", "steel"]
+	}],
+	"exclude": []
+}, {
+	"name": "nightmare",
+	"title": "Nightmare Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["psychic", "dark", "fighting"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mythical", "legendary"]
+	}, {
+		"filterType": "id",
+		"values": ["medicham", "sableye"]
+	}]
+}, {
+	"name": "regionals-1",
+	"title": "Season 1 Regionals",
+	"include": [{
+		"filterType": "type",
+		"values": ["rock", "steel", "fighting", "ground", "dark", "poison", "fairy", "ghost", "electric", "ice", "flying", "fire", "dragon"]
+	}],
+	"exclude": []
+}, {
+	"name": "championships-1",
+	"title": "Season 1 Championships",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mythical", "legendary"]
+	}]
+}, {
+	"name": "rainbow",
+	"title": "Rainbow Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["fire", "water", "electric", "grass", "bug"]
+	}, {
+		"filterType": "dex",
+		"values": [1, 251]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["alolan"]
+	}]
+}, {
+	"name": "jungle",
+	"title": "Jungle Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["normal", "grass", "bug", "electric"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["tropius", "wormadam_trash", "wormadam_sandy", "wormadam_plant", "mothim"]
+	}]
+}, {
+	"name": "safari",
+	"title": "Safari Cup",
+	"restrictedPicks": 2,
+	"restrictedPokemon": ["steelix", "swampert", "swampert_shadow", "bastiodon", "bastiodon_xs", "vigoroth", "stunfisk_galarian", "azumarill", "azumarill_xs", "skarmory", "skarmory_shadow", "altaria", "abomasnow", "abomasnow_shadow", "dragalge"],
+	"include": [{
+		"filterType": "type",
+		"values": ["grass", "ground", "rock", "bug", "normal", "poison", "flying", "water"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"link": "https://www.challengermode.com/tournaments/5f92f3d5-ef90-4b52-bf88-08d98fb816d9"
+}, {
+	"name": "fantasy",
+	"title": "Fantasy Cup",
+	"restrictedPicks": 1,
+	"include": [{
+		"filterType": "type",
+		"values": ["bug", "dark", "fighting", "poison", "fairy", "ghost", "psychic"]
+	}],
+	"exclude": []
+}, {
+	"name": "cliffhanger",
+	"title": "Cliffhanger",
+	"include": [],
+	"exclude": [],
+	"tierRules": {
+		"max": 17,
+		"floor": 0,
+		"tiers": [{
+			"points": 9,
+			"pokemon": ["altaria", "azumarill", "bastiodon", "deoxys_defense", "lickitung", "skarmory", "medicham", "stunfisk_galarian"]
+		}, {
+			"points": 5,
+			"pokemon": ["abomasnow", "chansey", "cofagrigus", "cresselia", "dewgong", "diggersby", "ferrothorn", "galvantula", "hypno", "jellicent", "lapras", "marowak_alolan", "machamp", "mandibuzz", "meganium", "nidoqueen", "ninetales_alolan", "pidgeot", "politoed", "registeel", "sableye", "scrafty", "serperior", "swampert", "talonflame", "tropius", "umbreon", "venusaur", "whiscash", "wobbuffet", "zweilous"]
+		}, {
+			"points": 1,
+			"pokemon": ["aromatisse", "beedrill", "bronzong", "castform_rainy", "castform_sunny", "chesnaught", "clefable", "drapion", "drifblim", "empoleon", "froslass", "gardevoir", "granbull", "greedent", "gengar", "golbat", "grimer_alolan", "haunter", "jirachi", "jumpluff", "lanturn", "lugia", "mantine", "melmetal", "mew", "muk_alolan", "ninetales", "noctowl", "obstagoon", "pachirisu", "pelipper", "probopass", "regirock", "raichu_alolan", "roserade", "shiftry", "sirfetchd", "skuntank", "slurpuff", "spritzee", "stunfisk", "sylveon", "toxicroak", "victreebel", "vigoroth", "whimsicott", "wigglytuff", "zapdos"]
+		}]
+	}
+}, {
+	"name": "sinister",
+	"title": "Sinister Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["ghost", "psychic", "fighting", "steel"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["skarmory", "hypno"]
+	}, {
+		"filterType": "tag",
+		"values": ["mythical", "shadow"]
+	}, {
+		"filterType": "type",
+		"values": ["dark"]
+	}]
+}, {
+	"name": "sinister-mirror",
+	"title": "Sinister Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["ghost", "psychic", "fighting", "steel"]
+	}, {
+		"filterType": "id",
+		"values": ["shiftry", "honchkrow", "murkrow", "crawdaunt", "sharpedo"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["skarmory", "hypno", "drifblim", "beheeyem"]
+	}, {
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow", "galarian", "mega"]
+	}, {
+		"filterType": "type",
+		"values": ["dark"]
+	}]
+}, {
+	"name": "ferocious",
+	"title": "Ferocious Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["absol", "aggron", "ampharos", "arcanine", "aron", "bagon", "bibarel", "bidoof", "blitzle", "buizel", "buneary", "camerupt", "cranidos", "cubone", "delcatty", "donphan", "drillbur", "eevee", "electrike", "entei", "espeon", "excadrill", "exploud", "flaaffy", "flareon", "floatzel", "furret", "gabite", "garchomp", "gible", "girafarig", "glaceon", "glameow", "granbull", "growlithe", "grumpig", "heatmor", "herdier", "hippopotas", "hippowdon", "houndoom", "houndour", "jolteon", "kangaskhan", "lairon", "larvitar", "lickilicky", "lickitung", "liepard", "lillipup", "linoone", "lopunny", "luxio", "luxray", "mamoswine", "manectric", "mareep", "marowak", "marowak_alolan", "meowth", "meowth_alolan", "mightyena", "miltank", "minun", "nidoking", "nidoqueen", "nidoran_female", "nidoran_male", "nidorina", "nidorino", "ninetales", "ninetales_alolan", "numel", "pachirisu", "patrat", "persian", "persian_alolan", "phanpy", "pichu", "pikachu", "piloswine", "plusle", "ponyta", "poochyena", "pupitar", "purrloin", "purugly", "raichu", "raichu_alolan", "raikou", "rampardos", "rapidash", "raticate", "raticate_alolan", "rattata", "rattata_alolan", "rhydon", "rhyhorn", "rhyperior", "sandslash", "sandslash_alolan", "sandshrew", "sandshrew_alolan", "sentret", "shelgon", "shinx", "skitty", "skuntank", "smeargle", "sneasel", "spoink", "stantler", "stoutland", "stunky", "suicune", "swinub", "tauros", "teddiursa", "torkoal", "tyranitar", "umbreon", "ursaring", "vaporeon", "vulpix", "vulpix_alolan", "watchog", "weavile", "zangoose", "zebstrika", "zigzagoon"]
+	}],
+	"exclude": []
+}, {
+	"name": "ferocious-mirror",
+	"title": "Ferocious Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["absol", "aggron", "ampharos", "arcanine", "aron", "bagon", "bibarel", "bidoof", "blitzle", "buizel", "buneary", "camerupt", "cranidos", "cubone", "delcatty", "donphan", "drillbur", "eevee", "electrike", "entei", "espeon", "excadrill", "exploud", "flaaffy", "flareon", "floatzel", "furret", "gabite", "garchomp", "gible", "girafarig", "glaceon", "glameow", "granbull", "growlithe", "grumpig", "heatmor", "herdier", "hippopotas", "hippowdon", "houndoom", "houndour", "jolteon", "kangaskhan", "lairon", "larvitar", "lickilicky", "lickitung", "liepard", "lillipup", "linoone", "lopunny", "luxio", "luxray", "mamoswine", "manectric", "mareep", "marowak", "marowak_alolan", "meowth", "meowth_alolan", "mightyena", "miltank", "minun", "nidoking", "nidoqueen", "nidoran_female", "nidoran_male", "nidorina", "nidorino", "ninetales", "ninetales_alolan", "numel", "pachirisu", "patrat", "persian", "persian_alolan", "phanpy", "pichu", "pikachu", "piloswine", "plusle", "ponyta", "poochyena", "pupitar", "purrloin", "purugly", "raichu", "raichu_alolan", "raikou", "rampardos", "rapidash", "raticate", "raticate_alolan", "rattata", "rattata_alolan", "rhydon", "rhyhorn", "rhyperior", "sandslash", "sandslash_alolan", "sandshrew", "sandshrew_alolan", "sentret", "shelgon", "shinx", "skitty", "skuntank", "smeargle", "sneasel", "spoink", "stantler", "stoutland", "stunky", "suicune", "swinub", "tauros", "teddiursa", "torkoal", "tyranitar", "ursaring", "vaporeon", "vulpix", "vulpix_alolan", "watchog", "weavile", "zebstrika", "zigzagoon", "linoone_galarian", "perrserker", "beartic", "gabite", "garchomp", "aerodactyl", "articuno", "moltres", "zapdos", "lugia", "ho_oh", "salamence"]
+	}],
+	"exclude": []
+}, {
+	"name": "timeless",
+	"title": "Timeless Cup",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["bulbasaur", "ivysaur", "venusaur", "squirtle", "wartortle", "blastoise", "charmander", "charmeleon", "charizard", "chikorita", "bayleef", "meganium", "totodile", "croconaw", "feraligatr", "cyndaquil", "quilava", "typhlosion", "treecko", "grovyle", "sceptile", "mudkip", "marshtomp", "swampert", "torchic", "combusken", "blaziken", "turtwig", "grotle", "torterra", "piplup", "prinplup", "empoleon", "chimchar", "monferno", "infernape"],
+	"include": [{
+		"filterType": "dex",
+		"values": [1, 488]
+	}, {
+		"filterType": "id",
+		"values": ["blaziken", "charizard", "charizard_shadow", "infernape", "empoleon", "monferno", "prinplup", "combusken"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "alolan", "shadow"]
+	}, {
+		"filterType": "type",
+		"values": ["fighting", "flying", "normal", "psychic", "steel", "fairy"]
+	}, {
+		"filterType": "id",
+		"values": ["umbreon", "sableye", "sableye_shadow"]
+	}]
+}, {
+	"name": "timeless-mirror",
+	"title": "Timeless Cup",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["bulbasaur", "ivysaur", "venusaur", "squirtle", "wartortle", "blastoise", "charmander", "charmeleon", "charizard", "chikorita", "bayleef", "meganium", "totodile", "croconaw", "feraligatr", "cyndaquil", "quilava", "typhlosion", "treecko", "grovyle", "sceptile", "mudkip", "marshtomp", "swampert", "torchic", "combusken", "blaziken", "turtwig", "grotle", "torterra", "piplup", "prinplup", "empoleon", "chimchar", "monferno", "infernape"],
+	"include": [{
+		"filterType": "dex",
+		"values": [1, 488]
+	}, {
+		"filterType": "id",
+		"values": ["blaziken", "charizard", "infernape", "empoleon", "monferno", "prinplup", "combusken"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "alolan", "shadow", "mega"]
+	}, {
+		"filterType": "type",
+		"values": ["fighting", "flying", "normal", "psychic", "steel", "fairy"]
+	}, {
+		"filterType": "id",
+		"values": ["umbreon", "kingdra", "abomasnow", "castform_snowy", "froslass", "rotom_wash", "rotom_wash"]
+	}]
+}, {
+	"name": "fusion",
+	"title": "Fusion Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow"]
+	}, {
+		"filterType": "type",
+		"values": ["none"]
+	}, {
+		"filterType": "id",
+		"values": ["azumarill", "medicham", "dewgong", "wormadam_trash", "wormadam_plant", "wormadam_sandy", "hypno", "munchlax", "linoone", "onix", "hitmonlee", "hitmonchan", "chansey", "mr.mime", "scyther", "jynx", "electabuzz", "magmar", "magmar_shadow", "pinsir", "lapras", "eevee", "vaporeon", "jolteon", "flareon", "omanyte", "omastar", "omastar_shadow", "kabuto", "kabutops", "aerodactyl", "snorlax", "dratini", "dragonair", "dragonite", "mareep", "flaafy", "ampharos", "sudowoodo", "espeon", "umbreon", "pineco", "forretress", "gligar", "steelix", "scizor", "delibird", "mantine", "skarmory", "hitmontop", "miltank", "blissey", "larvitar", "pupitar", "tyranitar", "ralts", "kirlia", "gardevoir", "slakoth", "vigoroth", "slaking", "nincada", "ninjask", "sableye", "mawile", "trapinch", "vibrava", "flygon", "milotic", "castform", "castform_sunny", "castform_rainy", "castform_snowy", "tropius", "chimecho", "absol", "absol_shadow", "relicanth", "bagon", "shelgon", "salamence", "metang", "metagross", "shinx", "luxio", "luxray", "cranidos", "rampardos", "shieldon", "bastiodon", "pachirisu", "drifloon", "drifblim", "chatot", "spiritomb", "gible", "gabite", "garchomp", "lucario", "skorupi", "drapion", "carnivine", "electivire", "magmortar", "leafeon", "glaceon", "gliscor", "gallade", "ferroseed", "ferrothorn", "klink", "klang", "klinklang", "litwick", "lampent", "chandelure", "golett", "golurk", "deino", "zweilous", "hydreigon", "mr_mime", "tirtouga", "carracosta", "archeops", "archen", "stunfisk", "alomomola", "timburr", "gurdurr", "conkeldurr", "rufflet", "braviary", "cryogonal", "axew", "haxorus", "fraxure", "sigilyph", "tirtouga", "carracosta"]
+	}]
+}, {
+	"name": "fusionfactions",
+	"title": "Fusion Cup",
+	"include": [{
+		"filterType": "cost",
+		"values": [10000, 50000]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["azumarill", "medicham", "dewgong", "scrafty", "jellicent", "nidoqueen", "diggersby", "walrein", "electrode_hisuian", "oricorio_baile", "oricorio_pau", "oricorio_pom_pom", "oricorio_sensu"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "type",
+		"values": ["none"]
+	}]
+}, {
+	"name": "rose",
+	"title": "Rose Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["charmander", "charmeleon", "charizard", "vileplume", "paras", "parasect", "voltorb", "electrode", "jynx", "magmar", "flareon", "ledyba", "ledian", "ariados", "yanma", "scizor", "slugma", "magcargo", "delibird", "porygon2", "magby", "torchic", "combusken", "blaziken", "wurmple", "medicham", "camerupt", "solrock", "castform_sunny", "kricketot", "kricketune", "wormadam_trash", "magmortar", "porygon_z", "tepig", "pignite", "emboar", "pansear", "simisear", "heatmor", "rattata", "ekans", "arbok", "nidoran_male", "nidorino", "nidoking", "zubat", "golbat", "venonat", "venomoth", "grimer", "muk", "gastly", "haunter", "gengar", "marowak_alolan", "koffing", "weezing", "aerodactyl", "crobat", "aipom", "espeon", "forretress", "gligar", "granbull", "tyrogue", "cascoon", "delcatty", "sableye", "illumise", "swalot", "grumpig", "lileep", "cherrim_overcast", "ambipom", "drifloon", "drifblim", "mismagius", "stunky", "skuntank", "spiritomb", "skorupi", "gliscor", "purrloin", "liepard", "clefairy", "clefable", "jigglypuff", "wigglytuff", "exeggcute", "mr_mime", "porygon", "cleffa", "igglybuff", "flaaffy", "hoppip", "snubbull", "smoochum", "miltank", "blissey", "whismur", "skitty", "cherubi", "cherrim_sunny", "happiny", "lickilicky", "drapion", "lickitung", "throh", "venipede", "whirlipede", "scolipede", "throh", "dwebble", "crustle", "shelmet", "accelgor", "machoke", "machop", "machamp", "geodude_alolan", "graveler_alolan", "golem_alolan", "magnemite", "magneton", "onix", "weezing_galarian", "rhyhorn", "rhydon", "misdreavus", "pineco", "steelix", "remoraid", "skarmory", "donphan", "pupitar", "poochyena", "mightyena", "nincada", "nosepass", "aron", "lairon", "aggron", "volbeat", "anorith", "armaldo", "castform", "snorunt", "glalie", "glameow", "purugly", "magnezone", "rhyperior", "probopass", "herdier", "stoutland", "pidove", "tranquill", "unfezant", "drilbur", "excadrill", "timburr", "gurdurr", "whirlipede", "escavalier", "ferroseed", "ferrothorn", "klink", "klang", "klinklang", "durant", "chansey", "minccino", "cinccino", "darumaka", "darmanitan_standard", "scrafty"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["water"]
+	}]
+}, {
+	"name": "toxic",
+	"title": "Toxic Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["bug", "poison", "normal", "ground", "grass"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["noctowl", "vigoroth", "tropius", "whiscash", "swampert", "quagsire", "gastrodon", "gastrodon", "seismitoad", "palpitoad", "marshtomp", "swampert_shadow", "marshtomp_shadow", "genesect"]
+	}]
+}, {
+	"name": "voyager",
+	"title": "Voyager Cup",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["altaria", "azumarill", "bastiodon", "cresselia", "deoxys_defense", "dewgong", "gardevoir", "gardevoir_shadow", "hypno", "hypno_shadow", "ivysaur", "ivysaur_shadow", "jellicent", "lapras", "lapras_shadow", "mandibuzz", "marowak_alolan", "medicham", "melmetal", "mew", "probopass", "registeel", "scrafty", "skarmory", "swampert", "swampert_shadow", "togekiss", "tropius", "umbreon", "venusaur", "venusaur_shadow", "whiscash", "wigglytuff", "zweilous"],
+	"include": [],
+	"exclude": []
+}, {
+	"name": "beam",
+	"title": "Get Beamed",
+	"include": [{
+		"filterType": "id",
+		"values": ["meganium", "venusaur", "mew", "wigglytuff", "lickitung", "grotle", "typhlosion", "ivysaur", "lickilicky", "victreebel", "ludicolo", "snorlax", "milotic", "leafeon", "dragonite", "vileplume", "wailord", "tangrowth", "castform_sunny", "latios", "sunflora", "ninetales", "torterra", "electrode", "cherrim_sunny", "cherrim_overcast", "tangela", "bibarel", "raticate_alolan", "infernape", "torkoal", "parasect", "celebi", "simisage", "cryogonal", "exeggutor_alolan", "chansey", "ursaring", "exeggutor", "cinccino", "unfezant", "gigalith", "luxray", "aerodactyl", "furret", "solrock", "blissey", "roserade", "porygon", "jumpluff", "maractus", "porygon2", "ho_oh", "ambipom", "raticate", "camerupt", "audino", "weezing_galarian", "porygon_z", "lopunny", "slaking"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["steel"]
+	}, {
+		"filterType": "tag",
+		"values": ["shadow"]
+	}]
+}, {
+	"name": "forest",
+	"title": "Forest Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["grass", "water", "fire", "electric", "bug"]
+	}, {
+		"filterType": "dex",
+		"values": [152, 649]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["tropius", "genesect", "raikou"]
+	}, {
+		"filterType": "tag",
+		"values": ["shadow"]
+	}]
+}, {
+	"name": "premier",
+	"title": "Premier Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}],
+	"partySize": 3
+}, {
+	"name": "premierclassic",
+	"title": "Premier Classic",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}],
+	"partySize": 3,
+	"levelCap": 40
+}, {
+	"name": "classic",
+	"title": "Classic",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["xl", "mega"]
+	}],
+	"partySize": 3,
+	"levelCap": 40
+}, {
+	"name": "grunt",
+	"title": "Grunt Cup",
+	"restrictedPokemon": ["ivysaur", "ivysaur_shadow", "venusaur", "venusaur_shadow", "wartortle", "wartortle_shadow", "blastoise", "blastoise_shadow", "charmeleon", "charmeleon_shadow", "charizard", "charizard_shadow"],
+	"include": [{
+		"filterType": "id",
+		"values": ["ferrothorn", "alomomola", "escavalier", "galvantula", "victini", "serperior", "klang", "lapras", "shiftry", "gallade", "hypno", "sableye", "alakazam", "muk", "grimer", "grimer_shadow", "muk_shadow", "lapras_shadow", "shiftry_shadow", "gallade_shadow", "hypno_shadow", "sableye_shadow", "alakazam_shadow", "exeggutor", "exeggutor_shadow", "sharpedo", "sharpedo_shadow", "metagross", "metagross_shadow", "houndoom", "houndoom_shadow", "charizard", "charizard_shadow", "blastoise", "blastoise_shadow", "fortress", "fortress_shadow", "dragonite", "dragonite_shadow", "steelix", "crobat", "crobat_shadow", "mawile", "mawile_shadow", "scizor", "scizor_shadow", "zapdos", "zapdos_shadow", "moltres", "moltres_shadow", "articuno", "articuno_shadow", "suicune", "suicune_shadow", "rhyperior", "machamp", "machamp_shadow", "rhydon", "khangaskan", "golem_alolan", "graveler_alolan", "gliscor", "gliscor_shadow", "victreebel", "victreebel_shadow", "gyarados", "gyarados_shadow", "arcanine", "arcanine_shadow", "venomoth", "venomoth_shadow", "cradily", "lanturn", "skuntank", "skuntank_shadow", "sealeo", "beedrill", "beedrill_shadow", "weezing", "weezing_shadow", "golbat", "arbok", "arbok_shadow", "wobbuffet", "wobbuffet_shadow", "lickitung", "tentacruel", "electrode", "haunter", "cloyster", "gengar", "clefable", "golbat_shadow", "poliwrath", "poliwrath_shadow", "forretress", "forretress_shadow", "magneton", "magneton_shadow"]
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["ferrothorn", "alomomola", "escavalier", "galvantula", "victini", "serperior", "klang", "muk", "grimer", "muk_shadow", "grimer_shadow"]
+	}, {
+		"pokemon": ["lapras", "lapras_shadow", "shiftry", "shiftry_shadow", "gallade", "gallade_shadow", "hypno", "hypno_shadow", "sableye", "sableye_shadow", "alakazam", "alakazam_shadow", "exeggutor", "exeggutor_shadow", "sharpedo", "sharpedo_shadow", "metagross", "metagross_shadow", "houndoom", "houndoom_shadow"]
+	}, {
+		"pokemon": ["charizard", "charizard_shadow", "blastoise", "blastoise_shadow", "forretress", "forretress_shadow", "dragonite", "dragonite_shadow", "magneton", "magneton_shadow", "steelix", "golbat", "golbat_shadow", "crobat", "crobat_shadow", "mawile", "mawile_shadow", "scizor", "scizor_shadow"]
+	}, {
+		"pokemon": ["zapdos", "moltres", "articuno", "zapdos_shadow", "moltres_shadow", "articuno_shadow", "suicune", "suicune_shadow", "rhyperior", "machamp", "machamp_shadow", "rhydon", "khangaskan", "graveler_alolan", "golem_alolan", "gliscor", "gliscor_shadow"]
+	}, {
+		"pokemon": ["victreebel", "victreebel_shadow", "arcanine", "arcanine_shadow", "gyarados", "gyarados_shadow", "venomoth", "venomoth_shadow", "cradily", "weezing", "weezing_shadow", "lanturn", "skuntank", "skuntank_shadow", "sealeo", "beedrill", "beedrill_shadow"]
+	}, {
+		"pokemon": ["wobbuffet", "wobbuffet_shadow", "arbok", "arbok_shadow", "lickitung", "poliwrath", "poliwrath_shadow", "tentacruel", "electrode", "haunter", "gengar", "cloyster", "clefable"]
+	}]
+}, {
+	"name": "sorcerous",
+	"title": "Sorcerous Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["ice", "poison", "fairy", "psychic", "normal"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow"]
+	}, {
+		"filterType": "id",
+		"values": ["drapion", "mawile", "metang", "metagross", "lapras", "dewgong", "snorlax", "vigoroth", "slaking", "castform", "rufflet", "braviary", "chansey", "blissey", "mr_mime", "jynx", "eevee", "espeon", "delibird", "miltank", "gardevoir", "gallade", "chimecho", "chatot", "skorupi", "sigilyph", "cryogonal", "glaceon", "castform_snowy", "raichu_alolan", "linoone_galarian", "obstagoon"]
+	}]
+}, {
+	"name": "sorcerous-mirror",
+	"title": "Sorcerous Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["ice", "poison", "fairy", "psychic", "normal"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow", "mega"]
+	}, {
+		"filterType": "id",
+		"values": ["drapion", "mawile", "lapras", "dewgong", "vigoroth", "slaking", "castform", "rufflet", "braviary", "chansey", "blissey", "mr_mime", "jynx", "eevee", "espeon", "delibird", "miltank", "gardevoir", "metang", "chimecho", "chatot", "skorupi", "sigilyph", "cryogonal", "glaceon", "castform_snowy", "raichu_alolan", "obstagoon", "bouffalant", "whimsicott"]
+	}]
+}, {
+	"name": "goteamup",
+	"title": "GOTeamUp",
+	"link": "https://www.stadiumgaming.gg/post/gtu6-is-here",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["skarmory", "skarmory_shadow", "altaria", "registeel", "meganium", "abomasnow", "abomasnow_shadow"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "continentals-2",
+	"title": "Season 2 continentals",
+	"include": [{
+		"filterType": "id",
+		"values": ["charizard", "blaziken", "typhlosion", "castform_sunny", "ninetales", "torkoal", "heatmor", "moltres", "bellossom", "tangrowth", "ludicolo", "sceptile", "cherrim_sunny", "serperior", "breloom", "exeggutor", "grotle", "tangela", "carnivine", "parasect", "castform_rainy", "blastoise", "alomomola", "seaking", "empoleon", "milotic", "wailord", "prinplup", "bibarel", "gyarados", "feraligatr", "golduck", "kingler", "suicune", "entei", "crawdaunt", "sharpedo", "cloyster", "vaporeon", "marowak_alolan", "sableye", "froslass", "drifblim", "banette", "dusclops", "golurk", "munchlax", "snorlax", "lickitung", "lickilicky", "zangoose", "linoone", "raticate_alolan", "noctowl", "pidgeot", "dunsparce", "ursaring", "castform", "furret", "porygon", "porygon2", "porygon_z", "delcatty", "girafarig", "machamp", "hitmontop", "primeape", "lucario", "poliwrath", "gallade", "hitmonchan", "perrserker", "chansey", "blissey", "azumarill", "altaria", "skarmory", "zweilous", "dragonair", "shelgon", "wigglytuff", "clefable", "granbull", "mawile", "registeel", "melmetal", "klang", "klinklang", "muk_alolan", "haunter", "gengar", "golbat", "skuntank", "drapion", "muk", "nidoqueen", "nidoking", "amoonguss", "qwilfish", "tentacruel", "lapras", "ninetales_alolan", "abomasnow", "walrein", "piloswine", "mamoswine", "cryogonal", "glaceon", "beartic", "regice", "relicanth", "regirock", "carracosta", "corsola", "cradily", "graveler_alolan", "golem_alolan", "sudowoodo", "aggron", "lairon", "magcargo", "bonsly", "aerodactyl", "archen", "archeops", "victreebel", "vileplume", "gloom", "seviper", "swalot", "rhyperior", "lunatone", "solrock", "probopass", "mantine", "zapdos", "dragonite", "gliscor", "gligar", "togekiss", "honchkrow", "electivire", "raikou", "lanturn", "magneton", "magnezone", "raichu", "raichu_alolan", "electrode", "zebstrika", "minun", "plusle", "ampharos", "stunfisk", "pachirisu", "marshtomp", "quagsire", "seismitoad", "palpitoad", "flygon", "torterra", "steelix", "claydol", "excadrill", "garchomp", "gastrodon", "gastrodon", "hippowdon", "camerupt", "donphan", "jirachi", "bronzong", "lugia", "wobbuffet", "celebi", "latios", "latias", "slowbro", "slowking", "alakazam", "gothitelle", "metagross", "sneasel", "weavile", "tyranitar", "shiftry", "escavalier", "forretress", "heracross", "galvantula", "crustle", "scizor", "beedrill", "vespiquen", "scolipede", "ninjask", "venomoth", "dustox", "obstagoon", "wormadam_trash", "wormadam_plant", "wormadam_sandy", "durant", "hydreigon", "mr_mime", "metang", "pinsir", "kricketune", "masquerain", "yanma", "yanmega"]
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["charizard", "blaziken", "typhlosion", "castform_sunny", "ninetales", "torkoal", "heatmor", "moltres", "bellossom", "tangrowth", "ludicolo", "sceptile", "cherrim_sunny", "serperior", "breloom", "exeggutor", "grotle", "tangela", "carnivine", "parasect", "castform_rainy", "blastoise", "alomomola", "seaking", "empoleon", "milotic", "wailord", "prinplup", "bibarel", "gyarados", "feraligatr", "golduck", "kingler", "suicune", "entei", "crawdaunt", "sharpedo", "cloyster", "vaporeon"]
+	}, {
+		"pokemon": ["marowak_alolan", "sableye", "froslass", "drifblim", "banette", "dusclops", "golurk", "munchlax", "snorlax", "lickitung", "lickilicky", "zangoose", "linoone", "raticate_alolan", "noctowl", "pidgeot", "dunsparce", "ursaring", "castform", "furret", "porygon", "porygon2", "porygon_z", "delcatty", "girafarig", "machamp", "hitmontop", "primeape", "lucario", "poliwrath", "gallade", "hitmonchan", "perrserker", "chansey", "blissey"]
+	}, {
+		"pokemon": ["azumarill", "altaria", "skarmory", "zweilous", "dragonair", "shelgon", "wigglytuff", "clefable", "granbull", "mawile", "registeel", "stunfisk_galarian", "melmetal", "klang", "klinklang"]
+	}, {
+		"pokemon": ["muk_alolan", "haunter", "gengar", "golbat", "skuntank", "drapion", "muk", "nidoqueen", "nidoking", "amoonguss", "qwilfish", "tentacruel", "lapras", "ninetales_alolan", "abomasnow", "castform_snowy", "articuno", "walrein", "sandslash_alolan", "glalie", "piloswine", "mamoswine", "cryogonal", "glaceon", "beartic", "regice", "relicanth", "regirock", "carracosta", "corsola", "cradily", "graveler_alolan", "golem_alolan", "sudowoodo", "aggron", "lairon", "magcargo", "bonsly", "aerodactyl", "archen", "archeops", "victreebel", "vileplume", "gloom", "seviper", "swalot", "toxicroak", "rhyperior", "lunatone", "solrock", "probopass"]
+	}, {
+		"pokemon": ["mantine", "zapdos", "dragonite", "gliscor", "gligar", "togekiss", "honchkrow", "electivire", "raikou", "lanturn", "magneton", "magnezone", "raichu", "electrode", "zebstrika", "minun", "plusle", "ampharos", "stunfisk", "pachirisu", "marshtomp", "quagsire", "seismitoad", "palpitoad", "flygon", "torterra", "steelix", "claydol", "excadrill", "garchomp", "gastrodon", "gastrodon", "hippowdon", "camerupt", "donphan"]
+	}, {
+		"pokemon": ["jirachi", "bronzong", "lugia", "wobbuffet", "celebi", "latios", "latias", "slowbro", "slowking", "alakazam", "gothitelle", "metagross", "raichu_alolan", "sneasel", "weavile", "tyranitar", "shiftry", "escavalier", "forretress", "heracross", "galvantula", "crustle", "scizor", "beedrill", "vespiquen", "scolipede", "ninjask", "venomoth", "dustox", "linoone_galarian", "obstagoon", "wormadam_trash", "wormadam_plant", "wormadam_sandy", "durant", "hydreigon", "mr_mime", "metang", "pinsir", "kricketune", "masquerain", "yanma", "yanmega"]
+	}]
+}, {
+	"name": "catacomb",
+	"title": "Catacomb Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["dark", "grass", "rock", "ice", "bug"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["scrafty", "obstagoon", "dewgong", "ninetales_alolan", "crustle"]
+	}, {
+		"filterType": "type",
+		"values": ["steel"]
+	}, {
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow", "regional"]
+	}]
+}, {
+	"name": "scoville",
+	"title": "Scoville Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["azumarill", "registeel", "altaria", "stunfisk_galarian", "deoxys_defense", "swampert", "mantine", "umbreon", "tropius", "cresselia", "swampert_shadow", "dewgong", "mew", "bastiodon", "raikou_shadow", "zweilous", "whiscash", "vigoroth", "meganium", "machamp", "venusaur", "scrafty", "skarmory", "castform_rainy", "regirock", "munchlax", "raikou", "shiftry_shadow", "grotle_shadow", "lapras", "medicham", "sableye_shadow", "ferrothorn", "wigglytuff", "zapdos", "perrserker", "primeape", "zapdos_shadow", "snorlax", "flygon_shadow", "lapras_shadow", "gloom_shadow", "dragonite_shadow", "noctowl", "obstagoon", "venusaur_shadow", "shiftry", "clefable", "hitmontop", "muk_alolan", "quagsire", "sableye", "melmetal", "politoed_shadow", "bellossom", "blastoise", "victreebel_shadow", "gardevoir_shadow", "lickitung", "snorlax_shadow", "marowak_alolan", "dragonair_shadow", "grotle", "flygon", "regice", "gliscor", "bellossom_shadow", "electivire_shadow", "lanturn", "politoed", "raichu_alolan", "vileplume_shadow", "zangoose", "escavalier", "ludicolo", "stunfisk", "lickilicky", "magnezone", "togekiss", "hariyama", "seaking", "alomomola", "hypno", "magnezone_shadow", "tangtowth", "ivysaur", "raichu", "typhlosion", "ninetales_alolan", "dragonair", "haunter", "toxicroak", "gloom", "torterra_shadow", "victreebel", "drapion", "golbat_shadow", "jumpluff", "blastoise_shadow"]
+	}]
+}, {
+	"name": "mexico",
+	"title": "Mexico Cup",
+	"link": "https://silph.gg/t/rrtb",
+	"include": [{
+		"filterType": "type",
+		"values": ["poison", "fighting", "grass", "ghost", "flying", "ground"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}]
+}, {
+	"name": "kaiser",
+	"title": "Kaiser Invitational",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["stunfisk_galarian", "bastiodon", "registeel", "ferrothorn", "deoxys_defense", "skarmory", "altaria"]
+	}, {
+		"filterType": "tag",
+		"values": ["regional", "mega"]
+	}]
+}, {
+	"name": "shadow",
+	"title": "Shadow Cup",
+	"link": "https://silph.gg/t/r4hu/team-rocket-academy-presents-shadow-cup-3-0",
+	"include": [{
+		"filterType": "tag",
+		"values": ["shadow"]
+	}],
+	"exclude": []
+}, {
+	"name": "flying",
+	"title": "Flying Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["flying"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3
+}, {
+	"name": "circus",
+	"title": "Circus Cup",
+	"link": "https://silph.gg/players-choice-finalists",
+	"include": [{
+		"filterType": "type",
+		"name": "Type",
+		"values": ["fighting", "fire", "flying", "poison", "psychic"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"name": "Tag",
+		"values": ["legendary", "mythical", "alolan"]
+	}, {
+		"filterType": "id",
+		"name": "Species",
+		"values": ["altaria"]
+	}]
+}, {
+	"name": "maelstrom",
+	"title": "Maelstrom Cup",
+	"link": "https://silph.gg/players-choice-finalists",
+	"include": [{
+		"filterType": "type",
+		"name": "Type",
+		"values": ["bug", "normal", "psychic", "water"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"name": "Species",
+		"values": ["deoxys_defense", "wigglytuff"]
+	}, {
+		"filterType": "tag",
+		"name": "Tag",
+		"values": ["shadow"]
+	}],
+	"overrides": [],
+	"league": 1500
+}, {
+	"name": "origin",
+	"title": "Origin Cup",
+	"link": "https://silph.gg/players-choice-finalists",
+	"include": [{
+		"filterType": "id",
+		"name": "Species",
+		"values": ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "eevee", "jolteon", "vaporeon", "flareon", "espeon", "umbreon", "rattata", "raticate", "raticate_alolan", "pidgey", "pidgeotto", "pidgeot", "caterpie", "metapod", "butterfree", "weedle", "kakuna", "beedrill", "ekans", "arbok", "pichu", "pikachu", "raichu", "raichu_alolan", "spearow", "fearow", "nidoran", "nidorino", "nidoking", "nidorina", "nidoqueen", "mankey", "primeape", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "sentret", "furret", "hoothoot", "noctowl", "ledyba", "ledian", "spinarak", "ariados", "mareep", "flaaffy", "ampharos", "hoppip", "skiploom", "jumpluff", "wooper", "quagsire", "bellsprout", "weepinbell", "victreebel", "geodude", "graveler", "golem", "geodude_alolan", "graveler_alolan", "golem_alolan", "dunsparce", "onix", "steelix", "treecko", "grovyle", "sceptile", "torchic", "combusken", "blaziken", "mudkip", "marshtomp", "swampert", "zigzagoon", "linoone", "linoone_galarian", "obstagoon", "wurmple", "silcoon", "beautifly", "cascoon", "dustox", "poochyena", "mightyena", "seedot", "nuzleaf", "shiftry", "lotad", "lombre", "ludicolo", "ralts", "kirlia", "gardevoir", "gallade", "surskit", "masquerain", "wingull", "pelliper", "taillow", "swellow", "shroomish", "breloom", "slakoth", "vigoroth", "slaking", "makuhita", "hariyama", "turtwig", "grotle", "torterra", "chimchar", "monferno", "infernape", "piplup", "prinplug", "empoleon", "doduo", "dodrio", "shinx", "luxio", "luxray", "zubat", "golbat", "crobat", "abra", "kadabra", "alakazam", "cubone", "marowak", "marowak_alolan", "budew", "roselia", "roserade", "ponyta", "rapidash", "machop", "machoke", "machamp", "bidoof", "bibarel", "stary", "staravia", "staraptor", "magikarp", "gyarados", "psyduck", "golduck", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott", "igglybuff", "jigglypuff", "wigglytuff", "patrat", "watchog", "lillipup", "herdier", "stoutland", "lickitung", "lickilicki", "purrloin", "liepard", "audino", "pansear", "simisear", "pansage", "simisage", "panpour", "simipour"]
+	}],
+	"exclude": [],
+	"overrides": [],
+	"league": 1500
+}, {
+	"name": "duet",
+	"title": "Duet Cup",
+	"link": "https://silph.gg/players-choice-finalists",
+	"include": [{
+		"filterType": "id",
+		"name": "Species",
+		"values": ["sneasel", "whimsicott", "emolga", "beheeyem", "bouffalant", "accelgor", "aerodactyl", "aipom", "alomomola", "ambipom", "amoonguss", "anorith", "archen", "archeops", "ariados", "armaldo", "audino", "basculin", "bastiodon", "beartic", "bibarel", "bonsly", "braviary", "breloom", "bronzong", "buneary", "camerupt", "carnivine", "carracosta", "castform", "castform_rainy", "castform_snowy", "castform_sunny", "chatot", "cherrim_overcast", "cherrim_sunny", "chimecho", "chinchou", "cinccino", "clamperl", "claydol", "cloyster", "cofagrigus", "corsola", "cradily", "cranidos", "crawdaunt", "crustle", "cryogonal", "darmanitan_standard", "darumaka", "delcatty", "dewgong", "dodrio", "donphan", "drapion", "drifblim", "drifloon", "drilbur", "dugtrio", "dugtrio_alolan", "dunsparce", "durant", "dwebble", "electrode", "escavalier", "espeon", "excadrill", "exeggutor_alolan", "farfetchd", "fearow", "ferrothorn", "flareon", "floatzel", "froslass", "furret", "galvantula", "garbodor", "gastrodon", "gastrodon", "girafarig", "glaceon", "glalie", "golett", "golurk", "gorebyss", "granbull", "grimer_alolan", "grumpig", "hariyama", "heatmor", "heracross", "hippopotas", "hippowdon", "hitmontop", "honchkrow", "huntail", "illumise", "jolteon", "jynx", "kabuto", "kabutops", "kangaskhan", "kingler", "krabby", "kricketune", "lanturn", "leafeon", "ledian", "lickilicky", "lickitung", "liepard", "lileep", "lilligant", "linoone", "lopunny", "lucario", "lumineon", "lunatone", "magcargo", "manectric", "mantine", "mantyke", "maractus", "marowak_alolan", "masquerain", "mightyena", "milotic", "miltank", "minun", "mothim", "mr.mime", "muk_alolan", "munchlax", "murkrow", "ninetales_alolan", "noctowl", "nosepass", "octillery", "onix", "pachirisu", "parasect", "pelipper", "persian_alolan", "phanpy", "pineco", "plusle", "ponyta", "primeape", "probopass", "purugly", "quagsire", "qwilfish", "rampardos", "rapidash", "raticate_alolan", "relicanth", "rotom_wash", "rufflet", "sandshrew_alolan", "sandslash_alolan", "sawk", "scrafty", "scraggy", "seaking", "sealeo", "seviper", "shellos_east_sea", "shellos_west_sea", "sigilyph", "simipour", "simisage", "simisear", "slowbro", "slowking", "slowpoke", "smoochum", "snubbull", "solrock", "spinda", "spiritomb", "spoink", "starmie", "steelix", "stunfisk", "sudowoodo", "sunflora", "swalot", "swanna", "swellow", "swoobat", "tangela", "tangrowth", "tauros", "teddiursa", "tentacruel", "throh", "tirtouga", "torkoal", "toxicroak", "umbreon", "ursaring", "vaporeon", "vespiquen", "volbeat", "wailmer", "wailord", "walrein", "watchog", "whiscash", "wormadam_plant", "wormadam_sandy", "wormadam_trash", "xatu", "yanma", "yanmega", "zangoose", "zebstrika", "raticate", "sandshrew", "sandslash", "arbok", "persian", "ninetales", "venomoth", "golduck", "arcanine", "muk", "grimer", "hypno", "exeggutor", "marowak", "hitmonlee", "hitmonchan", "weezing", "weezing_galarian", "chansey", "mr_mime", "scyther", "pinsir", "gyarados", "lapras", "omanyte", "omastar", "snorlax", "misdreavus", "wobbuffet", "forretress", "gligar", "scizor", "houndoom", "stantler", "miltank", "blissey", "ninjask", "sableye", "mawile", "sharpedo", "cacturne", "banette", "absol", "farfetchd_galarian", "mismagius", "skuntank", "bronzong", "abomasnow", "weavile", "gliscor", "darmanitan_galarian", "perrserker"]
+	}],
+	"exclude": []
+}, {
+	"name": "sunrise",
+	"title": "sunrise Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["fire", "flying", "grass", "ground", "normal"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["rock"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "marsh",
+	"title": "Marsh Cup",
+	"link": "https://silph.gg/factions/cycle/liga711-torneo3",
+	"include": [{
+		"filterType": "type",
+		"values": ["poison", "ghost", "bug", "grass", "water"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["abomasnow", "abomasnow_shadow", "tropius"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "uber",
+	"title": "Uber Tier Cup",
+	"link": "https://twitter.com/PoGoKieng/status/1321532380407103493",
+	"include": [],
+	"exclude": []
+}, {
+	"name": "little",
+	"title": "Little Cup",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": 1,
+		"values": ["abra", "aipom", "anorith", "archen", "aron", "axew", "azurill", "bagon", "baltoy", "barboach", "beldum", "bellsprout", "bidoof", "blitzle", "bonsly", "bronzor", "budew", "buizel", "bulbasaur", "buneary", "burmy", "cacnea", "carvanha", "caterpie", "charmander", "cherubi", "chikorita", "chimchar", "chinchou", "chingling", "cleffa", "combee", "corphish", "cranidos", "croagunk", "cubchoo", "cubone", "cyndaquil", "darumaka", "darumaka_galarian", "deerling", "deino", "diglett", "diglett_alolan", "doduo", "dratini", "drifloon", "drilbur", "drowzee", "ducklett", "duskull", "dwebble", "ekans", "electrike", "elekid", "elgyem", "exeggcute", "farfetchd_galarian", "feebas", "ferroseed", "finneon", "foongus", "frillish", "gastly", "geodude", "geodude_alolan", "gible", "glameow", "gligar", "goldeen", "golett", "gothita", "grimer", "grimer_alolan", "growlithe", "gulpin", "happiny", "hippopotas", "hoothoot", "hoppip", "horsea", "houndour", "igglybuff", "joltik", "kabuto", "klink", "koffing", "krabby", "kricketot", "larvesta", "larvitar", "ledyba", "lickitung", "lileep", "lillipup", "litwick", "lotad", "machop", "magby", "magikarp", "magnemite", "makuhita", "mankey", "mantyke", "mareep", "meditite", "meowth", "meowth_alolan", "meowth_galarian", "mienfoo", "mime jr.", "misdreavus", "mudkip", "munchlax", "munna", "murkrow", "natu", "nidoran_male", "nidoran_female", "nincada", "nosepass", "numel", "oddish", "omanyte", "oshawott", "pansage", "pansear", "paras", "patrat", "phanpy", "pichu", "pidgey", "pidove", "pineco", "piplup", "poliwag", "ponyta", "ponyta", "poochyena", "psyduck", "purrloin", "ralts", "rattata", "rattata_alolan", "remoraid", "rhyhorn", "riolu", "roggenrola", "rufflet", "sandile", "sandshrew", "sandshrew_alolan", "scraggy", "seedot", "seel", "sentret", "sewaddle", "shellos_east_sea", "shellos_west_sea", "shieldon", "shinx", "shroomish", "shuppet", "skitty", "skorupi", "slakoth", "slowpoke", "", "slugma", "smoochum", "sneasel", "snivy", "snorunt", "snover", "snubbull", "solosis", "spearow", "spheal", "spinarak", "spoink", "squirtle", "starly", "stunky", "surskit", "swablu", "swinub", "taillow", "tangela", "teddiursa", "tentacool", "tepig", "timburr", "tirtouga", "togepi", "torchic", "totodile", "trapinch", "treecko", "trubbish", "turtwig", "tympole", "tynamo", "tyrogue", "vanillite", "venipede", "venonat", "voltorb", "vulpix", "vulpix_alolan", "wailmer", "weedle", "whismur", "wingull", "woobat", "wooper", "wurmple", "wynaut", "yamask", "yanma", "zigzagoon", "zigzagoon_galarian", "zubat", "meltan", "yamask_galarian", "vulpix_shadow", "dratini_shadow", "stunky_shadow", "cubone_shadow", "gligar_shadow", "mareep_shadow", "turtwig_shadow", "growlithe_shadow", "psyduck_shadow", "duskull_shadow", "oddish_shadow", "hoppip_shadow", "houndour_shadow", "venonat_shadow", "squirtle_shadow", "drowzee_shadow", "nidoran_male_shadow", "seedot_shadow", "meowth_shadow", "pineco_shadow", "sandshrew_shadow", "mudkip_shadow", "poliwag_shadow", "machop_shadow", "exeggcute_shadow", "slowpoke_shadow", "magnemite_shadow", "grimer_shadow", "zubat_shadow", "teddiursa_shadow", "charmander_shadow", "rattata_shadow", "misdreavus_shadow", "snover_shadow", "bulbusaur_shadow", "ralts_shadow", "larvitar_shadow", "omanyte_shadow", "sneasel_shadow", "koffing_shadow", "carvanha_shadow", "bagon_shadow", "diglett_shadow", "trapinch_shadow", "cacnea_shadow", "weedle_shadow", "nidoran_female_shadow", "shuppet_shadow", "bellsprout_shadow", "ekans_shadow", "abra_shadow", "beldum_shadow", "magikarp_shadow", "shellder", "shellder_shadow", "cottonee", "scyther", "scyther_shadow", "onix", "mime_jr", "eevee", "porygon", "sunkern", "clamperl", "burmy", "shellos", "panpour", "petilil", "minccino", "karrablast", "shelmet", "vullaby", "pawniard", "staryu", "chespin", "fennekin", "froakie", "bunnelby", "fletchling", "litleo", "flabebe", "pancham", "espurr", "spritzee", "swirlix", "inkay", "binacle", "skrelp", "clauncher", "helioptile", "goomy", "phantump", "pumpkaboo_small", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_super", "bergmite", "noibat", "rowlet", "litten", "popplio", "pikipek", "yungoos", "rockruff", "fomantis", "salandit", "jangmo_o", "skwovet", "wooloo", "zigzagoon_galarian", "farfetchd_galarian", "mr_mime_galarian", "yamask_galarian"]
+	}],
+	"exclude": [],
+	"partySize": 3
+}, {
+	"name": "johto",
+	"title": "Johto Cup",
+	"include": [{
+		"filterType": "dex",
+		"values": [152, 251]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+}, {
+	"name": "sinnoh",
+	"title": "Sinnoh Cup",
+	"include": [{
+		"filterType": "dex",
+		"values": [387, 493]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["bastiodon_xs"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+}, {
+	"name": "nightfall",
+	"title": "Silph Nightfall Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["ice", "fighting", "normal", "poison", "ground"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["mr_rime", "mr_mime_galarian", "lickitung", "chansey", "pidgeot"]
+	}]
+}, {
+	"name": "cerberus",
+	"title": "Victory Road Cerberus Cup",
+	"link": "https://silph.gg/t/eh4b/the-three-heads-of-cerberus",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["sableye", "sableye_xl", "sableye_shadow", "sableye_shadow_xl", "zweilous", "umbreon"],
+	"include": [{
+		"filterType": "type",
+		"values": ["dragon", "ice", "fire", "psychic", "fighting"]
+	}, {
+		"filterType": "id",
+		"values": ["sableye", "sableye_xl", "sableye_shadow", "sableye_shadow_xl", "zweilous", "umbreon"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}, {
+		"filterType": "id",
+		"values": ["marowak_alolan", "gardevoir_shadow"]
+	}, {
+		"filterType": "type",
+		"values": ["dark"]
+	}]
+}, {
+	"name": "labyrinth",
+	"title": "Silph Labyrinth Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["azumarill", "azumarill_xl", "medicham", "medicham_xl", "stunfisk_galarian", "hypno", "hypno_shadow", "deoxys_defense", "cresselia", "umbreon", "machamp", "machamp_shadow", "scrafty", "sirfetchd", "altaria", "bastiodon", "bastiodon_xl", "primeape", "swampert", "swampert_shadow", "mew", "wobbuffet", "wobbuffet_shadow", "wobbuffet_xl"]
+	}]
+}, {
+	"name": "vortex",
+	"title": "Silph Vortex Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega", "legendary"]
+	}, {
+		"filterType": "type",
+		"values": ["fairy"]
+	}, {
+		"filterType": "id",
+		"values": ["medicham", "medicham_xl", "deoxys_defense", "azumarill_xl", "azumarill", "altaria", "sableye_shadow", "sableye", "sableye_xl", "stunfisk_galarian", "swampert", "swampert_shadow", "scrafty", "wobbuffet", "wobbuffet_xl", "lickitung", "lickitung_xl", "machamp", "machamp_shadow", "bastiodon", "bastiodon_xl", "cresselia", "wigglytuff", "abomasnow", "abomasnow_shadow", "skarmory", "vigoroth", "tropius", "marowak_alolan", "sirfetchd", "obstagoon", "umbreon", "politoed", "politoed_shadow"]
+	}]
+}, {
+	"name": "slitzko",
+	"title": "Slitzko Memorial Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["lapras", "steelix", "blaziken", "bastiodon", "lucario", "altaria", "graveler_alolan", "beedrill", "vigoroth", "forretress", "noctowl", "heracross", "charizard", "quagsire", "mantine", "qwilfish", "hypno", "mightyena", "skuntank", "raichu_alolan", "toxicroak", "skarmory", "melmetal", "kingdra", "registeel", "marshtomp", "magneton", "tropius", "ninetales_alolan", "houndoom", "muk", "arbok", "absol", "azumarill", "toxicroak", "muk_alolan", "noctowl", "venusaur", "swampert", "wigglytuff", "golbat", "sableye", "probopass", "scrafty", "marowak_alolan", "whiscash", "shiftry", "cloyster", "bronzong", "steelix", "dusclops", "drifblim", "cresselia", "medicham", "abomasnow", "stunfisk_galarian", "ferrothorn", "pelipper", "dewgong", "whimsicott", "poliwrath", "pidgeot", "forretress", "munchlax", "zweilous", "politoed", "toxicroak", "froslass", "umbreon", "gliscor", "medicham_xl", "azumarill_xl", "sableye_xl", "bastiodon_xl"]
+	}],
+	"exclude": [],
+	"link": "https://silph.gg/t/5wvm"
+}, {
+	"name": "prismatic",
+	"title": "Silph Prismatic Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["ivysaur", "weepinbell", "victreebel", "grimer_alolan", "muk_alolan", "scyther", "bayleef", "meganium", "xatu", "bellossom", "tyranitar", "celebi", "grovyle", "sceptile", "dustox", "ludicolo", "breloom", "roselia", "flygon", "cradily", "grotle", "torterra", "roserade", "wormadam_plant", "bronzong", "yanmega", "leafeon", "servine", "serperior", "simisage", "whimsicott", "maractus", "gardobor", "golurk", "quilladin", "chesnaught", "beedrill", "raichu", "ninetales", "persian", "ponyta", "rapidash", "hypno", "exeggutor", "electabuzz", "jolteon", "quilava", "typhlosion", "ampharos", "sunflora", "girafarig", "dunsparce", "pelipper", "ninjask", "manectric", "plusle", "minun", "lunatone", "mothim", "vespiquen", "electivire", "leavanny", "archeops", "raticate_alolan", "snorlax", "murkrow", "sneasel", "houndoom", "mawile", "claydol", "banette", "dusclops", "honchkrow", "munchlax", "weavile", "zebstrika", "chandelure", "wartortle", "blastoise", "sandslash_alolan", "nidoqueen", "gloom", "persian_alolan", "tangela", "seadra", "gyarados", "vaporeon", "omanyte", "omastar", "croconaw", "feraligatr", "lanturn", "jumpluff", "quagsire", "kingdra", "suicune", "marshtomp", "swellow", "masquerain", "wailmer", "wailord", "castform_rainy", "sealeo", "walrein", "huntail", "metang", "metagross", "regice", "prinplup", "empoleon", "luxio", "luxray", "rampardos", "gabite", "lucario", "lumineon", "tangrowth", "glaceon", "dewott", "simipour", "boldore", "gigalith", "swoobat", "palpitoad", "seismitoad", "carracosta", "cryogonal", "frogadier", "greninja", "charmeleon", "charizard", "vileplume", "parasect", "kingler", "electrode", "seaking", "magmar", "ledian", "ariados", "yanma", "scizor", "magcargo", "octillery", "porygon2", "combusken", "blaziken", "camerupt", "solrock", "crawdaunt", "castform_sunny", "kricketune", "wormadam_trash", "magmortar", "porygon_z", "rotom", "pignite", "emboar", "simisear", "scolipede", "krookodile", "darmanitan_standard", "crustle", "bisharp", "braviary", "heatmor", "braixen", "delphox", "fletchinder", "talonflame", "slowbro", "porygon", "slowking", "corsola", "milotic", "cherrim_sunny", "alomomola", "butterfree", "rapidash_galarian", "dewgong", "togetic", "linoone", "gardevoir", "zangoose", "castform_snowy", "shelgon", "pachirisu", "togekiss", "gallade", "swanna", "emolga", "amoonguss", "beartic", "floette", "florges", "meowstic", "machoke", "graveler_alolan", "golem_alolan", "magneton", "rhydon", "misdreavus", "steelix", "qwilfish", "donphan", "mightyena", "lairon", "aggron", "armaldo", "glalie", "relicanth", "purugly", "magnezone", "rhyperior", "probopass", "tranquill", "unfezant", "excadrill", "cinccino", "escavalier", "ferrothorn", "klinklang", "durant", "arbok", "nidoking", "golbat", "crobat", "venomoth", "grimer", "muk", "cloyster", "haunter", "gengar", "weezing", "aerodactyl", "espeon", "forretress", "gligar", "granbull", "mantine", "delcatty", "swalot", "drifblim", "mismagius", "skuntank", "spiritomb", "drapion", "gliscor", "gothitelle", "noivern", "pidgeot", "fearow", "raichu_alolan", "dugtrio", "arcanine", "alakazam", "graveler", "golem", "marowak", "hitmonchan", "kangaskhan", "pinsir", "kabutops", "furret", "noctowl", "sudowoodo", "ursaring", "piloswine", "hitmontop", "shiftry", "hariyama", "monferno", "infernape", "staraptor", "bibarel", "wormadam_sandy", "floatzel", "hippowdon", "mamoswine", "litleo_xl", "litleo", "pyroar", "froslass", "dragonite", "zapdos", "garbodor", "salamence", "liepard", "meowstic_female"]
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["wartortle", "blastoise", "sandslash_alolan", "nidoqueen", "gloom", "persian_alolan", "tangela", "seadra", "gyarados", "vaporeon", "omanyte", "omastar", "croconaw", "feraligatr", "lanturn", "jumpluff", "quagsire", "kingdra", "suicune", "marshtomp", "swellow", "masquerain", "wailmer", "wailord", "castform_rainy", "sealeo", "walrein", "huntail", "metang", "metagross", "regice", "prinplup", "empoleon", "luxio", "luxray", "rampardos", "gabite", "lucario", "lumineon", "tangrowth", "glaceon", "dewott", "simipour", "boldore", "gigalith", "swoobat", "palpitoad", "seismitoad", "carracosta", "cryogonal", "frogadier", "greninja", "salamence"]
+	}, {
+		"pokemon": ["charmeleon", "charizard", "vileplume", "parasect", "kingler", "electrode", "seaking", "magmar", "ledian", "ariados", "yanma", "scizor", "magcargo", "octillery", "porygon2", "combusken", "blaziken", "camerupt", "solrock", "crawdaunt", "castform_sunny", "kricketune", "wormadam_trash", "magmortar", "porygon_z", "rotom", "pignite", "emboar", "simisear", "scolipede", "krookodile", "darmanitan_standard", "crustle", "bisharp", "braviary", "heatmor", "braixen", "delphox", "fletchinder", "talonflame"]
+	}, {
+		"pokemon": ["beedrill", "raichu", "ninetales", "persian", "ponyta", "rapidash", "hypno", "exeggutor", "electabuzz", "jolteon", "quilava", "typhlosion", "ampharos", "sunflora", "girafarig", "dunsparce", "pelipper", "ninjask", "manectric", "plusle", "minun", "lunatone", "mothim", "vespiquen", "electivire", "leavanny", "archeops", "zapdos", "butterfree", "rapidash_galarian", "dewgong", "togetic", "linoone", "gardevoir", "zangoose", "castform_snowy", "shelgon", "pachirisu", "togekiss", "gallade", "swanna", "emolga", "amoonguss", "beartic", "floette", "florges", "meowstic", "froslass", "meowstic_female"]
+	}, {
+		"pokemon": ["ivysaur", "weepinbell", "victreebel", "grimer_alolan", "muk_alolan", "scyther", "bayleef", "meganium", "xatu", "bellossom", "tyranitar", "celebi", "grovyle", "sceptile", "dustox", "ludicolo", "breloom", "roselia", "flygon", "cradily", "grotle", "torterra", "roserade", "wormadam_plant", "bronzong", "yanmega", "leafeon", "servine", "serperior", "simisage", "whimsicott", "maractus", "gardobor", "golurk", "quilladin", "chesnaught", "raticate_alolan", "snorlax", "murkrow", "sneasel", "houndoom", "mawile", "claydol", "banette", "dusclops", "honchkrow", "munchlax", "weavile", "zebstrika", "chandelure", "garbodor"]
+	}, {
+		"pokemon": ["pidgeot", "fearow", "raichu_alolan", "dugtrio", "arcanine", "alakazam", "graveler", "golem", "marowak", "hitmonchan", "kangaskhan", "pinsir", "kabutops", "furret", "noctowl", "sudowoodo", "ursaring", "piloswine", "hitmontop", "shiftry", "hariyama", "monferno", "infernape", "staraptor", "bibarel", "wormadam_sandy", "floatzel", "hippowdon", "mamoswine", "litleo", "litleo_xl", "pyroar", "dragonite", "slowbro", "porygon", "slowking", "corsola", "milotic", "cherrim_sunny", "alomomola"]
+	}, {
+		"pokemon": ["arbok", "nidoking", "golbat", "crobat", "venomoth", "grimer", "muk", "cloyster", "haunter", "gengar", "weezing", "aerodactyl", "espeon", "forretress", "gligar", "granbull", "mantine", "delcatty", "swalot", "drifblim", "mismagius", "skuntank", "spiritomb", "drapion", "gliscor", "gothitelle", "noivern", "machoke", "graveler_alolan", "golem_alolan", "magneton", "rhydon", "misdreavus", "steelix", "qwilfish", "donphan", "mightyena", "lairon", "aggron", "armaldo", "glalie", "relicanth", "purugly", "magnezone", "rhyperior", "probopass", "tranquill", "unfezant", "excadrill", "cinccino", "escavalier", "ferrothorn", "klinklang", "durant", "liepard"]
+	}]
+}, {
+	"name": "commander",
+	"title": "Silph Commander Cup",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["munchlax", "shiftry", "escavalier", "steelix", "empoleon", "jellicent", "bronzong", "noctowl", "marowak_alolan", "poliwrath"],
+	"include": [{
+		"filterType": "id",
+		"values": ["munchlax", "shiftry", "escavalier", "steelix", "empoleon", "jellicent", "bronzong", "noctowl", "marowak_alolan", "poliwrath"]
+	}, {
+		"filterType": "type",
+		"values": ["rock", "ice", "electric", "poison", "psychic"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega", "legendary", "mythical", "shadow"]
+	}, {
+		"filterType": "type",
+		"values": ["steel"]
+	}, {
+		"filterType": "id",
+		"values": ["abomasnow", "galvantula", "regirock", "stunfisk", "medicham", "wobbuffet", "drapion", "pachirisu"]
+	}]
+}, {
+	"name": "factions",
+	"title": "Silph Factions",
+	"include": [{
+		"filterType": "type",
+		"values": ["bug", "dark", "dragon", "flying", "rock"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["bastiodon", "probopass", "regirock", "scrafty", "togekiss", "heracross", "skarmory", "altaria", "mantine", "hakamo_o", "kommo_o", "lycanroc_midnight", "lycanroc_midday", "incineroar", "dartrix", "toucannon", "trumbeak", "rowlet", "oricorio_baile", "oricorio_pau", "oricorio_pom_pom", "oricorio_sensu"]
+	}]
+}, {
+	"name": "floatingcity",
+	"title": "Floating City Field",
+	"include": [{
+		"filterType": "type",
+		"values": ["ground", "flying", "steel", "normal"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega", "mythical", "shadow", "regional"]
+	}, {
+		"filterType": "id",
+		"values": ["stunfisk_galarian", "skarmory", "altaria", "bastiodon", "registeel", "chansey", "pidgeot", "salazzle"]
+	}],
+	"partySize": 8
+}, {
+	"name": "dungeon",
+	"title": "Dungeon Field",
+	"include": [{
+		"filterType": "type",
+		"values": ["bug", "dragon", "poison", "steel", "water"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega", "shadow"]
+	}, {
+		"filterType": "id",
+		"values": ["azumarill", "stunfisk_galarian", "skarmory", "altaria", "bastiodon", "salazzle"]
+	}],
+	"partySize": 8
+}, {
+	"name": "comet",
+	"title": "Comet Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["fire", "flying", "ice", "normal", "psychic"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["altaria", "deoxys_defense", "medicham", "wobbuffet", "chansey", "mantine"]
+	}],
+	"link": "https://discord.gg/ybTf7ZYNzt?event=925020319037669387"
+}, {
+	"name": "cometultra",
+	"title": "Comet Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["fire", "flying", "ice", "normal", "psychic", "electric"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega", "mythical"]
+	}, {
+		"filterType": "id",
+		"values": ["salazzle"]
+	}],
+	"partySize": 8
+}, {
+	"name": "venture",
+	"title": "Venture Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["dark", "fairy", "steel"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["chansey", "pidgeot"]
+	}],
+	"tierRules": {
+		"max": 20,
+		"floor": 1,
+		"tiers": [{
+			"points": 10,
+			"pokemon": ["hypno", "hypno_shadow", "lickitung", "altaria", "froslass", "cresselia", "marowak_alolan"]
+		}, {
+			"points": 6,
+			"pokemon": ["dewgong", "lapras", "snorlax", "dragonair", "politoed", "kingdra", "vigoroth", "medicham", "regirock", "deoxys_defense", "munchlax", "lickilicky", "jellicent", "galvantula", "talonflame", "dragalge", "lugia"]
+		}, {
+			"points": 4,
+			"pokemon": ["machamp", "haunter", "gengar", "dragonite", "mew", "lanturn", "wobbuffet", "mantine", "swampert", "pelipper", "zangoose", "whiscash", "cradily", "dusclops", "tropius", "sealeo", "pachirisu", "drifblim", "abomasnow", "crustle", "stunfisk", "goodra", "graveler_alolan", "sirfetchd", "nidoqueen", "flygon"]
+		}]
+	}
+}, {
+	"name": "bidoof",
+	"title": "Bidoof Cup",
+	"include": [{
+		"filterType": "id",
+		"values": ["bidoof", "bidoof_shadow"]
+	}],
+	"exclude": [],
+	"partySize": 3
+}, {
+	"name": "continentals-3",
+	"title": "Silph Season 3 Continentals",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["pidgeot", "chansey"]
+	}],
+	"tierRules": {
+		"max": 20,
+		"floor": 1,
+		"tiers": [{
+			"points": 10,
+			"pokemon": ["lickitung", "mew", "hypno", "azumarill", "skarmory", "umbreon", "registeel", "altaria", "sableye", "medicham", "deoxys_defense", "abomasnow", "bastiodon", "cresselia", "jellicent", "mandibuzz", "stunfisk_galarian", "marowak_alolan", "talonflame", "ninetales_alolan", "diggersby"]
+		}, {
+			"points": 6,
+			"pokemon": ["clefable", "nidoqueen", "machamp", "venusaur", "dewgong", "wigglytuff", "meganium", "jumpluff", "politoed", "granbull", "lugia", "wobbuffet", "swampert", "tropius", "vigoroth", "gardevoir", "regirock", "togekiss", "drifblim", "froslass", "toxicroak", "munchlax", "lickilicky", "ferrothorn", "zweilous", "whimsicott", "stunfisk", "scrafty", "galvantula", "aromatisse", "spritzee", "raichu_alolan", "melmetal", "sylveon", "slurpuff", "muk_alolan"]
+		}, {
+			"points": 4,
+			"pokemon": ["golbat", "articuno", "beedrill", "zapdos", "snorlax", "seaking", "primeape", "lapras", "quagsire", "noctowl", "ariados", "lanturn", "bellossom", "raikou", "mantine", "steelix", "castform_rainy", "castform_snowy", "castform", "castform_sunny", "regice", "whiscash", "shiftry", "pelipper", "skuntank", "gliscor", "electivire", "pachirisu", "roserade", "empoleon", "magnezone", "drapion", "zebstrika", "serperior", "fraxure", "alomomola", "excadrill", "escavalier", "victini", "crustle", "chesnaught", "dragalge", "obstagoon", "sirfetchd", "pangoro", "goodra"]
+		}]
+	}
+}, {
+	"name": "cutie",
+	"title": "Cutie Cup",
+	"link": "https://silph.gg/t/rk55/regicide-charity-tournament",
+	"include": [{
+		"filterType": "type",
+		"name": "Type",
+		"values": ["bug", "dragon", "electric", "fairy", "fire", "flying", "grass", "ice", "normal", "psychic", "water"]
+	}, {
+		"filterType": "id",
+		"name": "Species",
+		"values": ["jirachi", "froslass", "wormadam_trash", "perrserker", "magneton", "mawile", "magcargo", "piloswine", "drifblim"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"name": "Species",
+		"values": ["vigoroth", "deoxys_defense", "hypno", "venusaur", "abomasnow", "haxorus", "azumarill", "altaria", "cresselia", "chansey", "lickitung", "pidgeot"]
+	}, {
+		"filterType": "type",
+		"name": "Type",
+		"values": ["dark", "fighting", "ghost", "ground", "rock", "steel"]
+	}, {
+		"filterType": "tag",
+		"name": "Tag",
+		"values": ["shadow", "mega"]
+	}]
+}, {
+	"name": "worlds",
+	"title": "Silph Worlds",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["venusaur", "lickitung", "chansey", "azumarill", "umbreon", "wobbuffet", "skarmory", "sableye", "medicham", "altaria", "jellicent", "ninetales_alolan", "stunfisk_galarian"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "lunar",
+	"title": "Lunar Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["bug", "dark", "electric", "ghost", "grass"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["scrafty", "pachirisu", "stunfisk", "marowak_alolan", "whimsicott", "vullaby"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega", "shadow"]
+	}]
+}, {
+	"name": "brawler",
+	"title": "Brawler Cup",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": 1,
+		"values": ["haunter", "uxie", "mesprit", "azelf", "spritzee", "castform", "castform_sunny", "castform_rainy", "castform_snowy", "misdreavus", "chimecho", "jirachi", "drifloon", "chatot", "roselia", "murkrow", "exeggcute", "jumpluff", "klefki", "espurr", "masquerain", "qwilfish", "victini", "plusle", "minun", "mismagius", "corsola", "celebi", "spinda", "emolga", "slurpuff", "bellossom", "magnemite", "greedent", "weepinbell", "wormadam_plant", "wormadam_sand", "wormadam_trash", "whimsicott", "swadloon", "omanyte", "pancham", "meltan", "cinccino", "sunflora", "drilbur", "meowstic", "meowstic_female", "gloom", "teddiursa", "hoopa", "cherrim_overcast", "cherrim_sunny", "weezing", "archen", "pawniard", "swoobat", "amoonguss", "rufflet", "frogadier", "sableye", "stunfisk", "mawile", "wigglytuff", "ninjask", "venomoth", "banette", "ivysaur", "lampent", "litleo", "dunsparce", "galvantula", "roserade", "dwebble", "braixen", "farfetch’d", "xatu", "drifblim", "bonsly", "tranquill", "vibrava", "victreebel", "aromatisse", "bayleef", "weezing_galarian", "servine", "lilligant", "dragonair", "tirtouga", "palpitoad", "sliggoo", "volbeat", "illumise", "basculin", "raticate", "vileplume", "charmeleon", "quilava", "nidorino", "machop", "combusken", "swellow", "ninetales", "nidorina", "poliwhirl", "reuniclus", "geodude_alolan", "ambipom", "leavanny", "raichu_alolan", "grovyle", "monferno", "eelektrik", "wartortle", "lanturn", "gorebyss", "prinplup", "mothim", "relicanth", "sylveon", "whiscash", "lumineon", "swanna", "jolteon", "dewott", "talonflame", "staraptor", "flareon", "croconaw", "kricketune", "leafeon", "raticate_alolan", "glaceon", "froslass", "honchkrow", "marshtomp", "pelipper", "furfrou", "perrserker", "vaporeon", "unfezant", "quilladin", "beedrill", "gastrodon", "gastrodon", "raichu", "grimer", "muk", "electabuzz", "dusclops", "bibarel", "dustox", "alomomola", "primeape", "furret", "porygon2", "linoone", "linoone_galarian", "crawdaunt", "escavalier", "durant", "ariados", "politoed", "marowak_alolan", "weavile", "chandelure", "omastar", "houndoom", "ledian", "fraxure", "sudowoodo", "skuntank", "togekiss", "vespiquen", "seaking", "delphox", "breloom", "pidgeot", "sandshrew_alolan", "clefable", "greninja", "manectric", "zangoose", "excadrill", "gengar", "noctowl", "grimer_alolan", "luxray", "diggersby", "gliscor", "purugly", "gothitelle", "toxicroak", "magmar", "obstagoon", "vigoroth", "malamar", "alakazam", "hitmontop", "gardevoir", "granbull", "zweilous", "hitmonchan", "muk_alolan", "blaziken", "gallade", "sceptile", "seviper", "zapdos", "poliwrath", "heracross", "lucario", "sandslash_alolan", "golbat", "tentacruel", "pinsir", "magcargo", "ludicolo", "infernape", "articuno", "pignite", "piloswine", "heatmor", "aerodactyl", "shiftry", "magneton", "kingler", "cradily", "ampharos", "drapion", "nidoking", "seismitoad", "falinks", "serperior", "gligar", "electrode", "magmortar", "bisharp", "machoke", "slowbro_galarian", "crobat", "quagsire", "cofagrigus", "golduck", "slowbro", "typhlosion", "slowking", "zebstrika", "swalot", "rapidash_galarian", "eelektross", "carracosta", "pyroar", "dragalge", "flygon", "empoleon", "blastoise", "sealeo", "feraligatr", "sharpedo", "chesnaught", "charizard", "darmanitan_standard", "samurott", "rapidash", "garchomp", "barbaracle", "krookodile", "grotle", "venusaur", "tropius", "meganium", "boldore", "rampardos", "salamence", "graveler", "munchlax", "haxorus", "dusknoir", "garbodor", "claydol", "spiritomb", "graveler_alolan", "ferrothorn", "shelgon", "rhyhorn", "sirfetchd", "scizor", "dewgong", "exeggutor", "rhydon", "donphan", "lairon", "darmanitan_galarian_standard", "mewtwo", "forretress", "ursaring", "tangrowth", "machamp", "wailmer", "slaking", "cloyster", "abomasnow", "pangoro", "electivire", "lickilicky", "cryogonal", "emboar", "goodra", "walrein", "kingdra", "solrock", "arcanine", "hydreigon", "milotic", "lunatone", "regice", "raikou", "magnezone", "suicune", "bronzong", "entei", "ho_oh", "crustle", "scolipede", "tyranitar", "metang", "rayquaza", "onix", "dragonite", "lugia", "lapras", "mantine", "camerupt", "gyarados", "hariyama", "glalie", "gigalith", "beartic", "rhyperior", "mamoswine", "golem", "hippowdon", "torterra", "golem_alolan", "golurk", "probopass", "aggron", "wailord", "steelix", "exeggutor_alolan", "snorlax", "metagross", "melmetal"]
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["haunter", "uxie", "mesprit", "azelf", "spritzee", "castform", "castform_sunny", "castform_rainy", "castform_snowy", "misdreavus", "chimecho", "jirachi", "drifloon", "chatot", "roselia", "murkrow", "exeggcute", "jumpluff", "klefki", "espurr", "masquerain", "qwilfish", "victini", "plusle", "minun", "mismagius", "corsola", "celebi", "spinda", "emolga", "slurpuff", "bellossom", "magnemite", "greedent", "weepinbell", "wormadam_plant", "wormadam_sand", "wormadam_trash", "whimsicott", "swadloon", "omanyte", "pancham", "meltan", "cinccino", "sunflora", "drilbur", "meowstic", "meowstic_female", "gloom", "teddiursa", "hoopa", "cherrim", "weezing", "archen", "cherrim_overcast", "cherrim_sunny"]
+	}, {
+		"pokemon": ["pawniard", "swoobat", "amoonguss", "rufflet", "frogadier", "sableye", "sableye_xs", "stunfisk", "mawile", "wigglytuff", "ninjask", "venomoth", "banette", "ivysaur", "lampent", "litleo", "dunsparce", "galvantula", "roserade", "dwebble", "braixen", "farfetch’d", "xatu", "drifblim", "bonsly", "tranquill", "vibrava", "victreebel", "aromatisse", "bayleef", "weezing_galarian", "servine", "lilligant", "dragonair", "tirtouga", "palpitoad", "sliggoo", "volbeat", "illumise", "basculin", "raticate", "vileplume", "charmeleon", "quilava", "nidorino", "machop", "combusken", "swellow", "ninetales", "nidorina", "poliwhirl", "reuniclus", "geodude_alolan", "ambipom", "leavanny", "raichu_alolan", "grovyle", "monferno", "eelektrik", "wartortle", "lanturn", "gorebyss", "prinplup", "mothim", "relicanth", "sylveon", "whiscash", "lumineon", "swanna", "jolteon", "dewott", "talonflame", "staraptor"]
+	}, {
+		"pokemon": ["flareon", "croconaw", "kricketune", "leafeon", "raticate_alolan", "glaceon", "froslass", "honchkrow", "marshtomp", "pelipper", "furfrou", "perrserker", "vaporeon", "unfezant", "quilladin", "beedrill", "gastrodon", "gastrodon", "raichu", "grimer", "muk", "electabuzz", "dusclops", "bibarel", "dustox", "alomomola", "primeape", "furret", "porygon2", "linoone", "linoone_galarian", "crawdaunt", "escavalier", "durant", "ariados", "politoed", "marowak_alolan", "weavile", "chandelure", "omastar", "houndoom", "ledian", "fraxure", "sudowoodo", "skuntank", "togekiss", "vespiquen", "seaking", "delphox", "breloom", "pidgeot", "sandshrew_alolan", "clefable", "greninja", "manectric", "zangoose", "excadrill", "gengar", "noctowl", "grimer_alolan", "luxray", "diggersby", "gliscor", "purugly", "gothitelle", "toxicroak", "magmar", "obstagoon", "vigoroth", "malamar", "alakazam", "hitmontop", "gardevoir", "granbull"]
+	}, {
+		"pokemon": ["zweilous", "hitmonchan", "muk_alolan", "blaziken", "gallade", "sceptile", "seviper", "zapdos", "poliwrath", "heracross", "lucario", "sandslash_alolan", "golbat", "tentacruel", "pinsir", "magcargo", "ludicolo", "infernape", "articuno", "pignite", "piloswine", "heatmor", "aerodactyl", "shiftry", "magneton", "kingler", "cradily", "ampharos", "drapion", "nidoking", "seismitoad", "falinks", "serperior", "gligar", "electrode", "magmortar", "bisharp", "machoke", "slowbro_galarian", "crobat", "quagsire", "cofagrigus", "golduck", "slowbro", "typhlosion", "slowking", "zebstrika", "swalot", "rapidash_galarian", "eelektross", "carracosta", "pyroar", "dragalge", "flygon", "empoleon", "blastoise", "sealeo", "feraligatr", "sharpedo", "chesnaught", "charizard", "darmanitan_standard", "samurott", "rapidash", "garchomp", "barbaracle", "krookodile", "grotle"]
+	}, {
+		"pokemon": ["venusaur", "tropius", "meganium", "boldore", "rampardos", "salamence", "graveler", "munchlax", "haxorus", "dusknoir", "garbodor", "claydol", "spiritomb", "graveler_alolan", "ferrothorn", "shelgon", "rhyhorn", "sirfetchd", "scizor", "dewgong", "exeggutor", "rhydon", "donphan", "lairon", "darmanitan_galarian_standard", "mewtwo", "forretress", "ursaring", "tangrowth", "machamp", "wailmer", "slaking", "cloyster", "abomasnow", "pangoro", "electivire", "lickilicky", "cryogonal", "emboar", "goodra", "walrein", "kingdra", "solrock", "arcanine", "hydreigon", "milotic", "lunatone", "regice", "raikou", "magnezone", "suicune", "bronzong", "entei", "ho_oh"]
+	}, {
+		"pokemon": ["crustle", "scolipede", "tyranitar", "metang", "rayquaza", "onix", "dragonite", "lugia", "lapras", "mantine", "camerupt", "gyarados", "hariyama", "glalie", "gigalith", "beartic", "rhyperior", "mamoswine", "golem", "hippowdon", "torterra", "golem_alolan", "golurk", "probopass", "aggron", "wailord", "steelix", "exeggutor_alolan", "snorlax", "metagross", "melmetal"]
+	}]
+}, {
+	"name": "unity",
+	"title": "Unity Cup",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": 0,
+		"values": ["ivysaur", "venusaur", "charizard", "blastoise", "beedrill", "pidgeot", "nidoking", "golbat", "tentacruel", "rapidash", "magneton", "dewgong", "muk", "gyarados", "lapras", "snorlax", "dragonair", "dragonite", "meganium", "typhlosion", "feraligatr", "noctowl", "lanturn", "ampharos", "sudowoodo", "politoed", "jumpluff", "quagsire", "forretress", "magcargo", "piloswine", "mantine", "kingdra", "hitmontop", "tyranitar", "sceptile", "blaziken", "swampert", "ludicolo", "pelipper", "vigoroth", "flygon", "whiscash", "cradily", "milotic", "sealeo", "walrein", "shelgon", "salamence", "grotle", "torterra", "infernape", "empoleon", "bibarel", "roserade", "garchomp", "lucario", "hippowdon", "abomasnow", "magnezone", "lickilicky", "rhyperior", "tangrowth", "electivire", "magmortar", "mamoswine", "probopass", "serperior", "emboar", "samurott", "zebstrika", "excadrill", "seismitoad", "scolipede", "crustle", "garbodor", "escavalier", "alomomola", "galvantula", "ferrothorn", "eelektross", "chesnaught", "delphox", "greninja", "talonflame", "pyroar", "barbaracle", "clawitzer", "dedenne", "goodra", "noivern", "raichu_alolan", "sandslash_alolan", "melmetal", "perrserker", "greedent", "dubwool"]
+	}],
+	"exclude": [],
+	"slots": [{
+		"pokemon": ["ivysaur", "venusaur", "charizard", "blastoise", "beedrill", "pidgeot", "nidoking", "golbat", "tentacruel", "rapidash", "magneton", "dewgong", "muk", "gyarados", "lapras", "snorlax", "dragonair", "dragonite"]
+	}, {
+		"pokemon": ["meganium", "typhlosion", "feraligatr", "noctowl", "lanturn", "ampharos", "sudowoodo", "politoed", "jumpluff", "quagsire", "forretress", "magcargo", "piloswine", "mantine", "kingdra", "hitmontop", "tyranitar"]
+	}, {
+		"pokemon": ["sceptile", "blaziken", "swampert", "ludicolo", "pelipper", "vigoroth", "flygon", "whiscash", "cradily", "milotic", "sealeo", "walrein", "shelgon", "salamence"]
+	}, {
+		"pokemon": ["grotle", "torterra", "infernape", "empoleon", "bibarel", "roserade", "garchomp", "lucario", "hippowdon", "abomasnow", "magnezone", "lickilicky", "rhyperior", "tangrowth", "electivire", "magmortar", "mamoswine", "probopass"]
+	}, {
+		"pokemon": ["serperior", "emboar", "samurott", "zebstrika", "excadrill", "seismitoad", "scolipede", "crustle", "garbodor", "escavalier", "alomomola", "galvantula", "ferrothorn", "eelektross"]
+	}, {
+		"pokemon": ["chesnaught", "delphox", "greninja", "talonflame", "pyroar", "barbaracle", "clawitzer", "dedenne", "goodra", "noivern", "raichu_alolan", "sandslash_alolan", "melmetal", "perrserker", "greedent", "dubwool"]
+	}],
+	"link": "https://twitter.com/SkyDragonsGami1/status/1465726406059569156"
+}, {
+	"name": "glacial",
+	"title": "Glacial Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["dragon", "ice", "poison", "psychic", "water"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["altaria", "azumarill", "jellicent", "swampert", "deoxys_defense", "wobbuffet", "cresselia", "medicham", "ninetales_alolan", "sandshrew_alolan", "lanturn", "gardevoir", "toxicroak"]
+	}]
+}, {
+	"name": "guardian",
+	"title": "Guardian Cup",
+	"include": [{
+		"filterType": "moveType",
+		"name": "Move Type",
+		"values": ["electric", "fighting", "flying", "psychic", "fire"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"name": "Tag",
+		"values": ["legendary", "mythical", "shadow", "mega"]
+	}, {
+		"filterType": "type",
+		"name": "Type",
+		"values": ["fairy"]
+	}, {
+		"filterType": "id",
+		"name": "Species",
+		"values": ["lickitung", "medicham", "altaria", "pachirisu", "wobbuffet", "stunfisk", "umbreon", "mandibuzz", "scrafty", "vullaby", "chansey", "hypno", "obstagoon", "cofagrigus", "bastiodon", "diggersby", "tropius", "lanturn"]
+	}]
+}, {
+	"name": "obsidian",
+	"title": "Obsidian Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "type",
+		"name": "Type",
+		"values": ["fairy", "fighting", "flying", "grass", "ground"]
+	}, {
+		"filterType": "id",
+		"name": "Species",
+		"values": ["lickitung", "bastiodon", "pachirisu", "vigoroth", "registeel", "hakamo_o", "kommo_o", "lycanroc_midnight", "lycanroc_midday", "incineroar", "dartrix", "toucannon", "trumbeak", "rowlet", "brionne", "torracat", "popplio", "gumshoos", "oricorio_baile", "oricorio_pau", "oricorio_pom_pom", "oricorio_sensu"]
+	}, {
+		"filterType": "tag",
+		"name": "Tag",
+		"values": ["mega", "shadow"]
+	}]
+}, {
+	"name": "nemesis",
+	"title": "Nemesis Cup",
+	"restrictedPicks": 2,
+	"restrictedPokemon": ["obstagoon", "gallade", "lucario", "poliwrath", "pangoro", "blaziken", "chesnaught", "quagsire", "flygon", "excadrill", "jumpluff", "dedenne", "froslass", "gourgeist_small", "gourgeist_average", "gourgeist_large", "gourgeist_super", "noctowl", "gyarados", "charizard", "gengar", "rapidash_galarian", "mawile"],
+	"include": [{
+		"filterType": "id",
+		"includeShadows": true,
+		"values": ["obstagoon", "gallade", "lucario", "poliwrath", "pangoro", "blaziken", "chesnaught", "quagsire", "flygon", "excadrill", "jumpluff", "dedenne", "froslass", "gourgeist_small", "gourgeist_average", "gourgeist_large", "gourgeist_super", "noctowl", "gyarados", "charizard", "gengar", "rapidash_galarian", "mawile"]
+	}, {
+		"filterType": "type",
+		"values": ["bug", "dark", "fire", "grass", "ice", "psychic", "water"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["escavalier", "salazzle"]
+	}, {
+		"filterType": "type",
+		"values": ["none", "fairy", "flying", "fighting", "ground", "ghost", "normal"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}, {
+	"name": "firefly",
+	"title": "Firefly Cup",
+	"include": [{
+		"filterType": "type",
+		"values":  ["normal", "electric", "bug", "poison", "ice"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["ground"]
+	}, {
+		"filterType": "id",
+		"values": ["escavalier", "salazzle", "walrein", "dragalge", "pachirisu"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+}],"devonchampionship":{
+    "name": "devonchampionship",
+    "title": "Devon (Championship Invitational)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "ghost", "poison", "rock"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["feraligatr", "feraligatr_shadow", "golisopod", "typhlosion", "typhlosion_shadow", "leavanny"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "ground", "ice", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["boltund", "bellibolt", "dusknoir", "carbink", "golurk", "corsola_galarian", "hakamo_o", "dragonair"]
+    }],
+    "levelCap": 50
+},"echo":{
+    "name": "echo",
+    "title": "Silph Factions (Echo)",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["articuno", "stunfisk", "swampert", "ferrothorn", "vigoroth", "wigglytuff", "drifblim", "talonflame", "zapdos", "obstagoon", "quagsire", "mandibuzz", "empoleon", "magnezone", "probopass", "wormadam_trash", "ninetales_alolan", "whimsicott", "nidoqueen", "scrafty", "whiscash", "pelipper", "mantine", "jellicent", "politoed", "galvantula", "venusaur", "golbat", "mawile"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["steelix", "escavalier", "jellicent", "dragonite", "zweilous", "flygon", "kommo_o", "dragalge", "haxorus", "roserade", "toxicroak", "heracross", "gyarados", "galvantula", "mawile", "vigoroth", "mandibuzz", "cresselia", "mew", "raichu_alolan", "obstagoon", "diggersby", "skarmory", "ninetales", "magcargo", "marowak_alolan", "talonflame", "lapras", "malamar", "vespiquen", "articuno", "umbreon", "sableye", "drapion", "graveler_alolan", "golem_alolan", "crustle", "barbaracle", "sudowoodo", "relicanth", "togetic", "scizor", "forretress"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["stunfisk", "cofagrigus", "ninetales", "sandslash_alolan", "dragonite", "gliscor", "gligar", "deoxys_defense", "sandslash", "froslass", "marowak_alolan", "magcargo", "flygon", "trevenant", "perrserker", "oranguru", "samurott", "galvantula", "politoed", "cresselia", "excadrill", "quagsire", "castform_rainy", "mew", "donphan", "leavanny", "torterra", "regice", "pinsir", "hypno", "dragonair", "goodra", "cradily", "tapu_fini", "greedent", "munchlax", "snorlax", "sceptile", "aurorus", "lapras", "sealeo", "skuntank", "muk_alolan", "grimer_alolan", "qwilfish_hisuian", "dedenne", "sudowoodo", "barbaracle", "druddigon"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["charizard", "poliwrath", "piloswine", "qwilfish_hisuian", "gligar", "gliscor", "sirfetchd", "primeape", "machamp", "moltres", "electivire", "zapdos", "ampharos", "minun", "galvantula", "victini", "pidgeot", "cofagrigus", "walrein", "sealeo", "dragonair", "regirock", "gallade", "milotic", "muk", "relicanth", "pelipper", "jumpluff", "crustle", "shiftry", "tyrunt", "malamar", "deoxys_defense", "aggron", "gengar", "haunter", "dusclops", "runerigus", "serperior", "ferrothorn"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega", "shadow"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water", "none"]
+    }],
+    "allowSameSpecies": true,
+    "partySize": 8
+},"element":{
+	"name": "element",
+	"title": "Element Cup",
+	"include": [{
+        "filterType": "evolution",
+        "values": [1]
+    }, {
+        "filterType": "type",
+        "values": ["fire", "water", "grass"]
+    }],
+	"exclude": [],
+	"partySize": 3,
+	"presetOnly": true
+},"elementremix":{
+	"name": "elementremix",
+	"title": "Element Cup Remix",
+	"include": [{
+        "filterType": "evolution",
+        "values": [1]
+    }, {
+        "filterType": "type",
+        "values": ["grass", "water", "fire"]
+    }],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["chinchou", "ducklett", "cottonee", "salandit"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"ember":{
+    "name": "ember",
+    "title": "Silph Factions (Ember)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "fire", "grass", "ground"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["muk_alolan", "qwilfish_hisuian", "honchkrow", "machamp", "malamar", "poliwrath", "primeape", "sirfetchd"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["shadow", "mega"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "rock", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["swampert", "whiscash", "quagsire", "marshtomp", "gastrodon", "seismitoad", "palpitoad", "abomasnow", "diggersby", "dugtrio", "lanturn", "nidoqueen", "ninetales", "pachirisu", "salazzle", "stunfisk", "whimsicott"]
+    }]
+},"enchanted":{
+    "name": "enchanted",
+    "title": "Battle Frontier (Enchanted)",
+	"include": [{
+        "filterType": "type",
+        "values": ["steel", "dragon", "fairy","dark","normal","ghost","psychic"]
+    },{
+        "filterType": "id",
+        "values": ["ampharos","ampharos_shadow","golisopod","articuno","articuno_shadow","muk","muk_shadow","zapdos","zapdos_shadow","regice","regice_shadow","sneasler","sneasler_shadow","blastoise","blastoise_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["stunfisk_galarian", "cobalion","registeel","zygarde_complete","giratina_altered","steelix","pidgeot","greedent","skarmory","empoleon"]
+    }]
+},"euic2026":{
+    "name": "euic2026",
+    "title": "EUIC 2026 Championship Series Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["normal","dark","bug","dragon"]
+    },{
+        "filterType": "id",
+        "values": ["froslass","froslass_shadow","politoed","politoed_shadow","seaking","milotic","milotic_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["steel","flying","fighting"]
+    },{
+        "filterType": "id",
+        "values": ["araquanid","crustle","morpeko_full_belly","turtonator","wigglytuff","morgrem", "ribombee","chansey","diggersby"]
+    },{
+        "filterType": "tag",
+        "values": ["mega","legendary","mythical","ultrabeast"]
+    }]
+},"evolution":{
+    "name": "evolution",
+    "title": "Evolution Cup",
+    "include": [{
+        "filterType": "evolution",
+        "values": [2]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }]
+},"factionsgreat":{
+    "name": "factionsgreat",
+    "title": "Silph Factions (Great League)",
+    "include": [],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["hawlucha"]
+    }],
+    "tierRules": {
+        "max": 19,
+        "floor": 1,
+        "tiers": [{
+            "points": 7,
+            "pokemon": ["altaria", "medicham", "stunfisk_galarian", "lanturn", "noctowl", "registeel"]
+        }, {
+            "points": 5,
+            "pokemon": ["azumarill", "ninetales_alolan", "bastiodon", "deoxys_defense", "dewgong", "lickitung", "sableye", "swampert", "toxapex", "umbreon"]
+        }, {
+            "points": 2,
+            "pokemon": ["abomasnow", "araquanid", "aurorus", "charizard", "cresselia", "cofagrigus", "diggersby", "drapion", "dunsparce", "froslass", "machamp", "mantine", "mandibuzz", "obstagoon", "pelipper", "pidgeot", "quagsire", "sandslash_alolan", "scrafty", "skarmory", "tapu_fini", "toxicroak", "trevenant", "venusaur", "walrein", "whiscash"]
+        }]
+    },
+    "allowSameSpecies": true
+},"factionsmaster":{
+    "name": "factionsmaster",
+    "title": "Silph Factions (Master League)",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+    }, {
+        "filterType": "id",
+        "values": ["aggron_mega", "scizor_mega", "salamence_mega", "steelix_mega", "charizard_mega_x", "blastoise_mega", "slowbro_mega", "venusaur_mega", "alakazam_mega", "sceptile_mega", "blaziken_mega", "altaria_mega", "abomasnow_mega", "beedrill_mega", "pidgeot_mega", "kangaskhan_mega", "aerodactyl_mega", "ampharos_mega", "houndoom_mega", "manectric_mega", "absol_mega", "banette_mega", "lopunny_mega", "glalie_mega", "pinsir_mega"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["hawlucha"]
+    }],
+    "tierRules": {
+        "max": 8,
+        "floor": 0,
+        "tiers": [{
+            "points": 4,
+            "pokemon": ["mewtwo", "dialga", "zacian_hero", "solgaleo", "groudon", "aggron_mega", "scizor_mega", "salamence_mega"]
+        }, {
+            "points": 3,
+            "pokemon": ["lugia", "ho_oh", "kyogre", "giratina_origin", "giratina_altered", "meloetta_aria", "zarude", "steelix_mega"]
+        }, {
+            "points": 2,
+            "pokemon": ["zekrom", "xerneas", "yveltal", "melmetal", "palkia", "dragonite", "reshiram", "rayquaza", "charizard_mega_x", "blastoise_mega", "slowbro_mega"]
+        }, {
+            "points": 1,
+            "pokemon": ["landorus_therian", "landorus_incarnate", "genesect", "genesect_shock", "genesect_chill", "genesect_burn", "genesect_douse", "mew", "buzzwole", "florges", "kyurem", "venusaur_mega", "abomasnow_mega", "blaziken_mega", "altaria_mega", "alakazam_mega"]
+        }]
+    },
+    "allowSameSpecies": true
+},"factionsultra":{
+    "name": "factionsultra",
+    "title": "Silph Factions (Ultra League)",
+    "include": [],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["hawlucha"]
+    }],
+    "tierRules": {
+        "max": 17,
+        "floor": 1,
+        "tiers": [{
+            "points": 7,
+            "pokemon": ["cobalion", "swampert", "giratina_altered", "registeel", "stunfisk_galarian", "cresselia"]
+        }, {
+            "points": 5,
+            "pokemon": ["trevenant", "charizard", "steelix", "virizion", "ninetales_alolan", "jellicent", "walrein", "clefable", "tapu_fini"]
+        }, {
+            "points": 2,
+            "pokemon": ["talonflame", "deoxys_defense", "umbreon", "mandibuzz", "scrafty", "regirock", "dragonite", "kommo-o", "guzzlord", "nidoqueen", "dubwool", "sandslash_alolan", "pidgeot"]
+        }]
+    },
+    "allowSameSpecies": true
+},"fighting":{
+	"name": "fighting",
+	"title": "Fighting Cup",
+	"include": [{
+		"filterType": "type",
+		"values":  ["fighting"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["psychic"]
+	}, {
+		"filterType": "tag",
+		"values":  ["mega"]
+	}],
+	"link": "https://bit.ly/3OHDut7"
+},"fightingremix":{
+	"name": "fightingremix",
+	"title": "Fighting Cup Remix",
+	"include": [{
+		"filterType": "type",
+		"values":  ["fighting"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["psychic"]
+	}, {
+		"filterType": "id",
+		"values":  ["hakamo_o", "kommo_o", "buzzwole", "sneasler"]
+	}, {
+		"filterType": "tag",
+		"values":  ["mega"]
+	}]
+},"firefly":{
+	"name": "firefly",
+	"title": "Firefly Cup",
+	"include": [{
+		"filterType": "type",
+		"values":  ["normal", "electric", "bug", "poison", "ice"]
+	}],
+	"exclude": [{
+		"filterType": "type",
+		"values":  ["ground"]
+	}, {
+		"filterType": "id",
+		"values": ["escavalier", "salazzle", "walrein", "dragalge", "pachirisu"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}]
+},"flying":{
+	"name": "flying",
+	"title": "Flying Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["flying"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3
+},"forged":{
+    "name": "forged",
+    "title": "Silph Forged Cup",
+    "include": [{
+        "filterType": "id",
+        "includeShadows": true,
+        "values": ["nidoqueen", "cresselia", "wobbuffet", "lickitung", "diggersby", "ninetales_alolan", "abomasnow", "talonflame", "trevenant", "cofagrigus", "azumarill", "jellicent", "froslass", "chansey", "araquanid", "tapu_fini", "nidorina", "golbat", "beedrill", "hypno", "mew", "pidgeot", "noctowl", "lickilicky", "snorlax", "munchlax", "greedent", "granbull", "wigglytuff", "clefable", "sylveon", "dewgong", "lapras", "marowak_alolan", "ninetales", "stunfisk", "galvantula", "pachirisu", "lanturn", "mantine", "politoed", "venusaur", "meganium", "serperior", "jumpluff", "muk", "grimer", "nidorino", "scolipede", "venomoth", "crobat", "tentacruel", "garbodor", "amoonguss", "nidoking", "arbok", "weezing", "mewtwo", "rapidash_galarian", "slowpoke", "slowpoke_galarian", "slowbro", "slowking", "slowbro_galarian", "slowking_galarian", "celebi", "uxie", "espeon", "exeggcute", "exeggutor", "mr_rime", "gothitelle", "girafarig", "meowstic", "meowstic_female", "swoobat", "alakazam", "bouffalant", "bibarel", "litleo", "pyroar", "furfrou", "porygon2", "porygon_z", "purugly", "toucannon", "farfetchd", "bewear", "florges", "floette", "togetic", "hitmonchan", "hitmontop", "heracross", "machoke", "gurdurr", "farfetchd_galarian", "avalugg", "piloswine", "mamoswine", "cryogonal", "glaceon", "beartic", "cloyster", "darmanitan_galarian_standard", "charizard", "fletchinder", "magmortar", "rapidash", "heatmor", "typhlosion", "arcanine", "darminitan_standard", "chandelure", "delphox", "emboar", "infernape", "flareon", "barbaracle", "dwebble", "carracosta", "omastar", "kabutops", "aerodactyl", "sudowoodo", "bonsly", "rhyperior", "rhydon", "gigalith", "lycanroc_midday", "gengar", "haunter", "decidueye", "golurk", "dusknoir", "raichu", "raichu_alolan", "raikou", "electivire", "electrode", "electrode_hisuian", "dedenne", "emolga", "ampharos", "zebstrika", "eelektross", "jolteon", "heliolisk", "samurott", "poliwrath", "gyarados", "blastoise", "seaking", "gastrodon", "seismitoad", "vaporeon", "poliwhirl", "golduck", "feraligatr", "kingler", "lumineon", "prinplup", "swanna", "chesnaught", "quilladin", "servine", "leafeon", "tangrowth", "leavanny", "cherrim_sunny", "wormadam_plant", "wormadam_sandy", "sandslash", "donphan", "marowak", "hippowdon", "vespiquen", "pinsir", "ledian", "kricketune", "parasect", "scyther", "yanmega", "qwilfish", "roserade", "ariados", "salazzle", "oranguru", "victini", "lugia", "gallade", "whimsicott", "aromatisse", "slurpuff", "spritzee", "togekiss", "primarina", "machamp", "primeape", "sirfetchd", "toxicroak", "articuno", "crustle", "graveler_alolan", "golem_alolan", "geodude_alolan", "magcargo", "lycanroc", "lycanroc_midnight", "gourgeist_super", "gourgeist_large", "gourgeist_average", "gourgeist_small", "drifblim", "drifloon", "zapdos", "luxray", "alomomola", "quagsire", "lurantis", "bellossom", "victreebel", "weepinbell", "gloom", "vileplume", "oddish", "grotle", "torterra", "bayleef", "ivysaur", "gligar", "gliscor"]
+    }],
+    "exclude": [],
+    "tierRules": {
+        "max": 17,
+        "floor": 1,
+        "tiers": [{
+            "points": 8,
+            "pokemon": ["nidoqueen", "cresselia", "wobbuffet", "lickitung", "diggersby", "ninetales_alolan", "abomasnow", "talonflame", "trevenant", "cofagrigus", "azumarill", "jellicent", "froslass", "chansey", "araquanid", "tapu_fini"]
+        }, {
+            "points": 4,
+            "pokemon": ["nidorina", "golbat", "beedrill", "hypno", "mew", "pidgeot", "noctowl", "lickilicky", "snorlax", "munchlax", "greedent", "granbull", "wigglytuff", "clefable", "sylveon", "dewgong", "lapras", "marowak_alolan", "ninetales", "stunfisk", "galvantula", "pachirisu", "lanturn", "mantine", "politoed", "venusaur", "meganium", "serperior", "jumpluff"]
+        }, {
+            "points": 2,
+            "pokemon": ["qwilfish", "roserade", "ariados", "salazzle", "oranguru", "victini", "lugia", "gallade", "whimsicott", "aromatisse", "slurpuff", "spritzee", "togekiss", "primarina", "machamp", "primeape", "sirfetchd", "toxicroak", "articuno", "crustle", "graveler_alolan", "golem_alolan", "geodude_alolan", "magcargo", "lycanroc", "lycanroc_midnight", "gourgeist_super", "gourgeist_large", "gourgeist_average", "gourgeist_small", "drifblim", "drifloon", "zapdos", "luxray", "alomomola", "quagsire", "lurantis", "bellossom", "victreebel", "weepinbell", "gloom", "vileplume", "oddish", "grotle", "torterra", "bayleef", "ivysaur", "gligar", "gliscor"]
+        }, {
+            "points": 1,
+            "pokemon": ["muk", "grimer", "nidorino", "scolipede", "venomoth", "crobat", "tentacruel", "garbodor", "amoonguss", "nidoking", "arbok", "weezing", "mewtwo", "rapidash_galarian", "slowpoke", "slowpoke_galarian", "slowbro", "slowking", "slowbro_galarian", "slowking_galarian", "celebi", "uxie", "espeon", "exeggcute", "exeggutor", "mr_rime", "gothitelle", "girafarig", "meowstic", "meowstic_female", "swoobat", "alakazam", "bouffalant", "bibarel", "litleo", "pyroar", "furfrou", "porygon2", "porygon_z", "purugly", "toucannon", "farfetchd", "bewear", "florges", "floette", "togetic", "hitmonchan", "hitmontop", "heracross", "machoke", "gurdurr", "farfetchd_galarian", "avalugg", "piloswine", "mamoswine", "cryogonal", "glaceon", "beartic", "cloyster", "darmanitan_galarian_standard", "charizard", "fletchinder", "magmortar", "rapidash", "heatmor", "typhlosion", "arcanine", "darminitan_standard", "chandelure", "delphox", "emboar", "infernape", "flareon", "barbaracle", "dwebble", "carracosta", "omastar", "kabutops", "aerodactyl", "sudowoodo", "bonsly", "rhyperior", "rhydon", "gigalith", "lycanroc_midday", "gengar", "haunter", "decidueye", "golurk", "dusknoir", "raichu", "raichu_alolan", "raikou", "electivire", "electrode", "nelectrode_hisuian", "dedenne", "emolga", "ampharos", "zebstrika", "eelektross", "jolteon", "heliolisk", "samurott", "poliwrath", "gyarados", "blastoise", "seaking", "gastrodon", "seismitoad", "vaporeon", "poliwhirl", "golduck", "feraligatr", "kingler", "lumineon", "prinplup", "swanna", "chesnaught", "quilladin", "servine", "leafeon", "tangrowth", "leavanny", "cherrim_sunny", "wormadam_plant", "wormadam_sandy", "sandslash", "donphan", "marowak", "hippowdon", "vespiquen", "pinsir", "ledian", "kricketune", "parasect", "scyther", "yanmega"]
+        }]
+    }
+},"fossil":{
+	"name": "fossil",
+	"title": "Fossil Cup",
+	"include": [{
+		"filterType": "type",
+		"values":  ["water", "rock", "steel"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values":  ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"galar_base":{
+	"name": "galar",
+	"title": "Galar Cup (Full Pokedex)",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": true,
+		"values":  ["grookey", "thwackey", "rillaboom", "scorbunny", "raboot", "cinderace", "sobble", "drizzile", "inteleon", "blipbug", "dottler", "orbeetle", "caterpie", "metapod", "butterfree", "grubbin", "charjabug", "vikavolt", "hoothoot", "noctowl", "rookidee", "corvisquire", "corviknight", "skwovet", "greedent", "pidove", "tranquill", "unfezant", "nickit", "thievul", "zigzagoon_galarian", "linoone_galarian", "obstagoon", "wooloo", "dubwool", "lotad", "lombre", "ludicolo", "seedot", "nuzleaf", "shiftry", "chewtle", "drednaw", "purrloin", "liepard", "yamper", "boltund", "bunnelby", "diggersby", "minccino", "cinccino", "bounsweet", "steenee", "tsareena", "oddish", "gloom", "vileplume", "bellossom", "budew", "roselia", "roserade", "wingull", "pelipper", "joltik", "galvantula", "electrike", "manectric", "vulpix", "ninetales", "growlithe", "arcanine", "vanillite", "vanillish", "vanilluxe", "swinub", "piloswine", "mamoswine", "delibird", "snorunt", "glalie", "froslass", "baltoy", "claydol", "mudbray", "mudsdale", "dwebble", "crustle", "golett", "golurk", "munna", "musharna", "natu", "xatu", "stufful", "bewear", "snover", "abomasnow", "krabby", "kingler", "wooper", "quagsire", "corphish", "crawdaunt", "nincada", "ninjask", "shedinja", "tyrogue", "hitmonlee", "hitmonchan", "hitmontop", "pancham", "pangoro", "klink", "klang", "klinklang", "combee", "vespiquen", "bronzor", "bronzong", "ralts", "kirlia", "gardevoir", "gallade", "drifloon", "drifloon", "gossifleur", "eldegoss", "cherubi", "cherrim_sunny", "stunky", "skuntank", "tympole", "palpitoad", "seismitoad", "duskull", "dusclops", "dusknoir", "machop", "machoke", "machamp", "gastly", "haunter", "gengar", "magikarp", "gyarados", "goldeen", "seaking", "remoraid", "octillery", "shellder", "cloyster", "feebas", "milotic", "basculin", "wishiwashi", "pyukumuku", "trubbish", "garbodor", "sizzlipede", "centiskorch", "rolycoly", "carkol", "coalossal", "diglett", "dugtrio", "drilbur", "excadrill", "roggenrola", "boldore", "gigalith", "timburr", "gurdurr", "conkeldurr", "woobat", "swoobat", "noibat", "noivern", "onix", "steelix", "arrokuda", "barraskewda", "meowth_galarian", "perrserker", "persian", "milcery", "alcremie", "cutiefly", "ribombee", "ferroseed", "ferrothorn", "pumpkaboo_super", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "gourgeist_super", "gourgeist_average", "gourgeist_large", "gourgeist_small", "pichu", "pikachu", "raichu", "eevee", "vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon", "applin", "flapple", "appletun", "espurr", "meowstic_female", "meowstic", "swirlix", "slurpuff", "spritzee", "aromatisse", "dewpider", "araquanid", "wynaut", "wobbuffet", "farfetchd_galarian", "sirfetchd", "chinchou", "lanturn", "croagunk", "toxicroak", "scraggy", "scrafty", "stunfisk_galarian", "shuckle", "barboach", "whiscash", "shellos", "gastrodon", "wimpod", "golisopod", "binacle", "barbaracle", "corsola_galarian", "cursola", "impidimp", "morgrem", "grimmsnarl", "hatenna", "hattrem", "hatterene", "salandit", "salazzle", "pawniard", "bisharp", "throh", "sawk", "koffing", "weezing_galarian", "bonsly", "sudowoodo", "cleffa", "clefairy", "clefable", "togepi", "togetic", "togekiss", "munchlax", "snorlax", "cottonee", "whimsicott", "rhyhorn", "rhydon", "rhyperior", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "karrablast", "escavalier", "shelmet", "accelgor", "elgyem", "beheeyem", "cubchoo", "beartic", "rufflet", "braviary", "vullaby", "mandibuzz", "skorupi", "drapion", "litwick", "lampent", "chandelure", "inkay", "malamar", "sneasel", "weavile", "sableye", "mawile", "maractus", "sigilyph", "riolu", "lucario", "torkoal", "mimikyu", "cufant", "copperajah", "qwilfish", "frillish", "jellicent", "mareanie", "toxapex", "cramorant", "toxel", "toxtricity", "silicobra", "sandaconda", "hippopotas", "hippowdon", "durant", "heatmor", "helioptile", "heliolisk", "hawlucha", "trapinch", "vibrava", "flygon", "axew", "fraxure", "haxorus", "yamask_galarian", "runerigus", "cofagrigus", "honedge", "doublade", "aegislash", "ponyta_galarian", "rapidash_galarian", "sinistea", "polteageist", "indeedee", "phantump", "trevenant", "morelull", "shiinotic", "oranguru", "passimian", "morpeko", "falinks", "drampa", "turtonator", "togedemaru", "snom", "frosmoth", "clobbopus", "grapploct", "pincurchin", "mantyke", "mantine", "wailmer", "wailord", "bergmite", "avalugg", "dhelmise", "lapras", "lunatone", "solrock", "mime_jr", "mr_mime_galarian", "mr_rime", "darumaka_galarian", "darmanitan_galarian_standard", "darmanitan_galarian_zen", "stonjourner", "eiscue", "duraludon", "rotom_wash", "rotom", "rotom_fan", "rotom_heat", "rotom_frost", "rotom_mow", "dracozolt", "arctozolt", "dracovish", "arctovish", "charmander", "charmeleon", "charizard", "type_null", "silvally", "larvitar", "pupitar", "tyranitar", "deino", "zweilous", "hydreigon", "goomy", "sliggoo", "goodra", "jangmo_o", "hakamo_o", "kommo_o", "dreepy", "drakloak", "dragapult", "zacian_hero", "zacian_crowned_sword", "zamazenta_hero", "zamazenta_crowned_shield", "zamazenta", "zacian", "eternatus", "eternatus_eternamax"]
+	}],
+	"exclude": [],
+	"partySize": 3,
+	"presetOnly": true
+},"galar":{
+	"name": "galar",
+	"title": "Galar Cup (Full Pokedex)",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": true,
+		"values":  ["grookey", "thwackey", "rillaboom", "scorbunny", "raboot", "cinderace", "sobble", "drizzile", "inteleon", "blipbug", "dottler", "orbeetle", "caterpie", "metapod", "butterfree", "grubbin", "charjabug", "vikavolt", "hoothoot", "noctowl", "rookidee", "corvisquire", "corviknight", "skwovet", "greedent", "pidove", "tranquill", "unfezant", "nickit", "thievul", "zigzagoon_galarian", "linoone_galarian", "obstagoon", "wooloo", "dubwool", "lotad", "lombre", "ludicolo", "seedot", "nuzleaf", "shiftry", "chewtle", "drednaw", "purrloin", "liepard", "yamper", "boltund", "bunnelby", "diggersby", "minccino", "cinccino", "bounsweet", "steenee", "tsareena", "oddish", "gloom", "vileplume", "bellossom", "budew", "roselia", "roserade", "wingull", "pelipper", "joltik", "galvantula", "electrike", "manectric", "vulpix", "ninetales", "growlithe", "arcanine", "vanillite", "vanillish", "vanilluxe", "swinub", "piloswine", "mamoswine", "delibird", "snorunt", "glalie", "froslass", "baltoy", "claydol", "mudbray", "mudsdale", "dwebble", "crustle", "golett", "golurk", "munna", "musharna", "natu", "xatu", "stufful", "bewear", "snover", "abomasnow", "krabby", "kingler", "wooper", "quagsire", "corphish", "crawdaunt", "nincada", "ninjask", "shedinja", "tyrogue", "hitmonlee", "hitmonchan", "hitmontop", "pancham", "pangoro", "klink", "klang", "klinklang", "combee", "vespiquen", "bronzor", "bronzong", "ralts", "kirlia", "gardevoir", "gallade", "drifloon", "drifblim", "gossifleur", "eldegoss", "cherubi", "cherrim_sunny", "stunky", "skuntank", "tympole", "palpitoad", "seismitoad", "duskull", "dusclops", "dusknoir", "machop", "machoke", "machamp", "gastly", "haunter", "gengar", "magikarp", "gyarados", "goldeen", "seaking", "remoraid", "octillery", "shellder", "cloyster", "feebas", "milotic", "basculin", "wishiwashi", "pyukumuku", "trubbish", "garbodor", "sizzlipede", "centiskorch", "rolycoly", "carkol", "coalossal", "diglett", "dugtrio", "drilbur", "excadrill", "roggenrola", "boldore", "gigalith", "timburr", "gurdurr", "conkeldurr", "woobat", "swoobat", "noibat", "noivern", "onix", "steelix", "arrokuda", "barraskewda", "meowth_galarian", "perrserker", "persian", "milcery", "alcremie", "cutiefly", "ribombee", "ferroseed", "ferrothorn", "pumpkaboo_super", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "gourgeist_super", "gourgeist_average", "gourgeist_large", "gourgeist_small", "pichu", "pikachu", "raichu", "eevee", "vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon", "applin", "flapple", "appletun", "espurr", "meowstic_female", "meowstic", "swirlix", "slurpuff", "spritzee", "aromatisse", "dewpider", "araquanid", "wynaut", "wobbuffet", "farfetchd_galarian", "sirfetchd", "chinchou", "lanturn", "croagunk", "toxicroak", "scraggy", "scrafty", "stunfisk_galarian", "shuckle", "barboach", "whiscash", "shellos", "gastrodon", "wimpod", "golisopod", "binacle", "barbaracle", "corsola_galarian", "cursola", "impidimp", "morgrem", "grimmsnarl", "hatenna", "hattrem", "hatterene", "salandit", "salazzle", "pawniard", "bisharp", "throh", "sawk", "koffing", "weezing_galarian", "bonsly", "sudowoodo", "cleffa", "clefairy", "clefable", "togepi", "togetic", "togekiss", "munchlax", "snorlax", "cottonee", "whimsicott", "rhyhorn", "rhydon", "rhyperior", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "karrablast", "escavalier", "shelmet", "accelgor", "elgyem", "beheeyem", "cubchoo", "beartic", "rufflet", "braviary", "vullaby", "mandibuzz", "skorupi", "drapion", "litwick", "lampent", "chandelure", "inkay", "malamar", "sneasel", "weavile", "sableye", "mawile", "maractus", "sigilyph", "riolu", "lucario", "torkoal", "mimikyu", "cufant", "copperajah", "qwilfish", "frillish", "jellicent", "mareanie", "toxapex", "cramorant", "toxel", "toxtricity", "silicobra", "sandaconda", "hippopotas", "hippowdon", "durant", "heatmor", "helioptile", "heliolisk", "hawlucha", "trapinch", "vibrava", "flygon", "axew", "fraxure", "haxorus", "yamask_galarian", "runerigus", "cofagrigus", "honedge", "doublade", "aegislash", "ponyta_galarian", "rapidash_galarian", "sinistea", "polteageist", "indeedee", "phantump", "trevenant", "morelull", "shiinotic", "oranguru", "passimian", "morpeko", "falinks", "drampa", "turtonator", "togedemaru", "snom", "frosmoth", "clobbopus", "grapploct", "pincurchin", "mantyke", "mantine", "wailmer", "wailord", "bergmite", "avalugg", "dhelmise", "lapras", "lunatone", "solrock", "mime_jr", "mr_mime_galarian", "mr_rime", "darumaka_galarian", "darmanitan_galarian_standard", "darmanitan_galarian_zen", "stonjourner", "eiscue", "duraludon", "rotom_wash", "rotom", "rotom_fan", "rotom_heat", "rotom_frost", "rotom_mow", "dracozolt", "arctozolt", "dracovish", "arctovish", "charmander", "charmeleon", "charizard", "type_null", "silvally", "larvitar", "pupitar", "tyranitar", "deino", "zweilous", "hydreigon", "goomy", "sliggoo", "goodra", "jangmo_o", "hakamo_o", "kommo_o", "dreepy", "drakloak", "dragapult", "vulpix_alolan", "ninetales_alolan", "diglett_alolan", "dugtrio_alolan", "raichu_alolan", "meowth_alolan", "persian_alolan"]
+	}],
+	"exclude": [],
+	"partySize": 3,
+	"presetOnly": true
+},"gbinvitational":{
+    "name": "gbinvitational",
+    "title": "Gymbreakers Invitational Remix",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "ice", "poison", "steel", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["goodra", "lurantis", "ursaring", "ursaring_shadow", "gliscor", "gliscor_shadow", "dunsparce", "charjabug"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["fighting"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["morpeko", "morpeko_full_belly", "skarmory", "registeel", "gastrodon", "medicham", "corviknight"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+    "overrides": [],
+    "league": 1500,
+    "useDefaultMovesets": 1,
+    "levelCap": 50
+},"genetic":{"name":"genetic","title":"Genetic","include":[{"filterType":"id","name":"Species","values":["alomomola","amoonguss","annihilape","araquanid","arbok","ariados","azumarill","banette","barbaracle","basculin","beedrill","bibarel","blastoise","brionne","bruxish","bulbasaur","carracosta","castform_rainy","ceruledge","chandelure","clamperl","clauncher","clawitzer","cloyster","cofagrigus","corphish","corsola","crawdaunt","crobat","croconaw","decidueye","dewgong","dewott","dragalge","drapion","drifblim","drifloon","dusclops","dusknoir","dustox","empoleon","feraligatr","floatzel","frillish","frogadier","froslass","garbodor","gengar","gholdengo","giratina_origin","gloom","golbat","goldeen","golduck","golisopod","gorebyss","gourgeist_average","gourgeist_large","gourgeist_small","gourgeist_super","greninja","grimer","grimer_alolan","gyarados","haunter","hoopa","houndstone","huntail","ivysaur","jellicent","kabuto","kabutops","kingdra","kingler","koffing","krabby","lampent","lapras","lombre","ludicolo","lumineon","mantine","mantyke","marowak_alolan","milotic","misdreavus","mismagius","muk","muk_alolan","nidorina","nidorino","octillery","oddish","omanyte","omastar","oricorio_sensu","overqwil","pelipper","piplup","poipole","politoed","poliwhirl","poliwrath","popplio","primarina","prinplup","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","quaquaval","quaxwell","qwilfish","qwilfish_hisuian","relicanth","revavroom","roselia","roserade","sableye","salazzle","samurott","samurott_hisuian","scolipede","seadra","seaking","sealeo","seel","seviper","sharpedo","shellos","simipour","skeledirge","skorupi","skrelp","skuntank","slowbro","slowbro_galarian","slowking","slowking_galarian","slowpoke","sneasel","sneasel_shadow","sneasel_hisuian","sneasler","spiritomb","starmie","stunky","suicune","swalot","swanna","tapu_fini","tentacool","tentacruel","tirtouga","totodile","toxapex","toxicroak","trevenant","typhlosion_hisuian","vaporeon","varoom","venomoth","venusaur","victreebel","vileplume","wailmer","wailord","walrein","wartortle","weepinbell","weezing","weezing_galarian","whirlipede","wugtrio","abomasnow","abomasnow_shadow","aerodactyl","aerodactyl_shadow","aggron","aggron_shadow","anorith","anorith_shadow","armaldo","armaldo_shadow","aron","aron_shadow","articuno","articuno_shadow","bastiodon","bastiodon_shadow","blaziken","blaziken_shadow","cacturne","cacturne_shadow","charizard","charizard_shadow","combusken","combusken_shadow","cradily","cradily_shadow","crustle","crustle_shadow","dragonite","dragonite_shadow","dwebble","dwebble_shadow","exeggcute","exeggcute_shadow","exeggutor","exeggutor_alolan","exeggutor_alolan_shadow","exeggutor_shadow","ferroseed","ferroseed_shadow","ferrothorn","ferrothorn_shadow","forretress","forretress_shadow","gallade","gallade_shadow","gardevoir","gardevoir_shadow","girafarig","girafarig_shadow","ho_oh","ho_oh_shadow","honchkrow","honchkrow_shadow","houndoom","houndoom_shadow","houndour","houndour_shadow","infernape","infernape_shadow","jumpluff","jumpluff_shadow","lairon","lairon_shadow","latias","latias_shadow","latios","latios_shadow","ledian","ledian_shadow","lileep","lileep_shadow","lugia","lugia_shadow","mawile","mawile_shadow","metagross","metagross_shadow","metang","metang_shadow","moltres","moltres_shadow","monferno","monferno_shadow","murkrow","murkrow_shadow","ninetales_alolan","ninetales_alolan_shadow","nuzleaf","nuzleaf_shadow","pidgeot","pidgeot_shadow","pidgeotto","pidgeotto_shadow","probopass","probopass_shadow","raticate_alolan","raticate_alolan_shadow","salamence","salamence_shadow","sandshrew_alolan","sandshrew_alolan_shadow","sandslash_alolan","sandslash_alolan_shadow","scizor","scizor_shadow","scyther","scyther_shadow","shiftry","shiftry_shadow","skarmory","skarmory_shadow","snover","snover_shadow","staraptor","staraptor_shadow","staravia","staravia_shadow","tranquill","tranquill_shadow","tyranitar","tyranitar_shadow","unfezant","unfezant_shadow","weavile","weavile_shadow","xatu","xatu_shadow"]}],"exclude":[],"overrides":[],"league":1500,"useDefaultMovesets":1},"geneticremix":{"name":"geneticremix","title":"Genetic Remix","include":[{"filterType":"id","name":"Species","values":["shadow","slowking","slowking_galarian","slowking_shadow","slowpoke","slowpoke_","galarian","slowpoke_shadow","smoochum","sneasel_hisuian","sneasel_hisuian_shadow","sneasler","sneasler_shadow","solosis","solosis_shadow","solrock","spiritomb","spoink","spoink_shadow","starmie","stunky","stunky_shadow","sudowoodo","sudowoodo_shadow","suicune","suicune_shadow","swalot","swanna","swanna_shadow","swoobat","talonflame","tapu_fini","tentacool","tentacool_shadow","tentacruel","tentacruel_shadow","tirtouga","torkoal","torracat","totodile","totodile_shadow","toxapex","trevenant","turtonator","typhlosion","typhlosion_hisuian","typhlosion_shadow","tyranitar","tyranitar_shadow","tyrantrum","tyrunt","unown","uxie","vaporeon","venomoth","venomoth_shadow","venusaur","venusaur_shadow","victini","victreebel","victreebel_shadow","vileplume","vileplume_shadow","wailmer","wailmer_shadow","wailord","wailord_shadow","walrein","walrein_shadow","wartortle","wartortle_shadow","weepinbell","weepinbell_shadow","weezing","weezing_galarian","weezing_shadow","whirlipede","wobbuffet","wobbuffet_shadow","wugtrio","xatu","xatu_shadow","abomasnow","abomasnow_shadow","altaria","arctibax","articuno","articuno_shadow","baxcalibur","beautifly","bombirdier","breloom","butterfree","buzzwole","cacturne","cacturne_shadow","chesnaught","crabominable","dartrix","decidueye_hisuian","dragonite","dragonite_shadow","exeggutor_alolan","exeggutor_alolan_shadow","frigibax","guzzlord","hakamo_o","hawlucha","heracross","honchkrow","honchkrow_shadow","hydreigon","jumpluff","jumpluff_shadow","kommo_o","leavanny","ledian","ledian_shadow","lokix","mandibuzz","masquerain","meowscarada","moltres_galarian","mothim","murkrow","murkrow_shadow","ninetales_alolan","ninetales_alolan_shadow","ninjask","noivern","nuzleaf","nuzleaf_shadow","pangoro","parasect","rayquaza","ribombee","rowlet","salamence","salamence_shadow","scrafty","scraggy","scyther","scyther_shadow","shaymin_sky","shiftry","shiftry_shadow","shiinotic","sneasel","sneasel_shadow","snover","snover_shadow","swadloon","togekiss","togetic","tropius","vespiquen","vivillon","vullaby","weavile","weavile_shadow","whimsicott","wormadam_plant","yanma","yanmega","zapdos_galarian","zweilous","aerodactyl","aerodactyl_shadow","alakazam","alakazam_shadow","alomomola","amaura","amoonguss","amoonguss_shadow","anorith","anorith_shadow","araquanid","arbok","arbok_shadow","arcanine","arcanine_hisuian","arcanine_shadow","archen","archeops","ariados","armaldo","armaldo_shadow","armarouge","articuno_galarian","avalugg_hisuian","azelf","azumarill","banette","banette_shadow","barbaracle","basculin","beedrill","beedrill_shadow","beheeyem","blastoise","blastoise_shadow","blaziken","blaziken_shadow","boldore","bonsly","braixen","brionne","bruxish","bulbasaur","bulbasaur_shadow","carracosta","castform_rainy","castform_sunny","celebi","ceruledge","chandelure","chandelure_shadow","charizard","charizard_shadow","charmeleon","charmeleon_shadow","chimecho","clamperl","clauncher","clawitzer","cloyster","cloyster_shadow","cofagrigus","combusken","combusken_shadow","corphish","corphish_shadow","corsola","cradily","cradily_shadow","crawdaunt","crawdaunt_shadow","crobat","crobat_shadow","crocalor","croconaw","croconaw_shadow","crustle","crustle_shadow","darmanitan_standard","darmanitan_standard_shadow","darumaka","decidueye","delphox","deoxys_speed","dewgong","dewott","diancie","dragalge","drapion","drapion_shadow","drifblim","drifblim_shadow","drifloon","drifloon_shadow","drowzee","drowzee_shadow","duosion","duosion_shadow","dusclops","dusclops_shadow","dusknoir","dusknoir_shadow","dustox","dwebble","dwebble_shadow","elgyem","emboar","entei","entei_shadow","espeon","espurr","exeggcute","exeggcute_shadow","exeggutor","exeggutor_shadow","flareon","fletchinder","floatzel","frillish","frogadier","froslass","froslass_shadow","fuecoco","gallade","gallade_shadow","garbodor","gardevoir","gardevoir_shadow","gengar","gengar_shadow","gigalith","giratina_origin","gloom","gloom_shadow","golbat","golbat_shadow","goldeen","golduck","golduck_shadow","golisopod","gorebyss","gothitelle","gothitelle_shadow","gothorita","gothorita_shadow","gourgeist_average","gourgeist_large","gourgeist_small","gourgeist_super","grimer","grimer_alolan","grimer_alolan_shadow","grimer_shadow","growlithe","growlithe_hisuian","growlithe_shadow","grumpig","grumpig_shadow","gyarados","gyarados_shadow","haunter","haunter_shadow","heatmor","ho_oh","ho_oh_shadow","hoopa","houndoom","houndoom_shadow","houndour","houndour_shadow","houndstone","huntail","hypno","hypno_shadow","incineroar","infernape","infernape_shadow","ivysaur","ivysaur_shadow","jellicent","jynx","kabuto","kabutops","kadabra","kingdra","kingdra_shadow","kingler","kleavor","koffing","koffing_shadow","krabby","kyogre_shadow","lampent","lampent_shadow","lapras","lapras_shadow","larvesta","latias","latias_shadow","latios","latios_shadow","lileep","lileep_shadow","lombre","ludicolo","lugia","lugia_shadow","lumineon","lunatone","lycanroc_dusk","lycanroc_midday","lycanroc_midnight","magby","magcargo","magmar","magmar_shadow","magmortar","magmortar_shadow","malamar","mantine","mantyke","marowak_alolan","marowak_alolan_shadow","medicham","meowstic_female","meowstic","mesprit","mewtwo_shadow","milotic","misdreavus","misdreavus_shadow","mismagius","mismagius_shadow","moltres","moltres_shadow","monferno","monferno_shadow","mr_mime","mr_mime_galarian","mr_rime","muk","muk_alolan","muk_alolan_shadow","muk_shadow","munna","musharna","naganadel","nidorina","nidorina_shadow","nidorino","nidorino_shadow","ninetales","ninetales_shadow","nosepass","nosepass_shadow","octillery","oddish","oddish_shadow","omanyte","omanyte_shadow","omastar","omastar_shadow","oricorio_baile","oricorio_pau","oricorio_sensu","overqwil","pelipper","pignite","piplup","piplup_shadow","poipole","politoed","politoed_shadow","poliwhirl","poliwhirl_shadow","ponyta","ponyta_galarian","popplio","primarina","prinplup","prinplup_shadow","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","quaquaval","quaxwell","quilava","quilava_shadow","qwilfish","qwilfish_hisuian","rampardos","rampardos_shadow","rapidash","rapidash_galarian","regirock","regirock_shadow","relicanth","reuniclus","reuniclus_shadow","roggenrola","roselia","roserade","sableye","sableye_shadow","salazzle","samurott","samurott_hisuian","scolipede","seadra","seadra_shadow","seaking","sealeo","sealeo_shadow","seel","seviper","sharpedo","sharpedo_shadow","shellos","sigilyph","simipour","simisear","skeledirge","skorupi","skorupi_shadow","skrelp","skuntank","skuntank_shadow","slowbro","slowbro_galarian","slowbro_"]}],"exclude":[],"overrides":[],"league":1500,"useDefaultMovesets":1,"excludeLowPokemon":1},"gobattleleague":{
+	"name": "gobattleleague",
+	"title": "GO Battle League",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"gymbreakers":{
+    "name": "gymbreakers",
+    "title": "Gymbreakers Invitational 2022",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dark", "dragon", "electric", "normal"]
+    }],
+    "exclude": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["buzzwole", "articuno_galarian", "zapdos_galarian", "moltres_galarian", "xurkitree", "pheromosa", "shaymin_sky", "sneasler", "sneasel_hisuian", "arcanine_hisuian", "growlithe_hisuian", "dragalge", "altaria", "diggersby", "wigglytuff", "forretress", "kommo_o", "scrafty", "stunfisk", "dedenne", "hakamo_o"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }]
+},"halloween":{
+	"name": "halloween",
+	"title": "Halloween Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["poison", "ghost", "bug", "dark", "fairy"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"hisui":{
+	"name": "hisui",
+	"title": "Hisui Cup",
+	"include": [{
+		"filterType": "dex",
+		"values": [387, 493]
+	}, {
+		"filterType": "id",
+		"values": ["sneasel_hisuian", "sneasel_hisuian_shadow", "sneasler", "sneasler_shadow", "qwilfish_hisuian", "overqwil", "growlithe_hisuian", "arcanine_hisuian", "braviary_hisuian", "voltorb_hisuian", "electrode_hisuian", "typhlosion_hisuian", "samurott_hisuian", "decidueye_hisuian", "wyrdeer", "kleavor", "ursaluna", "zoroark_hisuian", "lilligant_hisuian", "avalugg_hisuian"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"hoenn":{
+    "name": "hoenn",
+    "title": "Hoenn Cup",
+    "include": [{
+        "filterType": "dex",
+        "name": "Pokedex Number",
+        "values": [252, 386]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+    "overrides": []
+},"holiday":{
+	"name": "holiday",
+	"title": "Holiday Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["grass", "normal", "ice", "ghost", "flying", "electric"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["smeargle", "articuno", "celebi", "ho_oh", "hoopa", "lugia", "moltres", "rayquaza", "regice", "regieleki", "regigigas", "shaymin", "shaymin_sky", "zapdos", "morpeko_full_belly"],
+		"leagues": [500]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"illusion":{
+    "name": "illusion",
+    "title": "illusionT",
+    "restrictedPicks": 1,
+    "restrictedPokemon": ["flygon", "grumpig", "slowbro_galarian", "dubwool", "goodra", "druddigon", "cresselia", "deoxys_defense", "baxcalibur", "kingdra", "bronzong", "drampa"],
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "grass", "normal", "psychic"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "fairy", "flying"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["medicham", "delphox", "turtonator", "wobbuffet", "zygarde", "zygarde_10", "grafaiai", "arctibax", "dragonair", "furret", "dragalge", "pyroar", "hakamo_o", "kommo_o", "litleo", "armarouge", "lickilicky", "lickitung", "abomasnow", "diggersby", "ursaring"]
+    }],
+    "overrides": [],
+    "league": 1500,
+    "useDefaultMovesets": 1,
+    "excludeLowPokemon": 0,
+    "levelCap": 50,
+    "includeLowStatProduct": true
+},"ingot":{
+    "name": "ingot",
+    "title": "Ingot",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "electric", "fighting", "fire", "poison", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["rotom_wash", "wormadam_sandy", "archen", "archeops", "qwilfish_hisuian", "arctibax", "tyrunt", "stunfisk_galarian", "toxapex", "tentacruel", "cloyster", "araquanid", "cradily", "amaura", "avalugg_hisuian", "armaldo", "lairon", "", "steelix", "nidoking", "nidoqueen", "piloswine", "ursaluna", "", "camerupt", "munchlax", "lileep"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "ground", "rock", "water", "ghost", "fighting"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["gligar", "drapion", "vikavolt", "heliolisk", "morpeko_full_belly", "marowak_alolan", "grimer", "malamar", "salazzle", "nidorina", "qwilfish_hisuian", "pachirisu", "mandibuzz", "pangoro", "bellibolt", "corviknight", "grafaiai"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["shadow", "mega"]
+    }],
+    "overrides": [],
+    "league": 1500,
+    "useDefaultMovesets": 1,
+    "levelCap": 50,
+    "includeLowStatProduct": true
+},"innocent":{
+    "name": "innocent",
+    "title": "Silph Innocent Cup",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "fairy", "flying", "psychic", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["arbok", "dragalge", "garbodor", "swalot"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["shadow", "mega"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["fire", "ice", "poison", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["altaria", "articuno_galarian", "cresselia", "hawlucha", "lanturn", "mandibuzz", "mantine", "mew", "moltres_galarian", "noctowl", "pelipper", "pidgeot", "zapdos_galarian"]
+    }]
+},"ionic":{
+    "name": "ionic",
+    "title": "Silph Ionic Cup",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["ampharos", "dedenne", "luxray", "electivire", "raikou", "minun", "armaldo", "bewear", "bibarel", "crawdaunt", "drapion", "garbodor", "golisopod", "kricketune", "lapras", "linoone", "malamar", "milotic", "muk", "munchlax", "nidorina", "castform", "pangoro", "parasect", "pinsir", "politoed", "porygon2", "qwilfish", "sableye", "samurott", "scolipede", "seaking", "seviper", "skuntank", "snorlax", "swalot", "umbreon", "weavile", "zoroark", "ariados", "barbaracle", "beedrill", "blastoise", "sneasel_hisuian", "kricketune", "linoone", "poliwrath", "sealeo", "sneasel", "raticate_alolan", "greedent"],
+		"includeShadows": 1
+    }],
+    "exclude": [],
+    "overrides": []
+},"iridescent":{
+    "name": "iridescent",
+    "title": "Iridescent Cup",
+	"include": [{
+        "filterType": "type",
+        "values": ["bug","fairy","ghost","grass","ground"]
+    },{
+        "filterType": "id",
+        "values": ["whimsicott","slurpuff","girafarig"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega","shadow"]
+    }, {
+        "filterType": "type",
+        "values": ["fire","poison","steel","flying","ice","dark"]
+    }, {
+        "filterType": "id",
+        "values": ["diggersby","buzzwole","carbink","annihilape","giratina_origin","gogoat","zygarde","corsola_galarian","azumarill","araquanid","golisopod"]
+    }, {
+        "filterType": "move",
+        "values": ["CHARM"]
+    }]
+},"justicar":{
+    "name": "justicar",
+    "title": "Silph Factions (Justicar)",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug", "electric", "fairy", "fighting", "fire", "ice", "poison"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "type",
+        "values": ["ground"]
+    }, {
+        "filterType": "id",
+        "values": ["toxicroak", "dragalge", "aurorus", "golem_alolan", "lanturn", "tapu_fini", "hawlucha"]
+    }],
+	"allowSameSpecies": true
+},"kanto":{
+   "name": "kanto",
+   "title": "Kanto Cup",
+   "include": [{
+	   "filterType": "dex",
+	   "values": [1, 151]
+   }],
+   "exclude": [{
+	   "filterType": "tag",
+	   "values": ["mega"]
+   }],
+   "partySize": 3
+},"knockout":{
+    "name": "knockout",
+    "title": "Devon Knockout Cup",
+	"restrictedPicks": 2,
+	"restrictedPokemon": ["gastrodon", "whiscash", "diggersby", "runerigus", "golisopod", "araquanid", "tentacruel", "ariados", "charjabug", "vikavolt", "galvantula"],
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["sandslash", "machamp", "sirfetchd", "hitmontop", "primeape", "poliwrath", "gastrodon", "whiscash", "diggersby", "runerigus", "golisopod", "araquanid", "tentacruel", "ariados", "charjabug", "vikavolt", "galvantula", "donphan", "escavalier", "politoed", "dewgong", "walrein", "sealeo", "lapras", "samurott", "blastoise", "milotic", "greninja", "castform_rainy", "wailmer", "seaking", "suicune", "qwilfish", "gengar", "haunter", "beedrill", "swalot", "weezing_galarian", "grimer", "muk", "grimer_alolan", "muk_alolan", "drapion", "skuntank", "qwilfish_hisuian", "overqwil", "seviper", "scolipede", "marshtomp", "seismitoad", "stunfisk", "sanslash", "golurk", "palossand", "piloswine", "marowak", "hippowdon", "rhyperior", "rhydon", "ampharos", "heliolisk", "dedenne", "raichu_alolan", "minun", "graveler_alolan", "golem_alolan", "raichu", "minun", "luxray"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["shadow", "mega"]
+    }],
+	"link": "https://discord.com/invite/MtGA34QM5N"
+},"laic2025":{
+    "name": "laic2025",
+    "title": "LAIC 2025 Championship Series Cup",
+    "link": "https://laic.gg/competitor_info/pokemon_go/",
+    "include": [{
+        "filterType": "type",
+        "values": ["dragon", "flying", "ghost", "ice", "psychic"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["dark", "rock"]
+    }, {
+        "filterType": "tag",
+        "values": ["mega", "legendary", "mythical", "shadow", "ultrabeast"]
+    }, {
+        "filterType": "id",
+        "values": ["sandslash_alolan", "sandshrew_alolan", "corsola_galarian", "corviknight", "jellicent", "lapras", "kingdra", "ninetales_alolan", "honedge", "doublade", "aegislash_shield", "aegislash_blade"]
+    }]
+},"littlecatch":{
+    "name": "littlecatch",
+    "title": "Little Catch Cup",
+    "include": [],
+    "exclude": [{
+        "filterType": "id",
+        "values": ["articuno", "celebi", "ho_oh", "hoopa", "lugia", "moltres", "rayquaza", "regice", "regieleki", "regigigas", "shaymin", "shaymin_sky", "zapdos", "registeel", "cresselia", "guzzlord", "deoxys_defense", "mew", "tapu_fini", "regirock", "regice", "zygarde_complete", "zygarde", "victini", "raikou_shadow", "suicune_shadow", "entei_shadow", "gengar_shadow"]
+    }, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+    "levelCap": 50
+},"littlejungle":{
+	"name": "littlejungle",
+	"title": "Little Jungle Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["normal", "grass", "electric", "poison", "ground", "flying", "bug", "dark"]
+	}],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["shuckle", "shuckle_shadow", "smeargle", "genesect", "celebi", "hoopa", "hoopa_unbound", "aerodactyl_shadow", "zarude", "genesect_douse", "genesect_burn", "xerneas", "thundurus_therian", "yveltal", "meloetta_aria", "zacian", "zamazenta", "zacian_hero", "zamazenta_hero", "genesect_douse", "zarude", "hoopa_unbound", "genesect_shock", "tapu_koko", "tapu_lele", "tapu_bulu", "nihilego", "genesect_chill", "braviary_hisuian", "solgaleo", "lunala", "keldeo_ordinary", "avalugg_hisuian", "kyogre_primal", "groudon_primal", "kleavor", "guzzlord", "gligar", "stunfisk_galarian"]
+	}, {
+		"filterType": "tag",
+		"values": ["legendary", "mega"]
+	}],
+	"partySize": 3
+},"littlejungleremix":{
+    "name": "littlejungleremix",
+    "title": "Little Jungle Cup Remix",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug", "dark", "electric", "flying", "grass", "ground", "normal", "poison"]
+    }, {
+        "filterType": "id",
+        "values": ["zapdos_galarian", "moltres_galarian", "articuno_galarian", "suicune", "entei", "raikou"],
+		"includeShadows": false
+    }],
+    "exclude": [{
+        "filterType": "id",
+		"values": ["skorupi", "cottonee", "ducklett", "salandit", "shuckle", "shuckle_shadow", "smeargle", "aerodactyl_shadow", "scizor_shadow"]
+    }, {
+        "filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+    }]
+},"littleremix":{
+	"name": "littleremix",
+	"title": "Little Cup Remix",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": 1,
+		"values": ["abra", "aipom", "anorith", "archen", "aron", "axew", "azurill", "bagon", "baltoy", "barboach", "beldum", "bellsprout", "bidoof", "blitzle", "bonsly", "budew", "buizel", "bulbasaur", "buneary", "burmy", "cacnea", "carvanha", "caterpie", "charmander", "cherubi", "chikorita", "chimchar", "chinchou", "chingling", "cleffa", "combee", "corphish", "cranidos", "croagunk", "cubchoo", "cubone", "cyndaquil", "darumaka", "darumaka_galarian", "deerling", "diglett", "diglett_alolan", "doduo", "dratini", "drifloon", "drilbur", "drowzee", "ducklett", "duskull", "dwebble", "ekans", "electrike", "elekid", "elgyem", "exeggcute", "farfetchd_galarian", "feebas", "ferroseed", "finneon", "foongus", "frillish", "gastly", "geodude", "geodude_alolan", "gible", "glameow", "gligar", "goldeen", "golett", "gothita", "grimer", "grimer_alolan", "growlithe", "gulpin", "happiny", "hippopotas", "hoothoot", "hoppip", "horsea", "houndour", "igglybuff", "joltik", "kabuto", "klink", "koffing", "krabby", "kricketot", "larvesta", "larvitar", "ledyba", "lickitung", "lileep", "lillipup", "litwick", "lotad", "machop", "magby", "magikarp", "magnemite", "makuhita", "mankey", "mantyke", "mareep", "meditite", "meowth", "meowth_alolan", "meowth_galarian", "mienfoo", "mime jr.", "misdreavus", "mudkip", "munchlax", "munna", "murkrow", "natu", "nidoran_male", "nidoran_female", "nincada", "nosepass", "numel", "oddish", "omanyte", "oshawott", "pansage", "pansear", "paras", "patrat", "phanpy", "pichu", "pidgey", "pidove", "pineco", "piplup", "poliwag", "ponyta", "ponyta", "poochyena", "psyduck", "purrloin", "ralts", "rattata", "rattata_alolan", "remoraid", "rhyhorn", "riolu", "roggenrola", "rufflet", "sandile", "sandshrew", "sandshrew_alolan", "scraggy", "seedot", "seel", "sentret", "sewaddle", "shellos_east_sea", "shellos_west_sea", "shieldon", "shinx", "shroomish", "shuppet", "skitty", "skorupi", "slakoth", "slowpoke", "", "slugma", "smoochum", "sneasel", "snivy", "snorunt", "snover", "snubbull", "solosis", "spearow", "spheal", "spinarak", "spoink", "squirtle", "starly", "stunky", "surskit", "swablu", "swinub", "taillow", "tangela", "teddiursa", "tentacool", "tepig", "timburr", "tirtouga", "togepi", "torchic", "totodile", "trapinch", "treecko", "trubbish", "turtwig", "tympole", "tynamo", "tyrogue", "vanillite", "venipede", "venonat", "voltorb", "vulpix_alolan", "wailmer", "weedle", "whismur", "wingull", "woobat", "wooper", "wurmple", "wynaut", "yamask", "yanma", "zigzagoon", "zigzagoon_galarian", "zubat", "meltan", "yamask_galarian", "dratini_shadow", "stunky_shadow", "cubone_shadow", "gligar_shadow", "mareep_shadow", "turtwig_shadow", "growlithe_shadow", "psyduck_shadow", "duskull_shadow", "oddish_shadow", "hoppip_shadow", "houndour_shadow", "venonat_shadow", "squirtle_shadow", "drowzee_shadow", "nidoran_male_shadow", "seedot_shadow", "meowth_shadow", "pineco_shadow", "sandshrew_shadow", "mudkip_shadow", "poliwag_shadow", "machop_shadow", "exeggcute_shadow", "slowpoke_shadow", "magnemite_shadow", "grimer_shadow", "zubat_shadow", "teddiursa_shadow", "charmander_shadow", "rattata_shadow", "misdreavus_shadow", "snover_shadow", "bulbusaur_shadow", "ralts_shadow", "larvitar_shadow", "omanyte_shadow", "sneasel_shadow", "koffing_shadow", "carvanha_shadow", "bagon_shadow", "diglett_shadow", "trapinch_shadow", "cacnea_shadow", "weedle_shadow", "nidoran_female_shadow", "shuppet_shadow", "bellsprout_shadow", "ekans_shadow", "abra_shadow", "beldum_shadow", "magikarp_shadow", "shellder", "shellder_shadow", "scyther", "scyther_shadow", "onix", "mime_jr", "eevee", "porygon", "sunkern", "clamperl", "burmy", "shellos", "panpour", "petilil", "minccino", "karrablast", "shelmet", "vullaby", "pawniard", "staryu", "chespin", "fennekin", "froakie", "bunnelby", "fletchling", "litleo", "flabebe", "pancham", "espurr", "spritzee", "swirlix", "inkay", "binacle", "skrelp", "clauncher", "helioptile", "goomy", "phantump", "pumpkaboo_small", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_super", "bergmite", "noibat", "rowlet", "litten", "popplio", "pikipek", "yungoos", "rockruff", "fomantis", "salandit", "jangmo_o", "skwovet", "wooloo", "zigzagoon_galarian", "farfetchd_galarian", "mr_mime_galarian", "yamask_galarian", "dewpider", "voltorb_hisuian", "wimpod", "stufful", "amaura", "tyrunt"]
+	}],
+	"exclude": [],
+	"partySize": 3
+},"love":{
+	"name": "love",
+	"title": "Love Cup",
+	"include": [{
+		"filterType": "id",
+		"includeShadows": 1,
+		"values": ["charmander", "charmander_shadow", "charmeleon", "charmeleon_shadow", "charizard", "charizard_shadow", "vileplume", "vileplume_shadow", "paras", "parasect", "krabby", "kingler", "voltorb", "electrode", "goldeen", "seaking", "jynx", "magmar", "magmar_shadow", "magikarp", "magikarp_shadow", "flareon", "ledyba", "ledian", "ariados", "yanma", "scizor", "scizor_shadow", "slugma", "magcargo", "octillery", "delibird", "porygon2", "porygon2_shadow", "magby", "torchic", "combusken", "blaziken", "wurmple", "medicham", "medicham_xl", "carvanha", "carvanha_shadow", "camerupt", "solrock", "corphish", "crawdaunt", "kricketot", "kricketune", "burmy_trash", "wormadam_trash", "magmortar", "magmortar_shadow", "porygon_z", "porygon_z_shadow", "rotom_wash", "rotom_mow", "rotom", "rotom_fan", "rotom_frost", "rotom_heat", "tepig", "pignite", "emboar", "pansear", "simisear", "throh", "venipede", "scolipede", "krookodile", "darumaka", "darmanitan_standard", "dwebble", "crustle", "deerling", "accelgor", "pawniard", "bisharp", "braviary", "heatmor", "fennekin", "braixen", "delphox", "fletchling", "fletchinder", "talonflame", "vivillon", "tyrantrum", "litten", "torracat", "incineroar", "oricorio_baile", "lycanroc_midnight", "turtonator", "buzzwole", "fuecoco", "crocalor", "skeledirge", "charcadet", "armarouge", "klawf", "wugtrio", "tatsugiri_curly", "gimmighoul", "clefairy", "clefable", "jigglypuff", "wigglytuff", "slowpoke", "slowpoke_shadow", "slowbro", "slowbro_shadow", "exeggcute", "exeggcute_shadow", "lickitung", "lickitung_xl", "happiny", "chansey", "mr.mime", "mimejr.", "porygon", "porygon_shadow", "cleffa", "igglybuff", "flaaffy", "flaaffy_shadow", "hoppip", "hoppip_shadow", "slowking", "slowking_shadow", "snubbull", "corsola", "smoochum", "miltank", "blissey", "whismur", "skitty", "milotic", "gorebyss", "luvdisc", "cherubi", "cherrim_sunny", "lickilicky", "audino", "alomomola", "scrafty", "castform_sunny", "mr_mime", "druddigon", "sylveon", "spritzee", "aromatisse", "musharna", "slowbro_galarian", "slowking_galarian", "slowpoke_galarian", "electrode_hisuian", "litten", "torracat", "incineroar", "lycanroc_midnight", "oricorio_baile", "oricorio_pau", "fomantis", "lurantis", "bewear", "stufful", "latias", "latias_shadow", "mesprit", "bruxish", "hatenna", "hattrem", "hatterene", "impidimp", "morgrem", "tinkatink", "tinkatuff", "tinkaton", "flamigo", "tatsugiri_droopy", "sizzlipede", "centiskorch", "groudon", "deoxys", "deoxys_defense", "deoxys_attack", "deoxys_speed", "moltres_galarian", "ho_oh", "mew", "diancie"]
+	}],
+	"exclude": [],
+	"partySize": 3
+},"majestic":{
+    "name": "majestic",
+    "title": "Majestic Cup",
+	"include": [{
+        "filterType": "type",
+        "values": ["fairy","ice","psychic","ghost","water","normal"]
+    },{
+        "filterType": "id",
+        "values": []
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "type",
+        "values": ["dark","none","electric","rock","steel","fire"]
+    }, {
+        "filterType": "id",
+        "values": ["azumarill","oranguru","fearow","toucannon","trumbeak","dodrio","rufflet","toxapex","ninetales_alolan","sealeo","dewgong","wigglytuff","walrein","jellicent","araquanid","girafarig","tentacruel","weezing_galarian","lapras","abomasnow"]
+    }]
+},"mega":{
+	"name": "mega",
+	"title": "All Pokemon",
+	"include": [],
+	"exclude": []
+},"metamorphosis":{
+  "name": "metamorphosis",
+  "title": "Metamorphosis",
+  "include": [
+    {
+      "filterType": "type",
+      "name": "Type",
+      "values": [
+        "dragon",
+        "flying",
+        "psychic"
+      ]
+    },
+    {
+      "filterType": "id",
+      "name": "Species",
+      "values": [
+        "togekiss",
+        "jellicent",
+        "trevenant",
+        "marowak_alolan",
+        "marowak_alolan_shadow",
+        "seaking",
+        "primeape",
+        "primeape_shadow"
+      ]
+    }
+  ],
+  "exclude": [
+    {
+      "filterType": "type",
+      "name": "Type",
+      "values": [
+        "dark",
+        "electric",
+        "steel",
+        "ice"
+      ]
+    },
+    {
+      "filterType": "tag",
+      "name": "Tag",
+      "values": [
+        "mega"
+      ]
+    },
+    {
+      "filterType": "id",
+      "name": "Species",
+      "values": [
+        "corsola_galarian",
+	"rapidash_galarian",
+	"togetic"
+      ]
+    }
+  ],
+  "overrides": [],
+  "league": 1500,
+  "useDefaultMovesets": 1,
+  "excludeLowPokemon": 1
+},"mountain":{
+    "name": "mountain",
+    "title": "Mountain Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["ground", "ice", "rock", "steel"]
+    }],
+    "exclude": [{
+        "filterType": "id",
+        "values": ["swampert"]
+    }, {
+        "filterType": "tag",
+        "values": ["mega"]
+    }]
+},"naiad":{
+    "name": "naiad",
+    "title": "Silph Naiad Cup",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dragon", "psychic", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["greedent", "miltank", "snorlax", "snorlax_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "fairy", "rock"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["araquanid", "articuno_galarian", "cresselia", "forretress", "lanturn", "medicham", "toxapex"]
+    }]
+},"nemesis":{
+   "name": "nemesis",
+   "title": "Nemesis Cup",
+   "restrictedPicks": 2,
+   "restrictedPokemon": ["obstagoon", "gallade", "lucario", "poliwrath", "pangoro", "blaziken", "chesnaught", "quagsire", "flygon", "excadrill", "jumpluff", "dedenne", "froslass", "gourgeist_small", "gourgeist_average", "gourgeist_large", "gourgeist_super", "noctowl", "gyarados", "charizard", "gengar", "rapidash_galarian", "mawile"],
+   "include": [{
+	   "filterType": "id",
+	   "includeShadows": true,
+	   "values": ["obstagoon", "gallade", "lucario", "poliwrath", "pangoro", "blaziken", "chesnaught", "quagsire", "flygon", "excadrill", "jumpluff", "dedenne", "froslass", "gourgeist_small", "gourgeist_average", "gourgeist_large", "gourgeist_super", "noctowl", "gyarados", "charizard", "gengar", "rapidash_galarian", "mawile"]
+   }, {
+	   "filterType": "type",
+	   "values": ["bug", "dark", "fire", "grass", "ice", "psychic", "water"]
+   }],
+   "exclude": [{
+	   "filterType": "id",
+	   "values": ["escavalier", "salazzle"]
+   }, {
+	   "filterType": "type",
+	   "values": ["none", "fairy", "flying", "fighting", "ground", "ghost", "normal"]
+   }, {
+	   "filterType": "tag",
+	   "values": ["mega"]
+   }]
+},"nettle":{
+  "name": "nettle",
+  "title": "Devon Nettle Cup",
+  "link": "https://devon.gg/nettle-cup",
+  "include": [
+    {
+      "filterType": "id",
+      "values": [
+        "empoleon",
+        "empoleon_shadow",
+        "escavalier",
+        "pawniard",
+        "perrserker",
+        "tinkaton"
+      ]
+    },
+    {
+      "filterType": "type",
+      "name": "Type",
+      "values": [
+        "bug",
+        "dark",
+        "electric",
+        "fairy",
+        "fighting",
+        "grass",
+        "normal",
+        "poison",
+        "rock",
+        "water"
+      ]
+    }
+  ],
+  "exclude": [
+    {
+      "filterType": "type",
+      "name": "Type",
+      "values": [
+        "dragon",
+        "fire",
+        "flying",
+        "ghost",
+        "ground",
+        "ice",
+        "psychic",
+        "steel"
+      ]
+    },
+    {
+      "filterType": "id",
+      "values": [
+        "clodsire",
+        "cradily",
+        "cradily_shadow",
+        "dachsbun",
+        "nidoqueen",
+        "nidoqueen_shadow",
+        "wigglytuff"
+      ]
+    },
+    {
+      "filterType": "tag",
+      "name": "Tag",
+      "values": [
+        "mega"
+      ]
+    }
+  ],
+  "overrides": [],
+  "league": 1500,
+  "useDefaultMovesets": 1,
+  "levelCap": 50,
+  "excludeLowPokemon": 1
+},"onyx":{
+    "name": "onyx",
+    "title": "Onyx Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["normal","rock","fire","steel","water","ghost","dark","psychic","bug","ice","dragon","electric","poison"]
+    },{
+        "filterType": "id",
+        "values": ["onix"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["ground","flying","fighting","grass","fairy"]
+    },{
+        "filterType": "id",
+        "values": ["registeel","bastiodon","pachirisu","araquanid","togedemaru","morpeko_full_belly","bellibolt","toxtricity","guzzlord","genesect","forretress","corsola_galarian","malamar","drapion","regidrago","melmetal","lanturn","toxapex","wormadam_trash","spinda","furret","spiritomb","jellicent","dubwool","dunsparce","kangaskhan"]
+    },{
+        "filterType": "tag",
+        "values": ["mega","shadow"]
+    },{
+        "filterType": "move",
+        "values": []
+    }]
+},"overused":{
+	"name": "ou",
+	"title": "Overused Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["dialga", "palkia", "giratina_altered", "giratina_origin", "charizard_mega_x", "charizard_mega_y", "blastoise_mega", "gengar_mega", "melmetal", "kyogre", "groudon", "zekrom", "reshiram", "mewtwo", "lugia", "ho_oh", "dragonite", "gyarados_mega"]
+	}]
+},"pillar":{
+    "name": "pillar",
+    "title": "Devon Pillar Cup",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["bibarel", "bibarel_shadow", "clodsire", "feraligatr", "feraligatr_shadow", "ariados", "azumarill", "malamar", "jumpluff", "jumpluff_shadow", "drapion", "drapion_shadow", "lickilicky", "samurott", "walrein", "walrein_shadow", "arctibax", "goodra", "hippowdon", "hippowdon_shadow", "miltank", "ursaring", "ursaring_shadow", "sableye", "sableye_shadow", "weezing_galarian", "weezing_galarian_shadow", "cresselia", "cresselia_shadow", "regirock", "regirock_shadow", "stunfisk", "gligar", "gligar_shadow", "sealeo", "sealeo_shadow", "castform_rainy", "froslass", "froslass_shadow", "lokix", "greedent", "trevenant", "leavanny", "nidoqueen", "nidoqueen_shadow", "golisopod", "spiritomb", "raticate_alolan", "raticate_alolan_shadow", "cradily", "cradily_shadow", "empoleon", "empoleon_shadow", "altaria", "jellicent", "politoed", "politoed_shadow", "furfrou", "beedrill", "beedrill_shadow", "scizor", "scizor_shadow", "seaking", "pelipper", "dragapult", "typhlosion", "typhlosion_shadow", "tapu_fini", "rapidash", "furret", "pidgeot", "pidgeot_shadow", "gyarados", "gyarados_shadow", "lapras", "lapras_shadow", "noctowl", "zangoose", "forretress", "forretress_shadow", "mienshao", "sneasler", "sneasler_shadow", "sneasel_hisuian", "sneasel_hisuian_shadow", "qwilfish", "qwilfish_hisuian", "lunatone", "solrock", "victini", "poliwhirl", "poliwhirl_shadow", "magmar", "magmar_shadow", "magmortar", "magmortar_shadow", "sceptile", "sceptile_shadow", "marowak_alolan", "marowak_alolan_shadow", "runerigus", "gliscor", "gliscor_shadow", "regice", "regice_shadow", "nidoking", "nidoking_shadow", "flygon", "flygon_shadow", "sandslash", "sandslash_shadow", "rapidash_galarian", "swalot", "aurorus", "bewear", "starmie", "diggersby"]
+    }],
+    "exclude": [],
+    "overrides": [],
+    "levelCap": 50,
+    "includeLowStatProduct": true
+},"pillar3":{
+    "name": "pillar3",
+    "title": "Gymbreakers Pillar Cup Remix",
+    "include": [
+        {
+            "filterType": "id",
+            "name": "Species",
+            "values": ["bewear","bibarel","bibarel_shadow","starmie","lokix","ariados","leavanny","araquanid","beedrill","golisopod","beedrill_shadow","malamar","malamar_shadow","sableye","sableye_shadow","raticate_alolan","raticate_alolan_shadow","qwilfish_hisuian","goodra","arctibax","dragapult","sceptile","sceptile_shadow","froslass","froslass_shadow","spiritomb","trevenant","cresselia","rapidash_galarian","victini","stunfisk","runerigus","gligar","gligar_shadow","gliscor","gliscor_shadow","flygon","flygon_shadow","sandslash","sandslash_shadow","clodsire","weezing_galarian","weezing_galarian_shadow","drapion","drapion_shadow","swalot","nidoking","nidoking_shadow","nidoqueen","nidoqueen_shadow","regice","lapras","lapras_shadow","walrein","walrein_shadow","sealeo","sealeo_shadow","aurorus","aurorus_shadow","regirock","cradily","cradily_shadow","solrock","lunatone","lickilicky","miltank","ursaring","ursaring_shadow","diggersby","diggersby_shadow","noctowl","pidgeot","pidgeot_shadow","furfrou","greedent","zangoose","azumarill","feraligatr","feraligatr_shadow","castform_rainy","tapu_fini","qwilfish","empoleon","empoleon_shadow","samurott","samurott_shadow","pelipper","jellicent","seaking","poliwhirl","politoed","gyarados","sneasler","sneasler_shadow","gyarados_shadow","sneasel_hisuian","sneasel_hisuian_shadow","mienshao","mienshao_shadow","quagsire","quagsire_shadow","magmar","magmar_shadow","magmortar","magmortar_shadow","araquanid","fearow","crustle","oranguru","turtonator","castform","ninetales","ninetales_shadow","crustle_shadow"]
+        }
+    ],
+    "exclude": [
+    ]
+},"polaris":{
+    "name": "polaris",
+    "title": "Polaris Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug","ice","dark","electric"]
+    }, {
+        "filterType": "id",
+        "values": ["snorlax","tyrunt","cradily","samurott","snorlax_shadow","cradily_shadow","castform","greedent"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["araquanid","dewgong","ninetales_alolan","arctibax","frigibax","baxcalibur","ariados","malamar","charjabug","guzzlord","umbreon","obstagoon","lanturn","lanturnw","pachirisu","stunfisk","greninja","skuntank","pinsir"]
+    }, {
+        "filterType": "type",
+        "values": ["steel","fighting","fire","rock"]
+    }, {
+        "filterType": "move",
+        "values": ["MUD_SLAP"]
+    }]
+},"polkadot":{
+    "name": "polkadot",
+    "title": "Silph Polkadot Cup",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["beedrill", "venomoth", "heracross", "masquerain", "wormadam_sandy", "wormadam_plant", "vespiquen", "scolipede", "galvantula", "charjabug", "araquanid", "raichu", "nidoking", "golduck", "dewgong", "wailmer", "seviper", "sealeo", "bibarel", "serperior", "swoobat", "dedenne", "primarina", "arcanine", "rapidash", "rapidash_galarian", "vaporeon", "typhlosion", "girafarig", "sneasel_hisuian", "donphan", "blaziken", "manectric", "leafeon", "samurott", "zebstrika", "luxray", "emolga", "beartic", "quilladin", "chesnaught", "litleo", "pyroar", "sylveon", "oranguru", "xatu", "talonflame", "togekiss", "swanna", "clefable", "wigglytuff", "plusle", "minun", "florges", "aromatisse", "slurpuff", "raichu_alolan", "jumpluff", "granbull", "castform", "glalie", "roserade", "whimsicott", "arbok", "staraptor", "ledian", "scyther", "yanmega", "toucannon", "espeon", "glaceon", "golisopod", "flareon", "delphox", "heatmor", "zangoose", "emboar", "camerupt", "ampharos", "vikavolt", "jolteon", "bewear", "sandslash", "hippowdon", "pinsir", "kricketune", "lopunny", "linoone", "furret", "ursaluna", "wailord", "cherrim_sunny", "kecleon", "stoutland", "dustox", "braviary", "prinplup", "darmanitan_standard", "darmanitan_galarian_standard", "purugly"]
+    }],
+    "exclude": [],
+	"allowSameSpecies": true
+},"premierclassic":{
+	"name": "premierclassic",
+	"title": "Premier Classic",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}],
+	"partySize": 3,
+	"levelCap": 40
+},"primeval":{
+    "name": "primeval",
+    "title": "Silph Factions (Primeval)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "dragon", "electric", "ice", "rock"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["greedent", "snorlax", "munchlax", "lickilicky", "castform", "tapu_fini", "milotic", "arbok", "sceptile"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["shadow", "mega"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["fighting", "ground", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["ninetales_alolan", "obstagoon", "raichu", "walrein", "umbreon", "dewgong", "regirock", "lycanroc_midnight", "crustle", "dragalge", "pachirisu", "abomasnow", "sableye", "drapion", "moltres_galarian", "lileep", "guzzlord"]
+    }]
+},"primordial":{
+    "name": "primordial",
+    "title": "Battle Frontier (Primordial)",
+	"include": [{
+        "filterType": "type",
+        "values": ["dark","dragon","electric","ice","rock"]
+    },{
+        "filterType": "id",
+        "values": ["snorlax","munchlax","lickilicky","castform","milotic","arbok","sceptile","golisopod","togetic"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega","shadow"]
+    }, {
+        "filterType": "id",
+        "values": ["ninetales_alolan", "raichu","obstagoon","walrein","umbreon","dewgong","regirock","lycanroc_midnight","crustle","dragalge","abomasnow","pachirisu","chansey","carbink","haxorus","meowscarada","beartic","lanturn","diancie","stunfisk","guzzlord","avalugg_hisuian","lanturnw","giratina_origin","lileep"]
+    }, {
+        "filterType": "type",
+        "values": ["steel","fighting"]
+    }]
+},"psychic":{
+    "name": "psychic",
+    "title": "Psychic Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["psychic"]
+    }],
+    "exclude": [ {
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["mew"]
+    }],
+	"partySize": 3,
+	"presetOnly": true
+},"ragnar":{
+    "name": "ragnar",
+    "title": "Silph Factions (Ragnar)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dragon", "ice", "poison", "psychic", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["greedent", "snorlax", "miltank"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "electric", "rock"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["altaria", "ninetales_alolan", "sandshrew_alolan", "lanturn", "gardevoir", "toxicroak", "araquanid", "articuno_galarian", "toxapex", "pelipper", "sandslash_alolan", "medicham", "jellicent", "golbat", "crobat", "forretress", "sneasler"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega", "shadow"]
+    }],
+    "allowSameSpecies": true,
+    "partySize": 8
+},"ragnargymbreakers":{
+    "name": "ragnargymbreakers",
+    "title": "Gymbreakers (Ragnar)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dragon", "ice", "poison", "psychic", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["miltank", "snorlax", "snorlax_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "electric", "rock"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["altaria", "sandslash_alolan", "sandshrew_alolan", "ninetales_alolan", "lanturn", "toxicroak", "buzzwole", "sneasler", "medicham", "araquanid", "articuno_galarian", "toxapex", "jellicent", "pelipper", "golbat", "crobat", "forretress", "genesect"]
+    }],
+	"restrictedPicks": 2,
+	"restrictedPokemon": ["quagsire", "cresselia", "miltank", "escavalier", "mantine", "azumarill", "mew", "weezing_galarian"],
+    "allowSameSpecies": true,
+    "levelCap": 50
+},"rainstorm":{
+    "name": "rainstorm",
+    "title": "Devon Rainstorm Cup",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "flying", "water"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["ho_oh_shadow", "lugia_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "fairy", "fighting"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["obstagoon", "mantine", "toxapex", "whiscash", "skarmory", "ho_oh", "lugia", "celesteela", "pidgeot"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+    "levelCap": 50
+},"remix":{
+	"name": "remix",
+	"title": "Remix",
+	"include": [],
+	"exclude": [{
+		"filterType": "id",
+		"values": ["blastoise","primeape","marowak","azumarill","dunsparce","scizor","corsola_galarian","altaria","cradily","dusclops","empoleon","bastiodon","gastrodon","togekiss","stunfisk","talonflame","dedenne","corviknight","annihilape"],
+		"leagues": [1500]
+	}, {
+		"filterType": "id",
+		"values": ["venusaur", "muk_alolan", "umbreon", "swampert", "empoleon", "togekiss", "giratina_altered", "cresselia", "talonflame", "obstagoon"],
+		"leagues": [2500]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"retro":{
+	"name": "retro",
+	"title": "Retro Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "type",
+		"values": ["dark", "fairy", "steel"]
+	}, {
+		"filterType": "tag",
+		"values": ["mega"]
+	}],
+	"partySize": 3,
+	"presetOnly": true
+},"rivalry":{"name":"rivalry","title":"Rivalry","include":[{"filterType":"id","name":"Species","values":["aggron","aggron_shadow","araquanid","arctibax","aurorus","barbaracle","bombirdier","clefable","cofagrigus","corviknight","cradily","cradily_shadow","crawdaunt","crawdaunt_shadow","cresselia","cresselia_shadow","deoxys_defense","diggersby","dragalge","dunsparce","dusclops","dusclops_shadow","dusknoir","dusknoir_shadow","electrode","electrode_hisuian","electrode_shadow","electivire","electivire_shadow","ferrothorn","ferrothorn_shadow","froslass","froslass_shadow","furret","galvantula","galvantula_shadow","gengar","giratina_origin","glalie","glalie_shadow","gligar","gligar_shadow","golisopod","goodra","greedent","guzzlord","hitmonchan","hitmonchan_shadow","hitmonlee","hitmonlee_shadow","houndstone","jirachi","lapras","lapras_shadow","linoone","linoone_galarian","linoone_shadow","lunatone","lunatone_shadow","machamp","machamp_shadow","magmortar","magmortar_shadow","magneton","magneton_shadow","magnezone","magnezone_shadow","malamar","mandibuzz","mantine","marowak_alolan","marowak_alolan_shadow","marowak","marowak_shadow","mawile","mawile_shadow","milotic","muk","muk_alolan","muk_alolan_shadow","muk_shadow","nidoking","nidoking_shadow","nidoqueen","nidoqueen_shadow","ninetales","ninetales_alolan","ninetales_alolan_shadow","ninetales_shadow","obstagoon","pelipper","perrserker","politoed","politoed_shadow","poliwrath","poliwrath_shadow","primeape","primeape_shadow","qwilfish","qwilfish_hisuian","raichu","raichu_alolan","rapidash","rapidash_galarian","raticate_alolan","raticate_alolan_shadow","runerigus","sableye","sableye_shadow","sandslash","sandslash_alolan","sandslash_alolan_shadow","sandslash_shadow","seviper","slowbro","slowbro_galarian","slowbro_shadow","solrock","spiritomb","stunfisk","stunfisk_galarian","tapu_fini","tinkaton","tyranitar","tyranitar_shadow","tyrunt","ursaluna","ursaluna_shadow","ursaring","ursaring_shadow","vespiquen","weezing","weezing_galarian","weezing_galarian_shadow","weezing_shadow","whiscash","whiscash_shadow","wormadam_trash","zangoose"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct": true},"river":{
+   "name": "river",
+   "title": "Thedanies89's River Cup",
+   "link": "https://twitter.com/vaNNiiRL/status/1521861716744810497",
+   "restrictedPicks": 1,
+   "restrictedPokemon": ["malamar", "deoxys_defense", "melmetal", "froslass", "luxray", "sableye", "escavalier"],
+   "include": [{
+	   "filterType": "type",
+	   "name": "Type",
+	   "values": ["fire", "grass", "ground", "normal", "poison", "water"]
+   }, {
+	   "filterType": "id",
+	   "values": ["malamar", "deoxys_defense", "melmetal", "froslass", "luxray", "sableye", "sableye_shadow", "escavalier"]
+   }],
+   "exclude": [{
+	   "filterType": "type",
+	   "name": "Type",
+	   "values": ["flying"]
+   }, {
+	   "filterType": "tag",
+	   "name": "Tag",
+	   "values": ["mega"]
+   }, {
+	   "filterType": "id",
+	   "name": "Species",
+	   "values": ["walrein", "abomasnow", "araquanid"]
+   }]
+},"savannah":{
+    "name": "savannah",
+    "title": "Battle Frontier (Savannah)",
+    "include": [{
+        "filterType": "id",
+        "values": ["blaziken","poliwrath","tyrunt","regirock","qwilfish","togetic"]
+    }, {
+        "filterType": "type",
+        "values": ["electric", "normal", "grass","bug"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega","shadow"]
+    }, {
+        "filterType": "id",
+        "values": ["diggersby","pidgeot","vigoroth","dubwool","lanturn","stunfisk","noctowl"]
+    }]
+},"scroll":{
+	"name": "scroll",
+	"title": "Scroll Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["water", "fighting", "dark"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["primarina"]
+	}],
+	"partySize": 3
+},"serene":{
+    "name": "serene",
+    "title": "Battle Frontier (Serene)",
+	"include": [{
+        "filterType": "type",
+        "values": ["water","normal","psychic"]
+    },{
+        "filterType": "id",
+        "values": ["hitmontop","hitmontop_shadow","haunter", "haunter_shadow","conkeldurr","gengar", "gengar_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["araquanid", "lanturn","pidgeot","cresselia","medicham","poliwrath","obstagoon","wobbuffet","dubwool","vigoroth","heliolisk","toxapex","chansey","greedent","chinchou","lickitung","mantine","miltank","gardevoir","wigglytuff","primarina","rotom_wash","lanturnw","empoleon","feraligatr","gallade"]
+    },{
+        "filterType": "type",
+        "values": ["grass"]
+    }]
+},"single":{
+    "name": "single",
+    "title": "Single-Type Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["none"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["deoxys_defense", "deoxys", "deoxys_speed", "deoxys_attack", "cresselia"]
+    }],
+    "partySize": 3
+},"solstice":{
+    "name": "solstice",
+    "title": "Solstice Cup",
+	"include": [{
+        "filterType": "type",
+        "values": ["bug","ice","normal","psychic"]
+    },{
+        "filterType": "id",
+        "values": ["gyarados","gyarados_mega","gyarados_shadow","hippowdon","hippowdon_shadow","muk","muk_shadow","nihilego","samurott","samurott_shadow","swampert", "swampert_mega","swampert_shadow","weezing","weezing_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["fire","steel"]
+    }, {
+        "filterType": "id",
+        "values": ["aurorus","buzzwole","cresselia","golisopod","greedent","heracross","heracross_mega","leavanny","lickilicky","lokix","malamar","miltank","ninetales_alolan","oranguru","walrein","grumpig","lapras"]
+    }]
+},"sorcerousfactions":{
+	"name": "sorcerousfactions",
+	"title": "Silph Factions (Sorcerous)",
+	"include": [{
+		"filterType": "type",
+		"values": ["ice", "poison", "fairy", "psychic", "normal"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "mega"]
+	}, {
+		"filterType": "type",
+		"values": ["steel"]
+	}, {
+		"filterType": "cost",
+		"values": [100000, 75000]
+	}, {
+		"filterType": "id",
+		"values": ["dewgong", "obstagoon", "walrein", "diggersby", "lickitung", "nidoqueen", "qwilfish_hisuian", "overqwil", "wobbuffet", "medicham", "sneasler", "litleo", "pyroar", "articuno_galarian", "toxapex"]
+	}]
+},"sovereign":{
+    "name": "sovereign",
+    "title": "Devon Sovereign Cup",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "fairy", "ice", "normal", "psychic"]
+    }],
+    "exclude": [{
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["azumarill", "litleo", "greedent", "lickitung", "lanturn", "cresselia", "miltank", "froslass", "hoopa", "munchlax", "abomasnow", "arctibax", "baxcalibur", "frigibax", "bellibolt", "charjabug", "zangoose"]
+    }, {
+        "filterType": "type",
+        "name": "Type",
+        "values": ["ground", "rock", "steel"]
+    }]
+},"spicebowl":{
+	"name": "spicebowl",
+	"title": "Spice Bowl Cup",
+	"include": [],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["jumpluff","clodsire","mandibuzz","malamar","lapras","corsola_galarian","tinkaton","sableye","dusknoir","feraligatr","corviknight","weezing_galarian","grumpig","diggersby","primeape","carbink","azumarill","pangoro","annihilape","gastrodon","jellicent","machoke","steelix","toxapex","morpeko_full_belly","golurk","bastiodon","tinkatuff","claydol","clefable","furret","stunfisk","togedemaru","golisopod","emolga","marowak","sandslash_alolan","quagsire","drapion","guzzlord","dachsbun","marowak_alolan","cradily","aurorus","medicham","machamp","swalot","spiritomb","runerigus","blastoise","ninetales_alolan","registeel","drifblim","serperior","wigglytuff","talonflame","umbreon","lickitung","dewgong","lickilicky","dunsparce","klefki","gogoat","chansey","skarmory","blissey","mudbray","mudsdale","skiddo"]
+	}]
+},"stygian":{"name":"stygian","title":"Devon Stygian Cup","include":[{"filterType":"type","name":"Type","values":["dark","water","dragon","ice"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"type","name":"Type","values":["electric","fairy","rock"]},{"filterType":"id","name":"Species","values":["mandibuzz","toxapex","malamar","azumarill","feraligatr","umbreon","moltres_galarian","gastrodon","quagsire","pangoro","obstagoon","scrafty","poliwrath","lapras"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct": true},"summer":{
+	"name": "summer",
+	"title": "Summer Cup",
+	"include": [{
+		"filterType": "type",
+		"values":  ["normal", "grass", "fire", "water", "electric", "bug"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values":  ["mega"]
+	}]
+},"sunshine":{
+    "name": "sunshine",
+    "title": "Sunshine Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["normal", "fire", "ground", "grass"]
+    }],
+    "exclude": [ {
+        "filterType": "tag",
+        "values": ["mega"]
+    }, {
+        "filterType": "id",
+        "values": ["charizard"]
+    }],
+	"partySize": 3,
+	"presetOnly": true
+},"tempo":{
+    "name": "tempo",
+    "title": "Tempo Cup",
+    "include": [{
+        "filterType": "move",
+        "values": ["water_shuriken","bullet_seed","geomancy","rollout","snarl","incinerate","volt_switch","double_kick","hex","infestation","present","bubble","charge_beam","astonish","extrasensory","fire_spin","force_palm","ice_shard","magical_leaf","mud_slap","confusion","gust","splash","yawn","air_slash","dragon_tail","hidden_power_bug","smack_down","struggle_bug","take_down","waterfall"]
+    }, {
+        "filterType": "id",
+        "values": ["chatot","minun","plusle","sylveon","vaporeon"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["dark","dragon","fighting","ground","steel"]
+    }, {
+        "filterType": "tag",
+        "values": ["legendary","mythical","ultrabeast","mega"]
+    }, {
+        "filterType": "move",
+        "values": ["incinerate"]
+    }, {
+        "filterType": "id",
+        "values": ["aipom","anorith","araquanid","ariados","azumarill","bayleef","blastoise","boldore","cetitan","cetoddle","charjabug","chespin","chinchou","clauncher","clefable","comfey","corphish","corsola","corsola_galarian","corvisquire","cradily","cursola","deerling","dhelmise","dolliv","drifblim","drifloon","drowzee","dunsparce","duosion","dusclops","dusknoir","dwebble","elgyem","espeon","espurr","exeggcute","feraligatr","flaaffy","frillish","frogadier","froslass","gardevoir","gengar","geodude_alolan","gigalith","golem_alolan","","gothorita","grafaiai","graveler_alolan","greedent","grimer","grumpig","hatterene","hattrem","haunter","herdier","jellicent","jumpluff","kadabra","kangaskhan","koffing","krabby","lampent","lanturn","lapras","lickilicky","lileep","lombre","magmortar","mantyke","marowak_alolan","meganium","miltank","munna","ninetales","oinkologne","oinkologne_female","pachirisu","piplup","poliwhirl","porygon","prinplup","pumpkaboo_average","pumpkaboo_large","pumpkaboo_small","pumpkaboo_super","raichu","raichu_alolan","rampardos","roggenrola","roselia","roserade","rotom","rotom_frost","rotom_heat","rotom_mow","rotom_wash","rowlet","seel","shellos","simisear","skorupi","slowpoke","slowpoke_galarian","snover","solosis","spoink","spritzee","swadloon","swalot","tentacool","tranquill","tropius","typhlosion_hisuian","unown","vikavolt","wailmer","walrein","weepinbell","wobbuffet","wugtrio"]
+    }]
+},"timelessfactions":{
+	"name": "timelessfactions",
+	"title": "Silph Factions (Timeless)",
+	"restrictedPicks": 1,
+	"restrictedPokemon": ["bulbasaur", "ivysaur", "venusaur", "squirtle", "wartortle", "blastoise", "charmander", "charmeleon", "charizard", "chikorita", "bayleef", "meganium", "totodile", "croconaw", "feraligatr", "cyndaquil", "quilava", "typhlosion", "treecko", "grovyle", "sceptile", "mudkip", "marshtomp", "swampert", "torchic", "combusken", "blaziken", "turtwig", "grotle", "torterra", "piplup", "prinplup", "empoleon", "chimchar", "monferno", "infernape", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott"],
+	"include": [{
+		"filterType": "dex",
+		"values": [1, 649]
+	}, {
+		"filterType": "id",
+		"values": ["blaziken", "charizard", "infernape", "empoleon", "monferno", "prinplup", "combusken", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott"],
+		"includeShadows": false
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["legendary", "mythical", "shadow", "mega", "alolan", "hisuian", "galarian"]
+	}, {
+		"filterType": "type",
+		"values": ["dragon", "fairy", "fighting", "flying", "normal", "psychic", "steel"]
+	}, {
+		"filterType": "id",
+		"values": ["umbreon", "sableye", "drapion", "nidoqueen", "walrein", "pachirisu", "lileep"]
+	}]
+},"tundra":{"name":"tundra","title":"Tundra","include":[{"filterType":"type","name":"Type","values":["bug","dark","ice","normal","poison"]},{"filterType":"id","name":"Species","values":["goodra","politoed","politoed_shadow","gyarados","gyarados_shadow","ledian","ledian_shadow","armaldo","armaldo_shadow","ninjask","vespiquen","scyther","scyther_shadow","relicanth","tangrowth","tangrowth_shadow","sneasler"]}],"exclude":[{"filterType":"tag","name":"Tag","values":["mega"]},{"filterType":"id","name":"Species","values":["obstagoon","ursaring","arctibax","araquanid","tyranitar","dwebble","toxicroak","scrafty","vigoroth","lokix","miltank","greedent","dubwool","munchlax","oinkologne","oinkologne_female","castform","aurorus","amaura","crustle","buzzwole","heracross","dunsparce","toxapex","cetoddle"]},{"filterType":"type","name":"Type","values":["electric","fairy","fire","flying","ground","rock","steel"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50},"tundraremix":{
+    "name": "tundraremix",
+    "title": "Devon Tundra Cup (Gymbreakers Remix)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["bug", "dark", "ice", "normal", "poison"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["goodra", "politoed", "politoed_shadow", "tangrowth", "tangrowth_shadow", "relicanth", "gyarados", "gyarados_shadow", "scyther", "scyther_shadow", "vespiquen", "ninjask", "armaldo", "armaldo_shadow"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["electric", "fairy", "fire", "flying", "ground", "rock", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["obstagoon", "vigoroth", "toxicroak", "ursaring", "heracross", "buzzwole", "scrafty", "miltank", "lokix", "dubwool", "munchlax", "castform", "dunsparce", "araquanid", "toxapex", "arctibax", "oinkologne_female", "oinkologne_male", "greedent", "cetoddle", "malamar", "pangoro", "lickilicky", "oinkologne"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["mega"]
+    }],
+    "levelCap": 50,
+	"includeLowStatProduct": true
+},"tundraremixv2":{"name":"tundraremixv2","title":"Devon Tundra Cup (Gymbreakers Remix V2)","include":[{"filterType":"type","name":"Type","values":["bug","dark","ice","normal","poison"]},{"filterType":"id","name":"Species","values":["goodra","politoed","politoed_shadow","tangrowth","tangrowth_shadow","relicanth","gyarados","gyarados_shadow","scyther","scyther_shadow","vespiquen","ninjask","armaldo","armaldo_shadow"]}],"exclude":[{"filterType":"type","name":"Type","values":["electric","fairy","fire","flying","ground","rock","steel"]},{"filterType":"id","name":"Species","values":["dewgong","ariados","oranguru","obstagoon","vigoroth","toxicroak","ursaring","heracross","buzzwole","scrafty","miltank","lokix","dubwool","munchlax","castform","dunsparce","araquanid","toxapex","arctibax","oinkologne_female","oinkologne_male","cetoddle","malamar","pangoro","lickilicky","oinkologne"]},{"filterType":"tag","name":"Tag","values":["mega"]}],"overrides":[],"league":1500,"useDefaultMovesets":1,"levelCap":50,"includeLowStatProduct": true},"ufc-untapped-master":{
+    "name": "ufc-untapped-master",
+    "title": "UFC Untapped (Master League)",
+    "include": [],
+    "exclude": [
+        {
+            "filterType": "id",
+            "values": [
+                "victini",
+                "mew",
+                "pidgeot_mega",
+                "tyranitar_mega",
+                "gengar_mega",
+                "swampert_mega",
+                "gardevoir_mega",
+                "latios_mega",
+                "latias_mega",
+                "charizard_mega_y",
+                "gyarados_mega",
+                "groudon_primal",
+                "kyogre_primal",
+                "zygarde_complete",
+                "rayquaza_mega",
+                "garchomp_mega",
+                "heracross_mega",
+                "zygarde_10",
+                "solgaleo",
+                "aggron_mega",
+                "dialga_origin",
+                "palkia_origin",
+                "xerneas",
+                "steelix_mega",
+                "groudon",
+                "charizard_mega_x",
+                "meloetta_aria",
+                "salamence_mega",
+                "scizor_mega",
+                "landorus_therian",
+                "lugia",
+                "mewtwo_shadow",
+                "giratina_altered",
+                "palkia",
+                "slowbro_mega",
+                "mewtwo",
+                "reshiram",
+                "zekrom",
+                "blaziken_mega",
+                "kyurem",
+                "dragonite",
+                "ho_oh",
+                "groudon_shadow",
+                "zacian_hero",
+                "dialga",
+                "alakazam_mega",
+                "blastoise_mega",
+                "heatran",
+                "ho_oh_shadow",
+                "giratina_origin",
+                "lugia_shadow",
+                "aerodactyl_mega",
+                "zarude",
+                "dragonite_shadow",
+                "melmetal",
+                "kyogre",
+                "kyogre_shadow",
+                "venusaur_mega",
+                "yveltal",
+                "zapdos_galarian",
+                "enamorus_incarnate",
+                "buzzwole",
+                "keldeo_ordinary",
+                "landorus_incarnate",
+                "nihilego",
+                "ampharos_mega",
+                "regirock",
+                "regirock_shadow",
+                "garchomp",
+                "garchomp_shadow",
+                "lunala",
+                "diancie_mega",
+                "pinsir_mega",
+                "jirachi",
+                "rayquaza",
+                "zygarde",
+                "sceptile_mega",
+                "celebi",
+                "necrozma",
+                "necrozma_dawn_wings",
+                "necrozma_dusk_mane",
+                "marshadow"
+            ]
+        }
+    ]
+},"vanguard":{
+    "name": "vanguard",
+    "title": "Silph Factions (Vanguard)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "fighting", "flying", "ghost", "ground", "ice", "poison", "rock", "water"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "fairy", "steel"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["abomasnow", "trevenant", "altaria", "lanturn", "medicham", "sneasler", "aurorus"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["alolan", "galarian", "hisuian", "mega"]
+    }, {
+        "filterType": "dex",
+        "name": "Pokedex Number",
+        "values": [722, 898]
+    }]
+},"vanguardgymbreakers":{
+    "name": "vanguardgymbreakers",
+    "title": "Gymbreakers (Vanguard)",
+    "include": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dragon", "fighting", "flying", "ghost", "ground", "ice", "poison", "rock", "water"]
+    }, {
+        "filterType": "dex",
+        "name": "Pokedex Number",
+        "values": [1, 721]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "name": "Type",
+        "values": ["dark", "fairy", "steel"]
+    }, {
+        "filterType": "tag",
+        "name": "Tag",
+        "values": ["galarian", "hisuian", "mega"]
+    }, {
+        "filterType": "id",
+        "name": "Species",
+        "values": ["abomasnow", "medicham", "lanturn", "altaria", "cofagrigus", "noctowl", "pidgeot", "aurorus", "jellicent", "pelipper"]
+    }],
+	"allowSameSpecies": true,
+    "levelCap": 50
+},"wasteland":{
+    "name": "wasteland",
+    "title": "Wasteland Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["poison","ghost","steel","dark","psychic"]
+    },{
+        "filterType": "id",
+        "values": ["ampharos","gallade","farfetchd_galarian","electrode"]
+    }],
+    "exclude": [{
+        "filterType": "type",
+        "values": ["ground","electric","fire","dragon","fighting","flying"]
+    },{
+        "filterType": "id",
+        "values": ["registeel","bastiodon","probopass","weezing_galarian","sableye","klefki","umbreon","overqwil","empoleon","greninja","jellicent","drapion","sandslash_alolan","toxapex","grimer_alolan","stunky","tentacruel","raticate_alolan","forretress","grimer","genesect","mawile","malamar","spiritomb","corsola_galarian","cursola","dusknoir","grumpig","thievul","mightyena","amoonguss","dusclops","tinkatuff","tinkaton","cacturne","swalot"]
+    },{
+        "filterType": "tag",
+        "values": ["mega","shadow"]
+    },{
+        "filterType": "move",
+        "values": ["counter", "mud_slap"]
+    }]
+},"weather":{
+    "name": "weather",
+    "title": "Weather Cup",
+    "include": [{
+        "filterType": "type",
+        "values": ["fire", "water", "ice", "rock"]
+    }],
+    "exclude": [ {
+        "filterType": "tag",
+        "values": ["mega"]
+    }]
+},"willpower":{
+	"name": "willpower",
+	"title": "Willpower Cup",
+	"include": [{
+		"filterType": "type",
+		"values": ["dark", "psychic", "fighting"]
+	}],
+	"exclude": [{
+		"filterType": "tag",
+		"values": ["mega"]
+	}, {
+		"filterType": "id",
+		"values": ["gardevoir", "zorua", "zoroark"]
+	}],
+	"partySize": 3
+},"zodiac":{
+    "name": "zodiac",
+    "title": "Zodiac",
+    "include": [{
+        "filterType": "id",
+        "name": "Species",
+        "values": ["starmie", "dragonite", "dragonite_shadow", "seaking", "muk_alolan", "muk_alolan_shadow", "mew", "cradily", "cradily_shadow", "kingdra", "kingdra_shadow", "bewear", "skuntank", "skuntank_shadow", "munchlax", "electivire", "electivire_shadow", "linoone_galarian", "sandslash", "sandslash_shadow", "cresselia", "alakazam", "alakazam_shadow", "armaldo", "armaldo_shadow", "zweilous", "ursaluna", "ursaluna_shadow", "castform", "gallade", "gallade_shadow", "malamar", "pangoro", "qwilfish_hisuian", "froslass", "froslass_shadow", "regice", "regice_shadow", "slowbro_galarian", "barbaracle", "donphan", "donphan_shadow", "girafarig", "girafarig_shadow", "perrserker", "staraptor", "staraptor_shadow", "sneasler", "sneasler_shadow", "snorlax", "snorlax_shadow", "farfetchd_galarian", "furret", "golduck", "golduck_shadow", "suicune", "suicune_shadow", "greedent", "excadrill", "excadrill_shadow", "jumpluff", "jumpluff_shadow", "roserade", "sceptile", "sceptile_shadow", "sealeo", "sealeo_shadow", "lapras", "lapras_shadow", "walrein", "walrein_shadow", "tentacruel", "tentacruel_shadow", "pinsir", "pinsir_shadow", "ariados", "electrode_hisuian", "rapidash", "cetitan"]
+    }],
+    "exclude": []
+}};

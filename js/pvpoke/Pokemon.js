@@ -423,7 +423,7 @@ function Pokemon(id, i, b, d){
         this.startHp = this.hp;
 
         this.cp = self.calculateCP();
-
+		
 		self.isCustom = true;
 	}
 
@@ -2459,7 +2459,7 @@ function Pokemon(id, i, b, d){
 	}
 
 	this.replaceMove = function(moveType, oldMoveId, newMoveId){
-		if(moveType == "fast"){
+		if(moveType == "fast" && self.fastMove){
 			if(self.fastMove.moveId == oldMoveId){
 				self.selectMove(moveType, newMoveId, 0, true);
 			}
