@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Battle Sim — Dev Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { padding: 16px; font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; }
+        h1, h2 { margin-top: 0; }
+        .teams { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 16px; }
+        .team-card { border: 1px solid #444; padding: 12px; border-radius: 6px; background: #1a1a1a; }
+        .team-card h3 { margin-top: 0; }
+        .poke-row { display: grid; grid-template-columns: 2fr 50px 50px 50px; gap: 6px; align-items: center; margin-bottom: 6px; }
+        .poke-row input { padding: 4px; background: #222; color: #ddd; border: 1px solid #555; border-radius: 3px; }
+        .poke-row .species-search-wrapper { position: relative; }
+        .poke-row .species-search-wrapper input { width: 100%; box-sizing: border-box; }
+        .poke-row .species-search-wrapper input.resolved { border-color: #2a7; }
+        .poke-row .species-search-wrapper input.unresolved { border-color: #c44; }
+        .poke-row .search-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: #222; border: 1px solid #555; max-height: 240px; overflow-y: auto; z-index: 100; display: none; }
+        .poke-row .search-dropdown.visible { display: block; }
+        .poke-row .search-item { padding: 4px 8px; cursor: pointer; color: #ddd; font-size: 0.85rem; }
+        .poke-row .search-item:hover, .poke-row .search-item.selected { background: #2a7; color: #fff; }
+        .controls { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+        .controls label { display: flex; align-items: center; gap: 6px; }
+        .controls select, .controls input { padding: 4px; background: #222; color: #ddd; border: 1px solid #555; border-radius: 3px; }
+        .btn-primary { background: #2a7; color: #fff; border: none; padding: 8px 16px; cursor: pointer; border-radius: 4px; font-weight: 600; }
+        .btn-secondary { background: #555; color: #fff; border: none; padding: 8px 16px; cursor: pointer; border-radius: 4px; }
+        .progress-bar { height: 8px; background: #222; border-radius: 4px; overflow: hidden; margin: 8px 0; display: none; }
+        .progress-bar-fill { height: 100%; background: #2a7; width: 0%; transition: width 0.2s; }
+        .panel { border: 1px solid #444; padding: 12px; border-radius: 6px; background: #1a1a1a; margin-bottom: 16px; }
+        .panel h2 { font-size: 1.1rem; border-bottom: 1px solid #333; padding-bottom: 6px; margin-bottom: 8px; }
+        .panel.error { border-color: #c44; background: #2a1010; }
+        .panel.error h2 { color: #faa; }
+        .error-item { padding: 6px 8px; margin: 4px 0; background: #3a1a1a; border-left: 3px solid #c44; font-size: 0.9rem; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+        .summary-cell { background: #222; padding: 8px; border-radius: 4px; }
+        .summary-cell .label { font-size: 0.8rem; color: #999; }
+        .summary-cell .value { font-size: 1.2rem; font-weight: 600; }
+        .lead-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .lead-table th, .lead-table td { padding: 4px 8px; border: 1px solid #333; text-align: left; }
+        .lead-table th { background: #222; }
+        .win-list { list-style: none; padding: 0; }
+        .win-item { background: #222; padding: 8px; margin-bottom: 6px; border-radius: 4px; border-left: 3px solid #2a7; }
+        .win-item .desc { font-weight: 600; }
+        .win-item .meta { font-size: 0.8rem; color: #999; margin-top: 4px; }
+        .crit-list { list-style: none; padding: 0; }
+        .crit-item { background: #222; padding: 8px; margin-bottom: 6px; border-radius: 4px; border-left: 3px solid #f80; }
+        .crit-item .turn { font-size: 0.8rem; color: #999; }
+        .crit-item .ctx { font-weight: 600; margin: 4px 0; }
+        .empty { color: #666; font-style: italic; }
+        .verify-output { background: #111; padding: 8px; border-radius: 4px; font-family: monospace; font-size: 0.85rem; max-height: 300px; overflow-y: auto; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+<h1>Team Battle Sim — Dev Page</h1>
+<p style="color:#999">Phase 1 engine harness. Type a species name to autocomplete; pick from the dropdown to lock it in. See <a href="docs/pvp_mechanics.md" style="color:#2a7">docs/pvp_mechanics.md</a> for the mechanics this models.</p>
+
+<div class="loading-overlay" id="loadingOverlay">Loading game data...</div>
+
+<div class="controls">
+    <label>League
+        <select id="cpCapSelect">
+            <option value="1500">Great (1500)</option>
+            <option value="2500">Ultra (2500)</option>
+            <option value="10000">Master (10000)</option>
+        </select>
+    </label>
+    <label>Shields/player
+        <input type="number" id="shieldsInput" value="2" min="0" max="2" style="width:50px">
+    </label>
+    <label>Max branches
+        <input type="number" id="maxBranchesInput" value="1500" min="100" max="50000" style="width:80px">
+    </label>
+    <label title="By default, both teams' slot-0 pokemon are used as the lead. Check to enumerate all 9 lead pairs (slower).">
+        <input type="checkbox" id="exploreLeadsToggle"> Explore all 9 lead pairs
+    </label>
+    <button class="btn-primary" id="btnRun">Run Simulation</button>
+    <button class="btn-secondary" id="btnVerify">Run Verify Suite</button>
+    <button class="btn-secondary" id="btnExampleTeams">Load Example Teams</button>
+</div>
+
+<div class="progress-bar" id="progressBar">
+    <div class="progress-bar-fill" id="progressBarFill"></div>
+</div>
+<div id="statusLine" style="font-size:0.85rem; color:#999"></div>
+
+<div class="teams">
+    <div class="team-card">
+        <h3>Team A</h3>
+        <div class="poke-row" style="font-size:0.8rem;color:#999">
+            <div>Species</div><div>ATK</div><div>DEF</div><div>HP</div>
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="aSpec0" placeholder="Search…"><div class="search-dropdown" id="aDrop0"></div></div>
+            <input id="aAtk0" value="0"><input id="aDef0" value="15"><input id="aHp0" value="15">
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="aSpec1" placeholder="Search…"><div class="search-dropdown" id="aDrop1"></div></div>
+            <input id="aAtk1" value="0"><input id="aDef1" value="15"><input id="aHp1" value="15">
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="aSpec2" placeholder="Search…"><div class="search-dropdown" id="aDrop2"></div></div>
+            <input id="aAtk2" value="0"><input id="aDef2" value="15"><input id="aHp2" value="15">
+        </div>
+    </div>
+    <div class="team-card">
+        <h3>Team B</h3>
+        <div class="poke-row" style="font-size:0.8rem;color:#999">
+            <div>Species</div><div>ATK</div><div>DEF</div><div>HP</div>
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="bSpec0" placeholder="Search…"><div class="search-dropdown" id="bDrop0"></div></div>
+            <input id="bAtk0" value="0"><input id="bDef0" value="15"><input id="bHp0" value="15">
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="bSpec1" placeholder="Search…"><div class="search-dropdown" id="bDrop1"></div></div>
+            <input id="bAtk1" value="0"><input id="bDef1" value="15"><input id="bHp1" value="15">
+        </div>
+        <div class="poke-row">
+            <div class="species-search-wrapper"><input id="bSpec2" placeholder="Search…"><div class="search-dropdown" id="bDrop2"></div></div>
+            <input id="bAtk2" value="0"><input id="bDef2" value="15"><input id="bHp2" value="15">
+        </div>
+    </div>
+</div>
+
+<!-- Error panel (shown when species fail to resolve or engine returns errors) -->
+<div class="panel error" id="errorPanel" style="display:none">
+    <h2>Errors</h2>
+    <div id="errorList"></div>
+</div>
+
+<!-- Output panels -->
+<div id="results" style="display:none">
+    <div class="panel">
+        <h2>Summary</h2>
+        <div class="summary-grid" id="summaryGrid"></div>
+    </div>
+
+    <div class="panel">
+        <h2>Lead Pair Breakdown</h2>
+        <div id="leadBreakdown"></div>
+    </div>
+
+    <div class="panel">
+        <h2>Win Conditions — Team A</h2>
+        <ul class="win-list" id="winListA"></ul>
+    </div>
+
+    <div class="panel">
+        <h2>Win Conditions — Team B</h2>
+        <ul class="win-list" id="winListB"></ul>
+    </div>
+
+    <div class="panel">
+        <h2>Critical Decisions</h2>
+        <ul class="crit-list" id="critList"></ul>
+    </div>
+</div>
+
+<div class="panel" id="verifyPanel" style="display:none">
+    <h2>Verify Output</h2>
+    <div class="verify-output" id="verifyOutput"></div>
+</div>
+
+<!-- Game data -->
+<script src="data/gamemaster-data.js"></script>
+<script src="data/meta-groups.js"></script>
+<script src="data/ranking-movesets.js"></script>
+<script src="data/archived-cups.js"></script>
+<script src="data/ranking-scores.js"></script>
+
+<!-- PvPoke engine (verbatim) -->
+<script src="js/pvpoke/GameMasterShim.js"></script>
+<script src="js/pvpoke/DamageCalculator.js"></script>
+<script src="js/pvpoke/DecisionOption.js"></script>
+<script src="js/pvpoke/TimelineAction.js"></script>
+<script src="js/pvpoke/TimelineEvent.js"></script>
+<script src="js/pvpoke/Pokemon.js"></script>
+<script src="js/pvpoke/ActionLogic.js"></script>
+<script src="js/pvpoke/Battle.js"></script>
+
+<!-- App support layer (existing) -->
+<script src="js/types.js"></script>
+<script src="js/gamemaster.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/battle.js"></script>
+
+<!-- Team Sim engine (new) -->
+<script src="js/teamsim/state.js"></script>
+<script src="js/teamsim/tree.js"></script>
+<script src="js/teamsim/pruning.js"></script>
+<script src="js/teamsim/leg.js"></script>
+<script src="js/teamsim/analysis.js"></script>
+<script src="js/teamsim/orchestrator.js"></script>
+<script src="js/teamsim/engine.js"></script>
+<script src="js/teamsim/_verify.js"></script>
+
+<script>
+(function() {
+    var qs = function(id) { return document.getElementById(id); };
+
+    var SPEC_INPUTS = ['aSpec0','aSpec1','aSpec2','bSpec0','bSpec1','bSpec2'];
+    var DROP_INPUTS = ['aDrop0','aDrop1','aDrop2','bDrop0','bDrop1','bDrop2'];
+
+    // ============ SPECIES AUTOCOMPLETE ============
+    // Pattern mirrors js/app.js:111-156 — adapted for 6 inputs, each with its
+    // own dropdown. Resolved speciesId is stored on the input's dataset.
+
+    function setupSpeciesAutocomplete(inputId, dropdownId) {
+        var input = qs(inputId);
+        var dropdown = qs(dropdownId);
+        var selectedIdx = -1;
+
+        input.addEventListener('input', function() {
+            // User typed — invalidate any previously-resolved selection until they reselect.
+            input.dataset.speciesId = '';
+            input.classList.remove('resolved');
+            input.classList.add('unresolved');
+
+            var q = input.value.toLowerCase().trim();
+            if (q.length < 2) { dropdown.classList.remove('visible'); return; }
+            var all = PvPIV.getAllPokemon().filter(function(p) {
+                return p.released &&
+                    p.speciesId.indexOf('_mega') === -1 &&
+                    p.speciesId.indexOf('_shadow') === -1 &&
+                    (p.speciesName.toLowerCase().indexOf(q) > -1 ||
+                     p.speciesId.toLowerCase().indexOf(q) > -1 ||
+                     (p.nicknames && p.nicknames.some(function(n) { return n.toLowerCase().indexOf(q) > -1; })));
+            }).slice(0, 20);
+
+            dropdown.innerHTML = all.map(function(p) {
+                return '<div class="search-item" data-id="' + p.speciesId + '">' + p.speciesName + '</div>';
+            }).join('');
+            dropdown.classList.toggle('visible', all.length > 0);
+            selectedIdx = -1;
+        });
+
+        input.addEventListener('keydown', function(e) {
+            var items = dropdown.querySelectorAll('.search-item');
+            if (e.key === 'ArrowDown') { selectedIdx = Math.min(selectedIdx + 1, items.length - 1); updateSelected(items); e.preventDefault(); }
+            else if (e.key === 'ArrowUp') { selectedIdx = Math.max(selectedIdx - 1, 0); updateSelected(items); e.preventDefault(); }
+            else if (e.key === 'Enter' && selectedIdx >= 0 && items[selectedIdx]) {
+                pickSpecies(items[selectedIdx].dataset.id);
+                dropdown.classList.remove('visible');
+                e.preventDefault();
+            }
+            else if (e.key === 'Escape') { dropdown.classList.remove('visible'); }
+        });
+
+        dropdown.addEventListener('click', function(e) {
+            var item = e.target.closest('.search-item');
+            if (item) { pickSpecies(item.dataset.id); dropdown.classList.remove('visible'); }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.species-search-wrapper') || e.target.closest('.species-search-wrapper').querySelector('input') !== input) {
+                dropdown.classList.remove('visible');
+            }
+        });
+
+        function pickSpecies(speciesId) {
+            var p = PvPIV.getPokemonById(speciesId);
+            if (!p) return;
+            input.value = p.speciesName;
+            input.dataset.speciesId = speciesId;
+            input.classList.remove('unresolved');
+            input.classList.add('resolved');
+        }
+
+        function updateSelected(items) {
+            for (var i = 0; i < items.length; i++) items[i].classList.toggle('selected', i === selectedIdx);
+            if (items[selectedIdx]) items[selectedIdx].scrollIntoView({ block: 'nearest' });
+        }
+
+        // Expose pickSpecies for example-team setup
+        input._pickSpecies = pickSpecies;
+    }
+
+    // ============ TEAM READ + VALIDATION ============
+    function readTeam(prefix) {
+        var team = [];
+        for (var i = 0; i < 3; i++) {
+            var input = qs(prefix + 'Spec' + i);
+            var speciesId = input.dataset.speciesId || '';
+            if (!speciesId) continue;
+            team.push({
+                speciesId: speciesId,
+                ivs: {
+                    atk: parseInt(qs(prefix + 'Atk' + i).value) || 0,
+                    def: parseInt(qs(prefix + 'Def' + i).value) || 0,
+                    hp:  parseInt(qs(prefix + 'Hp' + i).value)  || 0
+                }
+            });
+        }
+        return team;
+    }
+
+    function validateInputsResolved() {
+        var errors = [];
+        for (var i = 0; i < SPEC_INPUTS.length; i++) {
+            var input = qs(SPEC_INPUTS[i]);
+            if (!input.dataset.speciesId) {
+                var label = (i < 3 ? 'Team A' : 'Team B') + ' slot ' + ((i % 3) + 1);
+                errors.push({
+                    team: i < 3 ? 'A' : 'B',
+                    slot: i % 3,
+                    speciesId: input.value || '(empty)',
+                    message: label + ': type a species and pick from the dropdown'
+                });
+                input.classList.add('unresolved');
+            }
+        }
+        return errors;
+    }
+
+    // ============ RENDERING ============
+    function renderErrors(errors) {
+        if (!errors || errors.length === 0) {
+            qs('errorPanel').style.display = 'none';
+            return;
+        }
+        qs('errorPanel').style.display = 'block';
+        qs('errorList').innerHTML = errors.map(function(e) {
+            return '<div class="error-item">' +
+                '<strong>Team ' + e.team + ' slot ' + (e.slot + 1) + '</strong>: ' +
+                e.message +
+                (e.speciesId ? ' <span style="color:#999">(' + e.speciesId + ')</span>' : '') +
+                '</div>';
+        }).join('');
+    }
+
+    function renderSummary(s) {
+        if (!s) { qs('summaryGrid').innerHTML = ''; return; }
+        var html = '';
+        html += cell('Branches Explored', s.totalBranches);
+        html += cell('Team A Win %', (s.winRateA * 100).toFixed(1) + '%');
+        html += cell('Team B Win %', (s.winRateB * 100).toFixed(1) + '%');
+        html += cell('Tie %', (s.tieRate * 100).toFixed(1) + '%');
+        html += cell('Avg Remaining A', s.avgRemainingA.toFixed(2));
+        html += cell('Avg Remaining B', s.avgRemainingB.toFixed(2));
+        html += cell('Confidence', s.confidence);
+        html += cell('Approximated Leaves', s.approximatedCount || 0);
+        qs('summaryGrid').innerHTML = html;
+    }
+    function cell(label, value) {
+        return '<div class="summary-cell"><div class="label">' + label + '</div><div class="value">' + value + '</div></div>';
+    }
+
+    function renderLeadBreakdown(leads) {
+        if (!leads || leads.length === 0) {
+            qs('leadBreakdown').innerHTML = '<div class="empty">No lead breakdown data.</div>';
+            return;
+        }
+        var rows = leads.map(function(l) {
+            var keyDec = l.keyDecision ? l.keyDecision.description : '—';
+            // Use friendly pokemon names from the enriched edge payload
+            var aLabel = '—', bLabel = '—';
+            if (l.leadA !== undefined && l.leadB !== undefined) {
+                // The lead edge payload (set in orchestrator) has leadAName / leadBName.
+                // computeLeadAnalysis surfaces leadA/leadB; we look up names from the
+                // tree's root if available, but fall back to bracket notation for safety.
+                aLabel = (l.leadAName || ('A[' + l.leadA + ']'));
+                bLabel = (l.leadBName || ('B[' + l.leadB + ']'));
+            }
+            return '<tr>' +
+                '<td>' + aLabel + ' vs ' + bLabel + '</td>' +
+                '<td>' + (l.winRateA * 100).toFixed(0) + '%</td>' +
+                '<td>' + (l.winRateB * 100).toFixed(0) + '%</td>' +
+                '<td>' + l.branchCount + '</td>' +
+                '<td>' + keyDec + '</td>' +
+            '</tr>';
+        }).join('');
+        qs('leadBreakdown').innerHTML =
+            '<table class="lead-table"><thead><tr>' +
+            '<th>Lead Pair</th><th>A Win%</th><th>B Win%</th><th>Branches</th><th>Key Decision</th>' +
+            '</tr></thead><tbody>' + rows + '</tbody></table>';
+    }
+
+    function renderWinList(elemId, conditions) {
+        var el = qs(elemId);
+        if (!conditions || conditions.length === 0) {
+            el.innerHTML = '<li class="empty">No winning branches identified.</li>';
+            return;
+        }
+        el.innerHTML = conditions.map(function(c) {
+            return '<li class="win-item">' +
+                '<div class="desc">' + c.description + '</div>' +
+                '<div class="meta">' +
+                'Occurs in ' + c.occurrences.toFixed(0) + ' branches (' + (c.shareOfWins * 100).toFixed(0) + '% of wins)' +
+                (c.preconditions && c.preconditions.length ? '<br>Key moves: ' + c.preconditions.join('; ') : '') +
+                '</div>' +
+            '</li>';
+        }).join('');
+    }
+
+    function renderCriticalDecisions(decisions) {
+        if (!decisions || decisions.length === 0) {
+            qs('critList').innerHTML = '<li class="empty">No high-variance decisions surfaced.</li>';
+            return;
+        }
+        qs('critList').innerHTML = decisions.map(function(d) {
+            return '<li class="crit-item">' +
+                '<div class="turn">Turn ' + d.turn + ' · variance ' + (d.variance * 100).toFixed(0) + '%</div>' +
+                '<div class="ctx">' + d.context + '</div>' +
+                '<div class="meta">' + (d.reasoning || '') + '</div>' +
+            '</li>';
+        }).join('');
+    }
+
+    function setStatus(text) { qs('statusLine').textContent = text; }
+    function setProgress(pct) { qs('progressBarFill').style.width = pct + '%'; }
+
+    // ============ EVENT HANDLERS ============
+    qs('btnRun').addEventListener('click', async function() {
+        // Pre-run validation: all 6 inputs must have resolved species IDs.
+        var inputErrors = validateInputsResolved();
+        if (inputErrors.length > 0) {
+            qs('results').style.display = 'none';
+            renderErrors(inputErrors);
+            setStatus('Fix species inputs above and try again.');
+            return;
+        }
+        renderErrors([]);
+
+        var teamA = readTeam('a');
+        var teamB = readTeam('b');
+        if (teamA.length !== 3 || teamB.length !== 3) {
+            renderErrors([{ team: '-', slot: -1, speciesId: '', message: 'Each team needs 3 pokemon.' }]);
+            return;
+        }
+
+        qs('results').style.display = 'none';
+        qs('progressBar').style.display = 'block';
+        setProgress(0);
+        setStatus('Running...');
+
+        try {
+            // simulateTeamBattle is async; the engine yields to the event loop
+            // periodically so the UI stays responsive during long runs.
+            var result = await PvPIV.teamsim.simulateTeamBattle(teamA, teamB, {
+                cpCap: parseInt(qs('cpCapSelect').value),
+                levelCap: 50,
+                shields: parseInt(qs('shieldsInput').value),
+                maxBranches: parseInt(qs('maxBranchesInput').value),
+                exploreLeads: qs('exploreLeadsToggle').checked,
+                onProgress: function(info) {
+                    setProgress(info.percent);
+                    setStatus('Explored ' + info.exploredBranches + ' branches…');
+                },
+                includeTree: true
+            });
+
+            if (result.errors && result.errors.length > 0) {
+                setStatus('Simulation aborted — see errors below.');
+                renderErrors(result.errors);
+                return;
+            }
+
+            setProgress(100);
+            setStatus('Done — ' + result.timing.elapsedMs + 'ms, ' + result.timing.totalNodes + ' nodes, depth ' + result.timing.treeDepth);
+
+            renderSummary(result.summary);
+            renderLeadBreakdown(result.leadAnalysis);
+            renderWinList('winListA', result.winConditions.A);
+            renderWinList('winListB', result.winConditions.B);
+            renderCriticalDecisions(result.criticalDecisions);
+
+            qs('results').style.display = 'block';
+
+            // Stash result globally for console drill-down
+            window.lastResult = result;
+            console.log('Result available as window.lastResult');
+        } catch (e) {
+            console.error(e);
+            setStatus('Error: ' + e.message);
+            renderErrors([{ team: '-', slot: -1, speciesId: '', message: 'Simulation failed: ' + e.message + ' (see console)' }]);
+        }
+    });
+
+    qs('btnVerify').addEventListener('click', async function() {
+        qs('verifyPanel').style.display = 'block';
+        var out = qs('verifyOutput');
+        out.textContent = '';
+        var origLog = console.log;
+        var lines = [];
+        console.log = function() {
+            var s = Array.prototype.slice.call(arguments).join(' ');
+            lines.push(s);
+            origLog.apply(console, arguments);
+            out.textContent = lines.join('\n');
+        };
+        try {
+            await PvPIV.teamsim.verify.runAll();
+        } catch (e) {
+            lines.push('THREW: ' + e.message);
+            out.textContent = lines.join('\n');
+        } finally {
+            console.log = origLog;
+        }
+    });
+
+    qs('btnExampleTeams').addEventListener('click', function() {
+        var a = ['medicham', 'cresselia', 'sableye'];
+        var b = ['azumarill', 'stunfisk_galarian', 'trevenant'];
+        for (var i = 0; i < 3; i++) {
+            qs('aSpec' + i)._pickSpecies(a[i]);
+            qs('bSpec' + i)._pickSpecies(b[i]);
+        }
+        renderErrors([]);
+    });
+
+    // Load the gamemaster data (populates PvPIV.getAllPokemon / getPokemonById),
+    // then wire up the autocompletes. Without this, all lookups return empty
+    // and pickSpecies silently no-ops.
+    PvPIV.loadGameMaster().then(function() {
+        for (var i = 0; i < SPEC_INPUTS.length; i++) {
+            setupSpeciesAutocomplete(SPEC_INPUTS[i], DROP_INPUTS[i]);
+        }
+        var overlay = qs('loadingOverlay');
+        if (overlay) overlay.style.display = 'none';
+    });
+})();
+</script>
+
+</body>
+</html>
