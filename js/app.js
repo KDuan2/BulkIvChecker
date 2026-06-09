@@ -1264,11 +1264,14 @@
     // loadGetData parser. The "4-4-1-0" tail = neutral atk/def buffs, default bait,
     // default move timing — matching PvPoke's own defaults.
     function pvpokePokeStr(p) {
-        var s = p.speciesId + '-' + p.level + '-' + p.ivs.atk + '-' + p.ivs.def + '-' + p.ivs.hp + '-4-4-1-0';
-        if (p.shadowType && p.shadowType !== 'normal' && p.speciesId.indexOf('_shadow') === -1) {
-            s += '-' + p.shadowType;
+        // PvPoke keys shadows as a separate "<base>_shadow" species id — that's what
+        // its own battle links use — so encode shadow into the id, not a "-shadow"
+        // suffix (which the battle page doesn't reliably honor).
+        var id = p.speciesId;
+        if (p.shadowType === 'shadow' && id.indexOf('_shadow') === -1) {
+            id += '_shadow';
         }
-        return s;
+        return id + '-' + p.level + '-' + p.ivs.atk + '-' + p.ivs.def + '-' + p.ivs.hp + '-4-4-1-0';
     }
 
     function pvpokeMoveStr(p) {
