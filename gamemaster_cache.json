@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-05-08 15:17:12",
+    "timestamp": "2026-06-09 00:44:18",
     "id": "gamemaster",
     "title": "Default",
     "settings": {
@@ -158,41 +158,6 @@
             ]
         },
         {
-            "name": "chrono",
-            "title": "Zygarden Chrono Meta",
-            "include": [],
-            "exclude": [
-                {
-                    "filterType": "id",
-                    "values": ["volcanion", "ditto", "shedinja", "xerneas", "yveltal", "mudbray", "mudsdale"]
-                },
-                {
-                    "filterType": "tag",
-                    "values": ["mega"]
-                }
-            ],
-            "slots": [
-                {
-                    "pokemon": ["dedenne", "cradily", "cradily_shadow", "lapras", "lapras_shadow", "dusclops", "dusclops_shadow", "clodsire", "clodsiresb", "tinkaton", "jumpluff", "jumpluff_shadow", "primeape", "primeape_shadow", "ariados", "corsola_galarian", "marowak", "marowak_shadow", "talonflame"]
-                },
-                {
-                    "pokemon": ["lanturn", "charjabug", "vigoroth", "vigoroth_shadow", "cresselia", "cresselia_shadow", "dewgong", "gligar", "gligar_shadow", "skeledirge", "skarmory", "skarmory_shadow", "froslass", "froslass_shadow", "wigglytuff", "whiscash", "whiscash_shadow", "carbink"]
-                },
-                {
-                    "pokemon": ["stunfisk_galarian", "noctowl", "swampert", "swampert_shadow", "charizard", "charizard_shadow", "sandslash_alolan", "sandslash_alolan_shadow", "trevenant", "medicham", "ninetales_alolan", "ninetales_alolan_shadow", "venusaur", "venusaur_shadow", "altaria", "nidoqueen", "nidoqueen_shadow", "walrein", "walrein_shadow"]
-                },
-                {
-                    "pokemon": ["annihilape", "annihilape_shadow", "azumarill", "drapion", "drapion_shadow", "diggersby", "feraligatr", "feraligatr_shadow", "mandibuzz", "lickitung", "sableye", "sableye_shadow", "umbreon", "registeel", "registeel_shadow", "serperior", "serperior_shadow", "quagsire", "quagsire_shadow"]
-                },
-                {
-                    "pokemon": ["abomasnow", "abomasnow_shadow", "absol", "absol_shadow", "accelgor", "accelgor_shadow", "aerodactyl", "aerodactyl_shadow", "aggron", "aggron_shadow", "aipom", "aipom_shadow", "alakazam", "alakazam_shadow", "alomomola", "amaura", "amaura_shadow", "ambipom", "ambipom_shadow", "amoonguss", "amoonguss_shadow", "ampharos", "ampharos_shadow", "anorith", "anorith_shadow", "appletun", "araquanid", "arbok", "arbok_shadow", "arboliva", "arcanine", "arcanine_hisuian", "arcanine_shadow", "archen", "archen_shadow", "archeops", "archeops_shadow", "arctibax", "armaldo", "armaldo_shadow", "armarouge", "aromatisse", "aron", "aron_shadow", "articuno", "articuno_galarian", "articuno_shadow", "audino", "aurorus", "aurorus_shadow", "avalugg", "avalugg_hisuian", "axew", "azelf", "banette", "banette_shadow", "barbaracle", "basculin", "bastiodon", "bastiodon_shadow", "baxcalibur", "bayleef", "bayleef_shadow", "beartic", "beautifly", "beedrill", "beedrill_shadow", "beheeyem", "bellibolt", "bellossom", "bellossom_shadow", "bergmite", "bewear", "bibarel", "bibarel_shadow", "bisharp", "blastoise", "blastoise_shadow", "blaziken", "blaziken_shadow", "blissey", "boldore", "boldore_shadow", "boltund", "bombirdier", "bonsly", "bouffalant", "braixen", "braviary", "braviary_hisuian", "breloom", "brionne", "bronzong", "bruxish", "bulbasaur", "bulbasaur_shadow", "buneary", "butterfree", "butterfree_shadow", "buzzwole", "cacturne", "cacturne_shadow", "camerupt", "camerupt_shadow", "carnivine", "carracosta", "carracosta_shadow", "castform", "castform_rainy", "castform_snowy", "castform_sunny", "celebi", "celesteela", "centiskorch", "ceruledge", "cetitan", "cetoddle", "chandelure", "chandelure_shadow", "chansey", "charmeleon", "charmeleon_shadow", "chatot", "cherrim_overcast", "cherrim_sunny", "chesnaught", "chespin", "chimecho", "chinchou", "cinccino", "cinderace", "clamperl", "clauncher", "clawitzer", "claydol", "clefable", "clefairy", "cloyster", "cloyster_shadow", "cofagrigus", "combusken", "combusken_shadow", "comfey", "conkeldurr", "conkeldurr_shadow", "corphish", "corphish_shadow", "corsola", "corviknight", "corvisquire", "crabominable", "crabrawler", "cranidos", "cranidos_shadow", "crawdaunt", "crawdaunt_shadow", "crobat", "crobat_shadow", "crocalor", "croconaw", "croconaw_shadow", "crustle", "crustle_shadow", "cryogonal", "cubone", "cubone_shadow", "cursola", "dachsbun", "darmanitan_galarian_standard", "darmanitan_standard", "darmanitan_standard_shadow", "dartrix", "darumaka", "darumaka_galarian", "darumaka_shadow", "decidueye", "decidueye_hisuian", "deerling", "delcatty", "delphox", "deoxys_defense", "deoxys_speed", "dewott", "dewott_shadow", "dhelmise", "dialga_shadow", "diancie", "dodrio", "dolliv", "donphan", "donphan_shadow", "dragalge", "dragapult", "dragonair", "dragonair_shadow", "dragonite", "dragonite_shadow", "drakloak", "drampa", "drifblim", "drifblim_shadow", "drifloon", "drifloon_shadow", "drilbur", "drilbur_shadow", "drizzile", "drowzee", "drowzee_shadow", "druddigon", "dubwool", "dugtrio", "dugtrio_alolan", "dugtrio_alolan_shadow", "dugtrio_shadow", "dunsparce", "duosion", "duosion_shadow", "durant", "dusknoir", "dusknoir_shadow", "dustox", "dwebble", "dwebble_shadow", "eelektrik", "eelektross", "eevee", "eldegoss", "electabuzz", "electabuzz_shadow", "electivire", "electivire_shadow", "electrode", "electrode_hisuian", "electrode_shadow", "elekid", "elgyem", "emboar", "emboar_shadow", "emolga", "empoleon", "empoleon_shadow", "entei", "entei_shadow", "escavalier", "escavalier_shadow", "espeon", "espurr", "excadrill", "excadrill_shadow", "exeggcute", "exeggcute_shadow", "exeggutor", "exeggutor_alolan", "exeggutor_alolan_shadow", "exeggutor_shadow", "exploud", "exploud_shadow", "falinks", "farfetchd", "farfetchd_galarian", "fearow", "ferroseed", "ferroseed_shadow", "ferrothorn", "ferrothorn_shadow", "flaaffy", "flaaffy_shadow", "flabebe", "flapple", "flareon", "fletchinder", "floatzel", "floette", "floragato", "florges", "flygon", "flygon_shadow", "forretress", "forretress_shadow", "fraxure", "frigibax", "frillish", "frogadier", "fuecoco", "furfrou", "furret", "gabite", "gabite_shadow", "gallade", "gallade_shadow", "galvantula", "galvantula_shadow", "garbodor", "garbodor_shadow", "garchomp", "garchomp_shadow", "gardevoir", "gardevoir_shadow", "gastrodon", "genesect", "gengar", "gengar_shadow", "geodude", "geodude_alolan", "geodude_alolan_shadow", "geodude_shadow", "gholdengo", "gigalith", "gigalith_shadow", "girafarig", "girafarig_shadow", "giratina_origin", "glaceon", "glalie", "glalie_shadow", "gliscor", "gliscor_shadow", "gloom", "gloom_shadow", "gogoat", "golbat", "golbat_shadow", "goldeen", "golduck", "golduck_shadow", "golem", "golem_alolan", "golem_alolan_shadow", "golem_shadow", "golett", "golett_shadow", "golisopod", "golisopodsh", "golurk", "golurk_shadow", "goodra", "gorebyss", "gothitelle", "gothitelle_shadow", "gothorita", "gothorita_shadow", "gourgeist_average", "gourgeist_large", "gourgeist_small", "gourgeist_super", "grafaiai", "granbull", "granbull_shadow", "graveler", "graveler_alolan", "graveler_alolan_shadow", "graveler_shadow", "greedent", "greninja", "grimer", "grimer_alolan", "grimer_alolan_shadow", "grimer_shadow", "grotle", "grotle_shadow", "groudon_shadow", "grovyle", "grovyle_shadow", "growlithe", "growlithe_hisuian", "growlithe_shadow", "grumpig", "grumpig_shadow", "gumshoos", "gurdurr", "gurdurr_shadow", "guzzlord", "gyarados", "gyarados_shadow", "hakamo_o", "hariyama", "hariyama_shadow", "hatterene", "hattrem", "haunter", "haunter_shadow", "hawlucha", "haxorus", "heatmor", "heatran", "heatran_shadow", "heliolisk", "heracross", "herdier", "hippopotas", "hippopotas_shadow", "hippowdon", "hippowdon_shadow", "hitmonchan", "hitmonchan_shadow", "hitmonlee", "hitmonlee_shadow", "hitmontop", "hitmontop_shadow", "ho_oh", "ho_oh_shadow", "honchkrow", "honchkrow_shadow", "hoopa", "houndoom", "houndoom_shadow", "houndour", "houndour_shadow", "houndstone", "huntail", "hydreigon", "hypno", "hypno_shadow", "illumise", "incineroar", "infernape", "infernape_shadow", "inteleon", "ivysaur", "ivysaur_shadow", "jellicent", "jirachi", "jolteon", "jynx", "kabuto", "kabutops", "kadabra", "kadabra_shadow", "kangaskhan", "karrablast", "karrablast_shadow", "kartana", "kecleon", "kingambit", "kingdra", "kingdra_shadow", "kingler", "klang", "kleavor", "klefki", "klinklang", "koffing", "koffing_shadow", "komala", "kommo_o", "krabby", "kricketune", "krokorok", "krookodile", "kubfu", "kyogre_shadow", "lairon", "lairon_shadow", "lampent", "lampent_shadow", "landorus_incarnate", "larvesta", "latias", "latias_shadow", "latios", "latios_shadow", "leafeon", "leavanny", "ledian", "ledian_shadow", "lickilicky", "liepard", "liepard_shadow", "lileep", "lileep_shadow", "lilligant", "lilligant_hisuian", "linoone", "linoone_galarian", "linoone_galarian_shadow", "litleo", "lokix", "lombre", "lopunny", "loudred", "loudred_shadow", "lucario", "ludicolo", "lugia", "lugia_shadow", "lumineon", "lunatone", "lurantis", "luxio", "luxio_shadow", "luxray", "luxray_shadow", "lycanroc_dusk", "lycanroc_midday", "lycanroc_midnight", "machamp", "machamp_shadow", "machoke", "machoke_shadow", "machop", "machop_shadow", "magby", "magcargo", "magmar", "magmar_shadow", "magmortar", "magmortar_shadow", "magnemite", "magnemite_shadow", "magneton", "magneton_shadow", "magnezone", "magnezone_shadow", "malamar", "malamar_shadow", "mamoswine", "mamoswine_shadow", "manectric", "manectric_shadow", "mankey", "mankey_shadow", "mantine", "mantyke", "maractus", "marowak_alolan", "marowak_alolan_shadow", "marshtomp", "marshtomp_shadow", "masquerain", "maushold", "mawile", "mawile_shadow", "meganium", "meganium_shadow", "melmetal", "meltan", "meowscarada", "meowstic_female", "meowstic", "mesprit", "metagross", "metagross_shadow", "metang", "metang_shadow", "mew", "mewtwo_shadow", "mienfoo", "mienshao", "mightyena", "mightyena_shadow", "milotic", "miltank", "minun", "misdreavus", "misdreavus_shadow", "mismagius", "mismagius_shadow", "moltres", "moltres_galarian", "moltres_shadow", "monferno", "monferno_shadow", "morpeko_full_belly", "mothim", "mr_mime", "mr_mime_galarian", "mr_rime", "mudbray", "mudsdale", "muk", "muk_alolan", "muk_alolan_shadow", "muk_shadow", "munchlax", "munna", "murkrow", "murkrow_shadow", "musharna", "naganadel", "nidoking", "nidoking_shadow", "nidorina", "nidorina_shadow", "nidorino", "nidorino_shadow", "ninetales", "ninetales_shadow", "ninjask", "noivern", "nosepass", "nosepass_shadow", "nuzleaf", "nuzleaf_shadow", "obstagoon", "obstagoon_shadow", "octillery", "oddish", "oddish_shadow", "oinkologne", "oinkologne_female", "omanyte", "omanyte_shadow", "omastar", "omastar_shadow", "onix", "onix_shadow", "oranguru", "oricorio_baile", "oricorio_pau", "oricorio_pom_pom", "oricorio_sensu", "overqwil", "pachirisu", "palkia_shadow", "palossand", "palpitoad", "pancham", "pangoro", "parasect", "passimian", "pawmo", "pawmot", "pawniard", "pelipper", "perrserker", "persian", "persian_alolan", "persian_shadow", "phanpy", "phanpy_shadow", "pidgeot", "pidgeot_shadow", "pidgeotto", "pidgeotto_shadow", "pignite", "pignite_shadow", "piloswine", "piloswine_shadow", "pineco", "pineco_shadow", "pinsir", "pinsir_shadow", "piplup", "piplup_shadow", "plusle", "poipole", "politoed", "politoed_shadow", "poliwhirl", "poliwhirl_shadow", "poliwrath", "poliwrath_shadow", "polteageist", "ponyta", "ponyta_galarian", "popplio", "porygon", "porygon_shadow", "porygon_z", "porygon_z_shadow", "porygon2", "porygon2_shadow", "primarina", "prinplup", "prinplup_shadow", "probopass", "probopass_shadow", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "pumpkaboo_super", "pupitar", "pupitar_shadow", "purugly", "purugly_shadow", "pyroar", "quaquaval", "quaxwell", "quilava", "quilava_shadow", "quilladin", "qwilfish", "qwilfish_hisuian", "raboot", "raichu", "raichu_alolan", "raikou", "raikou_shadow", "rampardos", "rampardos_shadow", "rapidash", "rapidash_galarian", "raticate", "raticate_alolan", "raticate_alolan_shadow", "raticate_shadow", "rayquaza", "regice", "regice_shadow", "regidrago", "regieleki", "regigigas", "regigigas_shadow", "regirock", "regirock_shadow", "relicanth", "reuniclus", "reuniclus_shadow", "revavroom", "rhydon", "rhydon_shadow", "rhyhorn", "rhyhorn_shadow", "rhyperior", "rhyperior_shadow", "ribombee", "rillaboom", "roggenrola", "roggenrola_shadow", "roselia", "roserade", "rotom", "rotom_fan", "rotom_frost", "rotom_heat", "rotom_mow", "rotom_wash", "rowlet", "rufflet", "runerigus", "salamence", "salamence_shadow", "salazzle", "samurott", "samurott_hisuian", "samurott_shadow", "sandshrew", "sandshrew_alolan", "sandshrew_alolan_shadow", "sandshrew_shadow", "sandslash", "sandslash_shadow", "sandygast", "sawk", "sawk_shadow", "sawsbuck", "sceptile", "sceptile_shadow", "scizor", "scizor_shadow", "scolipede", "scolipede_shadow", "scrafty", "scraggy", "scyther", "scyther_shadow", "seadra", "seadra_shadow", "seaking", "sealeo", "sealeo_shadow", "seel", "seismitoad", "servine", "servine_shadow", "seviper", "sharpedo", "shaymin_land", "shaymin_sky", "shelgon", "shelgon_shadow", "shellos", "shiftry", "shiftry_shadow", "shiinotic", "sigilyph", "simipour", "simisage", "simisear", "sirfetchd", "skiddo", "skorupi", "skorupi_shadow", "skrelp", "skuntank", "skuntank_shadow", "slaking", "slaking_shadow", "sliggoo", "slowbro", "slowbro_galarian", "slowbro_shadow", "slowking", "slowking_galarian", "slowking_shadow", "slowpoke", "slowpoke_galarian", "slowpoke_shadow", "slurpuff", "smoochum", "sneasel", "sneasel_hisuian", "sneasel_hisuian_shadow", "sneasel_shadow", "sneasler", "sneasler_shadow", "snorlax", "snorlax_shadow", "snover", "snover_shadow", "snubbull", "snubbull_shadow", "solosis", "solosis_shadow", "solrock", "spinda", "spiritomb", "spoink", "spoink_shadow", "spritzee", "stakataka", "stantler", "stantler_shadow", "staraptor", "staraptor_shadow", "staravia", "staravia_shadow", "starmie", "steelix", "steelix_shadow", "stonjourner", "stoutland", "stufful", "stunfisk", "stunky", "stunky_shadow", "sudowoodo", "sudowoodo_shadow", "suicune", "suicune_shadow", "sunflora", "swadloon", "swalot", "swanna", "swanna_shadow", "swellow", "swellow_shadow", "swirlix", "swoobat", "sylveon", "tangela", "tangela_shadow", "tangrowth", "tangrowth_shadow", "tapu_fini", "tatsugiri_curly", "tatsugiri_droopy", "tatsugiri_stretchy", "tauros", "tauros_aqua", "tauros_blaze", "tauros_combat", "teddiursa", "teddiursa_shadow", "tentacool", "tentacool_shadow", "tentacruel", "tentacruel_shadow", "thievul", "throh", "throh_shadow", "thundurus_incarnate", "thwackey", "timburr", "timburr_shadow", "tinkatuff", "tirtouga", "tirtouga_shadow", "togedemaru", "togekiss", "togetic", "torkoal", "tornadus_incarnate", "torracat", "torterra", "torterra_shadow", "totodile", "totodile_shadow", "toucannon", "toxapex", "toxicroak", "toxicroak_shadow", "toxtricity", "tranquill", "tranquill_shadow", "trapinch", "trapinch_shadow", "tropius", "trumbeak", "tsareena", "turtonator", "turtwig", "turtwig_shadow", "typhlosion", "typhlosion_hisuian", "typhlosion_shadow", "tyranitar", "tyranitar_shadow", "tyrantrum", "tyrantrum_shadow", "tyrunt", "tyrunt_shadow", "unfezant", "unfezant_shadow", "unown", "ursaluna", "ursaluna_shadow", "ursaring", "ursaring_shadow", "urshifu_rapid_strike", "urshifu_single_strike", "uxie", "vanillish", "vanilluxe", "vaporeon", "varoom", "venomoth", "venomoth_shadow", "vespiquen", "vibrava", "vibrava_shadow", "victini", "victreebel", "victreebel_shadow", "vikavolt", "vileplume", "vileplume_shadow", "vivillon", "volbeat", "volcanion", "vullaby", "wailmer", "wailmer_shadow", "wailord", "wailord_shadow", "wartortle", "wartortle_shadow", "watchog", "watchog_shadow", "weavile", "weavile_shadow", "weepinbell", "weepinbell_shadow", "weezing", "weezing_galarian", "weezing_galarian_shadow", "weezing_shadow", "whimsicott", "whirlipede", "whirlipede_shadow", "wobbuffet", "wobbuffet_shadow", "wormadam_plant", "wormadam_sandy", "wormadam_trash", "wugtrio", "wyrdeer", "xatu", "xatu_shadow", "yanma", "yanmega", "zangoose", "zapdos", "zapdos_galarian", "zapdos_shadow", "zebstrika", "zebstrika_shadow", "zoroark", "zoroark_hisuian", "zweilous", "zygarde_10", "zygarde"]
-                },
-                {
-                    "pokemon": ["abomasnow", "abomasnow_shadow", "absol", "absol_shadow", "accelgor", "accelgor_shadow", "aerodactyl", "aerodactyl_shadow", "aggron", "aggron_shadow", "aipom", "aipom_shadow", "alakazam", "alakazam_shadow", "alomomola", "amaura", "amaura_shadow", "ambipom", "ambipom_shadow", "amoonguss", "amoonguss_shadow", "ampharos", "ampharos_shadow", "anorith", "anorith_shadow", "appletun", "araquanid", "arbok", "arbok_shadow", "arboliva", "arcanine", "arcanine_hisuian", "arcanine_shadow", "archen", "archen_shadow", "archeops", "archeops_shadow", "arctibax", "armaldo", "armaldo_shadow", "armarouge", "aromatisse", "aron", "aron_shadow", "articuno", "articuno_galarian", "articuno_shadow", "audino", "aurorus", "aurorus_shadow", "avalugg", "avalugg_hisuian", "axew", "azelf", "banette", "banette_shadow", "barbaracle", "basculin", "bastiodon", "bastiodon_shadow", "baxcalibur", "bayleef", "bayleef_shadow", "beartic", "beautifly", "beedrill", "beedrill_shadow", "beheeyem", "bellibolt", "bellossom", "bellossom_shadow", "bergmite", "bewear", "bibarel", "bibarel_shadow", "bisharp", "blastoise", "blastoise_shadow", "blaziken", "blaziken_shadow", "blissey", "boldore", "boldore_shadow", "boltund", "bombirdier", "bonsly", "bouffalant", "braixen", "braviary", "braviary_hisuian", "breloom", "brionne", "bronzong", "bruxish", "bulbasaur", "bulbasaur_shadow", "buneary", "butterfree", "butterfree_shadow", "buzzwole", "cacturne", "cacturne_shadow", "camerupt", "camerupt_shadow", "carnivine", "carracosta", "carracosta_shadow", "castform", "castform_rainy", "castform_snowy", "castform_sunny", "celebi", "celesteela", "centiskorch", "ceruledge", "cetitan", "cetoddle", "chandelure", "chandelure_shadow", "chansey", "charmeleon", "charmeleon_shadow", "chatot", "cherrim_overcast", "cherrim_sunny", "chesnaught", "chespin", "chimecho", "chinchou", "cinccino", "cinderace", "clamperl", "clauncher", "clawitzer", "claydol", "clefable", "clefairy", "cloyster", "cloyster_shadow", "cofagrigus", "combusken", "combusken_shadow", "comfey", "conkeldurr", "conkeldurr_shadow", "corphish", "corphish_shadow", "corsola", "corviknight", "corvisquire", "crabominable", "crabrawler", "cranidos", "cranidos_shadow", "crawdaunt", "crawdaunt_shadow", "crobat", "crobat_shadow", "crocalor", "croconaw", "croconaw_shadow", "crustle", "crustle_shadow", "cryogonal", "cubone", "cubone_shadow", "cursola", "dachsbun", "darmanitan_galarian_standard", "darmanitan_standard", "darmanitan_standard_shadow", "dartrix", "darumaka", "darumaka_galarian", "darumaka_shadow", "decidueye", "decidueye_hisuian", "deerling", "delcatty", "delphox", "deoxys_defense", "deoxys_speed", "dewott", "dewott_shadow", "dhelmise", "dialga_shadow", "diancie", "dodrio", "dolliv", "donphan", "donphan_shadow", "dragalge", "dragapult", "dragonair", "dragonair_shadow", "dragonite", "dragonite_shadow", "drakloak", "drampa", "drifblim", "drifblim_shadow", "drifloon", "drifloon_shadow", "drilbur", "drilbur_shadow", "drizzile", "drowzee", "drowzee_shadow", "druddigon", "dubwool", "dugtrio", "dugtrio_alolan", "dugtrio_alolan_shadow", "dugtrio_shadow", "dunsparce", "duosion", "duosion_shadow", "durant", "dusknoir", "dusknoir_shadow", "dustox", "dwebble", "dwebble_shadow", "eelektrik", "eelektross", "eevee", "eldegoss", "electabuzz", "electabuzz_shadow", "electivire", "electivire_shadow", "electrode", "electrode_hisuian", "electrode_shadow", "elekid", "elgyem", "emboar", "emboar_shadow", "emolga", "empoleon", "empoleon_shadow", "entei", "entei_shadow", "escavalier", "escavalier_shadow", "espeon", "espurr", "excadrill", "excadrill_shadow", "exeggcute", "exeggcute_shadow", "exeggutor", "exeggutor_alolan", "exeggutor_alolan_shadow", "exeggutor_shadow", "exploud", "exploud_shadow", "falinks", "farfetchd", "farfetchd_galarian", "fearow", "ferroseed", "ferroseed_shadow", "ferrothorn", "ferrothorn_shadow", "flaaffy", "flaaffy_shadow", "flabebe", "flapple", "flareon", "fletchinder", "floatzel", "floette", "floragato", "florges", "flygon", "flygon_shadow", "forretress", "forretress_shadow", "fraxure", "frigibax", "frillish", "frogadier", "fuecoco", "furfrou", "furret", "gabite", "gabite_shadow", "gallade", "gallade_shadow", "galvantula", "galvantula_shadow", "garbodor", "garbodor_shadow", "garchomp", "garchomp_shadow", "gardevoir", "gardevoir_shadow", "gastrodon", "genesect", "gengar", "gengar_shadow", "geodude", "geodude_alolan", "geodude_alolan_shadow", "geodude_shadow", "gholdengo", "gigalith", "gigalith_shadow", "girafarig", "girafarig_shadow", "giratina_origin", "glaceon", "glalie", "glalie_shadow", "gliscor", "gliscor_shadow", "gloom", "gloom_shadow", "gogoat", "golbat", "golbat_shadow", "goldeen", "golduck", "golduck_shadow", "golem", "golem_alolan", "golem_alolan_shadow", "golem_shadow", "golett", "golett_shadow", "golisopod", "golisopodsh", "golurk", "golurk_shadow", "goodra", "gorebyss", "gothitelle", "gothitelle_shadow", "gothorita", "gothorita_shadow", "gourgeist_average", "gourgeist_large", "gourgeist_small", "gourgeist_super", "grafaiai", "granbull", "granbull_shadow", "graveler", "graveler_alolan", "graveler_alolan_shadow", "graveler_shadow", "greedent", "greninja", "grimer", "grimer_alolan", "grimer_alolan_shadow", "grimer_shadow", "grotle", "grotle_shadow", "groudon_shadow", "grovyle", "grovyle_shadow", "growlithe", "growlithe_hisuian", "growlithe_shadow", "grumpig", "grumpig_shadow", "gumshoos", "gurdurr", "gurdurr_shadow", "guzzlord", "gyarados", "gyarados_shadow", "hakamo_o", "hariyama", "hariyama_shadow", "hatterene", "hattrem", "haunter", "haunter_shadow", "hawlucha", "haxorus", "heatmor", "heatran", "heatran_shadow", "heliolisk", "heracross", "herdier", "hippopotas", "hippopotas_shadow", "hippowdon", "hippowdon_shadow", "hitmonchan", "hitmonchan_shadow", "hitmonlee", "hitmonlee_shadow", "hitmontop", "hitmontop_shadow", "ho_oh", "ho_oh_shadow", "honchkrow", "honchkrow_shadow", "hoopa", "houndoom", "houndoom_shadow", "houndour", "houndour_shadow", "houndstone", "huntail", "hydreigon", "hypno", "hypno_shadow", "illumise", "incineroar", "infernape", "infernape_shadow", "inteleon", "ivysaur", "ivysaur_shadow", "jellicent", "jirachi", "jolteon", "jynx", "kabuto", "kabutops", "kadabra", "kadabra_shadow", "kangaskhan", "karrablast", "karrablast_shadow", "kartana", "kecleon", "kingambit", "kingdra", "kingdra_shadow", "kingler", "klang", "kleavor", "klefki", "klinklang", "koffing", "koffing_shadow", "komala", "kommo_o", "krabby", "kricketune", "krokorok", "krookodile", "kubfu", "kyogre_shadow", "lairon", "lairon_shadow", "lampent", "lampent_shadow", "landorus_incarnate", "larvesta", "latias", "latias_shadow", "latios", "latios_shadow", "leafeon", "leavanny", "ledian", "ledian_shadow", "lickilicky", "liepard", "liepard_shadow", "lileep", "lileep_shadow", "lilligant", "lilligant_hisuian", "linoone", "linoone_galarian", "linoone_galarian_shadow", "litleo", "lokix", "lombre", "lopunny", "loudred", "loudred_shadow", "lucario", "ludicolo", "lugia", "lugia_shadow", "lumineon", "lunatone", "lurantis", "luxio", "luxio_shadow", "luxray", "luxray_shadow", "lycanroc_dusk", "lycanroc_midday", "lycanroc_midnight", "machamp", "machamp_shadow", "machoke", "machoke_shadow", "machop", "machop_shadow", "magby", "magcargo", "magmar", "magmar_shadow", "magmortar", "magmortar_shadow", "magnemite", "magnemite_shadow", "magneton", "magneton_shadow", "magnezone", "magnezone_shadow", "malamar", "malamar_shadow", "mamoswine", "mamoswine_shadow", "manectric", "manectric_shadow", "mankey", "mankey_shadow", "mantine", "mantyke", "maractus", "marowak_alolan", "marowak_alolan_shadow", "marshtomp", "marshtomp_shadow", "masquerain", "maushold", "mawile", "mawile_shadow", "meganium", "meganium_shadow", "melmetal", "meltan", "meowscarada", "meowstic_female", "meowstic", "mesprit", "metagross", "metagross_shadow", "metang", "metang_shadow", "mew", "mewtwo_shadow", "mienfoo", "mienshao", "mightyena", "mightyena_shadow", "milotic", "miltank", "minun", "misdreavus", "misdreavus_shadow", "mismagius", "mismagius_shadow", "moltres", "moltres_galarian", "moltres_shadow", "monferno", "monferno_shadow", "morpeko_full_belly", "mothim", "mr_mime", "mr_mime_galarian", "mr_rime", "mudbray", "mudsdale", "muk", "muk_alolan", "muk_alolan_shadow", "muk_shadow", "munchlax", "munna", "murkrow", "murkrow_shadow", "musharna", "naganadel", "nidoking", "nidoking_shadow", "nidorina", "nidorina_shadow", "nidorino", "nidorino_shadow", "ninetales", "ninetales_shadow", "ninjask", "noivern", "nosepass", "nosepass_shadow", "nuzleaf", "nuzleaf_shadow", "obstagoon", "obstagoon_shadow", "octillery", "oddish", "oddish_shadow", "oinkologne", "oinkologne_female", "omanyte", "omanyte_shadow", "omastar", "omastar_shadow", "onix", "onix_shadow", "oranguru", "oricorio_baile", "oricorio_pau", "oricorio_pom_pom", "oricorio_sensu", "overqwil", "pachirisu", "palkia_shadow", "palossand", "palpitoad", "pancham", "pangoro", "parasect", "passimian", "pawmo", "pawmot", "pawniard", "pelipper", "perrserker", "persian", "persian_alolan", "persian_shadow", "phanpy", "phanpy_shadow", "pidgeot", "pidgeot_shadow", "pidgeotto", "pidgeotto_shadow", "pignite", "pignite_shadow", "piloswine", "piloswine_shadow", "pineco", "pineco_shadow", "pinsir", "pinsir_shadow", "piplup", "piplup_shadow", "plusle", "poipole", "politoed", "politoed_shadow", "poliwhirl", "poliwhirl_shadow", "poliwrath", "poliwrath_shadow", "polteageist", "ponyta", "ponyta_galarian", "popplio", "porygon", "porygon_shadow", "porygon_z", "porygon_z_shadow", "porygon2", "porygon2_shadow", "primarina", "prinplup", "prinplup_shadow", "probopass", "probopass_shadow", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "pumpkaboo_super", "pupitar", "pupitar_shadow", "purugly", "purugly_shadow", "pyroar", "quaquaval", "quaxwell", "quilava", "quilava_shadow", "quilladin", "qwilfish", "qwilfish_hisuian", "raboot", "raichu", "raichu_alolan", "raikou", "raikou_shadow", "rampardos", "rampardos_shadow", "rapidash", "rapidash_galarian", "raticate", "raticate_alolan", "raticate_alolan_shadow", "raticate_shadow", "rayquaza", "regice", "regice_shadow", "regidrago", "regieleki", "regigigas", "regigigas_shadow", "regirock", "regirock_shadow", "relicanth", "reuniclus", "reuniclus_shadow", "revavroom", "rhydon", "rhydon_shadow", "rhyhorn", "rhyhorn_shadow", "rhyperior", "rhyperior_shadow", "ribombee", "rillaboom", "roggenrola", "roggenrola_shadow", "roselia", "roserade", "rotom", "rotom_fan", "rotom_frost", "rotom_heat", "rotom_mow", "rotom_wash", "rowlet", "rufflet", "runerigus", "salamence", "salamence_shadow", "salazzle", "samurott", "samurott_hisuian", "samurott_shadow", "sandshrew", "sandshrew_alolan", "sandshrew_alolan_shadow", "sandshrew_shadow", "sandslash", "sandslash_shadow", "sandygast", "sawk", "sawk_shadow", "sawsbuck", "sceptile", "sceptile_shadow", "scizor", "scizor_shadow", "scolipede", "scolipede_shadow", "scrafty", "scraggy", "scyther", "scyther_shadow", "seadra", "seadra_shadow", "seaking", "sealeo", "sealeo_shadow", "seel", "seismitoad", "servine", "servine_shadow", "seviper", "sharpedo", "shaymin_land", "shaymin_sky", "shelgon", "shelgon_shadow", "shellos", "shiftry", "shiftry_shadow", "shiinotic", "sigilyph", "simipour", "simisage", "simisear", "sirfetchd", "skiddo", "skorupi", "skorupi_shadow", "skrelp", "skuntank", "skuntank_shadow", "slaking", "slaking_shadow", "sliggoo", "slowbro", "slowbro_galarian", "slowbro_shadow", "slowking", "slowking_galarian", "slowking_shadow", "slowpoke", "slowpoke_galarian", "slowpoke_shadow", "slurpuff", "smoochum", "sneasel", "sneasel_hisuian", "sneasel_hisuian_shadow", "sneasel_shadow", "sneasler", "sneasler_shadow", "snorlax", "snorlax_shadow", "snover", "snover_shadow", "snubbull", "snubbull_shadow", "solosis", "solosis_shadow", "solrock", "spinda", "spiritomb", "spoink", "spoink_shadow", "spritzee", "stakataka", "stantler", "stantler_shadow", "staraptor", "staraptor_shadow", "staravia", "staravia_shadow", "starmie", "steelix", "steelix_shadow", "stonjourner", "stoutland", "stufful", "stunfisk", "stunky", "stunky_shadow", "sudowoodo", "sudowoodo_shadow", "suicune", "suicune_shadow", "sunflora", "swadloon", "swalot", "swanna", "swanna_shadow", "swellow", "swellow_shadow", "swirlix", "swoobat", "sylveon", "tangela", "tangela_shadow", "tangrowth", "tangrowth_shadow", "tapu_fini", "tatsugiri_curly", "tatsugiri_droopy", "tatsugiri_stretchy", "tauros", "tauros_aqua", "tauros_blaze", "tauros_combat", "teddiursa", "teddiursa_shadow", "tentacool", "tentacool_shadow", "tentacruel", "tentacruel_shadow", "thievul", "throh", "throh_shadow", "thundurus_incarnate", "thwackey", "timburr", "timburr_shadow", "tinkatuff", "tirtouga", "tirtouga_shadow", "togedemaru", "togekiss", "togetic", "torkoal", "tornadus_incarnate", "torracat", "torterra", "torterra_shadow", "totodile", "totodile_shadow", "toucannon", "toxapex", "toxicroak", "toxicroak_shadow", "toxtricity", "tranquill", "tranquill_shadow", "trapinch", "trapinch_shadow", "tropius", "trumbeak", "tsareena", "turtonator", "turtwig", "turtwig_shadow", "typhlosion", "typhlosion_hisuian", "typhlosion_shadow", "tyranitar", "tyranitar_shadow", "tyrantrum", "tyrantrum_shadow", "tyrunt", "tyrunt_shadow", "unfezant", "unfezant_shadow", "unown", "ursaluna", "ursaluna_shadow", "ursaring", "ursaring_shadow", "urshifu_rapid_strike", "urshifu_single_strike", "uxie", "vanillish", "vanilluxe", "vaporeon", "varoom", "venomoth", "venomoth_shadow", "vespiquen", "vibrava", "vibrava_shadow", "victini", "victreebel", "victreebel_shadow", "vikavolt", "vileplume", "vileplume_shadow", "vivillon", "volbeat", "volcanion", "vullaby", "wailmer", "wailmer_shadow", "wailord", "wailord_shadow", "wartortle", "wartortle_shadow", "watchog", "watchog_shadow", "weavile", "weavile_shadow", "weepinbell", "weepinbell_shadow", "weezing", "weezing_galarian", "weezing_galarian_shadow", "weezing_shadow", "whimsicott", "whirlipede", "whirlipede_shadow", "wobbuffet", "wobbuffet_shadow", "wormadam_plant", "wormadam_sandy", "wormadam_trash", "wugtrio", "wyrdeer", "xatu", "xatu_shadow", "yanma", "yanmega", "zangoose", "zapdos", "zapdos_galarian", "zapdos_shadow", "zebstrika", "zebstrika_shadow", "zoroark", "zoroark_hisuian", "zweilous", "zygarde_10", "zygarde"]
-                }
-            ]
-        },
-        {
             "name": "classic",
             "title": "Classic",
             "include": [],
@@ -241,31 +206,6 @@
             "exclude": []
         },
         {
-            "name": "electric",
-            "title": "Electric Cup",
-            "include": [
-                {
-                    "filterType": "type",
-                    "name": "Type",
-                    "values": ["electric"]
-                }
-            ],
-            "exclude": [
-                {
-                    "filterType": "tag",
-                    "name": "Tag",
-                    "values": ["mega"]
-                },
-                {
-                    "filterType": "id",
-                    "name": "Species",
-                    "values": ["stunfisk", "charjabug", "vikavolt", "heliolisk"]
-                }
-            ],
-            "partySize": 3,
-            "presetOnly": true
-        },
-        {
             "name": "equinox",
             "title": "Equinox Cup",
             "link": "https://devon.gg",
@@ -306,22 +246,6 @@
             "cup": "equinox"
         },
         {
-            "name": "fantasy",
-            "title": "Fantasy Cup",
-            "include": [
-                {
-                    "filterType": "type",
-                    "values": ["steel", "dragon", "fairy"]
-                }
-            ],
-            "exclude": [
-                {
-                    "filterType": "tag",
-                    "values": ["mega"]
-                }
-            ]
-        },
-        {
             "name": "gobattleleague",
             "title": "GO Battle League",
             "rankingAlias": "all",
@@ -334,54 +258,6 @@
             ],
             "partySize": 3,
             "presetOnly": true
-        },
-        {
-            "name": "jungle",
-            "title": "Jungle Cup",
-            "include": [
-                {
-                    "filterType": "type",
-                    "values": ["normal", "grass", "electric", "poison", "ground", "flying", "bug", "dark"]
-                }
-            ],
-            "exclude": [
-                {
-                    "filterType": "tag",
-                    "values": ["mega"]
-                }
-            ],
-            "partySize": 3,
-            "presetOnly": true
-        },
-        {
-            "name": "laic2025remix",
-            "title": "Gymbreakers LAIC 2025 Remix",
-            "link": "https://discord.gg/Gymbreakers",
-            "league": 1500,
-            "include": [
-                {
-                    "filterType": "id",
-                    "values": ["barbaracle", "crustle", "dudunsparce", "feraligatr", "milotic"]
-                },
-                {
-                    "filterType": "type",
-                    "values": ["dragon", "flying", "ghost", "ice", "psychic"]
-                }
-            ],
-            "exclude": [
-                {
-                    "filterType": "type",
-                    "values": ["dark", "rock"]
-                },
-                {
-                    "filterType": "tag",
-                    "values": ["mega", "legendary", "mythical", "shadow", "ultrabeast"]
-                },
-                {
-                    "filterType": "id",
-                    "values": ["sandslash_alolan", "sandshrew_alolan", "corsola_galarian", "corviknight", "jellicent", "kingdra", "ninetales_alolan", "honedge", "doublade", "aegislash_shield", "aegislash_blade", "oranguru", "runerigus", "walrein", "dewgong"]
-                }
-            ]
         },
         {
             "name": "little",
@@ -486,28 +362,6 @@
                     "values": ["abomasnow", "amoonguss", "araquanid", "bellibolt", "charjabug", "dhelmise", "dragalge", "golbat", "gourgeist_average", "gourgeist_large", "gourgeist_small", "gourgeist_super", "jumpluff", "lanturn", "ledian", "nidorina", "oranguru", "pachirisu", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "pumpkaboo_super", "rotom", "rotom_fan", "rotom_frost", "rotom_mow", "rotom_wash", "slowking_galarian", "smoochum", "spidops", "swalot", "toxapex", "toxtricity", "vespiquen", "vikavolt"]
                 }
             ]
-        },
-        {
-            "name": "spring",
-            "title": "Spring Cup",
-            "include": [
-                {
-                    "filterType": "type",
-                    "values": ["water", "grass", "fairy"]
-                }
-            ],
-            "exclude": [
-                {
-                    "filterType": "tag",
-                    "values": ["mega"]
-                },
-                {
-                    "filterType": "id",
-                    "values": ["jumpluff", "roserade", "toxapex"]
-                }
-            ],
-            "partySize": 3,
-            "presetOnly": true
         }
     ],
     "formats": [
@@ -531,26 +385,6 @@
             "showMeta": true,
             "hideRankings": true,
             "rules": ["No CP limit.", "Legendary Pokémon,  Mythical Pokémon,  and Ultra Beasts are not eligible."]
-        },
-        {
-            "title": "Fantasy Cup",
-            "cup": "fantasy",
-            "cp": 1500,
-            "meta": "fantasy",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true,
-            "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Dragon-,  Steel-,  and Fairy-type Pokémon are eligible."]
-        },
-        {
-            "title": "Jungle Cup",
-            "cup": "jungle",
-            "cp": 1500,
-            "meta": "jungle",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true,
-            "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Normal-,  Grass-,  Electric-,  Poison-,  Ground-,  Flying-,  Bug-,  and Dark-type Pokémon are eligible."]
         },
         {
             "title": "NAIC 2026 Championship Series Cup",
@@ -599,46 +433,10 @@
             "showMeta": true
         },
         {
-            "title": "Devon Equinox Cup",
-            "cup": "equinox",
-            "cp": 1500,
-            "meta": "equinox",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true
-        },
-        {
-            "title": "Devon Maelstrom Cup",
-            "cup": "maelstrom",
-            "cp": 1500,
-            "meta": "maelstrom",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true
-        },
-        {
             "title": "Devon Cosy Cup",
             "cup": "cosy",
             "cp": 1500,
             "meta": "cosy",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true
-        },
-        {
-            "title": "Gymbreakers LAIC 2025 Remix",
-            "cup": "laic2025remix",
-            "cp": 1500,
-            "meta": "laic2025remix",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true
-        },
-        {
-            "title": "Zygarden Chrono Meta",
-            "cup": "chrono",
-            "cp": 1500,
-            "meta": "chrono",
             "showCup": true,
             "showFormat": true,
             "showMeta": true
@@ -740,7 +538,7 @@
             "dexEnd": 1008
         }
     ],
-    "shadowPokemon": ["bulbasaur", "ivysaur", "venusaur", "venusaur_mega", "charmander", "charmeleon", "charizard", "charizard_mega_x", "charizard_mega_y", "squirtle", "wartortle", "blastoise", "weedle", "kakuna", "beedrill", "beedrill_mega", "rattata", "raticate", "zubat", "golbat", "oddish", "gloom", "vileplume", "venonat", "venomoth", "meowth", "persian", "psyduck", "golduck", "growlithe", "arcanine", "poliwag", "poliwhirl", "poliwrath", "abra", "kadabra", "alakazam", "alakazam_mega", "grimer", "muk", "drowzee", "hypno", "cubone", "marowak", "hitmonchan", "scyther", "electabuzz", "magmar", "magikarp", "gyarados", "gyarados_mega", "lapras", "snorlax", "dratini", "dragonair", "dragonite", "crobat", "mareep", "flaaffy", "ampharos", "ampharos_mega", "bellossom", "politoed", "scizor", "scizor_mega", "houndour", "houndoom", "houndoom_mega", "larvitar", "pupitar", "tyranitar", "tyranitar_mega", "mudkip", "marshtomp", "swampert", "swampert_mega", "seedot", "nuzleaf", "shiftry", "ralts", "kirlia", "gardevoir", "gardevoir_mega", "trapinch", "vibrava", "flygon", "shuppet", "banette", "banette_mega", "duskull", "dusclops", "turtwig", "grotle", "torterra", "electivire", "magmortar", "gallade", "gallade_mega", "dusknoir", "magnemite", "magneton", "magnezone", "bellsprout", "weepinbell", "victreebel", "sandshrew", "sandslash", "porygon", "porygon2", "porygon_z", "wobbuffet", "meowth", "persian", "hitmonlee", "articuno", "sneasel", "weavile", "sableye", "sableye_mega", "zapdos", "moltres", "delibird", "stantler", "absol", "bagon", "shelgon", "salamence", "salamence_mega", "snover", "abomasnow", "abomasnow_mega", "raikou", "vulpix", "ninetales", "exeggcute", "exeggutor", "omanyte", "omastar", "misdreavus", "mismagius", "carvanha", "sharpedo", "sharpedo_mega", "pinsir", "pinsir_mega", "mawile", "mawile_mega", "beldum", "metang", "metagross", "metagross_mega", "entei", "ekans", "arbok", "koffing", "weezing", "nidoran_female", "nidorina", "nidoran_male", "nidorino", "nidoqueen", "nidoking", "machop", "machoke", "machamp", "gligar", "gliscor", "shuckle", "stunky", "skuntank", "suicune", "pineco", "forretress", "mewtwo", "mewtwo_mega_x", "mewtwo_mega_y", "diglett", "dugtrio", "shellder", "cloyster", "slowpoke", "slowbro", "slowking", "aerodactyl", "skarmory", "teddiursa", "ursaring", "hoppip", "skiploom", "jumpluff", "wooper", "quagsire", "swinub", "piloswine", "mamoswine", "nosepass", "probopass", "aron", "lairon", "aggron", "spheal", "sealeo", "walrein", "lileep", "cradily", "anorith", "armaldo", "aipom", "ambipom", "skorupi", "drapion", "poochyena", "mightyena", "murkrow", "honchkrow", "electrike", "manectric", "snubbull", "granbull", "makuhita", "hariyama", "starly", "staravia", "staraptor", "tangela", "tangrowth", "horsea", "seadra", "kingdra", "ho_oh", "bidoof", "bibarel", "cacnea", "cacturne", "lugia", "voltorb", "electrode", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "whismur", "loudred", "exploud", "hippopotas", "hippowdon", "rattata_alolan", "raticate_alolan", "sandshrew_alolan", "sandslash_alolan", "exeggutor_alolan", "sudowoodo", "girafarig", "numel", "camerupt", "latias", "exeggutor_alolan", "marowak_alolan", "geodude", "graveler", "golem", "shinx", "luxio", "luxray", "purrloin", "liepard", "latios", "foongus", "amoonguss", "patrat", "watchog", "ducklett", "swanna", "ursaluna", "diglett_alolan", "dugtrio_alolan", "onix", "steelix", "natu", "xatu", "wailmer", "wailord", "golett", "golurk", "vulpix_alolan", "ninetales_alolan", "spoink", "grumpig", "blitzle", "zebstrika", "joltik", "galvantula", "registeel", "salamence_mega", "aggron_mega", "manectric_mega", "gardevoir_mega", "latios_mega", "latias_mega", "grimer_alolan", "muk_alolan", "phanpy", "donphan", "treecko", "grovyle", "sceptile", "sceptile_mega", "torchic", "combusken", "blaziken", "blaziken_mega", "drifloon", "drifblim", "regice", "regirock", "throh", "sawk", "geodude_alolan", "graveler_alolan", "golem_alolan", "ledyba", "ledian", "hitmontop", "glameow", "purugly", "gible", "gabite", "garchomp", "regigigas", "gastly", "haunter", "gengar", "rhyhorn", "rhydon", "rhyperior", "barboach", "whiscash", "cranidos", "rampardos", "shieldon", "bastiodon", "drilbur", "excadrill", "litwick", "lampent", "chandelure", "sneasel_hisuian", "sneasler", "kyogre", "corphish", "crawdaunt", "snorunt", "glalie", "froslass", "chimchar", "monferno", "infernape", "piplup", "prinplup", "empoleon", "croagunk", "toxicroak", "dwebble", "crustle", "ferroseed", "ferrothorn", "tentacool", "tentacruel", "groudon", "pidgey", "pidgeotto", "pidgeot", "darumaka", "darmanitan_standard", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "pidove", "tranquill", "unfezant", "cresselia", "archen", "archeops", "tirtouga", "carracosta", "timburr", "gurdurr", "conkeldurr", "weezing_galarian", "heatran", "mankey", "primeape", "annihilape", "caterpie", "metapod", "butterfree", "roggenrola", "boldore", "gigalith", "venipede", "whirlipede", "scolipede", "karrablast", "escavalier", "shelmet", "accelgor", "zigzagoon_galarian", "linoone_galarian", "obstagoon", "palkia", "taillow", "swellow", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott", "trubbish", "garbodor", "bunnelby", "diggersby", "slakoth", "vigoroth", "slaking", "dialga", "inkay", "malamar", "tyrunt", "tyrantrum", "amaura", "aurorus", "giratina_altered", "staryu", "starmie", "fletchling", "fletchinder", "talonflame", "pikipek", "trumbeak", "toucannon", "grubbin", "charjabug", "vikavolt", "qwilfish", "swablu", "altaria", "baltoy", "claydol", "deino", "zweilous", "hydreigon", "tornadus_incarnate", "feebas", "milotic", "yamask", "cofagrigus", "phantump", "trevenant", "darkrai", "thundurus_incarnate", "froakie", "frogadier", "greninja", "chespin", "quilladin", "chesnaught", "fennekin", "braixen", "delphox", "ponyta", "rapidash", "kabuto", "kabutops", "helioptile", "heliolisk", "morellul", "shiinotic", "stufful", "bewear", "dewpider", "araquanid", "landorus_incarnate"],
+    "shadowPokemon": ["bulbasaur", "ivysaur", "venusaur", "venusaur_mega", "charmander", "charmeleon", "charizard", "charizard_mega_x", "charizard_mega_y", "squirtle", "wartortle", "blastoise", "weedle", "kakuna", "beedrill", "beedrill_mega", "rattata", "raticate", "zubat", "golbat", "oddish", "gloom", "vileplume", "venonat", "venomoth", "meowth", "persian", "psyduck", "golduck", "growlithe", "arcanine", "poliwag", "poliwhirl", "poliwrath", "abra", "kadabra", "alakazam", "alakazam_mega", "grimer", "muk", "drowzee", "hypno", "cubone", "marowak", "hitmonchan", "scyther", "electabuzz", "magmar", "magikarp", "gyarados", "gyarados_mega", "lapras", "snorlax", "dratini", "dragonair", "dragonite", "crobat", "mareep", "flaaffy", "ampharos", "ampharos_mega", "bellossom", "politoed", "scizor", "scizor_mega", "houndour", "houndoom", "houndoom_mega", "larvitar", "pupitar", "tyranitar", "tyranitar_mega", "mudkip", "marshtomp", "swampert", "swampert_mega", "seedot", "nuzleaf", "shiftry", "ralts", "kirlia", "gardevoir", "gardevoir_mega", "trapinch", "vibrava", "flygon", "shuppet", "banette", "banette_mega", "duskull", "dusclops", "turtwig", "grotle", "torterra", "electivire", "magmortar", "gallade", "gallade_mega", "dusknoir", "magnemite", "magneton", "magnezone", "bellsprout", "weepinbell", "victreebel", "sandshrew", "sandslash", "porygon", "porygon2", "porygon_z", "wobbuffet", "meowth", "persian", "hitmonlee", "articuno", "sneasel", "weavile", "sableye", "sableye_mega", "zapdos", "moltres", "delibird", "stantler", "absol", "bagon", "shelgon", "salamence", "salamence_mega", "snover", "abomasnow", "abomasnow_mega", "raikou", "vulpix", "ninetales", "exeggcute", "exeggutor", "omanyte", "omastar", "misdreavus", "mismagius", "carvanha", "sharpedo", "sharpedo_mega", "pinsir", "pinsir_mega", "mawile", "mawile_mega", "beldum", "metang", "metagross", "metagross_mega", "entei", "ekans", "arbok", "koffing", "weezing", "nidoran_female", "nidorina", "nidoran_male", "nidorino", "nidoqueen", "nidoking", "machop", "machoke", "machamp", "gligar", "gliscor", "shuckle", "stunky", "skuntank", "suicune", "pineco", "forretress", "mewtwo", "mewtwo_mega_x", "mewtwo_mega_y", "diglett", "dugtrio", "shellder", "cloyster", "slowpoke", "slowbro", "slowking", "aerodactyl", "skarmory", "teddiursa", "ursaring", "hoppip", "skiploom", "jumpluff", "wooper", "quagsire", "swinub", "piloswine", "mamoswine", "nosepass", "probopass", "aron", "lairon", "aggron", "spheal", "sealeo", "walrein", "lileep", "cradily", "anorith", "armaldo", "aipom", "ambipom", "skorupi", "drapion", "poochyena", "mightyena", "murkrow", "honchkrow", "electrike", "manectric", "snubbull", "granbull", "makuhita", "hariyama", "starly", "staravia", "staraptor", "tangela", "tangrowth", "horsea", "seadra", "kingdra", "ho_oh", "bidoof", "bibarel", "cacnea", "cacturne", "lugia", "voltorb", "electrode", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "whismur", "loudred", "exploud", "hippopotas", "hippowdon", "rattata_alolan", "raticate_alolan", "sandshrew_alolan", "sandslash_alolan", "exeggutor_alolan", "sudowoodo", "girafarig", "numel", "camerupt", "latias", "exeggutor_alolan", "marowak_alolan", "geodude", "graveler", "golem", "shinx", "luxio", "luxray", "purrloin", "liepard", "latios", "foongus", "amoonguss", "patrat", "watchog", "ducklett", "swanna", "ursaluna", "diglett_alolan", "dugtrio_alolan", "onix", "steelix", "natu", "xatu", "wailmer", "wailord", "golett", "golurk", "vulpix_alolan", "ninetales_alolan", "spoink", "grumpig", "blitzle", "zebstrika", "joltik", "galvantula", "registeel", "salamence_mega", "aggron_mega", "manectric_mega", "gardevoir_mega", "latios_mega", "latias_mega", "grimer_alolan", "muk_alolan", "phanpy", "donphan", "treecko", "grovyle", "sceptile", "sceptile_mega", "torchic", "combusken", "blaziken", "blaziken_mega", "drifloon", "drifblim", "regice", "regirock", "throh", "sawk", "geodude_alolan", "graveler_alolan", "golem_alolan", "ledyba", "ledian", "hitmontop", "glameow", "purugly", "gible", "gabite", "garchomp", "regigigas", "gastly", "haunter", "gengar", "rhyhorn", "rhydon", "rhyperior", "barboach", "whiscash", "cranidos", "rampardos", "shieldon", "bastiodon", "drilbur", "excadrill", "litwick", "lampent", "chandelure", "sneasel_hisuian", "sneasler", "kyogre", "corphish", "crawdaunt", "snorunt", "glalie", "froslass", "chimchar", "monferno", "infernape", "piplup", "prinplup", "empoleon", "croagunk", "toxicroak", "dwebble", "crustle", "ferroseed", "ferrothorn", "tentacool", "tentacruel", "groudon", "pidgey", "pidgeotto", "pidgeot", "darumaka", "darmanitan_standard", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "pidove", "tranquill", "unfezant", "cresselia", "archen", "archeops", "tirtouga", "carracosta", "timburr", "gurdurr", "conkeldurr", "weezing_galarian", "heatran", "mankey", "primeape", "annihilape", "caterpie", "metapod", "butterfree", "roggenrola", "boldore", "gigalith", "venipede", "whirlipede", "scolipede", "karrablast", "escavalier", "shelmet", "accelgor", "zigzagoon_galarian", "linoone_galarian", "obstagoon", "palkia", "taillow", "swellow", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott", "trubbish", "garbodor", "bunnelby", "diggersby", "slakoth", "vigoroth", "slaking", "dialga", "inkay", "malamar", "tyrunt", "tyrantrum", "amaura", "aurorus", "giratina_altered", "staryu", "starmie", "fletchling", "fletchinder", "talonflame", "pikipek", "trumbeak", "toucannon", "grubbin", "charjabug", "vikavolt", "qwilfish", "swablu", "altaria", "baltoy", "claydol", "deino", "zweilous", "hydreigon", "tornadus_incarnate", "feebas", "milotic", "yamask", "cofagrigus", "phantump", "trevenant", "darkrai", "thundurus_incarnate", "froakie", "frogadier", "greninja", "chespin", "quilladin", "chesnaught", "fennekin", "braixen", "delphox", "ponyta", "rapidash", "kabuto", "kabutops", "helioptile", "heliolisk", "morellul", "shiinotic", "stufful", "bewear", "dewpider", "araquanid", "landorus_incarnate", "krabby", "kingler"],
     "greatLeagueIneligible": ["mewtwo", "mewtwo_armored", "giratina_altered", "groudon", "kyogre", "palkia", "dialga", "cobalion", "terrakion", "virizion", "tornadus_therian", "tornadus_therian_xl", "landorus_therian", "reshiram", "zekrom", "kyurem", "genesect_burn", "xerneas", "thundurus_therian", "yveltal", "meloetta_aria", "zacian", "zamazenta", "zacian_hero", "zamazenta_hero", "genesect_douse", "zarude", "hoopa_unbound", "genesect_shock", "tapu_koko", "tapu_lele", "tapu_bulu", "nihilego", "genesect_chill", "solgaleo", "lunala", "keldeo_ordinary", "kyogre_primal", "groudon_primal", "zygarde_complete", "enamorus_therian", "enamorus_incarnate", "dialga_origin", "palkia_origin", "necrozma", "necrozma_dawn_wings", "necrozma_dusk_mane", "marshadow", "kyurem_black", "kyurem_white", "zacian_crowned_sword", "zamazenta_crowned_shield", "eternatus", "sinistcha", "keldeo_resolute"],
     "pokemon": [
         {
@@ -1837,7 +1635,7 @@
             },
             "types": ["normal", "flying"],
             "fastMoves": ["AIR_SLASH", "STEEL_WING", "WING_ATTACK", "GUST"],
-            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE"],
+            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE", "TWISTER"],
             "defaultIVs": {
                 "cp500": [9, 4, 9, 14],
                 "cp1500": [26.5, 4, 14, 12],
@@ -1866,7 +1664,7 @@
             },
             "types": ["normal", "flying"],
             "fastMoves": ["AIR_SLASH", "STEEL_WING", "WING_ATTACK", "GUST"],
-            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE"],
+            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE", "TWISTER"],
             "defaultIVs": {
                 "cp500": [5, 15, 15, 14],
                 "cp1500": [15, 4, 13, 12],
@@ -1893,7 +1691,7 @@
             },
             "types": ["normal", "flying"],
             "fastMoves": ["AIR_SLASH", "STEEL_WING", "WING_ATTACK", "GUST"],
-            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE"],
+            "chargedMoves": ["AERIAL_ACE", "AIR_CUTTER", "BRAVE_BIRD", "HURRICANE", "FEATHER_DANCE", "HEAT_WAVE", "TWISTER"],
             "defaultIVs": {
                 "cp500": [9, 4, 9, 14],
                 "cp1500": [26.5, 4, 14, 12],
@@ -3308,7 +3106,7 @@
             "level25CP": 1382,
             "tags": ["shadoweligible"],
             "eliteMoves": ["EMBER", "FIRE_BLAST", "FLAMETHROWER", "ENERGY_BALL"],
-            "searchPriority": 3,
+            "searchPriority": 8,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -3338,7 +3136,7 @@
                 "cp2500": [47.5, 13, 15, 14],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 8,
+            "searchPriority": 5,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -3369,7 +3167,6 @@
                 "cp2500": [47.5, 13, 15, 14],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 5,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -7194,12 +6991,40 @@
                 "cp2500": [50, 15, 15, 15],
                 "cp1500l40": [39, 12, 13, 14]
             },
+            "tags": ["shadoweligible"],
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
             "family": {
                 "id": "FAMILY_KRABBY",
                 "evolutions": ["kingler"]
+            }
+        },
+        {
+            "dex": 98,
+            "speciesName": "Krabby (Shadow)",
+            "speciesId": "krabby_shadow",
+            "baseStats": {
+                "atk": 181,
+                "def": 124,
+                "hp": 102
+            },
+            "types": ["water", "none"],
+            "fastMoves": ["BUBBLE", "MUD_SHOT"],
+            "chargedMoves": ["BUBBLE_BEAM", "VICE_GRIP", "WATER_PULSE", "RAZOR_SHELL"],
+            "defaultIVs": {
+                "cp500": [12, 4, 12, 15],
+                "cp1500": [42, 4, 15, 13],
+                "cp2500": [50, 15, 15, 15],
+                "cp1500l40": [39, 12, 13, 14]
+            },
+            "tags": ["shadow"],
+            "buddyDistance": 3,
+            "thirdMoveCost": 50000,
+            "released": true,
+            "family": {
+                "id": "FAMILY_KRABBY",
+                "evolutions": ["kingler_shadow"]
             }
         },
         {
@@ -7219,6 +7044,7 @@
                 "cp1500": [19.5, 5, 15, 12],
                 "cp2500": [35, 4, 15, 13]
             },
+            "tags": ["shadoweligible"],
             "eliteMoves": ["MUD_SHOT"],
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
@@ -7226,6 +7052,33 @@
             "family": {
                 "id": "FAMILY_KRABBY",
                 "parent": "krabby"
+            }
+        },
+        {
+            "dex": 99,
+            "speciesName": "Kingler (Shadow)",
+            "speciesId": "kingler_shadow",
+            "baseStats": {
+                "atk": 240,
+                "def": 181,
+                "hp": 146
+            },
+            "types": ["water", "none"],
+            "fastMoves": ["BUBBLE", "METAL_CLAW", "MUD_SHOT"],
+            "chargedMoves": ["VICE_GRIP", "WATER_PULSE", "X_SCISSOR", "CRABHAMMER", "RAZOR_SHELL"],
+            "defaultIVs": {
+                "cp500": [6.5, 11, 14, 15],
+                "cp1500": [19.5, 5, 15, 12],
+                "cp2500": [35, 4, 15, 13]
+            },
+            "tags": ["shadow"],
+            "eliteMoves": ["MUD_SHOT"],
+            "buddyDistance": 3,
+            "thirdMoveCost": 50000,
+            "released": true,
+            "family": {
+                "id": "FAMILY_KRABBY",
+                "parent": "krabby_shadow"
             }
         },
         {
@@ -7660,7 +7513,7 @@
                 "cp2500": [50, 15, 15, 15]
             },
             "level25CP": 1090,
-            "searchPriority": 5,
+            "searchPriority": 3,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -7689,7 +7542,7 @@
                 "cp1500": [31.5, 4, 15, 14],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 5,
+            "searchPriority": 3,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -7725,7 +7578,7 @@
                 "parent": "cubone_shadow"
             },
             "nicknames": ["kwak"],
-            "searchPriority": 10
+            "searchPriority": 6
         },
         {
             "dex": 106,
@@ -8439,7 +8292,8 @@
             "family": {
                 "id": "FAMILY_GOLDEEN",
                 "parent": "goldeen"
-            }
+            },
+            "searchPriority": 5
         },
         {
             "dex": 120,
@@ -8506,7 +8360,7 @@
             },
             "types": ["water", "psychic"],
             "fastMoves": ["HIDDEN_POWER_BUG", "HIDDEN_POWER_DARK", "HIDDEN_POWER_DRAGON", "HIDDEN_POWER_ELECTRIC", "HIDDEN_POWER_FIGHTING", "HIDDEN_POWER_FIRE", "HIDDEN_POWER_FLYING", "HIDDEN_POWER_GHOST", "HIDDEN_POWER_GRASS", "HIDDEN_POWER_GROUND", "HIDDEN_POWER_ICE", "HIDDEN_POWER_POISON", "HIDDEN_POWER_PSYCHIC", "HIDDEN_POWER_ROCK", "HIDDEN_POWER_STEEL", "HIDDEN_POWER_WATER", "QUICK_ATTACK", "TACKLE", "WATER_GUN", "PSYWAVE"],
-            "chargedMoves": ["HYDRO_PUMP", "ICE_BEAM", "POWER_GEM", "PSYBEAM", "PSYCHIC", "THUNDER", "SURF"],
+            "chargedMoves": ["HYDRO_PUMP", "ICE_BEAM", "POWER_GEM", "PSYBEAM", "PSYCHIC", "THUNDER", "SURF", "AQUA_JET"],
             "legacyMoves": ["QUICK_ATTACK"],
             "defaultIVs": {
                 "cp500": [7.5, 4, 10, 8],
@@ -8537,7 +8391,7 @@
             },
             "types": ["water", "psychic"],
             "fastMoves": ["HIDDEN_POWER_BUG", "HIDDEN_POWER_DARK", "HIDDEN_POWER_DRAGON", "HIDDEN_POWER_ELECTRIC", "HIDDEN_POWER_FIGHTING", "HIDDEN_POWER_FIRE", "HIDDEN_POWER_FLYING", "HIDDEN_POWER_GHOST", "HIDDEN_POWER_GRASS", "HIDDEN_POWER_GROUND", "HIDDEN_POWER_ICE", "HIDDEN_POWER_POISON", "HIDDEN_POWER_PSYCHIC", "HIDDEN_POWER_ROCK", "HIDDEN_POWER_STEEL", "HIDDEN_POWER_WATER", "TACKLE", "WATER_GUN", "PSYWAVE"],
-            "chargedMoves": ["HYDRO_PUMP", "ICE_BEAM", "POWER_GEM", "PSYBEAM", "PSYCHIC", "THUNDER", "SURF"],
+            "chargedMoves": ["HYDRO_PUMP", "ICE_BEAM", "POWER_GEM", "PSYBEAM", "PSYCHIC", "THUNDER", "SURF", "AQUA_JET"],
             "defaultIVs": {
                 "cp500": [7.5, 4, 10, 8],
                 "cp1500": [21.5, 5, 13, 13],
@@ -9525,7 +9379,7 @@
             },
             "types": ["rock", "water"],
             "fastMoves": ["FURY_CUTTER", "MUD_SHOT", "ROCK_SMASH", "WATERFALL"],
-            "chargedMoves": ["ANCIENT_POWER", "STONE_EDGE", "WATER_PULSE"],
+            "chargedMoves": ["ANCIENT_POWER", "STONE_EDGE", "WATER_PULSE", "AQUA_JET"],
             "defaultIVs": {
                 "cp500": [7, 4, 12, 14],
                 "cp1500": [20.5, 4, 12, 14],
@@ -9553,7 +9407,7 @@
             },
             "types": ["rock", "water"],
             "fastMoves": ["FURY_CUTTER", "MUD_SHOT", "ROCK_SMASH", "WATERFALL"],
-            "chargedMoves": ["ANCIENT_POWER", "STONE_EDGE", "WATER_PULSE"],
+            "chargedMoves": ["ANCIENT_POWER", "STONE_EDGE", "WATER_PULSE", "AQUA_JET"],
             "defaultIVs": {
                 "cp500": [7, 4, 12, 14],
                 "cp1500": [20.5, 4, 12, 14],
@@ -9800,7 +9654,7 @@
                 "hp": 207
             },
             "types": ["fighting", "flying"],
-            "fastMoves": ["COUNTER"],
+            "fastMoves": ["COUNTER", "LOW_KICK"],
             "chargedMoves": ["CLOSE_COMBAT", "ANCIENT_POWER", "BRAVE_BIRD", "FLY"],
             "tags": ["legendary", "galarian", "wildlegendary"],
             "defaultIVs": {
@@ -10127,6 +9981,56 @@
             "thirdMoveCost": 100000,
             "released": true,
             "nicknames": ["m2"]
+        },
+        {
+            "dex": 150,
+            "speciesName": "Mewtwo (Mega X)",
+            "speciesId": "mewtwo_mega_x",
+            "baseStats": {
+                "atk": 399,
+                "def": 215,
+                "hp": 214
+            },
+            "types": ["psychic", "fighting"],
+            "fastMoves": ["CONFUSION", "PSYCHO_CUT"],
+            "chargedMoves": ["FLAMETHROWER", "FOCUS_BLAST", "HYPER_BEAM", "ICE_BEAM", "PSYCHIC", "SHADOW_BALL", "THUNDERBOLT", "PSYSTRIKE"],
+            "tags": ["legendary", "shadoweligible", "mega"],
+            "defaultIVs": {
+                "cp500": [3.5, 7, 4, 6],
+                "cp1500": [9, 14, 11, 14],
+                "cp2500": [15, 9, 12, 15]
+            },
+            "level25CP": 2641,
+            "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"],
+            "buddyDistance": 20,
+            "thirdMoveCost": 100000,
+            "released": true,
+            "levelFloor": 15
+        },
+        {
+            "dex": 150,
+            "speciesName": "Mewtwo (Mega Y)",
+            "speciesId": "mewtwo_mega_y",
+            "baseStats": {
+                "atk": 413,
+                "def": 228,
+                "hp": 214
+            },
+            "types": ["psychic", "none"],
+            "fastMoves": ["CONFUSION", "PSYCHO_CUT"],
+            "chargedMoves": ["FLAMETHROWER", "FOCUS_BLAST", "HYPER_BEAM", "ICE_BEAM", "PSYCHIC", "SHADOW_BALL", "THUNDERBOLT", "PSYSTRIKE"],
+            "tags": ["legendary", "shadoweligible", "mega"],
+            "defaultIVs": {
+                "cp500": [3, 9, 15, 14],
+                "cp1500": [8.5, 12, 15, 11],
+                "cp2500": [14.5, 4, 9, 12]
+            },
+            "level25CP": 2641,
+            "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"],
+            "buddyDistance": 20,
+            "thirdMoveCost": 100000,
+            "released": true,
+            "levelFloor": 15
         },
         {
             "dex": 150,
@@ -10694,7 +10598,7 @@
                 "id": "FAMILY_TOTODILE",
                 "parent": "croconaw"
             },
-            "searchPriority": 3
+            "searchPriority": 5
         },
         {
             "dex": 160,
@@ -10767,7 +10671,7 @@
                 "cp1500": [34.5, 4, 14, 13],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 10,
+            "searchPriority": 6,
             "buddyDistance": 1,
             "thirdMoveCost": 10000,
             "released": true,
@@ -10891,8 +10795,8 @@
                 "hp": 146
             },
             "types": ["bug", "flying"],
-            "fastMoves": ["BUG_BITE", "STRUGGLE_BUG", "COUNTER"],
-            "chargedMoves": ["AERIAL_ACE", "BUG_BUZZ", "SILVER_WIND", "DYNAMIC_PUNCH"],
+            "fastMoves": ["BUG_BITE", "STRUGGLE_BUG", "COUNTER", "ROLLOUT"],
+            "chargedMoves": ["AERIAL_ACE", "BUG_BUZZ", "SILVER_WIND", "DYNAMIC_PUNCH", "ACROBATICS"],
             "defaultIVs": {
                 "cp500": [14.5, 4, 13, 12],
                 "cp1500": [49.5, 14, 15, 14],
@@ -10919,8 +10823,8 @@
                 "hp": 146
             },
             "types": ["bug", "flying"],
-            "fastMoves": ["BUG_BITE", "STRUGGLE_BUG", "COUNTER"],
-            "chargedMoves": ["AERIAL_ACE", "BUG_BUZZ", "SILVER_WIND", "DYNAMIC_PUNCH"],
+            "fastMoves": ["BUG_BITE", "STRUGGLE_BUG", "COUNTER", "ROLLOUT"],
+            "chargedMoves": ["AERIAL_ACE", "BUG_BUZZ", "SILVER_WIND", "DYNAMIC_PUNCH", "ACROBATICS"],
             "defaultIVs": {
                 "cp500": [14.5, 4, 13, 12],
                 "cp1500": [49.5, 14, 15, 14],
@@ -11319,7 +11223,7 @@
             },
             "types": ["psychic", "flying"],
             "fastMoves": ["AIR_SLASH", "FEINT_ATTACK", "PECK"],
-            "chargedMoves": ["AERIAL_ACE", "FUTURE_SIGHT", "OMINOUS_WIND", "PSYSHOCK"],
+            "chargedMoves": ["AERIAL_ACE", "FUTURE_SIGHT", "OMINOUS_WIND", "PSYSHOCK", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [8.5, 5, 15, 14],
                 "cp1500": [25.5, 4, 14, 14],
@@ -11346,7 +11250,7 @@
             },
             "types": ["psychic", "flying"],
             "fastMoves": ["AIR_SLASH", "FEINT_ATTACK", "PECK"],
-            "chargedMoves": ["AERIAL_ACE", "FUTURE_SIGHT", "OMINOUS_WIND", "PSYSHOCK"],
+            "chargedMoves": ["AERIAL_ACE", "FUTURE_SIGHT", "OMINOUS_WIND", "PSYSHOCK", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [8.5, 5, 15, 14],
                 "cp1500": [25.5, 4, 14, 14],
@@ -12660,7 +12564,7 @@
             },
             "level25CP": 1383,
             "tags": ["shadoweligible"],
-            "searchPriority": 7,
+            "searchPriority": 10,
             "buddyDistance": 5,
             "thirdMoveCost": 75000,
             "released": true,
@@ -12980,7 +12884,7 @@
             },
             "types": ["water", "poison"],
             "fastMoves": ["POISON_STING", "WATER_GUN"],
-            "chargedMoves": ["AQUA_TAIL", "ICE_BEAM", "SLUDGE_WAVE", "ACID_SPRAY", "FELL_STINGER", "SCALD"],
+            "chargedMoves": ["AQUA_TAIL", "ICE_BEAM", "SLUDGE_WAVE", "ACID_SPRAY", "FELL_STINGER", "SCALD", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [9, 5, 15, 15],
                 "cp1500": [27, 5, 14, 15],
@@ -13030,7 +12934,7 @@
             },
             "types": ["water", "poison"],
             "fastMoves": ["POISON_STING", "WATER_GUN"],
-            "chargedMoves": ["AQUA_TAIL", "ICE_BEAM", "SLUDGE_WAVE", "ACID_SPRAY", "FELL_STINGER", "SCALD"],
+            "chargedMoves": ["AQUA_TAIL", "ICE_BEAM", "SLUDGE_WAVE", "ACID_SPRAY", "FELL_STINGER", "SCALD", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [9, 5, 15, 15],
                 "cp1500": [27, 5, 14, 15],
@@ -13744,13 +13648,13 @@
             },
             "types": ["water", "flying"],
             "fastMoves": ["BUBBLE", "BULLET_SEED", "WING_ATTACK"],
-            "chargedMoves": ["AERIAL_ACE", "ICE_BEAM", "WATER_PULSE", "BUBBLE_BEAM"],
+            "chargedMoves": ["AERIAL_ACE", "ICE_BEAM", "WATER_PULSE", "BUBBLE_BEAM", "TWISTER"],
             "defaultIVs": {
                 "cp500": [9, 4, 12, 15],
                 "cp1500": [27, 4, 14, 12],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 5,
+            "searchPriority": 6,
             "buddyDistance": 5,
             "thirdMoveCost": 75000,
             "released": true,
@@ -13949,7 +13853,7 @@
             },
             "types": ["water", "dragon"],
             "fastMoves": ["DRAGON_BREATH", "WATER_GUN", "WATERFALL"],
-            "chargedMoves": ["BLIZZARD", "HYDRO_PUMP", "OUTRAGE", "OCTAZOOKA", "SWIFT"],
+            "chargedMoves": ["BLIZZARD", "HYDRO_PUMP", "OUTRAGE", "OCTAZOOKA", "SWIFT", "SURF"],
             "defaultIVs": {
                 "cp500": [7, 10, 13, 14],
                 "cp1500": [21, 5, 15, 12],
@@ -13979,7 +13883,7 @@
             },
             "types": ["water", "dragon"],
             "fastMoves": ["DRAGON_BREATH", "WATER_GUN", "WATERFALL"],
-            "chargedMoves": ["BLIZZARD", "HYDRO_PUMP", "OUTRAGE", "OCTAZOOKA", "SWIFT"],
+            "chargedMoves": ["BLIZZARD", "HYDRO_PUMP", "OUTRAGE", "OCTAZOOKA", "SWIFT", "SURF"],
             "defaultIVs": {
                 "cp500": [7, 10, 13, 14],
                 "cp1500": [21, 5, 15, 12],
@@ -19684,7 +19588,7 @@
             },
             "types": ["normal", "none"],
             "fastMoves": ["LICK", "SUCKER_PUNCH"],
-            "chargedMoves": ["AERIAL_ACE", "FLAMETHROWER", "FOUL_PLAY", "ICE_BEAM", "SHADOW_SNEAK", "THUNDER"],
+            "chargedMoves": ["AERIAL_ACE", "FLAMETHROWER", "FOUL_PLAY", "ICE_BEAM", "SHADOW_SNEAK", "THUNDER", "THUNDER_PUNCH", "DYNAMIC_PUNCH"],
             "defaultIVs": {
                 "cp500": [9, 8, 15, 13],
                 "cp1500": [27.5, 4, 14, 14],
@@ -23351,7 +23255,7 @@
             },
             "types": ["normal", "none"],
             "fastMoves": ["LOW_KICK", "POUND", "DOUBLE_KICK"],
-            "chargedMoves": ["FIRE_PUNCH", "FOCUS_BLAST", "HYPER_BEAM", "TRIPLE_AXEL"],
+            "chargedMoves": ["FIRE_PUNCH", "FOCUS_BLAST", "HYPER_BEAM", "TRIPLE_AXEL", "THUNDER_PUNCH", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [9, 6, 15, 15],
                 "cp1500": [27.5, 4, 11, 15],
@@ -23377,7 +23281,7 @@
             },
             "types": ["normal", "fighting"],
             "fastMoves": ["LOW_KICK", "POUND", "DOUBLE_KICK"],
-            "chargedMoves": ["FIRE_PUNCH", "FOCUS_BLAST", "HYPER_BEAM", "TRIPLE_AXEL"],
+            "chargedMoves": ["FIRE_PUNCH", "FOCUS_BLAST", "HYPER_BEAM", "TRIPLE_AXEL", "THUNDER_PUNCH", "SHADOW_BALL"],
             "defaultIVs": {
                 "cp500": [5, 13, 15, 14],
                 "cp1500": [14.5, 5, 15, 15],
@@ -24594,7 +24498,7 @@
                 "hp": 170
             },
             "types": ["water", "none"],
-            "fastMoves": ["WATER_GUN", "WATERFALL"],
+            "fastMoves": ["WATER_GUN", "WATERFALL", "GUST"],
             "chargedMoves": ["BLIZZARD", "SILVER_WIND", "WATER_PULSE", "AQUA_TAIL"],
             "defaultIVs": {
                 "cp500": [10.5, 4, 13, 13],
@@ -24920,7 +24824,7 @@
             },
             "types": ["ground", "rock"],
             "fastMoves": ["MUD_SLAP", "SMACK_DOWN"],
-            "chargedMoves": ["EARTHQUAKE", "STONE_EDGE", "SURF", "SKULL_BASH", "SUPER_POWER", "ROCK_WRECKER", "BREAKING_SWIPE"],
+            "chargedMoves": ["EARTHQUAKE", "STONE_EDGE", "SURF", "SKULL_BASH", "SUPER_POWER", "ROCK_WRECKER", "BREAKING_SWIPE", "DRILL_RUN"],
             "defaultIVs": {
                 "cp500": [5, 14, 14, 15],
                 "cp1500": [15, 4, 12, 8],
@@ -24949,7 +24853,7 @@
             },
             "types": ["ground", "rock"],
             "fastMoves": ["MUD_SLAP", "SMACK_DOWN"],
-            "chargedMoves": ["EARTHQUAKE", "STONE_EDGE", "SURF", "SKULL_BASH", "SUPER_POWER", "ROCK_WRECKER", "BREAKING_SWIPE"],
+            "chargedMoves": ["EARTHQUAKE", "STONE_EDGE", "SURF", "SKULL_BASH", "SUPER_POWER", "ROCK_WRECKER", "BREAKING_SWIPE", "DRILL_RUN"],
             "defaultIVs": {
                 "cp500": [5, 14, 14, 15],
                 "cp1500": [15, 4, 12, 8],
@@ -26884,7 +26788,7 @@
                 "cp2500": [48.5, 13, 15, 15],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 8,
+            "searchPriority": 2,
             "buddyDistance": 3,
             "thirdMoveCost": 10000,
             "released": true,
@@ -26914,7 +26818,6 @@
                 "cp2500": [48.5, 13, 15, 15],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 8,
             "buddyDistance": 3,
             "thirdMoveCost": 10000,
             "released": true,
@@ -28163,7 +28066,7 @@
                 "hp": 198
             },
             "types": ["rock", "none"],
-            "fastMoves": ["MUD_SLAP", "SMACK_DOWN"],
+            "fastMoves": ["MUD_SLAP", "SMACK_DOWN", "LOCK_ON"],
             "chargedMoves": ["ROCK_SLIDE", "SOLAR_BEAM", "SUPER_POWER", "HEAVY_SLAM", "METEOR_BEAM"],
             "eliteMoves": ["METEOR_BEAM"],
             "defaultIVs": {
@@ -28191,7 +28094,7 @@
                 "hp": 198
             },
             "types": ["rock", "none"],
-            "fastMoves": ["MUD_SLAP", "SMACK_DOWN"],
+            "fastMoves": ["MUD_SLAP", "SMACK_DOWN", "LOCK_ON"],
             "chargedMoves": ["ROCK_SLIDE", "SOLAR_BEAM", "SUPER_POWER", "HEAVY_SLAM", "METEOR_BEAM"],
             "eliteMoves": ["METEOR_BEAM"],
             "defaultIVs": {
@@ -28532,7 +28435,7 @@
                 "hp": 233
             },
             "types": ["fighting", "none"],
-            "fastMoves": ["COUNTER", "POISON_JAB"],
+            "fastMoves": ["COUNTER", "POISON_JAB", "FORCE_PALM"],
             "chargedMoves": ["DYNAMIC_PUNCH", "FOCUS_BLAST", "STONE_EDGE", "BRUTAL_SWING"],
             "eliteMoves": ["BRUTAL_SWING"],
             "defaultIVs": {
@@ -28560,7 +28463,7 @@
                 "hp": 233
             },
             "types": ["fighting", "none"],
-            "fastMoves": ["COUNTER", "POISON_JAB"],
+            "fastMoves": ["COUNTER", "POISON_JAB", "FORCE_PALM"],
             "chargedMoves": ["DYNAMIC_PUNCH", "FOCUS_BLAST", "STONE_EDGE", "BRUTAL_SWING"],
             "eliteMoves": ["BRUTAL_SWING"],
             "defaultIVs": {
@@ -28640,7 +28543,7 @@
             },
             "types": ["water", "ground"],
             "fastMoves": ["MUD_SHOT", "BUBBLE"],
-            "chargedMoves": ["MUDDY_WATER", "EARTH_POWER", "SLUDGE_BOMB"],
+            "chargedMoves": ["MUDDY_WATER", "EARTH_POWER", "SLUDGE_BOMB", "ICY_WIND"],
             "defaultIVs": {
                 "cp500": [7.5, 4, 10, 13],
                 "cp1500": [22, 4, 11, 13],
@@ -30649,8 +30552,8 @@
                 "hp": 181
             },
             "types": ["water", "flying"],
-            "fastMoves": ["WATER_GUN", "AIR_SLASH"],
-            "chargedMoves": ["ICE_BEAM", "BUBBLE_BEAM", "HURRICANE", "FLY"],
+            "fastMoves": ["WATER_GUN", "AIR_SLASH", "GUST"],
+            "chargedMoves": ["ICE_BEAM", "BUBBLE_BEAM", "HURRICANE", "FLY", "AQUA_JET"],
             "defaultIVs": {
                 "cp500": [9, 4, 13, 15],
                 "cp1500": [26.5, 5, 15, 14],
@@ -30676,8 +30579,8 @@
                 "hp": 181
             },
             "types": ["water", "flying"],
-            "fastMoves": ["WATER_GUN", "AIR_SLASH"],
-            "chargedMoves": ["ICE_BEAM", "BUBBLE_BEAM", "HURRICANE", "FLY"],
+            "fastMoves": ["WATER_GUN", "AIR_SLASH", "GUST"],
+            "chargedMoves": ["ICE_BEAM", "BUBBLE_BEAM", "HURRICANE", "FLY", "AQUA_JET"],
             "defaultIVs": {
                 "cp500": [9, 4, 13, 15],
                 "cp1500": [26.5, 5, 15, 14],
@@ -32399,7 +32302,7 @@
                 "cp1500": [26.5, 5, 15, 13],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 9,
+            "searchPriority": 3,
             "buddyDistance": 5,
             "thirdMoveCost": 75000,
             "released": true,
@@ -34002,7 +33905,7 @@
                 "cp1500": [25.5, 4, 12, 15],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 15,
+            "searchPriority": 9,
             "buddyDistance": 1,
             "thirdMoveCost": 10000,
             "released": true,
@@ -34031,7 +33934,6 @@
                 "cp1500": [25.5, 4, 12, 15],
                 "cp2500": [50, 15, 15, 15]
             },
-            "searchPriority": 15,
             "buddyDistance": 1,
             "thirdMoveCost": 10000,
             "released": true,
@@ -34603,7 +34505,7 @@
                 "hp": 226
             },
             "types": ["fairy", "none"],
-            "fastMoves": ["CHARM", "CHARGE_BEAM"],
+            "fastMoves": ["CHARM", "CHARGE_BEAM", "FAIRY_WIND"],
             "chargedMoves": ["MOONBLAST", "THUNDERBOLT", "PSYCHIC", "DRAINING_KISS", "PSYSHOCK"],
             "defaultIVs": {
                 "cp500": [8, 5, 15, 14],
@@ -34797,7 +34699,6 @@
                 "cp2500": [50, 4, 13, 15],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 7,
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
             "released": true,
@@ -35291,8 +35192,8 @@
                 "hp": 216
             },
             "types": ["fairy", "none"],
-            "fastMoves": ["CHARM", "QUICK_ATTACK"],
-            "chargedMoves": ["MOONBLAST", "DAZZLING_GLEAM", "DRAINING_KISS", "LAST_RESORT", "PSYSHOCK"],
+            "fastMoves": ["CHARM", "QUICK_ATTACK", "FAIRY_WIND"],
+            "chargedMoves": ["MOONBLAST", "DAZZLING_GLEAM", "DRAINING_KISS", "LAST_RESORT", "PSYSHOCK", "SHADOW_BALL"],
             "eliteMoves": ["LAST_RESORT", "PSYSHOCK"],
             "defaultIVs": {
                 "cp500": [6, 12, 15, 15],
@@ -35411,8 +35312,8 @@
                 "hp": 169
             },
             "types": ["dragon", "none"],
-            "fastMoves": ["WATER_GUN", "TACKLE"],
-            "chargedMoves": ["DRAGON_PULSE", "SLUDGE_WAVE", "MUDDY_WATER", "WATER_PULSE"],
+            "fastMoves": ["WATER_GUN", "TACKLE", "DRAGON_BREATH"],
+            "chargedMoves": ["DRAGON_PULSE", "SLUDGE_WAVE", "MUDDY_WATER", "WATER_PULSE", "BODY_SLAM"],
             "defaultIVs": {
                 "cp500": [9.5, 4, 7, 11],
                 "cp1500": [27.5, 4, 15, 15],
@@ -35425,7 +35326,8 @@
                 "id": "FAMILY_GOOMY",
                 "parent": "goomy",
                 "evolutions": ["goodra"]
-            }
+            },
+            "searchPriority": 4
         },
         {
             "dex": 706,
@@ -39302,15 +39204,18 @@
             },
             "types": ["electric", "none"],
             "fastMoves": ["SPARK", "VOLT_SWITCH"],
-            "chargedMoves": ["THUNDER_PUNCH", "DISCHARGE", "WILD_CHARGE"],
+            "chargedMoves": ["THUNDER_PUNCH", "DISCHARGE", "WILD_CHARGE", "PLASMA_FISTS"],
             "defaultIVs": {
-                "cp500": [5.5, 9, 14, 15],
-                "cp1500": [16, 5, 14, 15],
-                "cp2500": [27, 4, 10, 15]
+                "cp500": [5.5, 12, 11, 12],
+                "cp1500": [15.5, 11, 15, 13],
+                "cp2500": [26.5, 11, 11, 10]
             },
             "buddyDistance": 20,
             "thirdMoveCost": 100000,
-            "released": false
+            "released": true,
+            "levelFloor": 15,
+            "tags": ["mythical", "untradeable"],
+            "searchPriority": 2
         },
         {
             "dex": 808,
@@ -39349,7 +39254,7 @@
             },
             "types": ["steel", "none"],
             "fastMoves": ["THUNDER_SHOCK"],
-            "chargedMoves": ["FLASH_CANNON", "HYPER_BEAM", "ROCK_SLIDE", "THUNDERBOLT", "SUPER_POWER", "DOUBLE_IRON_BASH"],
+            "chargedMoves": ["FLASH_CANNON", "HYPER_BEAM", "ROCK_SLIDE", "THUNDERBOLT", "SUPER_POWER", "DOUBLE_IRON_BASH", "DYNAMIC_PUNCH"],
             "eliteMoves": ["DOUBLE_IRON_BASH"],
             "defaultIVs": {
                 "cp500": [5.5, 4, 11, 5],
@@ -41010,6 +40915,28 @@
             "released": true
         },
         {
+            "dex": 870,
+            "speciesName": "Falinks (Mega)",
+            "speciesId": "falinks_mega",
+            "baseStats": {
+                "atk": 267,
+                "def": 229,
+                "hp": 163
+            },
+            "types": ["fighting", "none"],
+            "fastMoves": ["ROCK_SMASH", "COUNTER"],
+            "chargedMoves": ["SUPER_POWER", "BRICK_BREAK", "MEGAHORN"],
+            "defaultIVs": {
+                "cp500": [5, 15, 15, 15],
+                "cp1500": [15, 4, 11, 15],
+                "cp2500": [25, 4, 14, 13]
+            },
+            "buddyDistance": 5,
+            "thirdMoveCost": 75000,
+            "released": true,
+            "tags": ["mega"]
+        },
+        {
             "dex": 871,
             "speciesName": "Pincurchin",
             "speciesId": "pincurchin",
@@ -42381,7 +42308,7 @@
                 "hp": 198
             },
             "types": ["water", "fighting"],
-            "fastMoves": ["WATER_GUN", "WING_ATTACK"],
+            "fastMoves": ["WATER_GUN", "WING_ATTACK", "LOW_KICK"],
             "chargedMoves": ["AQUA_JET", "AERIAL_ACE", "LIQUIDATION", "CLOSE_COMBAT", "AQUA_STEP", "HYDRO_CANNON"],
             "eliteMoves": ["HYDRO_CANNON"],
             "defaultIVs": {
@@ -43592,7 +43519,7 @@
             },
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
-            "released": false,
+            "released": true,
             "family": {
                 "id": "FAMILY_FLITTLE",
                 "evolutions": ["espathra"]
@@ -43618,7 +43545,7 @@
             },
             "buddyDistance": 3,
             "thirdMoveCost": 50000,
-            "released": false,
+            "released": true,
             "family": {
                 "id": "FAMILY_FLITTLE",
                 "parent": "flittle"
@@ -43694,7 +43621,7 @@
                 "cp2500": [50, 12, 15, 15],
                 "cp2500l40": [40, 15, 15, 15]
             },
-            "searchPriority": 8,
+            "searchPriority": 10,
             "buddyDistance": 3,
             "thirdMoveCost": 75000,
             "released": true,
@@ -44180,13 +44107,13 @@
             "chargedMoves": ["OUTRAGE", "SURF", "HYDRO_PUMP", "LIQUIDATION"],
             "defaultIVs": {
                 "cp500": [6.5, 4, 10, 13],
-                "cp1500": [20, 1, 1, 2],
+                "cp1500": [18.5, 6, 13, 14],
                 "cp2500": [32, 4, 14, 15]
             },
             "buddyDistance": 5,
             "thirdMoveCost": 75000,
             "released": true,
-            "levelFloor": 20
+            "levelFloor": 15
         },
         {
             "dex": 978,
@@ -45931,7 +45858,7 @@
             "name": "Charm",
             "abbreviation": "Ch",
             "type": "fairy",
-            "power": 13,
+            "power": 12,
             "energy": 0,
             "energyGain": 8,
             "cooldown": 1500,
@@ -46206,14 +46133,14 @@
             "name": "Dragon Ascent",
             "abbreviation": "DrA",
             "type": "flying",
-            "power": 150,
-            "energy": 70,
+            "power": 110,
+            "energy": 45,
             "energyGain": 0,
             "cooldown": 500,
             "buffs": [0, -1],
             "buffTarget": "self",
             "buffApplyChance": "1",
-            "archetype": "Self-Debuff Nuke",
+            "archetype": "Self-Debuff",
             "turns": 1
         },
         {
@@ -46315,11 +46242,11 @@
             "moveId": "DRILL_RUN",
             "name": "Drill Run",
             "type": "ground",
-            "power": 80,
-            "energy": 45,
+            "power": 70,
+            "energy": 40,
             "energyGain": 0,
             "cooldown": 500,
-            "archetype": "General",
+            "archetype": "Spam/Bait",
             "turns": 1
         },
         {
@@ -46366,7 +46293,7 @@
             "name": "Earthquake",
             "abbreviation": "Eq",
             "type": "ground",
-            "power": 110,
+            "power": 120,
             "energy": 65,
             "energyGain": 0,
             "cooldown": 500,
@@ -46378,13 +46305,13 @@
             "name": "Earth Power",
             "type": "ground",
             "power": 90,
-            "energy": 55,
+            "energy": 50,
             "energyGain": 0,
             "cooldown": 500,
             "buffs": [0, -1],
             "buffTarget": "opponent",
             "buffApplyChance": ".1",
-            "archetype": "High Energy",
+            "archetype": "Debuff",
             "turns": 1
         },
         {
@@ -46402,14 +46329,14 @@
             "moveId": "ENERGY_BALL",
             "name": "Energy Ball",
             "type": "grass",
-            "power": 90,
-            "energy": 55,
+            "power": 80,
+            "energy": 45,
             "energyGain": 0,
             "cooldown": 500,
             "buffs": [0, -1],
             "buffTarget": "opponent",
             "buffApplyChance": ".1",
-            "archetype": "High Energy",
+            "archetype": "Debuff",
             "turns": 1
         },
         {
@@ -46577,7 +46504,7 @@
             "name": "Flash Cannon",
             "type": "steel",
             "power": 110,
-            "energy": 70,
+            "energy": 65,
             "energyGain": 0,
             "cooldown": 500,
             "archetype": "Nuke",
@@ -46764,6 +46691,17 @@
             "turns": 3
         },
         {
+            "moveId": "GIGATON_HAMMER",
+            "name": "Gigaton Hammer",
+            "type": "steel",
+            "power": 130,
+            "energy": 60,
+            "energyGain": 0,
+            "cooldown": 500,
+            "archetype": "Nuke",
+            "turns": 1
+        },
+        {
             "moveId": "GIGA_DRAIN",
             "name": "Giga Drain",
             "type": "grass",
@@ -46780,17 +46718,6 @@
             "type": "normal",
             "power": 150,
             "energy": 80,
-            "energyGain": 0,
-            "cooldown": 500,
-            "archetype": "Nuke",
-            "turns": 1
-        },
-        {
-            "moveId": "GIGATON_HAMMER",
-            "name": "Gigaton Hammer",
-            "type": "steel",
-            "power": 130,
-            "energy": 60,
             "energyGain": 0,
             "cooldown": 500,
             "archetype": "Nuke",
@@ -46838,7 +46765,7 @@
             "type": "flying",
             "power": 16,
             "energy": 0,
-            "energyGain": 12,
+            "energyGain": 14,
             "cooldown": 2000,
             "archetype": "Multipurpose",
             "turns": 4
@@ -47145,7 +47072,7 @@
             "abbreviation": "Hu",
             "type": "flying",
             "power": 110,
-            "energy": 65,
+            "energy": 60,
             "energyGain": 0,
             "cooldown": 500,
             "archetype": "Nuke",
@@ -47952,6 +47879,17 @@
             "turns": 1
         },
         {
+            "moveId": "PLASMA_FISTS",
+            "name": "Plasma Fists",
+            "type": "electric",
+            "power": 60,
+            "energy": 35,
+            "energyGain": 0,
+            "cooldown": 500,
+            "archetype": "Spam/Bait",
+            "turns": 1
+        },
+        {
             "moveId": "POISON_FANG",
             "name": "Poison Fang",
             "type": "poison",
@@ -48604,7 +48542,7 @@
             "name": "Silver Wind",
             "abbreviation": "SvW",
             "type": "bug",
-            "power": 60,
+            "power": 75,
             "energy": 45,
             "energyGain": 0,
             "cooldown": 500,
@@ -49395,7 +49333,7 @@
             "name": "Wrap",
             "abbreviation": "Wr",
             "type": "normal",
-            "power": 60,
+            "power": 70,
             "energy": 45,
             "energyGain": 0,
             "cooldown": 500,
