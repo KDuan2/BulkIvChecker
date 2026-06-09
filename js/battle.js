@@ -75,16 +75,21 @@ var PvPIV = PvPIV || {};
      * Set moves on a Pokemon from: explicit override > ranking data > auto-select.
      */
     function setMovesFromSource(poke, speciesId, explicitMoves, cpCap) {
-        var moves = explicitMoves;
-        if (!moves) {
-            moves = getRankingMoveset(speciesId, cpCap);
-        }
-        if (moves) {
-            if (moves[0]) poke.selectMove("fast", moves[0]);
-            if (moves[1]) poke.selectMove("charged", moves[1], 0);
-            if (moves[2]) poke.selectMove("charged", moves[2], 1);
+        // Baseline: ranking moveset (or engine auto-select). Each move slot left
+        // unset in an override falls back to this baseline.
+        var ranking = getRankingMoveset(speciesId, cpCap);
+        if (ranking) {
+            if (ranking[0]) poke.selectMove("fast", ranking[0]);
+            if (ranking[1]) poke.selectMove("charged", ranking[1], 0);
+            if (ranking[2]) poke.selectMove("charged", ranking[2], 1);
         } else {
             poke.autoSelectMoves(2);
+        }
+        // Overlay explicit per-slot overrides on top of the baseline.
+        if (explicitMoves) {
+            if (explicitMoves[0]) poke.selectMove("fast", explicitMoves[0]);
+            if (explicitMoves[1]) poke.selectMove("charged", explicitMoves[1], 0);
+            if (explicitMoves[2]) poke.selectMove("charged", explicitMoves[2], 1);
         }
     }
 
@@ -146,7 +151,7 @@ var PvPIV = PvPIV || {};
      */
     ns.simulateBattleFromObjects = function(poke1, poke2, shields1, shields2, cpCap, levelCap, moveOverride) {
         var movesA = null;
-        if (moveOverride && moveOverride.fastMove) {
+        if (moveOverride) {
             movesA = [moveOverride.fastMove, moveOverride.chargedMove1, moveOverride.chargedMove2];
         }
 

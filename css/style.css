@@ -82,6 +82,13 @@ body {
 
 .controls-row:last-child { margin-bottom: 0; }
 
+/* Moveset row flash on league switch — isolated; safe to remove */
+@keyframes moveset-flash {
+    0%   { background: rgba(76, 175, 80, 0.35); }
+    100% { background: transparent; }
+}
+.controls-row.flash { animation: moveset-flash 0.6s ease; border-radius: 6px; }
+
 label {
     font-size: 0.85rem;
     color: var(--text-dim);
@@ -495,6 +502,29 @@ select:focus { border-color: var(--accent); }
 .br-cell.loss-strong { background: var(--loss-strong); color: white; }
 .br-cell.excluded { opacity: 0.3; }
 
+/* Corner deep-link into PvPoke's 1v1 sim — subtle until the cell is hovered */
+.pvpoke-link {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font-size: 0.7rem;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--accent);
+    opacity: 0;
+    transition: opacity 0.12s;
+}
+
+.br-cell:hover .pvpoke-link { opacity: 0.65; }
+.pvpoke-link:hover { opacity: 1 !important; }
+
+/* Aggregate "Overall" column — visually separated from the matchup cells */
+.overall-cell {
+    border-left: 2px solid var(--border);
+    border-right: 2px solid var(--border);
+    cursor: pointer;
+}
+
 /* Shield scenario indicator — 3x3 grid */
 .shield-grid {
     display: inline-grid;
@@ -680,6 +710,15 @@ select:focus { border-color: var(--accent); }
     opacity: 0.35;
 }
 
+/* Tiebreaker chip shown beside "No differences" */
+.diff-tiebreak {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 6px;
+}
+.diff-tiebreak.gain { color: var(--win-light); }
+.diff-tiebreak.loss-pill { color: var(--loss-light); }
+
 .diff-pill.priority {
     border-color: var(--priority-border);
     border-width: 2px;
@@ -703,6 +742,14 @@ select:focus { border-color: var(--accent); }
     outline: 1.5px solid white;
     outline-offset: 0.5px;
 }
+
+/* Within a flip, distinguish robust vs fragile structurally (shape, not shade):
+   robust keeps the filled disc; fragile becomes a hollow ring in the same
+   direction color, reading as "uncertain". The white flip outline stays on both. */
+.diff-pill .shield-dot.flipped.fragile { background: transparent !important; }
+.diff-pill .shield-dot.flipped.fragile.win  { box-shadow: inset 0 0 0 2px var(--win-light); }
+.diff-pill .shield-dot.flipped.fragile.loss { box-shadow: inset 0 0 0 2px var(--loss-light); }
+.diff-pill .shield-dot.flipped.fragile.tie  { box-shadow: inset 0 0 0 2px var(--tie); }
 
 /* Threat Management */
 .threat-section {

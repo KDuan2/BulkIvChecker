@@ -6,6 +6,10 @@
 (function() {
     var ns = PvPIV;
 
+    // A flip whose resulting battle rating lands within this many points of the
+    // 500 win/loss boundary is "fragile" (an IV knife-edge); beyond it, "robust".
+    var FRAGILE_MARGIN = 25;
+
     // ============ STATE ============
     var state = {
         species: null,
@@ -298,12 +302,20 @@
         }
     }
 
+    function invalidateForMoveChange(message) {
+        state.results = null;
+        document.getElementById('matrixSection').style.display = 'none';
+        document.getElementById('diffSection').style.display = 'none';
+        document.getElementById('statusBar').textContent = message;
+    }
+
     function setupMoveSelects() {
         var handler = function() {
             var fm = document.getElementById('fastMoveSelect').value;
             var cm1 = document.getElementById('chargedMove1Select').value;
             var cm2 = document.getElementById('chargedMove2Select').value;
             state.moveOverride = (fm || cm1 || cm2) ? { fastMove: fm || null, chargedMove1: cm1 || null, chargedMove2: cm2 || null } : null;
+            invalidateForMoveChange('Moveset changed — click Apply Moves (or Run Simulation) to update results.');
             saveState();
         };
         document.getElementById('fastMoveSelect').addEventListener('change', handler);
@@ -315,8 +327,10 @@
             document.getElementById('fastMoveSelect').value = '';
             document.getElementById('chargedMove1Select').value = '';
             document.getElementById('chargedMove2Select').value = '';
+            invalidateForMoveChange('Moveset reset to Auto — click Apply Moves (or Run Simulation) to update results.');
             saveState();
         });
+        document.getElementById('btnApplyMoves').addEventListener('click', runSimulation);
     }
 
     // ============ LEAGUE / BUDDY / FORM ============
@@ -331,8 +345,29 @@
                 state.results = null;
                 document.getElementById('matrixSection').style.display = 'none';
                 document.getElementById('diffSection').style.display = 'none';
-                document.getElementById('statusBar').textContent = 'League changed \u2014 run simulation to update results.';
                 updateAllCandidateComputedFields();
+
+                // Refresh the move-selector "(Auto)" labels for the new league and
+                // re-apply any active override, then indicate the change.
+                if (state.species) {
+                    populateMoveSelects();
+                    restoreMoveOverrideUI();
+                    var leagueNames = { 500: 'Little', 1500: 'Great', 2500: 'Ultra', 10000: 'Master' };
+                    var auto = getAutoMoves(state.species);
+                    var moveNames = [auto.fast, auto.charged1, auto.charged2]
+                        .filter(Boolean).map(function(m) { return m.name; });
+                    var msg = (leagueNames[state.league] || '') + ' League';
+                    msg += moveNames.length ? ' \u2014 recommended moves: ' + moveNames.join(' / ') + '. ' : ' \u2014 ';
+                    document.getElementById('statusBar').textContent = msg + 'Run simulation to update results.';
+                    // Flash the moveset row so the label change is noticeable
+                    var row = document.getElementById('movesetRow');
+                    row.classList.remove('flash');
+                    void row.offsetWidth; // reflow so the animation can replay on rapid switches
+                    row.classList.add('flash');
+                } else {
+                    document.getElementById('statusBar').textContent = 'League changed \u2014 run simulation to update results.';
+                }
+
                 // Set meta dropdown to default for the new league
                 var defaultMap = { 500: 'little', 1500: 'great', 2500: 'ultra', 10000: 'master' };
                 var metaSel = document.getElementById('metaSelect');
@@ -961,9 +996,9 @@
                 var cand = candidatePokemon[ci];
                 var threat = threatPokemon[ti];
 
-                // Build move arrays
+                // Build move arrays (null slots fall back to auto per-slot)
                 var movesA = null;
-                if (state.moveOverride && state.moveOverride.fastMove) {
+                if (state.moveOverride) {
                     movesA = [state.moveOverride.fastMove, state.moveOverride.chargedMove1, state.moveOverride.chargedMove2];
                 }
                 var movesB = null;
@@ -1014,7 +1049,7 @@
         var thead = document.getElementById('matrixHead');
         var tbody = document.getElementById('matrixBody');
 
-        var headerHtml = '<tr><th></th><th>Wins</th>';
+        var headerHtml = '<tr><th></th><th>Wins</th><th>Overall</th>';
         for (var ti = 0; ti < threatPokemon.length; ti++) {
             var tp = threatPokemon[ti];
             var data = ns.getPokemonById(tp.speciesId);
@@ -1084,6 +1119,27 @@
             }
             html += '<td class="win-count">' + wins + '/' + total + '</td>';
 
+            // Overall rating cell — aggregate across threats, styled like a matchup cell
+            var ov = computeOverall(matrix[ci], threatPokemon);
+            if (ov.headline == null) {
+                html += '<td class="br-cell overall-cell">&mdash;</td>';
+            } else {
+                var ovColor = getBRColorClass(ov.headline);
+                var ovContent = '<span class="br-main">' + ov.headline + '</span>';
+                ovContent += '<span class="shield-expanded"><span class="shield-expanded-grid">';
+                ovContent += '<span class="seg-header"></span><span class="seg-header">0s</span><span class="seg-header">1s</span><span class="seg-header">2s</span>';
+                for (var orow = 0; orow < 3; orow++) {
+                    ovContent += '<span class="seg-header">' + orow + 's</span>';
+                    for (var ocol = 0; ocol < 3; ocol++) {
+                        var oBR = ov.byScenario[orow + 'v' + ocol];
+                        var oClass = oBR === 500 ? 'seg-tie' : (oBR > 500 ? 'seg-win' : 'seg-loss');
+                        ovContent += '<span class="' + oClass + '">' + oBR + '</span>';
+                    }
+                }
+                ovContent += '</span></span>';
+                html += '<td class="br-cell ' + ovColor + ' overall-cell">' + ovContent + '</td>';
+            }
+
             for (var ti = 0; ti < matrix[ci].length; ti++) {
                 var results = matrix[ci][ti];
                 var excluded = !!state.excludedThreats[threatPokemon[ti].threatData.speciesId];
@@ -1128,6 +1184,13 @@
                 }
                 cellContent += '</span></span>';
 
+                // Corner link into PvPoke's 1v1 sim for this exact matchup.
+                var r1v1 = results["1v1"];
+                if (r1v1 && r1v1.pokemon && r1v1.pokemon.length === 2) {
+                    var pvpLink = buildPvpokeLink(r1v1.pokemon[0], r1v1.pokemon[1], 1, 1, state.league);
+                    cellContent += '<a class="pvpoke-link" href="' + pvpLink + '" target="_blank" rel="noopener" title="Open 1v1 in PvPoke">↗</a>';
+                }
+
                 html += '<td class="br-cell ' + colorClass + (excluded ? ' excluded' : '') + '">' + cellContent + '</td>';
             }
             tr.innerHTML = html;
@@ -1138,6 +1201,12 @@
         var cells = tbody.querySelectorAll('.br-cell');
         for (var i = 0; i < cells.length; i++) {
             cells[i].addEventListener('click', function() { this.classList.toggle('expanded'); });
+        }
+
+        // PvPoke links open in a new tab without toggling the cell's expand state
+        var pvpLinks = tbody.querySelectorAll('.pvpoke-link');
+        for (var i = 0; i < pvpLinks.length; i++) {
+            pvpLinks[i].addEventListener('click', function(e) { e.stopPropagation(); });
         }
 
         // Row header click to set reference — map filtered index back to state.candidates index
@@ -1157,6 +1226,28 @@
         }
     }
 
+    var SCENARIO_KEYS = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+
+    // Aggregate a candidate's matchups into a single "Overall" rating.
+    // For each shield scenario, average the raw battle rating across non-excluded
+    // threats. Headline mirrors PvPoke's default matrix (1-shield = 1v1).
+    function computeOverall(matrixRow, threatPokemon) {
+        var byScenario = {};
+        var count = 0;
+        for (var sk = 0; sk < SCENARIO_KEYS.length; sk++) {
+            var key = SCENARIO_KEYS[sk];
+            var sum = 0, n = 0;
+            for (var ti = 0; ti < matrixRow.length; ti++) {
+                if (state.excludedThreats[threatPokemon[ti].threatData.speciesId]) continue;
+                sum += matrixRow[ti][key].battleRating;
+                n++;
+            }
+            byScenario[key] = n > 0 ? Math.round(sum / n) : null;
+            if (key === '1v1') count = n;
+        }
+        return { byScenario: byScenario, headline: count > 0 ? byScenario['1v1'] : null, count: count };
+    }
+
     function getBRColorClass(br) {
         if (br >= 700) return 'win-strong';
         if (br === 500) return 'tie';
@@ -1164,6 +1255,32 @@
         if (br >= 480) return 'loss';
         if (br >= 400) return 'loss';
         return 'loss-strong';
+    }
+
+    // ============ PVPOKE DEEP LINK ============
+    // Build a link into PvPoke's own 1v1 battle sim, pre-loaded with the exact
+    // matchup we simulated (species, level, IVs, the moveset the sim actually used,
+    // and shields). Format verified against PvPoke's generateURLPokeStr/MoveStr and
+    // loadGetData parser. The "4-4-1-0" tail = neutral atk/def buffs, default bait,
+    // default move timing — matching PvPoke's own defaults.
+    function pvpokePokeStr(p) {
+        var s = p.speciesId + '-' + p.level + '-' + p.ivs.atk + '-' + p.ivs.def + '-' + p.ivs.hp + '-4-4-1-0';
+        if (p.shadowType && p.shadowType !== 'normal' && p.speciesId.indexOf('_shadow') === -1) {
+            s += '-' + p.shadowType;
+        }
+        return s;
+    }
+
+    function pvpokeMoveStr(p) {
+        // Literal move IDs; PvPoke loads any [A-Z_]+ slot as a custom move, so we
+        // don't need its per-species move-pool order. Missing 2nd charged move = "0".
+        var cm = p.chargedMoves || [];
+        return p.fastMove.moveId + '-' + (cm[0] ? cm[0].moveId : '0') + '-' + (cm[1] ? cm[1].moveId : '0');
+    }
+
+    function buildPvpokeLink(pa, pb, shieldsA, shieldsB, cp) {
+        return 'https://pvpoke.com/battle/' + cp + '/' + pvpokePokeStr(pa) + '/' + pvpokePokeStr(pb) +
+            '/' + shieldsA + shieldsB + '/' + pvpokeMoveStr(pa) + '/' + pvpokeMoveStr(pb) + '/';
     }
 
     // ============ DIFFERENCES ============
@@ -1186,13 +1303,19 @@
             var cBR = entry.candResults[i];
             var dotClass = cBR === 500 ? 'tie' : (cBR > 500 ? 'win' : 'loss');
             dot.className = 'shield-dot ' + dotClass;
-            if (entry.flipped.indexOf(i) > -1) {
+            var isFlipped = entry.flipped.indexOf(i) > -1;
+            var fragile = false;
+            if (isFlipped) {
                 dot.classList.add('flipped');
+                // Robustness of the flip: how far the resulting BR sits from the
+                // 500 boundary. Near it = an IV knife-edge (hollow ring); far = solid.
+                fragile = Math.abs(cBR - 500) < FRAGILE_MARGIN;
+                dot.classList.add(fragile ? 'fragile' : 'robust');
             }
             var row = Math.floor(i / 3), col = i % 3;
             var outcomeLabel = cBR === 500 ? 'Tie' : (cBR > 500 ? 'Win' : 'Loss');
             dot.title = row + 'v' + col + ': ' + outcomeLabel + ' (' + cBR + ')' +
-                (entry.flipped.indexOf(i) > -1 ? ' (flipped)' : '');
+                (isFlipped ? ' (flipped' + (fragile ? ' · knife-edge' : ' · solid') + ')' : '');
             grid.appendChild(dot);
         }
         pill.appendChild(grid);
@@ -1223,6 +1346,8 @@
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             if (ci === refIdx) continue;
             var gains = [], losses = [];
+            // Tiebreaker: mean BR delta vs reference across all scored scenarios/threats
+            var sumCand = 0, sumRef = 0, cnt = 0;
 
             for (var ti = 0; ti < matrix[ci].length; ti++) {
                 var speciesId = threatPokemon[ti].threatData.speciesId;
@@ -1248,6 +1373,7 @@
                     var rOutcome = rBR === 500 ? 0 : (rBR > 500 ? 1 : -1);
                     candResults.push(cBR);
                     refResults.push(rBR);
+                    sumCand += cBR; sumRef += rBR; cnt++;
                     if (cOutcome > rOutcome) { hasGain = true; flipped.push(si); }
                     if (cOutcome < rOutcome) { hasLoss = true; flipped.push(si); }
                 }
@@ -1281,7 +1407,16 @@
             pillsDiv.className = 'diff-pills';
 
             if (gains.length === 0 && losses.length === 0) {
-                pillsDiv.innerHTML = '<span style="color:var(--text-dim); font-size:0.8rem">No differences</span>';
+                var nd = '<span style="color:var(--text-dim); font-size:0.8rem">No differences</span>';
+                if (cnt > 0) {
+                    var delta = Math.round((sumCand - sumRef) / cnt);
+                    if (delta !== 0) {
+                        var refName = candidates[refIdx] ? candidates[refIdx].nickname : 'reference';
+                        nd += ' <span class="diff-tiebreak ' + (delta > 0 ? 'gain' : 'loss-pill') + '">≈ ' +
+                            (delta > 0 ? '+' : '') + delta + ' vs ' + escHtml(refName) + '</span>';
+                    }
+                }
+                pillsDiv.innerHTML = nd;
                 div.appendChild(pillsDiv);
                 container.appendChild(div);
                 continue;
