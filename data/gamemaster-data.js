@@ -1,5 +1,5 @@
 var GAMEMASTER_DATA = {
-    "timestamp": "2026-06-09 00:44:18",
+    "timestamp": "2026-06-16 15:18:30",
     "id": "gamemaster",
     "title": "Default",
     "settings": {
@@ -45,6 +45,44 @@ var GAMEMASTER_DATA = {
                     "values": ["mega"]
                 }
             ]
+        },
+        {
+            "name": "bastille",
+            "title": "Bastille Cup",
+            "link": "https://devon.gg/",
+            "include": [
+                {
+                    "filterType": "type",
+                    "name": "Type",
+                    "values": ["bug", "dragon", "poison", "steel", "water"]
+                },
+                {
+                    "filterType": "id",
+                    "name": "Species",
+                    "values": ["sandslash_alolan", "stunfisk_galarian"]
+                }
+            ],
+            "exclude": [
+                {
+                    "filterType": "type",
+                    "name": "Type",
+                    "values": ["electric", "fairy", "fire", "flying", "ground"]
+                },
+                {
+                    "filterType": "tag",
+                    "name": "Tag",
+                    "values": ["mega", "shadow"]
+                },
+                {
+                    "filterType": "id",
+                    "name": "Species",
+                    "values": ["doublade", "empoleon", "forretress", "melmetal", "metang"]
+                }
+            ],
+            "overrides": [],
+            "league": 1500,
+            "useDefaultMovesets": 1,
+            "excludeLowPokemon": 1
         },
         {
             "name": "battlefrontiermaster",
@@ -300,6 +338,12 @@ var GAMEMASTER_DATA = {
             "excludeLowPokemon": 1
         },
         {
+            "name": "mega",
+            "title": "All Pokemon",
+            "include": [],
+            "exclude": []
+        },
+        {
             "name": "naic2026",
             "title": "NAIC 2026 Championship Series Cup",
             "include": [
@@ -362,6 +406,28 @@ var GAMEMASTER_DATA = {
                     "values": ["abomasnow", "amoonguss", "araquanid", "bellibolt", "charjabug", "dhelmise", "dragalge", "golbat", "gourgeist_average", "gourgeist_large", "gourgeist_small", "gourgeist_super", "jumpluff", "lanturn", "ledian", "nidorina", "oranguru", "pachirisu", "pumpkaboo_average", "pumpkaboo_large", "pumpkaboo_small", "pumpkaboo_super", "rotom", "rotom_fan", "rotom_frost", "rotom_mow", "rotom_wash", "slowking_galarian", "smoochum", "spidops", "swalot", "toxapex", "toxtricity", "vespiquen", "vikavolt"]
                 }
             ]
+        },
+        {
+            "name": "sunshine",
+            "title": "Sunshine Cup",
+            "include": [
+                {
+                    "filterType": "type",
+                    "values": ["normal", "fire", "ground", "grass"]
+                }
+            ],
+            "exclude": [
+                {
+                    "filterType": "tag",
+                    "values": ["mega"]
+                },
+                {
+                    "filterType": "id",
+                    "values": ["charizard"]
+                }
+            ],
+            "partySize": 3,
+            "presetOnly": true
         }
     ],
     "formats": [
@@ -395,6 +461,26 @@ var GAMEMASTER_DATA = {
             "showFormat": true,
             "showMeta": true,
             "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Fairy-,  Normal-,  Psychic- and Water-type Pokémon are eligible.", "The following types are not allowed: Dark,  Grass,  Steel", "The following Pokemon are not allowed: Araquanid,  Carbink,  Chansey,  Chinchou,  Claydol,  Clefable,  Cresselia,  Dedenne,  Diggersby,  Farfetch'd,  Gastrodon,  Golisopod,  Greedent,  Jellicent,  Lanturn,  Lickilicky,  Lickitung,  Lugia,  Medicham,  Oranguru,  Poliwrath"]
+        },
+        {
+            "title": "Sunshine Cup",
+            "cup": "sunshine",
+            "cp": 1500,
+            "meta": "sunshine",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true,
+            "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Normal-,  Fire-,  Grass-,  and Ground-type Pokémon are eligible.", "The following Pokemon are not allowed: Charizard"]
+        },
+        {
+            "title": "Mega Master League",
+            "cup": "mega",
+            "cp": 10000,
+            "meta": "mega",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true,
+            "rules": ["No CP limit.", "Mega Evolutions are eligible."]
         },
         {
             "title": "Battle Frontier (Bayou Cup)",
@@ -433,10 +519,19 @@ var GAMEMASTER_DATA = {
             "showMeta": true
         },
         {
-            "title": "Devon Cosy Cup",
-            "cup": "cosy",
+            "title": "Devon Equinox Cup",
+            "cup": "equinox",
             "cp": 1500,
-            "meta": "cosy",
+            "meta": "equinox",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true
+        },
+        {
+            "title": "Devon Bastille Cup",
+            "cup": "bastille",
+            "cp": 1500,
+            "meta": "bastille",
             "showCup": true,
             "showFormat": true,
             "showMeta": true
@@ -9967,7 +10062,7 @@ var GAMEMASTER_DATA = {
                 "hp": 214
             },
             "types": ["psychic", "none"],
-            "fastMoves": ["CONFUSION", "PSYCHO_CUT"],
+            "fastMoves": ["CONFUSION", "PSYCHO_CUT", "COUNTER"],
             "chargedMoves": ["FLAMETHROWER", "FOCUS_BLAST", "HYPER_BEAM", "ICE_BEAM", "PSYCHIC", "SHADOW_BALL", "THUNDERBOLT", "PSYSTRIKE"],
             "tags": ["legendary", "shadoweligible"],
             "defaultIVs": {
@@ -9977,6 +10072,7 @@ var GAMEMASTER_DATA = {
             },
             "level25CP": 2641,
             "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"],
+            "legacyMoves": ["COUNTER"],
             "buddyDistance": 20,
             "thirdMoveCost": 100000,
             "released": true,
@@ -9989,19 +10085,20 @@ var GAMEMASTER_DATA = {
             "baseStats": {
                 "atk": 399,
                 "def": 215,
-                "hp": 214
+                "hp": 228
             },
             "types": ["psychic", "fighting"],
-            "fastMoves": ["CONFUSION", "PSYCHO_CUT"],
+            "fastMoves": ["CONFUSION", "PSYCHO_CUT", "COUNTER"],
             "chargedMoves": ["FLAMETHROWER", "FOCUS_BLAST", "HYPER_BEAM", "ICE_BEAM", "PSYCHIC", "SHADOW_BALL", "THUNDERBOLT", "PSYSTRIKE"],
             "tags": ["legendary", "shadoweligible", "mega"],
             "defaultIVs": {
-                "cp500": [3.5, 7, 4, 6],
-                "cp1500": [9, 14, 11, 14],
-                "cp2500": [15, 9, 12, 15]
+                "cp500": [3, 9, 15, 14],
+                "cp1500": [9, 5, 13, 8],
+                "cp2500": [15, 4, 13, 7]
             },
             "level25CP": 2641,
             "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"],
+            "legacyMoves": ["COUNTER"],
             "buddyDistance": 20,
             "thirdMoveCost": 100000,
             "released": true,
@@ -10013,20 +10110,21 @@ var GAMEMASTER_DATA = {
             "speciesId": "mewtwo_mega_y",
             "baseStats": {
                 "atk": 413,
-                "def": 228,
-                "hp": 214
+                "def": 223,
+                "hp": 228
             },
             "types": ["psychic", "none"],
-            "fastMoves": ["CONFUSION", "PSYCHO_CUT"],
+            "fastMoves": ["CONFUSION", "PSYCHO_CUT", "COUNTER"],
             "chargedMoves": ["FLAMETHROWER", "FOCUS_BLAST", "HYPER_BEAM", "ICE_BEAM", "PSYCHIC", "SHADOW_BALL", "THUNDERBOLT", "PSYSTRIKE"],
             "tags": ["legendary", "shadoweligible", "mega"],
             "defaultIVs": {
                 "cp500": [3, 9, 15, 14],
-                "cp1500": [8.5, 12, 15, 11],
-                "cp2500": [14.5, 4, 9, 12]
+                "cp1500": [8.5, 6, 5, 15],
+                "cp2500": [14, 4, 7, 15]
             },
             "level25CP": 2641,
             "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"],
+            "legacyMoves": ["COUNTER"],
             "buddyDistance": 20,
             "thirdMoveCost": 100000,
             "released": true,
