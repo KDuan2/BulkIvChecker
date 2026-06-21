@@ -623,6 +623,42 @@ select:focus { border-color: var(--accent); }
     padding-left: 10px;
 }
 
+/* Interactive shield-scenario filter (built on the legend grid) */
+#shieldFilter { gap: 6px; }
+#shieldFilter .shield-legend-col-headers,
+#shieldFilter .shield-legend-row {
+    grid-template-columns: 12px repeat(3, 16px);
+    gap: 3px;
+}
+.shield-toggle {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all 0.12s;
+}
+.shield-toggle.active {
+    background: var(--win-light);
+    border-color: var(--win-light);
+    opacity: 1;
+}
+.shield-toggle:hover { border-color: var(--win-light); }
+.shield-presets {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-left: 4px;
+}
+.shield-presets button { font-size: 0.6rem; padding: 2px 6px; }
+
+/* Dim shield scenarios excluded by the active filter */
+.shield-dot.inactive { opacity: 0.2; }
+.shield-expanded-grid .inactive { opacity: 0.25; }
+
 /* Win count column */
 .win-count {
     font-weight: 700;

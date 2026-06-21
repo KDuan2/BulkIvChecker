@@ -22,10 +22,18 @@
         referenceIdx: 0,
         results: null,
         excludedThreats: {},
+        activeScenarios: {
+            '0v0': true, '0v1': true, '0v2': true,
+            '1v0': true, '1v1': true, '1v2': true,
+            '2v0': true, '2v1': true, '2v2': true,
+        },
         nextCandidateId: 1,
     };
 
     var STORAGE_KEY = "pvp_iv_tool_state";
+
+    // The 9 shield scenarios (candidate-shields × opponent-shields).
+    var SCENARIO_KEYS = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
 
     // ============ PERSISTENCE ============
     function saveState() {
@@ -40,6 +48,7 @@
                     shadowType: t.shadowType, priority: t.priority || false };
             }),
             referenceIdx: state.referenceIdx, excludedThreats: excludedArr,
+            activeScenarios: SCENARIO_KEYS.filter(function(k) { return state.activeScenarios[k]; }),
             nextCandidateId: state.nextCandidateId,
         };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
@@ -62,6 +71,9 @@
             state.referenceIdx = s.referenceIdx || 0;
             state.excludedThreats = {};
             (s.excludedThreats || []).forEach(function(id) { state.excludedThreats[id] = true; });
+            var savedScen = (s.activeScenarios && s.activeScenarios.length) ? s.activeScenarios : SCENARIO_KEYS;
+            state.activeScenarios = {};
+            SCENARIO_KEYS.forEach(function(k) { state.activeScenarios[k] = savedScen.indexOf(k) > -1; });
             state.nextCandidateId = s.nextCandidateId || state.candidates.length + 1;
             return true;
         } catch(e) { console.warn("Failed to load state:", e); return false; }
@@ -79,6 +91,8 @@
             setupFormSelect();
             setupMoveSelects();
             setupButtons();
+            setupShieldFilter();
+            renderShieldFilter();
             populateMetaSelect();
 
             if (hadState) {
@@ -1040,6 +1054,57 @@
         document.getElementById('diffSection').style.display = '';
     }
 
+    // ============ SHIELD-SCENARIO FILTER ============
+    // Interactive 3x3 grid (You shields × Opponent shields) controlling which shield
+    // scenarios the matrix, Overall column, and Differences view consider. All on by default.
+    function renderShieldFilter() {
+        var el = document.getElementById('shieldFilter');
+        if (!el) return;
+        var html = '<span class="shield-legend-vertical-label">You</span>';
+        html += '<span class="shield-legend-grid">';
+        html += '<span class="shield-legend-top-label">Opponent</span>';
+        html += '<span class="shield-legend-col-headers"><span></span><span>0</span><span>1</span><span>2</span></span>';
+        for (var row = 0; row < 3; row++) {
+            html += '<span class="shield-legend-row"><span>' + row + '</span>';
+            for (var col = 0; col < 3; col++) {
+                var key = row + 'v' + col;
+                var on = state.activeScenarios[key] ? ' active' : '';
+                html += '<button class="shield-toggle' + on + '" data-key="' + key + '" title="' + key + '"></button>';
+            }
+            html += '</span>';
+        }
+        html += '</span>';
+        html += '<span class="shield-presets">' +
+            '<button data-preset="1v1">1v1 only</button>' +
+            '<button data-preset="all">All</button></span>';
+        el.innerHTML = html;
+    }
+
+    function setupShieldFilter() {
+        var el = document.getElementById('shieldFilter');
+        if (!el) return;
+        el.addEventListener('click', function(e) {
+            var btn = e.target.closest('button');
+            if (!btn) return;
+            if (btn.dataset.preset === 'all') {
+                SCENARIO_KEYS.forEach(function(k) { state.activeScenarios[k] = true; });
+            } else if (btn.dataset.preset === '1v1') {
+                SCENARIO_KEYS.forEach(function(k) { state.activeScenarios[k] = (k === '1v1'); });
+            } else if (btn.dataset.key) {
+                var k = btn.dataset.key;
+                // Keep at least one scenario active.
+                if (state.activeScenarios[k] && activeScenarioKeys().length === 1) return;
+                state.activeScenarios[k] = !state.activeScenarios[k];
+            } else {
+                return;
+            }
+            renderShieldFilter();
+            renderMatrix();
+            renderDifferences();
+            saveState();
+        });
+    }
+
     // ============ MATRIX ============
     function renderMatrix() {
         if (!state.results) return;
@@ -1113,7 +1178,7 @@
             var wins = 0, total = 0;
             for (var ti = 0; ti < matrix[ci].length; ti++) {
                 if (!state.excludedThreats[threatPokemon[ti].threatData.speciesId]) {
-                    if (matrix[ci][ti]["1v1"].battleRating >= 500) wins++;
+                    if (headlineBR(matrix[ci][ti]) >= 500) wins++;
                     total++;
                 }
             }
@@ -1131,8 +1196,10 @@
                 for (var orow = 0; orow < 3; orow++) {
                     ovContent += '<span class="seg-header">' + orow + 's</span>';
                     for (var ocol = 0; ocol < 3; ocol++) {
-                        var oBR = ov.byScenario[orow + 'v' + ocol];
+                        var oKey = orow + 'v' + ocol;
+                        var oBR = ov.byScenario[oKey];
                         var oClass = oBR === 500 ? 'seg-tie' : (oBR > 500 ? 'seg-win' : 'seg-loss');
+                        if (!state.activeScenarios[oKey]) oClass += ' inactive';
                         ovContent += '<span class="' + oClass + '">' + oBR + '</span>';
                     }
                 }
@@ -1143,16 +1210,15 @@
             for (var ti = 0; ti < matrix[ci].length; ti++) {
                 var results = matrix[ci][ti];
                 var excluded = !!state.excludedThreats[threatPokemon[ti].threatData.speciesId];
-                var br = results["1v1"].battleRating;
+                var br = headlineBR(results);
                 var colorClass = getBRColorClass(br);
 
-                // Check if any of the 9 scenarios differs from the 1v1 outcome
-                function brOutcome(val) { return val === 500 ? 0 : (val > 500 ? 1 : -1); }
-                var w1v1 = brOutcome(br);
-                var scenarioKeys = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+                // Among active scenarios, does any outcome differ from the headline?
+                var activeKeys = activeScenarioKeys();
+                var headOutcome = brOutcome(br);
                 var differs = false;
-                for (var sk = 0; sk < scenarioKeys.length; sk++) {
-                    if (brOutcome(results[scenarioKeys[sk]].battleRating) !== w1v1) { differs = true; break; }
+                for (var sk = 0; sk < activeKeys.length; sk++) {
+                    if (brOutcome(results[activeKeys[sk]].battleRating) !== headOutcome) { differs = true; break; }
                 }
 
                 var cellContent = '<span class="br-main">' + br + '</span>';
@@ -1163,6 +1229,7 @@
                             var key = row + 'v' + col;
                             var sBR = results[key].battleRating;
                             var dotClass = sBR === 500 ? 'tie' : (sBR > 500 ? 'win' : 'loss');
+                            if (!state.activeScenarios[key]) dotClass += ' inactive';
                             cellContent += '<span class="shield-dot ' + dotClass + '" title="' + key + ': ' + sBR + '"></span>';
                         }
                     }
@@ -1179,16 +1246,19 @@
                         var key = row + 'v' + col;
                         var sBR = results[key].battleRating;
                         var sClass = sBR === 500 ? 'seg-tie' : (sBR > 500 ? 'seg-win' : 'seg-loss');
+                        if (!state.activeScenarios[key]) sClass += ' inactive';
                         cellContent += '<span class="' + sClass + '">' + sBR + '</span>';
                     }
                 }
                 cellContent += '</span></span>';
 
-                // Corner link into PvPoke's 1v1 sim for this exact matchup.
-                var r1v1 = results["1v1"];
-                if (r1v1 && r1v1.pokemon && r1v1.pokemon.length === 2) {
-                    var pvpLink = buildPvpokeLink(r1v1.pokemon[0], r1v1.pokemon[1], 1, 1, state.league);
-                    cellContent += '<a class="pvpoke-link" href="' + pvpLink + '" target="_blank" rel="noopener" title="Open 1v1 in PvPoke">↗</a>';
+                // Corner link into PvPoke's sim. With exactly one active scenario, use its
+                // shield counts; otherwise default to 1v1.
+                var linkKey = activeKeys.length === 1 ? activeKeys[0] : '1v1';
+                var linkRes = results[linkKey];
+                if (linkRes && linkRes.pokemon && linkRes.pokemon.length === 2) {
+                    var pvpLink = buildPvpokeLink(linkRes.pokemon[0], linkRes.pokemon[1], Number(linkKey[0]), Number(linkKey[2]), state.league);
+                    cellContent += '<a class="pvpoke-link" href="' + pvpLink + '" target="_blank" rel="noopener" title="Open ' + linkKey + ' in PvPoke">↗</a>';
                 }
 
                 html += '<td class="br-cell ' + colorClass + (excluded ? ' excluded' : '') + '">' + cellContent + '</td>';
@@ -1226,14 +1296,47 @@
         }
     }
 
-    var SCENARIO_KEYS = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+    // The active shield scenarios the user is currently focusing on (default: all 9).
+    function activeScenarioKeys() {
+        var keys = SCENARIO_KEYS.filter(function(k) { return state.activeScenarios[k]; });
+        return keys.length ? keys : SCENARIO_KEYS.slice();
+    }
+
+    function brOutcome(v) { return v === 500 ? 0 : (v > 500 ? 1 : -1); }
+
+    // Which scenario(s) define the headline number: 1v1 whenever it's active (so the
+    // default all-on view stays the familiar 1v1), the single active scenario when only
+    // one is on, else the mean of the active set (1v1 specifically filtered out).
+    function headlineKeys() {
+        var keys = activeScenarioKeys();
+        if (keys.length === 1) return keys;
+        if (state.activeScenarios['1v1']) return ['1v1'];
+        return keys;
+    }
+
+    // Representative BR for one matchup cell over the headline scenario set.
+    function headlineBR(cellResults) {
+        var keys = headlineKeys();
+        var sum = 0;
+        for (var i = 0; i < keys.length; i++) sum += cellResults[keys[i]].battleRating;
+        return Math.round(sum / keys.length);
+    }
+
+    // Reduce a precomputed per-scenario map (Overall column) over the headline set.
+    function reduceByScenario(byScenario) {
+        var keys = headlineKeys();
+        var sum = 0, n = 0;
+        for (var i = 0; i < keys.length; i++) {
+            if (byScenario[keys[i]] != null) { sum += byScenario[keys[i]]; n++; }
+        }
+        return n ? Math.round(sum / n) : null;
+    }
 
     // Aggregate a candidate's matchups into a single "Overall" rating.
     // For each shield scenario, average the raw battle rating across non-excluded
-    // threats. Headline mirrors PvPoke's default matrix (1-shield = 1v1).
+    // threats. Headline reduces those over the active scenario set.
     function computeOverall(matrixRow, threatPokemon) {
         var byScenario = {};
-        var count = 0;
         for (var sk = 0; sk < SCENARIO_KEYS.length; sk++) {
             var key = SCENARIO_KEYS[sk];
             var sum = 0, n = 0;
@@ -1243,9 +1346,8 @@
                 n++;
             }
             byScenario[key] = n > 0 ? Math.round(sum / n) : null;
-            if (key === '1v1') count = n;
         }
-        return { byScenario: byScenario, headline: count > 0 ? byScenario['1v1'] : null, count: count };
+        return { byScenario: byScenario, headline: reduceByScenario(byScenario) };
     }
 
     function getBRColorClass(br) {
@@ -1306,6 +1408,7 @@
             var cBR = entry.candResults[i];
             var dotClass = cBR === 500 ? 'tie' : (cBR > 500 ? 'win' : 'loss');
             dot.className = 'shield-dot ' + dotClass;
+            if (!state.activeScenarios[SCENARIO_KEYS[i]]) dot.classList.add('inactive');
             var isFlipped = entry.flipped.indexOf(i) > -1;
             var fragile = false;
             if (isFlipped) {
@@ -1344,7 +1447,7 @@
         document.getElementById('diffRefLabel').textContent = '(vs ' + (candidates[refIdx] ? candidates[refIdx].nickname : 'Candidate 1') + ')';
         container.innerHTML = '';
 
-        var allScenarios = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
+        var allScenarios = SCENARIO_KEYS;
 
         for (var ci = 0; ci < candidatePokemon.length; ci++) {
             if (ci === refIdx) continue;
@@ -1372,10 +1475,13 @@
                     var s = allScenarios[si];
                     var cBR = matrix[ci][ti][s].battleRating;
                     var rBR = matrix[refIdx][ti][s].battleRating;
-                    var cOutcome = cBR === 500 ? 0 : (cBR > 500 ? 1 : -1);
-                    var rOutcome = rBR === 500 ? 0 : (rBR > 500 ? 1 : -1);
+                    // The pill grid always shows all 9 dots...
                     candResults.push(cBR);
                     refResults.push(rBR);
+                    // ...but only active scenarios count as a difference / tiebreak.
+                    if (!state.activeScenarios[s]) continue;
+                    var cOutcome = cBR === 500 ? 0 : (cBR > 500 ? 1 : -1);
+                    var rOutcome = rBR === 500 ? 0 : (rBR > 500 ? 1 : -1);
                     sumCand += cBR; sumRef += rBR; cnt++;
                     if (cOutcome > rOutcome) { hasGain = true; flipped.push(si); }
                     if (cOutcome < rOutcome) { hasLoss = true; flipped.push(si); }
