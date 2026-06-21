@@ -223,8 +223,6 @@
             if (q.length < 2) { dropdown.classList.remove('visible'); return; }
             var all = PvPIV.getAllPokemon().filter(function(p) {
                 return p.released &&
-                    p.speciesId.indexOf('_mega') === -1 &&
-                    p.speciesId.indexOf('_shadow') === -1 &&
                     (p.speciesName.toLowerCase().indexOf(q) > -1 ||
                      p.speciesId.toLowerCase().indexOf(q) > -1 ||
                      (p.nicknames && p.nicknames.some(function(n) { return n.toLowerCase().indexOf(q) > -1; })));
