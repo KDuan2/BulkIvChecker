@@ -108,6 +108,7 @@
             if (hadState) {
                 if (state.species) {
                     document.getElementById('speciesSearch').value = state.species.speciesName;
+                    updateFormOptions(); // build mega/shadow options before restoring the saved form
                     populateMoveSelects();
                 }
                 document.getElementById('formSelect').value = state.form;
@@ -147,8 +148,6 @@
             if (q.length < 2) { dropdown.classList.remove('visible'); return; }
             var all = ns.getAllPokemon().filter(function(p) {
                 return p.released &&
-                    p.speciesId.indexOf('_mega') === -1 &&
-                    p.speciesId.indexOf('_shadow') === -1 &&
                     (p.speciesName.toLowerCase().indexOf(q) > -1 ||
                      p.speciesId.toLowerCase().indexOf(q) > -1 ||
                      (p.nicknames && p.nicknames.some(function(n) { return n.toLowerCase().indexOf(q) > -1; })));
@@ -185,6 +184,28 @@
     }
 
     function selectSpecies(speciesId) {
+        // If a mega entry was selected, strip to base and set form to the mega variant
+        // token (e.g. "charizard_mega_x" -> base "charizard", form "mega_x").
+        var megaIdx = speciesId.indexOf('_mega');
+        if (megaIdx > -1) {
+            var megaBaseId = speciesId.slice(0, megaIdx);
+            var megaBaseData = ns.getPokemonById(megaBaseId);
+            if (megaBaseData) {
+                state.species = megaBaseData;
+                state.form = speciesId.slice(megaBaseId.length + 1); // "mega" | "mega_x" | "mega_y"
+            } else {
+                state.species = ns.getPokemonById(speciesId);
+                if (!state.species) return;
+                state.form = 'normal';
+            }
+            document.getElementById('speciesSearch').value = state.species.speciesName;
+            updateFormOptions();
+            document.getElementById('formSelect').value = state.form;
+            populateMoveSelects();
+            updateAllCandidateComputedFields();
+            saveState();
+            return;
+        }
         // If a shadow entry was selected, strip to base and set form to shadow
         if (speciesId.indexOf('_shadow') > -1) {
             var baseId = speciesId.replace('_shadow', '');
@@ -213,22 +234,73 @@
         saveState();
     }
 
+    // Human label for a form token: "mega" -> "Mega", "mega_x" -> "Mega X".
+    function formLabel(form) {
+        if (!form || form === 'normal') return 'Normal';
+        if (form === 'shadow') return 'Shadow';
+        if (form === 'purified') return 'Purified';
+        if (form === 'mega') return 'Mega';
+        if (form.indexOf('mega_') === 0) return 'Mega ' + form.slice(5).toUpperCase();
+        return form;
+    }
+
+    // Mega form tokens available for a base species (e.g. ["mega"] or ["mega_x","mega_y"]).
+    function megaFormsForSpecies(species) {
+        if (!species) return [];
+        return ns.getMegaForms(species.speciesId).map(function(m) {
+            return m.speciesId.slice(species.speciesId.length + 1);
+        });
+    }
+
     function updateFormOptions() {
         var formSelect = document.getElementById('formSelect');
+
+        // Rebuild dynamic mega options for the current species.
+        Array.prototype.slice.call(formSelect.querySelectorAll('option[data-mega]'))
+            .forEach(function(o) { o.remove(); });
+        var megaForms = megaFormsForSpecies(state.species);
+        megaForms.forEach(function(tok) {
+            var opt = document.createElement('option');
+            opt.value = tok;
+            opt.textContent = formLabel(tok);
+            opt.setAttribute('data-mega', '1');
+            formSelect.appendChild(opt);
+        });
+
+        var isMegaForm = state.form && state.form.indexOf('mega') === 0;
+
         var shadowOption = formSelect.querySelector('option[value="shadow"]');
-        if (!shadowOption) return;
+        if (shadowOption) {
+            var isShadowEligible = state.species && state.species.tags &&
+                (state.species.tags.indexOf('shadoweligible') > -1 || state.species.tags.indexOf('shadow') > -1);
+            // Shadow and mega are mutually exclusive in GO — disable shadow while a mega form is active.
+            shadowOption.disabled = !isShadowEligible || isMegaForm;
+            if (shadowOption.disabled && state.form === 'shadow') {
+                state.form = 'normal';
+                formSelect.value = 'normal';
+            }
+        }
 
-        var isShadowEligible = state.species &&
-            state.species.tags &&
-            (state.species.tags.indexOf('shadoweligible') > -1 || state.species.tags.indexOf('shadow') > -1);
-
-        shadowOption.disabled = !isShadowEligible;
-
-        // If shadow is selected but not eligible, reset to normal
-        if (!isShadowEligible && state.form === 'shadow') {
+        // If the current form is a mega variant the new species doesn't have, reset to normal.
+        if (isMegaForm && megaForms.indexOf(state.form) === -1) {
             state.form = 'normal';
             formSelect.value = 'normal';
         }
+    }
+
+    // Resolve a (base species, form) pair to the actual gamemaster entry + shadow flag.
+    // Mega forms are separate species entries; shadow/purified ride on the base entry.
+    function resolveFormSpecies(baseSpecies, form) {
+        if (baseSpecies && form && form.indexOf('mega') === 0) {
+            var megaData = ns.getPokemonById(baseSpecies.speciesId + '_' + form);
+            if (megaData) return { species: megaData, shadowType: 'normal' };
+        }
+        return { species: baseSpecies, shadowType: form === 'shadow' ? 'shadow' : 'normal' };
+    }
+
+    // The effective candidate species entry for a given form (mega-aware).
+    function getCandidateSpecies(form) {
+        return resolveFormSpecies(state.species, form || state.form).species;
     }
 
     // ============ MOVE SELECTS ============
@@ -287,12 +359,14 @@
 
     function populateMoveSelects() {
         if (!state.species) return;
+        // Use the effective (mega-aware) species so mega-specific move pools populate.
+        var sp = getCandidateSpecies(state.form) || state.species;
         var fm = document.getElementById('fastMoveSelect');
         var cm1 = document.getElementById('chargedMove1Select');
         var cm2 = document.getElementById('chargedMove2Select');
 
         // Compute auto-selected moves
-        var auto = getAutoMoves(state.species);
+        var auto = getAutoMoves(sp);
         var autoFastName = auto.fast ? auto.fast.name : 'Auto';
         var autoCharged1Name = auto.charged1 ? auto.charged1.name : 'Auto';
         var autoCharged2Name = auto.charged2 ? auto.charged2.name : 'Auto';
@@ -301,18 +375,18 @@
         cm1.innerHTML = '<option value="">' + autoCharged1Name + ' (Auto)</option>';
         cm2.innerHTML = '<option value="">' + autoCharged2Name + ' (Auto)</option>';
 
-        (state.species.fastMoves || []).forEach(function(moveId) {
+        (sp.fastMoves || []).forEach(function(moveId) {
             var move = ns.getMoveById(moveId);
             if (move) {
-                var elite = (state.species.eliteMoves || []).indexOf(moveId) > -1 ? ' *' : '';
+                var elite = (sp.eliteMoves || []).indexOf(moveId) > -1 ? ' *' : '';
                 fm.innerHTML += '<option value="' + moveId + '">' + move.name + elite + '</option>';
             }
         });
 
-        (state.species.chargedMoves || []).forEach(function(moveId) {
+        (sp.chargedMoves || []).forEach(function(moveId) {
             var move = ns.getMoveById(moveId);
             if (move) {
-                var elite = (state.species.eliteMoves || []).indexOf(moveId) > -1 ? ' *' : '';
+                var elite = (sp.eliteMoves || []).indexOf(moveId) > -1 ? ' *' : '';
                 cm1.innerHTML += '<option value="' + moveId + '">' + move.name + elite + '</option>';
                 cm2.innerHTML += '<option value="' + moveId + '">' + move.name + elite + '</option>';
             }
@@ -378,7 +452,7 @@
                     populateMoveSelects();
                     restoreMoveOverrideUI();
                     var leagueNames = { 500: 'Little', 1500: 'Great', 2500: 'Ultra', 10000: 'Master' };
-                    var auto = getAutoMoves(state.species);
+                    var auto = getAutoMoves(getCandidateSpecies(state.form) || state.species);
                     var moveNames = [auto.fast, auto.charged1, auto.charged2]
                         .filter(Boolean).map(function(m) { return m.name; });
                     var msg = (leagueNames[state.league] || '') + ' League';
@@ -418,6 +492,9 @@
     function setupFormSelect() {
         document.getElementById('formSelect').addEventListener('change', function(e) {
             state.form = e.target.value;
+            updateFormOptions();          // keep shadow/mega option enablement in sync
+            populateMoveSelects();        // mega forms have their own move pools
+            restoreMoveOverrideUI();
             updateAllCandidateComputedFields();
             saveState();
         });
@@ -451,6 +528,9 @@
         // Track reference by candidate ID so reordering preserves it
         var refId = state.candidates[state.referenceIdx] ? state.candidates[state.referenceIdx].id : null;
 
+        // Mega override options apply to the shared candidate species (same for every row).
+        var megaTokens = megaFormsForSpecies(state.species);
+
         state.candidates.forEach(function(c, idx) {
             var tr = document.createElement('tr');
             tr.dataset.id = c.id;
@@ -475,6 +555,9 @@
                     '<option value="normal"' + (c.form === 'normal' ? ' selected' : '') + '>Normal</option>' +
                     '<option value="shadow"' + (c.form === 'shadow' ? ' selected' : '') + '>Shadow</option>' +
                     '<option value="purified"' + (c.form === 'purified' ? ' selected' : '') + '>Purified</option>' +
+                    megaTokens.map(function(tok) {
+                        return '<option value="' + tok + '"' + (c.form === tok ? ' selected' : '') + '>' + formLabel(tok) + '</option>';
+                    }).join('') +
                 '</select></td>' +
                 '<td class="computed">' + computed + '</td>' +
                 '<td class="row-actions">' +
@@ -657,7 +740,7 @@
         if (!state.species || c.atk === '' || c.def === '' || c.sta === '') {
             return '<span style="color:var(--text-dim)">Enter IVs</span>';
         }
-        var data = state.species;
+        var data = getCandidateSpecies(getEffectiveForm(c)) || state.species;
         var levelCap = getLevelCap();
         var result = ns.findOptimalLevel(data.baseStats, c.atk, c.def, c.sta, state.league, levelCap);
         var rank = ns.getIVRank(data.baseStats, c.atk, c.def, c.sta, state.league, levelCap, 0);
@@ -690,7 +773,7 @@
             var q = input.value.toLowerCase().trim();
             if (q.length < 2) { dropdown.classList.remove('visible'); return; }
             var all = ns.getAllPokemon().filter(function(p) {
-                return p.released && p.speciesId.indexOf('_mega') === -1 &&
+                return p.released &&
                     (p.speciesName.toLowerCase().indexOf(q) > -1 || p.speciesId.toLowerCase().indexOf(q) > -1);
             }).slice(0, 15);
 
@@ -1004,12 +1087,17 @@
         // Build candidate display info using lightweight stat calc
         var candidatePokemon = validCandidates.map(function(c) {
             var form = getEffectiveForm(c);
-            var result = ns.findOptimalLevel(state.species.baseStats, c.atk, c.def, c.sta, state.league, levelCap);
+            // Mega forms resolve to their own species entry (own stats/types/moves);
+            // shadow/purified ride on the base entry via shadowType.
+            var resolved = resolveFormSpecies(state.species, form);
+            var sp = resolved.species || state.species;
+            var result = ns.findOptimalLevel(sp.baseStats, c.atk, c.def, c.sta, state.league, levelCap);
             return {
-                speciesId: state.species.speciesId,
-                speciesName: state.species.speciesName,
+                speciesId: sp.speciesId,
+                speciesName: sp.speciesName,
                 ivs: { atk: c.atk, def: c.def, hp: c.sta },
-                shadowType: form,
+                shadowType: resolved.shadowType,
+                form: form,
                 cp: result.cp, level: result.level, stats: result.stats,
             };
         });
@@ -1400,8 +1488,9 @@
             if (ci === matrixRefIdx) tr.classList.add('reference');
 
             var form = getEffectiveForm(c);
-            var formLabel = form === 'shadow' ? ' (S)' : form === 'purified' ? ' (P)' : '';
-            var label = escHtml(c.nickname) + formLabel + '<br><span style="font-size:0.7rem;color:var(--text-dim)">' + c.atk + '/' + c.def + '/' + c.sta + ' CP' + cp.cp + ' L' + cp.level + '</span>';
+            var formTag = form === 'shadow' ? ' (S)' : form === 'purified' ? ' (P)' :
+                form === 'mega' ? ' (M)' : form.indexOf('mega_') === 0 ? ' (M' + form.slice(5).toUpperCase() + ')' : '';
+            var label = escHtml(c.nickname) + formTag + '<br><span style="font-size:0.7rem;color:var(--text-dim)">' + c.atk + '/' + c.def + '/' + c.sta + ' CP' + cp.cp + ' L' + cp.level + '</span>';
 
             var html = '<th>' + label + '</th>';
 
