@@ -28,6 +28,10 @@
             '2v0': true, '2v1': true, '2v2': true,
         },
         nextCandidateId: 1,
+        mode: 'compare',                       // 'compare' (matrix) | 'bulk' (one mon vs meta)
+        bulkIVs: { atk: 15, def: 15, sta: 15 }, // IVs for the single mon in bulk mode
+        bulkSort: 'overall',                   // 'overall' | '1v1' | 'name'
+        bulkResults: null,
     };
 
     var STORAGE_KEY = "pvp_iv_tool_state";
@@ -50,6 +54,7 @@
             referenceIdx: state.referenceIdx, excludedThreats: excludedArr,
             activeScenarios: SCENARIO_KEYS.filter(function(k) { return state.activeScenarios[k]; }),
             nextCandidateId: state.nextCandidateId,
+            mode: state.mode, bulkIVs: state.bulkIVs, bulkSort: state.bulkSort,
         };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
     }
@@ -75,6 +80,9 @@
             state.activeScenarios = {};
             SCENARIO_KEYS.forEach(function(k) { state.activeScenarios[k] = savedScen.indexOf(k) > -1; });
             state.nextCandidateId = s.nextCandidateId || state.candidates.length + 1;
+            if (s.mode === 'bulk' || s.mode === 'compare') state.mode = s.mode;
+            if (s.bulkIVs) state.bulkIVs = s.bulkIVs;
+            if (s.bulkSort) state.bulkSort = s.bulkSort;
             return true;
         } catch(e) { console.warn("Failed to load state:", e); return false; }
     }
@@ -92,6 +100,8 @@
             setupMoveSelects();
             setupButtons();
             setupShieldFilter();
+            setupModeTabs();
+            setupBulk();
             renderShieldFilter();
             populateMetaSelect();
 
@@ -112,6 +122,7 @@
             renderCandidates();
             renderThreats();
             if (state.candidates.length === 0) addCandidateRow();
+            applyMode();
             // Convert vertical mouse wheel to horizontal scroll on the matrix
             var matrixScroll = document.getElementById('matrixScroll');
             matrixScroll.addEventListener('wheel', function(e) {
@@ -946,6 +957,39 @@
         URL.revokeObjectURL(url);
     }
 
+    // Resolve a list of threats into display+sim Pokemon objects with per-league
+    // default IVs and recommended moves. Shared by the matrix (runSimulation) and
+    // the bulk matchups view so default-IV logic stays identical.
+    function resolveThreatPokemon(threats, league, levelCap) {
+        return threats.map(function(t) {
+            var baseId = t.speciesId.replace('_shadow', '');
+            var shadowType = t.shadowType || (t.speciesId.indexOf('_shadow') > -1 ? 'shadow' : 'normal');
+            var data = ns.getPokemonById(baseId);
+            if (!data) return null;
+
+            // Use default IVs from gamemaster (prefer shadow-specific entry)
+            var gmEntry = ns.getPokemonById(t.speciesId) || data;
+            var ivs = { atk: 0, def: 0, hp: 0 };
+            var key = 'cp' + league;
+            if (gmEntry.defaultIVs && gmEntry.defaultIVs[key]) {
+                var combo = gmEntry.defaultIVs[key];
+                ivs = { atk: combo[1], def: combo[2], hp: combo[3] };
+            }
+            var result = ns.findOptimalLevel(data.baseStats, ivs.atk, ivs.def, ivs.hp, league, levelCap);
+
+            return {
+                speciesId: baseId,
+                speciesName: data.speciesName,
+                ivs: ivs,
+                shadowType: shadowType,
+                cp: result.cp, level: result.level, stats: result.stats,
+                threatData: t,
+                preferredFastMove: t.fastMove || null,
+                preferredChargedMoves: t.chargedMoves || [],
+            };
+        }).filter(Boolean);
+    }
+
     function runSimulation() {
         if (!state.species) { alert('Select a species first.'); return; }
         var validCandidates = state.candidates.filter(function(c) { return c.atk !== '' && c.def !== '' && c.sta !== '' && !c.excluded; });
@@ -970,34 +1014,8 @@
             };
         });
 
-        // Build threat display info
-        var threatPokemon = state.threats.map(function(t) {
-            var baseId = t.speciesId.replace('_shadow', '');
-            var shadowType = t.shadowType || (t.speciesId.indexOf('_shadow') > -1 ? 'shadow' : 'normal');
-            var data = ns.getPokemonById(baseId);
-            if (!data) return null;
-
-            // Use default IVs from gamemaster (prefer shadow-specific entry)
-            var gmEntry = ns.getPokemonById(t.speciesId) || data;
-            var ivs = { atk: 0, def: 0, hp: 0 };
-            var key = 'cp' + state.league;
-            if (gmEntry.defaultIVs && gmEntry.defaultIVs[key]) {
-                var combo = gmEntry.defaultIVs[key];
-                ivs = { atk: combo[1], def: combo[2], hp: combo[3] };
-            }
-            var result = ns.findOptimalLevel(data.baseStats, ivs.atk, ivs.def, ivs.hp, state.league, levelCap);
-
-            return {
-                speciesId: baseId,
-                speciesName: data.speciesName,
-                ivs: ivs,
-                shadowType: shadowType,
-                cp: result.cp, level: result.level, stats: result.stats,
-                threatData: t,
-                preferredFastMove: t.fastMove || null,
-                preferredChargedMoves: t.chargedMoves || [],
-            };
-        }).filter(Boolean);
+        // Build threat display info (shared with the bulk matchups view)
+        var threatPokemon = resolveThreatPokemon(state.threats, state.league, levelCap);
 
         // Run simulations using PvPoke's engine
         var matrix = [];
@@ -1052,6 +1070,218 @@
         renderDifferences();
         document.getElementById('matrixSection').style.display = '';
         document.getElementById('diffSection').style.display = '';
+    }
+
+    // ============ MODE TABS ============
+    function setupModeTabs() {
+        var btns = document.querySelectorAll('.mode-btn');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() { setMode(this.dataset.mode); });
+        }
+    }
+
+    function setMode(mode) {
+        if (mode !== 'compare' && mode !== 'bulk') return;
+        state.mode = mode;
+        applyMode();
+        saveState();
+    }
+
+    // Toggle section visibility for the current mode. Controls + threat list are shared.
+    function applyMode() {
+        var bulk = state.mode === 'bulk';
+        var btns = document.querySelectorAll('.mode-btn');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.toggle('active', btns[i].dataset.mode === state.mode);
+        }
+        document.getElementById('candidatesSection').style.display = bulk ? 'none' : '';
+        document.getElementById('matrixSection').style.display = (!bulk && state.results) ? '' : 'none';
+        document.getElementById('diffSection').style.display = (!bulk && state.results) ? '' : 'none';
+        document.getElementById('bulkSection').style.display = bulk ? '' : 'none';
+        if (bulk) renderBulkMatchups();
+    }
+
+    // ============ BULK MATCHUPS (one mon vs the meta, all shields) ============
+    function setupBulk() {
+        document.getElementById('bulkAtk').value = state.bulkIVs.atk;
+        document.getElementById('bulkDef').value = state.bulkIVs.def;
+        document.getElementById('bulkSta').value = state.bulkIVs.sta;
+        var sortBtns = document.querySelectorAll('.bulk-sort-btn');
+        for (var i = 0; i < sortBtns.length; i++) {
+            sortBtns[i].classList.toggle('active', sortBtns[i].dataset.sort === state.bulkSort);
+            sortBtns[i].addEventListener('click', function() {
+                state.bulkSort = this.dataset.sort;
+                var all = document.querySelectorAll('.bulk-sort-btn');
+                for (var j = 0; j < all.length; j++) all[j].classList.toggle('active', all[j].dataset.sort === state.bulkSort);
+                renderBulkMatchups();
+                saveState();
+            });
+        }
+        document.getElementById('btnRunBulk').addEventListener('click', runBulkMatchups);
+    }
+
+    function readBulkIVs() {
+        function clamp(v) { v = parseInt(v, 10); if (isNaN(v)) v = 0; return Math.max(0, Math.min(15, v)); }
+        state.bulkIVs = {
+            atk: clamp(document.getElementById('bulkAtk').value),
+            def: clamp(document.getElementById('bulkDef').value),
+            sta: clamp(document.getElementById('bulkSta').value),
+        };
+        return state.bulkIVs;
+    }
+
+    // Mean battle rating across all 9 shield scenarios — a true "across all shields"
+    // summary, distinct from the 1v1 figure (used for the Overall column + sort).
+    function bulkOverall(results) {
+        var sum = 0;
+        for (var i = 0; i < SCENARIO_KEYS.length; i++) sum += results[SCENARIO_KEYS[i]].battleRating;
+        return Math.round(sum / SCENARIO_KEYS.length);
+    }
+
+    function runBulkMatchups() {
+        if (!state.species) { alert('Select a species first.'); return; }
+        if (state.threats.length === 0) { alert('Add threats or load meta first.'); return; }
+
+        var statusBar = document.getElementById('statusBar');
+        statusBar.textContent = 'Simulating...';
+        var startTime = performance.now();
+        var levelCap = getLevelCap();
+        var ivs = readBulkIVs();
+        var form = state.form;
+
+        var threatPokemon = resolveThreatPokemon(state.threats, state.league, levelCap);
+
+        var movesA = null;
+        if (state.moveOverride) {
+            movesA = [state.moveOverride.fastMove, state.moveOverride.chargedMove1, state.moveOverride.chargedMove2];
+        }
+
+        var ALL_SCENARIOS = [[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]];
+        var rows = [];
+        for (var ti = 0; ti < threatPokemon.length; ti++) {
+            var threat = threatPokemon[ti];
+            var movesB = null;
+            if (threat.preferredFastMove) {
+                movesB = [threat.preferredFastMove,
+                    (threat.preferredChargedMoves || [])[0] || null,
+                    (threat.preferredChargedMoves || [])[1] || null];
+            }
+            var results = {};
+            for (var s = 0; s < ALL_SCENARIOS.length; s++) {
+                var sKey = ALL_SCENARIOS[s][0] + 'v' + ALL_SCENARIOS[s][1];
+                results[sKey] = ns.simulateBattle(
+                    state.species.speciesId, [ivs.atk, ivs.def, ivs.sta],
+                    threat.speciesId, [threat.ivs.atk, threat.ivs.def, threat.ivs.hp],
+                    ALL_SCENARIOS[s][0], ALL_SCENARIOS[s][1],
+                    state.league, levelCap,
+                    form, threat.shadowType,
+                    movesA, movesB
+                );
+            }
+            rows.push({ threat: threat, results: results });
+        }
+
+        state.bulkResults = {
+            mon: { speciesId: state.species.speciesId, speciesName: state.species.speciesName, ivs: ivs, form: form },
+            rows: rows,
+        };
+
+        var elapsed = ((performance.now() - startTime) / 1000).toFixed(2);
+        statusBar.textContent = (threatPokemon.length * ALL_SCENARIOS.length) + ' simulations completed in ' + elapsed + 's';
+
+        renderBulkMatchups();
+        saveState();
+    }
+
+    function renderBulkMatchups() {
+        var container = document.getElementById('bulkContent');
+        if (!container) return;
+        var label = document.getElementById('bulkMonLabel');
+
+        if (!state.bulkResults) {
+            if (label) label.textContent = '';
+            container.innerHTML = '<div class="bulk-empty">Pick a species, load a meta, then press Run.</div>';
+            return;
+        }
+
+        var mon = state.bulkResults.mon;
+        var formLabel = mon.form === 'shadow' ? ' (Shadow)' : (mon.form === 'purified' ? ' (Purified)' : '');
+        if (label) label.textContent = mon.speciesName + formLabel + ' · ' + mon.ivs.atk + '/' + mon.ivs.def + '/' + mon.ivs.sta;
+
+        // Sort a copy of the rows by the active preset.
+        var rows = state.bulkResults.rows.slice();
+        var sort = state.bulkSort;
+        rows.sort(function(a, b) {
+            if (sort === 'name') {
+                return a.threat.speciesName > b.threat.speciesName ? 1 : (b.threat.speciesName > a.threat.speciesName ? -1 : 0);
+            }
+            var av = sort === '1v1' ? a.results['1v1'].battleRating : bulkOverall(a.results);
+            var bv = sort === '1v1' ? b.results['1v1'].battleRating : bulkOverall(b.results);
+            return bv - av; // best matchups first
+        });
+
+        var html = '<table class="bulk-table"><thead><tr>' +
+            '<th class="bulk-opp-head">Opponent</th>' +
+            '<th>Overall</th>' +
+            '<th class="bulk-grid-head">Matchups <span class="bulk-axis">(your▾ / opp▸ shields)</span></th>' +
+            '</tr></thead><tbody>';
+
+        for (var r = 0; r < rows.length; r++) {
+            var row = rows[r];
+            var tp = row.threat;
+            var name = tp.speciesName + (tp.shadowType === 'shadow' ? ' (S)' : '');
+
+            var moveStr = '';
+            var fmData = ns.getMoveById(tp.preferredFastMove || '');
+            if (fmData) {
+                moveStr = abbreviateMove(fmData.name);
+                var cmParts = [];
+                var cms = tp.preferredChargedMoves || [];
+                for (var mi = 0; mi < cms.length; mi++) {
+                    var cmData = ns.getMoveById(cms[mi]);
+                    if (cmData) cmParts.push(abbreviateMove(cmData.name));
+                }
+                if (cmParts.length) moveStr += '+' + cmParts.join('/');
+            }
+            var ivStr = tp.ivs.atk + '/' + tp.ivs.def + '/' + tp.ivs.hp;
+
+            var ov = bulkOverall(row.results);
+            var ovClass = getBRColorClass(ov);
+
+            // 3x3 grid: rows = your shields (0s/1s/2s), cols = opponent shields.
+            // Reuse the matrix's expanded-grid layout + seg-* colors.
+            var grid = '<span class="shield-expanded-grid bulk-grid">';
+            grid += '<span class="seg-header"></span><span class="seg-header">0s</span><span class="seg-header">1s</span><span class="seg-header">2s</span>';
+            for (var ys = 0; ys < 3; ys++) {
+                grid += '<span class="seg-header">' + ys + 's</span>';
+                for (var os = 0; os < 3; os++) {
+                    var key = ys + 'v' + os;
+                    var sBR = row.results[key].battleRating;
+                    var sClass = sBR === 500 ? 'seg-tie' : (sBR > 500 ? 'seg-win' : 'seg-loss');
+                    grid += '<span class="' + sClass + '">' + sBR + '</span>';
+                }
+            }
+            grid += '</span>';
+
+            var pvp = '';
+            var r1 = row.results['1v1'];
+            if (r1 && r1.pokemon && r1.pokemon.length === 2) {
+                var link = buildPvpokeLink(r1.pokemon[0], r1.pokemon[1], 1, 1, state.league);
+                pvp = '<a class="pvpoke-link bulk-pvp" href="' + link + '" target="_blank" rel="noopener" title="Open 1v1 in PvPoke">↗</a>';
+            }
+
+            html += '<tr class="bulk-row">' +
+                '<td class="bulk-opp">' +
+                    '<span class="threat-name">' + name + '</span>' +
+                    '<span class="threat-moves">' + moveStr + '</span>' +
+                    '<span class="threat-ivs">' + ivStr + '</span>' + pvp +
+                '</td>' +
+                '<td class="br-cell ' + ovClass + ' bulk-overall">' + ov + '</td>' +
+                '<td class="bulk-grid-cell">' + grid + '</td>' +
+            '</tr>';
+        }
+        html += '</tbody></table>';
+        container.innerHTML = html;
     }
 
     // ============ SHIELD-SCENARIO FILTER ============

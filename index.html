@@ -58,8 +58,18 @@
         </div>
     </div>
 
+    <!-- Mode switcher -->
+    <div class="mode-tabs-bar">
+        <label>Mode</label>
+        <div class="league-tabs">
+            <button class="mode-btn active" data-mode="compare">IV Comparison</button>
+            <button class="mode-btn" data-mode="bulk">Bulk Matchups</button>
+        </div>
+        <span class="mode-hint" id="modeHint"></span>
+    </div>
+
     <!-- Candidates -->
-    <div class="candidates-section">
+    <div class="candidates-section" id="candidatesSection">
         <h2>Candidates</h2>
         <table class="candidate-table">
             <thead>
@@ -138,6 +148,29 @@
             </div>
         </div>
         <div id="diffContent"></div>
+    </div>
+
+    <!-- Bulk Matchups (one mon vs the meta, all shields) -->
+    <div class="bulk-section" id="bulkSection" style="display:none">
+        <div class="bulk-header">
+            <h2>Bulk Matchups <span class="bulk-sub" id="bulkMonLabel"></span></h2>
+            <div class="bulk-controls">
+                <span class="bulk-iv-group">
+                    <label>IVs</label>
+                    <input type="number" id="bulkAtk" min="0" max="15" value="15" title="Attack IV" class="iv-input">
+                    <input type="number" id="bulkDef" min="0" max="15" value="15" title="Defense IV" class="iv-input">
+                    <input type="number" id="bulkSta" min="0" max="15" value="15" title="Stamina IV" class="iv-input">
+                </span>
+                <span class="bulk-sort-group">
+                    <label>Sort</label>
+                    <button class="bulk-sort-btn active" data-sort="overall">Overall</button>
+                    <button class="bulk-sort-btn" data-sort="1v1">1v1</button>
+                    <button class="bulk-sort-btn" data-sort="name">A&ndash;Z</button>
+                </span>
+                <button id="btnRunBulk" style="font-weight:600">Run</button>
+            </div>
+        </div>
+        <div id="bulkContent"></div>
     </div>
 
     <div class="status-bar" id="statusBar"></div>

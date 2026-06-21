@@ -855,6 +855,80 @@ select:focus { border-color: var(--accent); }
     text-align: center;
 }
 
+/* Mode switcher */
+.mode-tabs-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.mode-hint { font-size: 0.8rem; color: var(--text-dim); }
+
+/* Bulk Matchups */
+.bulk-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+}
+.bulk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.bulk-header h2 { font-size: 1rem; color: var(--text-bright); }
+.bulk-sub { font-weight: 400; color: var(--text-dim); font-size: 0.85rem; }
+.bulk-controls { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.bulk-iv-group, .bulk-sort-group { display: flex; align-items: center; gap: 4px; }
+.bulk-iv-group input {
+    width: 48px;
+    padding: 5px 6px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.85rem;
+    text-align: center;
+    outline: none;
+}
+.bulk-iv-group input:focus { border-color: var(--accent); }
+.bulk-sort-btn { padding: 5px 10px; font-size: 0.8rem; }
+
+.bulk-empty { color: var(--text-dim); font-size: 0.85rem; padding: 8px 0; }
+
+.bulk-table { width: 100%; border-collapse: collapse; }
+.bulk-table thead th {
+    text-align: left;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+}
+.bulk-axis { text-transform: none; letter-spacing: 0; font-size: 0.65rem; }
+.bulk-row td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.bulk-row:hover { background: rgba(79, 195, 247, 0.05); }
+
+.bulk-opp { position: relative; min-width: 150px; }
+.bulk-opp .threat-name { display: block; font-weight: 600; color: var(--text); font-size: 0.85rem; }
+.bulk-opp .threat-moves { display: block; color: var(--text-dim); font-size: 0.72rem; }
+.bulk-opp .threat-ivs { display: block; color: var(--text-dim); font-size: 0.72rem; }
+.bulk-pvp { position: absolute; top: 4px; right: 6px; }
+.bulk-row:hover .bulk-pvp { opacity: 0.65; }
+.bulk-pvp:hover { opacity: 1 !important; }
+
+.bulk-overall { text-align: center; min-width: 52px; }
+
+.bulk-grid-cell { width: 1%; white-space: nowrap; }
+.bulk-grid { font-size: 0.72rem; gap: 2px 8px; }
+.bulk-grid .seg-header { font-size: 0.62rem; }
+
 /* Responsive */
 @media (max-width: 900px) {
     .controls-row { flex-direction: column; align-items: flex-start; }
