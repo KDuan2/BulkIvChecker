@@ -52,6 +52,14 @@ var PvPIV = PvPIV || {};
     ns.getAllPokemon = function() { return gmData ? gmData.pokemon : []; };
     ns.getSettings = function() { return gmData ? gmData.settings : { buffDivisor: 4, maxBuffStages: 4 }; };
 
+    // Mega forms are separate species entries (e.g. "venusaur_mega", "charizard_mega_x").
+    // Returns the mega gmEntries for a base species, in gamemaster order.
+    ns.getMegaForms = function(baseId) {
+        if (!baseId || baseId.indexOf('_mega') > -1) return [];
+        var re = new RegExp('^' + baseId + '_mega(_[a-z]+)?$');
+        return ns.getAllPokemon().filter(function(p) { return re.test(p.speciesId); });
+    };
+
     ns.loadMetaGroup = function(league) {
         // Use the embedded META_GROUPS global (loaded via <script> tag)
         if (typeof META_GROUPS !== 'undefined' && META_GROUPS[league]) {
