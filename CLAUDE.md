@@ -89,6 +89,20 @@ To re-sync with a newer PvPoke release:
 - **Vanilla JS only** — no frameworks, no build step. Consistent with PvPoke's own codebase.
 - **`PvPIV` namespace** — our code attaches to `var PvPIV = PvPIV || {};` to avoid polluting globals. PvPoke's verbatim code uses its own globals (`Battle`, `Pokemon`, `GameMaster`, etc.).
 
+## Git workflow
+
+Sole-owner repo (both committing accounts are the same person, no CI/deploy, static
+`file://` app). **Commit directly to `main` by default** — new pages, features, small
+fixes, and bug fixes all go straight in; no branch or PR needed.
+
+Branch only when a change is genuinely risky:
+- Large refactors of existing working functionality.
+- Anything touching the verbatim PvPoke engine (`js/pvpoke/*`) or otherwise risking
+  the accuracy guarantee.
+- Experimental work that might be thrown away.
+
+When a change crosses that line, call it out and branch instead of committing to `main`.
+
 ## License
 
 PvPoke is MIT-licensed. See `ATTRIBUTION.md` for credit and the license terms we comply with.
