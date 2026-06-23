@@ -202,6 +202,7 @@
             updateFormOptions();
             document.getElementById('formSelect').value = state.form;
             populateMoveSelects();
+            fillBulkDefaultIVs();
             updateAllCandidateComputedFields();
             saveState();
             return;
@@ -230,6 +231,7 @@
         document.getElementById('formSelect').value = state.form;
         updateFormOptions();
         populateMoveSelects();
+        fillBulkDefaultIVs();
         updateAllCandidateComputedFields();
         saveState();
     }
@@ -761,6 +763,7 @@
             var c = state.candidates.find(function(c) { return c.id === id; });
             if (c) updateCandidateComputed(rows[i], c);
         }
+        updateBulkReadout();
     }
 
     // ============ THREATS ============
@@ -1206,6 +1209,21 @@
             });
         }
         document.getElementById('btnRunBulk').addEventListener('click', runBulkMatchups);
+
+        // Live CP/Level/Rank readout as IVs are edited
+        ['bulkAtk', 'bulkDef', 'bulkSta'].forEach(function(id) {
+            document.getElementById(id).addEventListener('input', function() {
+                readBulkIVs();
+                updateBulkReadout();
+                saveState();
+            });
+        });
+        document.getElementById('btnBulkDefaultIV').addEventListener('click', function() {
+            fillBulkDefaultIVs();
+            updateBulkReadout();
+            saveState();
+        });
+        updateBulkReadout();
     }
 
     function readBulkIVs() {
@@ -1216,6 +1234,37 @@
             sta: clamp(document.getElementById('bulkSta').value),
         };
         return state.bulkIVs;
+    }
+
+    // PvPoke's per-league rank-1 default IV spread for a species (same source threats
+    // use). Returns {atk, def, sta} or null if the species has no defaults.
+    function getDefaultIVs(species, league) {
+        var key = 'cp' + league;
+        if (species && species.defaultIVs && species.defaultIVs[key]) {
+            var combo = species.defaultIVs[key];
+            return { atk: combo[1], def: combo[2], sta: combo[3] };
+        }
+        return null;
+    }
+
+    // Insert the selected species' default spread into the bulk IV fields.
+    function fillBulkDefaultIVs() {
+        if (!state.species) return;
+        var sp = getCandidateSpecies(state.form) || state.species;
+        state.bulkIVs = getDefaultIVs(sp, state.league) || { atk: 15, def: 15, sta: 15 };
+        var a = document.getElementById('bulkAtk'), d = document.getElementById('bulkDef'), s = document.getElementById('bulkSta');
+        if (a) a.value = state.bulkIVs.atk;
+        if (d) d.value = state.bulkIVs.def;
+        if (s) s.value = state.bulkIVs.sta;
+    }
+
+    // CP / Level / Rank readout for the current bulk IVs (reuses computeCandidate).
+    function updateBulkReadout() {
+        var el = document.getElementById('bulkIvReadout');
+        if (!el) return;
+        el.innerHTML = state.species
+            ? computeCandidate({ atk: state.bulkIVs.atk, def: state.bulkIVs.def, sta: state.bulkIVs.sta, form: state.form })
+            : '';
     }
 
     // Mean battle rating across all 9 shield scenarios — a true "across all shields"

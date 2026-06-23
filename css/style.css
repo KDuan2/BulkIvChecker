@@ -897,6 +897,9 @@ select:focus { border-color: var(--accent); }
     outline: none;
 }
 .bulk-iv-group input:focus { border-color: var(--accent); }
+.bulk-iv-readout { font-size: 0.8rem; color: var(--text-dim); white-space: nowrap; margin-left: 6px; }
+.bulk-iv-readout .cp { color: var(--text-bright); font-weight: 600; }
+.bulk-iv-readout .rank { color: var(--accent); }
 .bulk-sort-btn { padding: 5px 10px; font-size: 0.8rem; }
 
 .bulk-empty { color: var(--text-dim); font-size: 0.85rem; padding: 8px 0; }
