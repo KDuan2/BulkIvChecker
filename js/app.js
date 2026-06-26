@@ -308,18 +308,26 @@
     // ============ MOVE SELECTS ============
 
     // Get the recommended moveset for a species: ranking data first, then DPE-based fallback.
-    function getAutoMoves(speciesData) {
-        // Check ranking data first
-        if (typeof RANKING_MOVESETS !== 'undefined') {
-            var league = RANKING_MOVESETS[state.league];
-            if (league && league[speciesData.speciesId]) {
-                var ranked = league[speciesData.speciesId];
-                return {
-                    fast: ns.getMoveById(ranked[0]),
-                    charged1: ns.getMoveById(ranked[1]),
-                    charged2: ranked[2] ? ns.getMoveById(ranked[2]) : null,
-                };
-            }
+    // Recommended [fast, c1, c2] moveset for a species at the current league.
+    // Shadows have their own ranking entry (keyed "<base>_shadow"); prefer it.
+    function rankedMoveset(baseSpeciesId, isShadow) {
+        if (typeof RANKING_MOVESETS === 'undefined') return null;
+        var league = RANKING_MOVESETS[state.league];
+        if (!league) return null;
+        if (isShadow && league[baseSpeciesId + '_shadow']) return league[baseSpeciesId + '_shadow'];
+        return league[baseSpeciesId] || null;
+    }
+
+    function getAutoMoves(speciesData, form) {
+        if (form === undefined) form = state.form;
+        // Check ranking data first (shadow-aware)
+        var ranked = rankedMoveset(speciesData.speciesId, form === 'shadow');
+        if (ranked) {
+            return {
+                fast: ns.getMoveById(ranked[0]),
+                charged1: ns.getMoveById(ranked[1]),
+                charged2: ranked[2] ? ns.getMoveById(ranked[2]) : null,
+            };
         }
 
         // Fallback: score by DPE
@@ -368,7 +376,7 @@
         var cm2 = document.getElementById('chargedMove2Select');
 
         // Compute auto-selected moves
-        var auto = getAutoMoves(sp);
+        var auto = getAutoMoves(sp, state.form);
         var autoFastName = auto.fast ? auto.fast.name : 'Auto';
         var autoCharged1Name = auto.charged1 ? auto.charged1.name : 'Auto';
         var autoCharged2Name = auto.charged2 ? auto.charged2.name : 'Auto';
@@ -454,7 +462,7 @@
                     populateMoveSelects();
                     restoreMoveOverrideUI();
                     var leagueNames = { 500: 'Little', 1500: 'Great', 2500: 'Ultra', 10000: 'Master' };
-                    var auto = getAutoMoves(getCandidateSpecies(state.form) || state.species);
+                    var auto = getAutoMoves(getCandidateSpecies(state.form) || state.species, state.form);
                     var moveNames = [auto.fast, auto.charged1, auto.charged2]
                         .filter(Boolean).map(function(m) { return m.name; });
                     var msg = (leagueNames[state.league] || '') + ' League';
@@ -813,10 +821,15 @@
         if (state.threats.some(function(t) { return t.speciesId === speciesId; })) return;
         var data = ns.getPokemonById(speciesId);
         if (!data) return;
+        var isShadow = speciesId.indexOf('_shadow') > -1;
+        // Default to the recommended (shadow-aware) moveset; fall back to first-in-pool.
+        var ranked = rankedMoveset(speciesId.replace('_shadow', ''), isShadow);
+        var fastMove = ranked ? ranked[0] : ((data.fastMoves || [])[0] || '');
+        var chargedMoves = ranked ? ranked.slice(1).filter(Boolean) : (data.chargedMoves || []).slice(0, 2);
         state.threats.push({
-            speciesId: speciesId, fastMove: (data.fastMoves || [])[0] || '',
-            chargedMoves: (data.chargedMoves || []).slice(0, 2),
-            shadowType: speciesId.indexOf('_shadow') > -1 ? 'shadow' : 'normal',
+            speciesId: speciesId, fastMove: fastMove,
+            chargedMoves: chargedMoves,
+            shadowType: isShadow ? 'shadow' : 'normal',
             priority: false, excluded: false,
         });
         renderThreats(); saveState();

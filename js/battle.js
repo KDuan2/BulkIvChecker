@@ -64,20 +64,25 @@ var PvPIV = PvPIV || {};
      * Look up the ranking-recommended moveset for a species at a given CP cap.
      * Returns [fastMoveId, charged1Id, charged2Id] or null.
      */
-    function getRankingMoveset(speciesId, cpCap) {
+    function getRankingMoveset(speciesId, cpCap, shadowType) {
         if (typeof RANKING_MOVESETS === 'undefined') return null;
         var league = RANKING_MOVESETS[cpCap];
         if (!league) return null;
+        // Shadows have their own ranking entry ("<base>_shadow"); speciesId is the
+        // base id here, so prefer the shadow key when this is a shadow.
+        if (shadowType === "shadow" && league[speciesId + "_shadow"]) {
+            return league[speciesId + "_shadow"];
+        }
         return league[speciesId] || null;
     }
 
     /**
      * Set moves on a Pokemon from: explicit override > ranking data > auto-select.
      */
-    function setMovesFromSource(poke, speciesId, explicitMoves, cpCap) {
+    function setMovesFromSource(poke, speciesId, explicitMoves, cpCap, shadowType) {
         // Baseline: ranking moveset (or engine auto-select). Each move slot left
         // unset in an override falls back to this baseline.
-        var ranking = getRankingMoveset(speciesId, cpCap);
+        var ranking = getRankingMoveset(speciesId, cpCap, shadowType);
         if (ranking) {
             if (ranking[0]) poke.selectMove("fast", ranking[0]);
             if (ranking[1]) poke.selectMove("charged", ranking[1], 0);
@@ -120,8 +125,8 @@ var PvPIV = PvPIV || {};
         pokeB.startingShields = shields2;
 
         // Set moves: explicit override > ranking moveset > auto-select
-        setMovesFromSource(pokeA, speciesA, movesA, cpCap);
-        setMovesFromSource(pokeB, speciesB, movesB, cpCap);
+        setMovesFromSource(pokeA, speciesA, movesA, cpCap, shadowA);
+        setMovesFromSource(pokeB, speciesB, movesB, cpCap, shadowB);
 
         // Set Pokemon into battle
         battle.setNewPokemon(pokeA, 0, false);
