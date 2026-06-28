@@ -147,6 +147,7 @@ var PvPIV = PvPIV || {};
             winner: winner,
             ratings: [br1, br2],
             pokemon: [pokeA, pokeB],
+            battle: battle,
         };
     };
 
@@ -177,11 +178,14 @@ var PvPIV = PvPIV || {};
     /**
      * Debug battle with turn-by-turn console logging.
      */
-    ns.debugBattle = function(speciesA, ivsA, speciesB, ivsB, shields, cpCap, movesA, movesB) {
+    ns.debugBattle = function(speciesA, ivsA, speciesB, ivsB, shields, cpCap, movesA, movesB, levelCap, shadowA, shadowB) {
         cpCap = cpCap || 1500;
         shields = shields !== undefined ? shields : 1;
+        levelCap = levelCap || 50;
+        shadowA = shadowA || "normal";
+        shadowB = shadowB || "normal";
 
-        var result = ns.simulateBattle(speciesA, ivsA, speciesB, ivsB, shields, shields, cpCap, 50, "normal", "normal", movesA, movesB);
+        var result = ns.simulateBattle(speciesA, ivsA, speciesB, ivsB, shields, shields, cpCap, levelCap, shadowA, shadowB, movesA, movesB);
         var pokeA = result.pokemon[0];
         var pokeB = result.pokemon[1];
 
@@ -200,6 +204,19 @@ var PvPIV = PvPIV || {};
             for (var ci = 0; ci < p.chargedMoves.length; ci++) {
                 var cm = p.chargedMoves[ci];
                 console.log('  Charged' + (ci + 1) + ': ' + cm.name + ' (pow=' + cm.power + ' cost=' + cm.energy + (cm.buffs ? ' buffs=' + JSON.stringify(cm.buffs) + ' target=' + cm.buffTarget + ' chance=' + cm.buffApplyChance : '') + ')');
+            }
+        }
+
+        // Turn-by-turn timeline (move usage, shields, faints) for tracing divergence.
+        if (result.battle && result.battle.getTimeline) {
+            console.log('----------------------------------------');
+            console.log('TIMELINE (turn | actor | event):');
+            var tl = result.battle.getTimeline();
+            for (var ti = 0; ti < tl.length; ti++) {
+                var ev = tl[ti];
+                var actorName = ev.actor === 0 ? pokeA.speciesName : ev.actor === 1 ? pokeB.speciesName : ('#' + ev.actor);
+                var vals = (ev.values && ev.values.length) ? ' [' + ev.values.join(',') + ']' : '';
+                console.log('  t' + ev.turn + ' | ' + actorName + ' | ' + ev.type + ': ' + ev.name + vals);
             }
         }
 
