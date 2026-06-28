@@ -855,6 +855,45 @@ select:focus { border-color: var(--accent); }
     text-align: center;
 }
 
+/* Saved Builds library */
+.saved-builds-bar {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+.saved-builds-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.saved-builds-title { font-size: 0.85rem; font-weight: 600; color: var(--text-bright); }
+.saved-builds-head button { padding: 4px 10px; font-size: 0.78rem; }
+.saved-builds-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.saved-builds-hint { font-size: 0.8rem; color: var(--text-dim); }
+.saved-build-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 4px 4px 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    font-size: 0.8rem;
+}
+.saved-build-chip:hover { border-color: var(--accent); }
+.saved-build-chip .sb-load { cursor: pointer; color: var(--text); }
+.saved-build-chip .sb-del {
+    cursor: pointer;
+    color: var(--text-dim);
+    font-size: 0.72rem;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.saved-build-chip .sb-del:hover { color: #fff; background: var(--loss-strong); }
+.row-actions .btn-save-build { color: var(--tie); padding: 5px 7px; }
+.row-actions .btn-save-build:hover { color: #fff; border-color: var(--tie); }
+
 /* Mode switcher */
 .mode-tabs-bar {
     display: flex;

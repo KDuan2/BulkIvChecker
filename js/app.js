@@ -32,9 +32,11 @@
         bulkIVs: { atk: 15, def: 15, sta: 15 }, // IVs for the single mon in bulk mode
         bulkSort: 'overall',                   // 'overall' | '1v1' | 'name'
         bulkResults: null,
+        savedBuilds: [],                       // per-species library: {speciesId,speciesName,atk,def,sta,form,name}
     };
 
     var STORAGE_KEY = "pvp_iv_tool_state";
+    var SAVED_BUILDS_KEY = "pvp_iv_saved_builds"; // separate from the session — survives Clear Session + restarts
 
     // The 9 shield scenarios (candidate-shields × opponent-shields).
     var SCENARIO_KEYS = ['0v0','0v1','0v2','1v0','1v1','1v2','2v0','2v1','2v2'];
@@ -87,10 +89,122 @@
         } catch(e) { console.warn("Failed to load state:", e); return false; }
     }
 
+    // ============ SAVED BUILDS LIBRARY ============
+    // A per-species library of {speciesId, speciesName, atk, def, sta, form, name},
+    // stored under its own key so "Clear Session" never wipes it and it survives
+    // browser/device restarts (localStorage is persistent, unlike sessionStorage).
+    function loadSavedBuilds() {
+        try {
+            var raw = localStorage.getItem(SAVED_BUILDS_KEY);
+            state.savedBuilds = raw ? (JSON.parse(raw) || []) : [];
+            if (!Array.isArray(state.savedBuilds)) state.savedBuilds = [];
+        } catch (e) { state.savedBuilds = []; }
+    }
+
+    function persistSavedBuilds() {
+        localStorage.setItem(SAVED_BUILDS_KEY, JSON.stringify(state.savedBuilds));
+    }
+
+    function buildKey(b) { return b.speciesId + '|' + b.atk + '/' + b.def + '/' + b.sta + '|' + (b.form || ''); }
+
+    function saveBuild(c) {
+        if (!state.species || c.atk === '' || c.def === '' || c.sta === '') return;
+        var build = {
+            speciesId: state.species.speciesId,
+            speciesName: state.species.speciesName,
+            atk: c.atk, def: c.def, sta: c.sta,
+            form: getEffectiveForm(c),
+            name: c.nickname || '',
+        };
+        if (!state.savedBuilds.some(function(b) { return buildKey(b) === buildKey(build); })) {
+            state.savedBuilds.push(build);
+            persistSavedBuilds();
+        }
+        renderSavedBuilds();
+    }
+
+    function deleteSavedBuild(idx) {
+        state.savedBuilds.splice(idx, 1);
+        persistSavedBuilds();
+        renderSavedBuilds();
+    }
+
+    // Render chips for the currently-selected species' saved builds. Clicking a chip
+    // appends it as a candidate row; the × deletes it from the library.
+    function renderSavedBuilds() {
+        var list = document.getElementById('savedBuildsList');
+        if (!list) return;
+        list.innerHTML = '';
+        if (!state.species) {
+            list.innerHTML = '<span class="saved-builds-hint">Select a species to see its saved builds.</span>';
+            return;
+        }
+        var any = false;
+        state.savedBuilds.forEach(function(b, idx) {
+            if (b.speciesId !== state.species.speciesId) return;
+            any = true;
+            var formStr = (b.form && b.form !== 'normal') ? ' · ' + formLabel(b.form) : '';
+            var labelName = b.name ? escHtml(b.name) + ': ' : '';
+            var chip = document.createElement('span');
+            chip.className = 'saved-build-chip';
+            chip.innerHTML = '<span class="sb-load" title="Add as a candidate row">' +
+                labelName + b.atk + '/' + b.def + '/' + b.sta + formStr + '</span>' +
+                '<span class="sb-del" title="Delete saved build">&#x2715;</span>';
+            chip.querySelector('.sb-load').addEventListener('click', function() {
+                addCandidateRow(b.atk, b.def, b.sta, b.form, b.name || undefined);
+            });
+            chip.querySelector('.sb-del').addEventListener('click', function() { deleteSavedBuild(idx); });
+            list.appendChild(chip);
+        });
+        if (!any) {
+            list.innerHTML = '<span class="saved-builds-hint">No saved builds for ' +
+                escHtml(state.species.speciesName) + ' yet — use ★ on a candidate row.</span>';
+        }
+    }
+
+    function exportBuilds() {
+        if (!state.savedBuilds.length) { alert('No saved builds to export.'); return; }
+        var blob = new Blob([JSON.stringify(state.savedBuilds, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'pvp-iv-builds.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function importBuilds(file) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            try {
+                var data = JSON.parse(reader.result);
+                if (!Array.isArray(data)) throw new Error('not an array');
+                var added = 0;
+                data.forEach(function(b) {
+                    if (!b || !b.speciesId || b.atk == null || b.def == null || b.sta == null) return;
+                    var build = {
+                        speciesId: b.speciesId, speciesName: b.speciesName || b.speciesId,
+                        atk: b.atk, def: b.def, sta: b.sta, form: b.form || 'normal', name: b.name || '',
+                    };
+                    if (!state.savedBuilds.some(function(x) { return buildKey(x) === buildKey(build); })) {
+                        state.savedBuilds.push(build); added++;
+                    }
+                });
+                persistSavedBuilds();
+                renderSavedBuilds();
+                alert('Imported ' + added + ' new build' + (added === 1 ? '' : 's') + '.');
+            } catch (e) {
+                alert('Could not import: invalid builds file.');
+            }
+        };
+        reader.readAsText(file);
+    }
+
     // ============ INIT ============
     function init() {
         ns.loadGameMaster().then(function() {
             var hadState = loadState();
+            loadSavedBuilds();
 
             setupSpeciesSearch();
             setupThreatSearch();
@@ -122,6 +236,7 @@
 
             renderCandidates();
             renderThreats();
+            renderSavedBuilds();
             if (state.candidates.length === 0) addCandidateRow();
             applyMode();
             // Convert vertical mouse wheel to horizontal scroll on the matrix
@@ -573,6 +688,7 @@
                 '<td class="row-actions">' +
                     (getEffectiveForm(c) === 'shadow' ? '<button class="btn-purify" title="Purify (adds +2 to each IV)">Purify</button>' : '') +
                     (getEffectiveForm(c) === 'purified' && c._shadowIVs ? '<button class="btn-unpurify" title="Revert to shadow IVs">Shadow</button>' : '') +
+                    '<button class="btn-save-build" title="Save this build (species + IVs + form)">&#9733;</button>' +
                     '<button class="btn-del" title="Remove">&#x2715;</button>' +
                 '</td>';
             body.appendChild(tr);
@@ -606,6 +722,17 @@
                 state.candidates = state.candidates.filter(function(c) { return c.id !== id; });
                 if (state.referenceIdx >= state.candidates.length) state.referenceIdx = 0;
                 renderCandidates(); saveState();
+            });
+        }
+
+        // Save-build buttons — store this row's species + IVs + form in the library
+        var saveBtns = body.querySelectorAll('.btn-save-build');
+        for (var i = 0; i < saveBtns.length; i++) {
+            saveBtns[i].addEventListener('click', function() {
+                var tr = this.closest('tr');
+                var id = Number(tr.dataset.id);
+                var c = state.candidates.find(function(c) { return c.id === id; });
+                if (c) saveBuild(c);
             });
         }
 
@@ -772,6 +899,7 @@
             if (c) updateCandidateComputed(rows[i], c);
         }
         updateBulkReadout();
+        renderSavedBuilds();
     }
 
     // ============ THREATS ============
@@ -984,6 +1112,13 @@
         document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
         document.getElementById('btnExportCSV0v0').addEventListener('click', function() { exportCSV('0v0'); });
         document.getElementById('btnExportCSV1v1').addEventListener('click', function() { exportCSV('1v1'); });
+        document.getElementById('btnExportBuilds').addEventListener('click', exportBuilds);
+        var importInput = document.getElementById('importBuildsInput');
+        document.getElementById('btnImportBuilds').addEventListener('click', function() { importInput.click(); });
+        importInput.addEventListener('change', function() {
+            if (this.files && this.files[0]) importBuilds(this.files[0]);
+            this.value = '';
+        });
         document.getElementById('diffPriorityOnly').addEventListener('change', function() {
             if (state.results) renderDifferences();
         });
