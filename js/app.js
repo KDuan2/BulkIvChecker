@@ -1879,8 +1879,11 @@
     // Build a link into PvPoke's own 1v1 battle sim, pre-loaded with the exact
     // matchup we simulated (species, level, IVs, the moveset the sim actually used,
     // and shields). Format verified against PvPoke's generateURLPokeStr/MoveStr and
-    // loadGetData parser. The "4-4-1-0" tail = neutral atk/def buffs, default bait,
-    // default move timing — matching PvPoke's own defaults.
+    // loadGetData parser. The "4-4-1-1" tail = neutral atk/def buffs, default bait, and
+    // optimizeMoveTiming ON — the last field is optimizeMoveTiming (1=on/0=off), and
+    // PvPoke's matrix/single-battle default (getDefaultMultiBattleSettings) is ON, which
+    // is also what our sim uses. (A "0" here would force timing OFF on PvPoke and could
+    // disagree with our matrix on fast-move-timing knife-edges.)
     function pvpokePokeStr(p) {
         // PvPoke keys shadows as a separate "<base>_shadow" species id — that's what
         // its own battle links use — so encode shadow into the id, not a "-shadow"
@@ -1889,7 +1892,7 @@
         if (p.shadowType === 'shadow' && id.indexOf('_shadow') === -1) {
             id += '_shadow';
         }
-        return id + '-' + p.level + '-' + p.ivs.atk + '-' + p.ivs.def + '-' + p.ivs.hp + '-4-4-1-0';
+        return id + '-' + p.level + '-' + p.ivs.atk + '-' + p.ivs.def + '-' + p.ivs.hp + '-4-4-1-1';
     }
 
     function pvpokeMoveStr(p) {
