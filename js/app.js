@@ -1201,9 +1201,11 @@
             var data = ns.getPokemonById(baseId);
             if (!data) return null;
 
-            // Use default IVs from gamemaster (prefer shadow-specific entry)
+            // Use default IVs from gamemaster (prefer shadow-specific entry).
+            // Fallback is 15/15/15 for Master League, which has no CP cap and thus no
+            // defaultIVs entry (cp10000) — max IVs are always rank 1 there.
             var gmEntry = ns.getPokemonById(t.speciesId) || data;
-            var ivs = { atk: 0, def: 0, hp: 0 };
+            var ivs = { atk: 15, def: 15, hp: 15 };
             var key = 'cp' + league;
             if (gmEntry.defaultIVs && gmEntry.defaultIVs[key]) {
                 var combo = gmEntry.defaultIVs[key];
