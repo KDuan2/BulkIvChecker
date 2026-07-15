@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-06-25 22:17:15",
+    "timestamp": "2026-07-14 03:16:24",
     "id": "gamemaster",
     "title": "Default",
     "settings": {
@@ -196,6 +196,44 @@
             ]
         },
         {
+            "name": "chrysalis",
+            "title": "Chrysalis Cup - Devon World Championship 2026",
+            "include": [
+                {
+                    "filterType": "type",
+                    "name": "Type",
+                    "values": ["dragon", "flying", "psychic"]
+                },
+                {
+                    "filterType": "id",
+                    "name": "Species",
+                    "values": ["jellicent", "marowak_alolan", "marowak_alolan_shadow", "primeape", "primeape_shadow", "seaking", "togekiss", "trevenant", "trevenant_shadow"]
+                }
+            ],
+            "exclude": [
+                {
+                    "filterType": "type",
+                    "name": "Type",
+                    "values": ["dark", "electric", "ice", "steel"]
+                },
+                {
+                    "filterType": "tag",
+                    "name": "Tag",
+                    "values": ["mega"]
+                },
+                {
+                    "filterType": "id",
+                    "name": "Species",
+                    "values": ["corsola_galarian", "rapidash_galarian", "togetic"]
+                }
+            ],
+            "overrides": [],
+            "league": 1500,
+            "useDefaultMovesets": 1,
+            "excludeLowPokemon": 1,
+            "link": "https://devon.gg/"
+        },
+        {
             "name": "classic",
             "title": "Classic",
             "include": [],
@@ -232,7 +270,7 @@
                 },
                 {
                     "filterType": "id",
-                    "values": ["aegislash_shield", "araquanid", "bastiodon", "corviknight", "doublade", "durant", "empoleon", "escavalier", "forretress", "honedge", "klang", "mandibuzz", "mantine", "obstagoon", "orthworm", "probopass", "scizor", "steelix", "toxapex", "umbreon", "vullaby", "wormadam_trash"]
+                    "values": ["araquanid", "bastiodon", "corviknight", "durant", "empoleon", "escavalier", "forretress", "klang", "mandibuzz", "mantine", "obstagoon", "orthworm", "probopass", "scizor", "steelix", "toxapex", "umbreon", "vullaby", "wormadam_trash"]
                 }
             ]
         },
@@ -275,7 +313,7 @@
                 },
                 {
                     "filterType": "id",
-                    "values": ["shaymin_land", "banette_mega", "giratina_altered", "goodra", "sceptile_mega", "xurkitree"]
+                    "values": ["shaymin_land", "banette_mega", "giratina_altered", "giratina_altered_shadow", "goodra", "sceptile_mega", "xurkitree"]
                 }
             ],
             "exclude": [
@@ -340,6 +378,22 @@
             "cup": "equinox"
         },
         {
+            "name": "fantasy",
+            "title": "Fantasy Cup",
+            "include": [
+                {
+                    "filterType": "type",
+                    "values": ["steel", "dragon", "fairy"]
+                }
+            ],
+            "exclude": [
+                {
+                    "filterType": "tag",
+                    "values": ["mega"]
+                }
+            ]
+        },
+        {
             "name": "gobattleleague",
             "title": "GO Battle League",
             "rankingAlias": "all",
@@ -360,7 +414,7 @@
             "exclude": [
                 {
                     "filterType": "id",
-                    "values": ["bellibolt", "jellicent", "mewtwo_armored", "tinkaton", "zygarde_complete"]
+                    "values": ["bellibolt", "jellicent", "mewtwo_armored", "mimikyu", "tinkaton", "zygarde_complete"]
                 }
             ]
         },
@@ -445,6 +499,23 @@
                 }
             ],
             "partySize": 3
+        },
+        {
+            "name": "retro",
+            "title": "Retro Cup",
+            "include": [],
+            "exclude": [
+                {
+                    "filterType": "type",
+                    "values": ["dark", "fairy", "steel"]
+                },
+                {
+                    "filterType": "tag",
+                    "values": ["mega"]
+                }
+            ],
+            "partySize": 3,
+            "presetOnly": true
         },
         {
             "name": "spellcraft",
@@ -536,7 +607,7 @@
                 },
                 {
                     "filterType": "id",
-                    "values": ["abomasnow", "amaura", "annihilape", "aurorus", "azumarill", "bewear", "carbink", "cetoddle", "chansey", "clefable", "corsola_galarian", "cradily", "crustle", "dolliv", "drampa", "dubwool", "dudunsparce", "dunsparce", "dusknoir", "frillish", "furfrou", "furret", "girafarig", "greedent", "jellicent", "kangaskhan", "kecleon", "lapras", "lickilicky", "lickitung", "lileep", "linoone", "miltank", "naclstack", "ninetales_alolan", "oinkologne", "oinkologne_female", "oranguru", "relicanth", "spinda", "ursaring", "vigoroth", "weezing_galarian", "wigglytuff", "wyrdeer", "zangoose"]
+                    "values": ["abomasnow", "amaura", "annihilape", "aurorus", "azumarill", "bewear", "carbink", "cetoddle", "chansey", "clefable", "corsola_galarian", "cradily", "crustle", "dolliv", "drampa", "dubwool", "dudunsparce", "dunsparce", "dusknoir", "frillish", "furfrou", "furret", "girafarig", "greedent", "jellicent", "kangaskhan", "kecleon", "lapras", "lickilicky", "lickitung", "lileep", "linoone", "miltank", "mimikyu", "naclstack", "ninetales_alolan", "oinkologne", "oinkologne_female", "oranguru", "relicanth", "spinda", "ursaring", "vigoroth", "weezing_galarian", "wigglytuff", "wyrdeer", "zangoose"]
                 }
             ]
         }
@@ -564,14 +635,24 @@
             "rules": ["No CP limit.", "Legendary Pokémon,  Mythical Pokémon,  and Ultra Beasts are not eligible."]
         },
         {
-            "title": "Summer Cup",
-            "cup": "summer",
-            "cp": 1500,
-            "meta": "summer",
+            "title": "Fantasy Cup (Ultra League)",
+            "cup": "fantasy",
+            "cp": 2500,
+            "meta": "fantasyultra",
             "showCup": true,
             "showFormat": true,
             "showMeta": true,
-            "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Normal-,  Fire-,  Water-,  Grass-,  Electric-,  and Bug-type Pokémon are eligible."]
+            "rules": ["Pokémon must be at or below 2, 500 CP to enter.", "Only Dragon-,  Steel-,  and Fairy-type Pokémon are eligible."]
+        },
+        {
+            "title": "Retro Cup",
+            "cup": "retro",
+            "cp": 1500,
+            "meta": "retro",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true,
+            "rules": ["Pokémon must be at or below 2, 500 CP to enter.", "Dark-,  Steel-,  and Fairy-type Pokémon are not eligible."]
         },
         {
             "title": "Battle Frontier (Copa Dilúvio)",
@@ -623,6 +704,15 @@
             "cup": "bastille",
             "cp": 1500,
             "meta": "bastille",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true
+        },
+        {
+            "title": "Devon Chrysalis Cup",
+            "cup": "chrysalis",
+            "cp": 1500,
+            "meta": "chrysalis",
             "showCup": true,
             "showFormat": true,
             "showMeta": true
@@ -14010,6 +14100,30 @@
                 "cp2500": [50, 15, 15, 15]
             },
             "tags": ["shadow"],
+            "buddyDistance": 5,
+            "thirdMoveCost": 75000,
+            "released": true
+        },
+        {
+            "dex": 227,
+            "speciesName": "Skarmory (Mega)",
+            "speciesId": "skarmory_mega",
+            "baseStats": {
+                "atk": 273,
+                "def": 228,
+                "hp": 163
+            },
+            "types": ["steel", "flying"],
+            "fastMoves": ["AIR_SLASH", "STEEL_WING"],
+            "chargedMoves": ["BRAVE_BIRD", "FLASH_CANNON", "SKY_ATTACK"],
+            "defaultIVs": {
+                "cp500": [5, 15, 14, 13],
+                "cp1500": [14.5, 7, 14, 14],
+                "cp2500": [24.5, 4, 14, 13]
+            },
+            "searchPriority": 1,
+            "level25CP": 1267,
+            "tags": ["shadoweligible", "mega"],
             "buddyDistance": 5,
             "thirdMoveCost": 75000,
             "released": true
@@ -39973,7 +40087,8 @@
             },
             "types": ["water", "none"],
             "fastMoves": ["POUND", "WATER_GUN"],
-            "chargedMoves": ["WATER_PULSE", "SURF", "SHADOW_BALL"],
+            "chargedMoves": ["WATER_PULSE", "SURF", "SHADOW_BALL", "SNIPE_SHOT", "HYDRO_CANNON"],
+            "eliteMoves": ["HYDRO_CANNON"],
             "defaultIVs": {
                 "cp500": [6.5, 4, 14, 7],
                 "cp1500": [18.5, 5, 13, 15],
@@ -49132,6 +49247,21 @@
             "cooldown": 1500,
             "archetype": "Fast Charge",
             "turns": 3
+        },
+        {
+            "moveId": "SNIPE_SHOT",
+            "name": "Snipe Shot",
+            "abbreviation": "Sni",
+            "type": "water",
+            "power": 65,
+            "energy": 35,
+            "energyGain": 0,
+            "cooldown": 500,
+            "buffs": [2, 0],
+            "buffTarget": "self",
+            "buffApplyChance": ".125",
+            "archetype": "Boost Spam",
+            "turns": 1
         },
         {
             "moveId": "SOLAR_BEAM",
