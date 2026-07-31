@@ -1256,7 +1256,8 @@
         });
 
         // Build threat display info (shared with the bulk matchups view)
-        var threatPokemon = resolveThreatPokemon(state.threats, state.league, levelCap);
+        // Best Buddy boosts only the user's candidates; the meta stays at the standard L50.
+        var threatPokemon = resolveThreatPokemon(state.threats, state.league, 50);
 
         // Run simulations using PvPoke's engine
         var matrix = [];
@@ -1436,7 +1437,8 @@
         var ivs = readBulkIVs();
         var form = state.form;
 
-        var threatPokemon = resolveThreatPokemon(state.threats, state.league, levelCap);
+        // Best Buddy boosts only the user's candidates; the meta stays at the standard L50.
+        var threatPokemon = resolveThreatPokemon(state.threats, state.league, 50);
 
         var movesA = null;
         if (state.moveOverride) {
