@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-07-14 03:16:24",
+    "timestamp": "2026-07-30 21:39:36",
     "id": "gamemaster",
     "title": "Default",
     "settings": {
@@ -610,6 +610,22 @@
                     "values": ["abomasnow", "amaura", "annihilape", "aurorus", "azumarill", "bewear", "carbink", "cetoddle", "chansey", "clefable", "corsola_galarian", "cradily", "crustle", "dolliv", "drampa", "dubwool", "dudunsparce", "dunsparce", "dusknoir", "frillish", "furfrou", "furret", "girafarig", "greedent", "jellicent", "kangaskhan", "kecleon", "lapras", "lickilicky", "lickitung", "lileep", "linoone", "miltank", "mimikyu", "naclstack", "ninetales_alolan", "oinkologne", "oinkologne_female", "oranguru", "relicanth", "spinda", "ursaring", "vigoroth", "weezing_galarian", "wigglytuff", "wyrdeer", "zangoose"]
                 }
             ]
+        },
+        {
+            "name": "weather",
+            "title": "Weather Cup",
+            "include": [
+                {
+                    "filterType": "type",
+                    "values": ["fire", "water", "ice", "rock"]
+                }
+            ],
+            "exclude": [
+                {
+                    "filterType": "tag",
+                    "values": ["mega"]
+                }
+            ]
         }
     ],
     "formats": [
@@ -629,30 +645,30 @@
             "cp": 10000,
             "meta": "premiermaster",
             "showCup": true,
+            "showFormat": true,
+            "showMeta": true,
+            "rules": ["No CP limit.", "Legendary Pokémon,  Mythical Pokémon,  and Ultra Beasts are not eligible."]
+        },
+        {
+            "title": "Weather Cup",
+            "cup": "weather",
+            "cp": 1500,
+            "meta": "weather",
+            "showCup": true,
+            "showFormat": true,
+            "showMeta": true,
+            "rules": ["Pokémon must be at or below 1, 500 CP to enter.", "Only Fire-,  Water-,  Ice-,  and Rock-type Pokémon are eligible."]
+        },
+        {
+            "title": "Mega Master League",
+            "cup": "mega",
+            "cp": 10000,
+            "meta": "mega",
+            "showCup": true,
             "showFormat": false,
             "showMeta": true,
             "hideRankings": true,
             "rules": ["No CP limit.", "Legendary Pokémon,  Mythical Pokémon,  and Ultra Beasts are not eligible."]
-        },
-        {
-            "title": "Fantasy Cup (Ultra League)",
-            "cup": "fantasy",
-            "cp": 2500,
-            "meta": "fantasyultra",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true,
-            "rules": ["Pokémon must be at or below 2, 500 CP to enter.", "Only Dragon-,  Steel-,  and Fairy-type Pokémon are eligible."]
-        },
-        {
-            "title": "Retro Cup",
-            "cup": "retro",
-            "cp": 1500,
-            "meta": "retro",
-            "showCup": true,
-            "showFormat": true,
-            "showMeta": true,
-            "rules": ["Pokémon must be at or below 2, 500 CP to enter.", "Dark-,  Steel-,  and Fairy-type Pokémon are not eligible."]
         },
         {
             "title": "Battle Frontier (Copa Dilúvio)",
@@ -2603,6 +2619,60 @@
                 "parent": "pikachu"
             },
             "nicknames": ["kchu"]
+        },
+        {
+            "dex": 26,
+            "speciesName": "Raichu (Mega X)",
+            "speciesId": "raichu_mega_x",
+            "baseStats": {
+                "atk": 277,
+                "def": 203,
+                "hp": 155
+            },
+            "types": ["electric", "none"],
+            "fastMoves": ["SPARK", "THUNDER_SHOCK", "VOLT_SWITCH", "CHARM"],
+            "chargedMoves": ["BRICK_BREAK", "THUNDER", "THUNDER_PUNCH", "WILD_CHARGE", "SKULL_BASH", "TRAILBLAZE", "SURF"],
+            "defaultIVs": {
+                "cp500": [5.5, 4, 9, 15],
+                "cp1500": [15.5, 5, 14, 15],
+                "cp2500": [26, 5, 13, 14]
+            },
+            "eliteMoves": ["THUNDER"],
+            "buddyDistance": 1,
+            "thirdMoveCost": 10000,
+            "released": true,
+            "family": {
+                "id": "FAMILY_PIKACHU",
+                "parent": "pikachu"
+            },
+            "tags": ["mega"]
+        },
+        {
+            "dex": 26,
+            "speciesName": "Raichu (Mega Y)",
+            "speciesId": "raichu_mega_y",
+            "baseStats": {
+                "atk": 339,
+                "def": 157,
+                "hp": 155
+            },
+            "types": ["electric", "none"],
+            "fastMoves": ["SPARK", "THUNDER_SHOCK", "VOLT_SWITCH", "CHARM"],
+            "chargedMoves": ["BRICK_BREAK", "THUNDER", "THUNDER_PUNCH", "WILD_CHARGE", "SKULL_BASH", "TRAILBLAZE", "SURF"],
+            "defaultIVs": {
+                "cp500": [5, 8, 15, 15],
+                "cp1500": [14.5, 4, 11, 15],
+                "cp2500": [24, 5, 12, 15]
+            },
+            "eliteMoves": ["THUNDER"],
+            "buddyDistance": 1,
+            "thirdMoveCost": 10000,
+            "released": true,
+            "family": {
+                "id": "FAMILY_PIKACHU",
+                "parent": "pikachu"
+            },
+            "tags": ["mega"]
         },
         {
             "dex": 26,
@@ -40685,7 +40755,7 @@
                 "hp": 190
             },
             "types": ["rock", "fire"],
-            "fastMoves": ["SMACK_DOWN"],
+            "fastMoves": ["SMACK_DOWN", "TACKLE"],
             "chargedMoves": ["ROCK_BLAST", "ROCK_SLIDE", "FLAME_CHARGE"],
             "defaultIVs": {
                 "cp500": [13, 4, 12, 8],
@@ -40866,7 +40936,7 @@
             },
             "types": ["flying", "water"],
             "fastMoves": ["PECK", "WATER_GUN"],
-            "chargedMoves": ["DRILL_PECK", "FLY", "HYDRO_PUMP"],
+            "chargedMoves": ["FLY", "HYDRO_PUMP", "SURF", "DIVE"],
             "defaultIVs": {
                 "cp500": [9, 4, 8, 11],
                 "cp1500": [26, 5, 15, 13],
@@ -46676,6 +46746,18 @@
             "cooldown": 500,
             "archetype": "General",
             "turns": 1
+        },
+        {
+            "moveId": "DIVE",
+            "name": "Dive",
+            "type": "water",
+            "power": 50,
+            "energy": 40,
+            "energyGain": 0,
+            "turns": 1,
+            "cooldown": 500,
+            "archetype": "Spam/Bait",
+            "abbreviation": "Dve"
         },
         {
             "moveId": "DOOM_DESIRE",

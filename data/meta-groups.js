@@ -3646,8 +3646,8 @@ var META_GROUPS = {"bastille":[
 ],"premiermaster":[
   {
     "speciesId": "annihilape",
-    "fastMove": "COUNTER",
-    "chargedMoves": ["RAGE_FIST","ICE_PUNCH"]
+    "fastMove": "LOW_KICK",
+    "chargedMoves": ["RAGE_FIST","CLOSE_COMBAT"]
   },
   {
     "speciesId": "annihilape_shadow",
@@ -3671,6 +3671,11 @@ var META_GROUPS = {"bastille":[
     "chargedMoves": ["AVALANCHE","SUPER_POWER"]
   },
   {
+    "speciesId": "dondozo",
+    "fastMove": "WATERFALL",
+    "chargedMoves": ["SURF","OUTRAGE"]
+  },
+  {
     "speciesId": "dragonite_shadow",
     "fastMove": "DRAGON_BREATH",
     "chargedMoves": ["THUNDER_PUNCH","SUPER_POWER"],
@@ -3681,6 +3686,16 @@ var META_GROUPS = {"bastille":[
     "fastMove": "DRAGON_BREATH",
     "chargedMoves": ["THUNDER_PUNCH","SUPER_POWER"],
     "shadowType": "shadow"
+  },
+  {
+    "speciesId": "empoleon",
+    "fastMove": "METAL_SOUND",
+    "chargedMoves": ["HYDRO_CANNON","DRILL_PECK"]
+  },
+  {
+    "speciesId": "excadrill",
+    "fastMove": "MUD_SHOT",
+    "chargedMoves": ["DRILL_RUN","ROCK_SLIDE"]
   },
   {
     "speciesId": "feraligatr",
@@ -3691,6 +3706,16 @@ var META_GROUPS = {"bastille":[
     "speciesId": "florges",
     "fastMove": "FAIRY_WIND",
     "chargedMoves": ["MOONBLAST","CHILLING_WATER"]
+  },
+  {
+    "speciesId": "garchomp",
+    "fastMove": "DRAGON_TAIL",
+    "chargedMoves": ["TWISTER","SAND_TOMB"]
+  },
+  {
+    "speciesId": "garchomp",
+    "fastMove": "MUD_SHOT",
+    "chargedMoves": ["TWISTER","EARTH_POWER"]
   },
   {
     "speciesId": "gholdengo",
@@ -3729,6 +3754,11 @@ var META_GROUPS = {"bastille":[
     "chargedMoves": ["BRUTAL_SWING","FLY"]
   },
   {
+    "speciesId": "kingambit",
+    "fastMove": "METAL_SOUND",
+    "chargedMoves": ["FOUL_PLAY","IRON_HEAD"]
+  },
+  {
     "speciesId": "lapras",
     "fastMove": "PSYWAVE",
     "chargedMoves": ["SURF","ICE_BEAM"]
@@ -3750,6 +3780,11 @@ var META_GROUPS = {"bastille":[
     "shadowType": "shadow"
   },
   {
+    "speciesId": "milotic",
+    "fastMove": "WATERFALL",
+    "chargedMoves": ["AQUA_TAIL","WRAP"]
+  },
+  {
     "speciesId": "primarina",
     "fastMove": "CHARM",
     "chargedMoves": ["DISARMING_VOICE","HYDRO_CANNON"]
@@ -3762,12 +3797,12 @@ var META_GROUPS = {"bastille":[
   {
     "speciesId": "rhyperior",
     "fastMove": "MUD_SLAP",
-    "chargedMoves": ["BREAKING_SWIPE","ROCK_WRECKER"]
+    "chargedMoves": ["DRILL_RUN","ROCK_WRECKER"]
   },
   {
     "speciesId": "rhyperior_shadow",
     "fastMove": "MUD_SLAP",
-    "chargedMoves": ["BREAKING_SWIPE","ROCK_WRECKER"],
+    "chargedMoves": ["DRILL_RUN","ROCK_WRECKER"],
     "shadowType": "shadow"
   },
   {
@@ -3797,6 +3832,11 @@ var META_GROUPS = {"bastille":[
     "chargedMoves": ["HYDRO_CANNON","EARTHQUAKE"]
   },
   {
+    "speciesId": "sylveon",
+    "fastMove": "FAIRY_WIND",
+    "chargedMoves": ["MOONBLAST","SHADOW_BALL"]
+  },
+  {
     "speciesId": "tangrowth",
     "fastMove": "VINE_WHIP",
     "chargedMoves": ["POWER_WHIP","ROCK_SLIDE"]
@@ -3805,6 +3845,11 @@ var META_GROUPS = {"bastille":[
     "speciesId": "togekiss",
     "fastMove": "PECK",
     "chargedMoves": ["DAZZLING_GLEAM","AURA_SPHERE"]
+  },
+  {
+    "speciesId": "togekiss",
+    "fastMove": "PECK",
+    "chargedMoves": ["PSYSHOCK","FLAMETHROWER"]
   },
   {
     "speciesId": "torterra",
@@ -3831,11 +3876,6 @@ var META_GROUPS = {"bastille":[
     "speciesId": "venusaur",
     "fastMove": "VINE_WHIP",
     "chargedMoves": ["FRENZY_PLANT","SLUDGE"]
-  },
-  {
-    "speciesId": "empoleon",
-    "fastMove": "METAL_SOUND",
-    "chargedMoves": ["HYDRO_CANNON","DRILL_PECK"]
   }
 ],"premierultra":[
   {
@@ -5688,5 +5728,189 @@ var META_GROUPS = {"bastille":[
     "fastMove": "EMBER",
     "chargedMoves": ["WEATHER_BALL_FIRE","ENERGY_BALL"],
     "shadowType": "shadow"
+  }
+],"weather":[
+  {
+    "speciesId": "kingdra",
+    "fastMove": "DRAGON_BREATH",
+    "chargedMoves": ["SURF","SWIFT"]
+  },
+  {
+    "speciesId": "kingdra",
+    "fastMove": "DRAGON_BREATH",
+    "chargedMoves": ["OUTRAGE","SWIFT"]
+  },
+  {
+    "speciesId": "ludicolo",
+    "fastMove": "ASTONISH",
+    "chargedMoves": ["WEATHER_BALL_WATER","ENERGY_BALL"]
+  },
+  {
+    "speciesId": "lanturn",
+    "fastMove": "SPARK",
+    "chargedMoves": ["SURF","THUNDERBOLT"]
+  },
+  {
+    "speciesId": "cradily",
+    "fastMove": "ACID",
+    "chargedMoves": ["ROCK_TOMB","GRASS_KNOT"]
+  },
+  {
+    "speciesId": "cradily",
+    "fastMove": "BULLET_SEED",
+    "chargedMoves": ["ROCK_TOMB","GRASS_KNOT"]
+  },
+  {
+    "speciesId": "kingdra_shadow",
+    "fastMove": "DRAGON_BREATH",
+    "chargedMoves": ["SURF","SWIFT"],
+    "shadowType": "shadow"
+  },
+  {
+    "speciesId": "abomasnow",
+    "fastMove": "LEAFAGE",
+    "chargedMoves": ["WEATHER_BALL_ICE","ENERGY_BALL"]
+  },
+  {
+    "speciesId": "abomasnow_shadow",
+    "fastMove": "LEAFAGE",
+    "chargedMoves": ["WEATHER_BALL_ICE","ENERGY_BALL"],
+    "shadowType": "shadow"
+  },
+  {
+    "speciesId": "araquanid",
+    "fastMove": "BUG_BITE",
+    "chargedMoves": ["BUG_BUZZ","BUBBLE_BEAM"]
+  },
+  {
+    "speciesId": "empoleon",
+    "fastMove": "METAL_SOUND",
+    "chargedMoves": ["HYDRO_CANNON","DRILL_PECK"]
+  },
+  {
+    "speciesId": "lapras",
+    "fastMove": "PSYWAVE",
+    "chargedMoves": ["SPARKLING_ARIA","SKULL_BASH"]
+  },
+  {
+    "speciesId": "sandslash_alolan",
+    "fastMove": "SHADOW_CLAW",
+    "chargedMoves": ["ICE_PUNCH","DRILL_RUN"]
+  },
+  {
+    "speciesId": "carbink",
+    "fastMove": "ROCK_THROW",
+    "chargedMoves": ["ROCK_SLIDE","MOONBLAST"]
+  },
+  {
+    "speciesId": "toxapex",
+    "fastMove": "POISON_JAB",
+    "chargedMoves": ["BRINE","SLUDGE_WAVE"]
+  },
+  {
+    "speciesId": "bastiodon",
+    "fastMove": "SMACK_DOWN",
+    "chargedMoves": ["STONE_EDGE","FLAMETHROWER"]
+  },
+  {
+    "speciesId": "tentacruel",
+    "fastMove": "ACID",
+    "chargedMoves": ["SCALD","PAYBACK"]
+  },
+  {
+    "speciesId": "gyarados_shadow",
+    "fastMove": "DRAGON_BREATH",
+    "chargedMoves": ["AQUA_TAIL","TWISTER"],
+    "shadowType": "shadow"
+  },
+  {
+    "speciesId": "golisopod",
+    "fastMove": "FURY_CUTTER",
+    "chargedMoves": ["X_SCISSOR","AQUA_JET"]
+  },
+  {
+    "speciesId": "seaking",
+    "fastMove": "PECK",
+    "chargedMoves": ["DRILL_RUN","MEGAHORN"]
+  },
+  {
+    "speciesId": "gastrodon",
+    "fastMove": "MUD_SLAP",
+    "chargedMoves": ["BODY_SLAM","EARTH_POWER"]
+  },
+  {
+    "speciesId": "pelipper",
+    "fastMove": "WING_ATTACK",
+    "chargedMoves": ["WEATHER_BALL_WATER","HURRICANE"]
+  },
+  {
+    "speciesId": "arctibax",
+    "fastMove": "DRAGON_BREATH",
+    "chargedMoves": ["AVALANCHE","DRAGON_CLAW"]
+  },
+  {
+    "speciesId": "milotic",
+    "fastMove": "DRAGON_TAIL",
+    "chargedMoves": ["AQUA_TAIL","WRAP"]
+  },
+  {
+    "speciesId": "mantine",
+    "fastMove": "WING_ATTACK",
+    "chargedMoves": ["TWISTER","AERIAL_ACE"]
+  },
+  {
+    "speciesId": "samurott",
+    "fastMove": "FURY_CUTTER",
+    "chargedMoves": ["HYDRO_CANNON","MEGAHORN"]
+  },
+  {
+    "speciesId": "crustle",
+    "fastMove": "FURY_CUTTER",
+    "chargedMoves": ["X_SCISSOR","ROCK_WRECKER"]
+  },
+  {
+    "speciesId": "swampert",
+    "fastMove": "MUD_SHOT",
+    "chargedMoves": ["HYDRO_CANNON","EARTHQUAKE"]
+  },
+  {
+    "speciesId": "azumarill",
+    "fastMove": "BUBBLE",
+    "chargedMoves": ["ICE_BEAM","PLAY_ROUGH"]
+  },
+  {
+    "speciesId": "qwilfish",
+    "fastMove": "POISON_STING",
+    "chargedMoves": ["AQUA_TAIL","SHADOW_BALL"]
+  },
+  {
+    "speciesId": "blastoise",
+    "fastMove": "ROLLOUT",
+    "chargedMoves": ["HYDRO_CANNON","SKULL_BASH"]
+  },
+  {
+    "speciesId": "poliwrath",
+    "fastMove": "MUD_SHOT",
+    "chargedMoves": ["ICY_WIND","DYNAMIC_PUNCH"]
+  },
+  {
+    "speciesId": "quagsire",
+    "fastMove": "MUD_SHOT",
+    "chargedMoves": ["AQUA_TAIL","MUD_BOMB"]
+  },
+  {
+    "speciesId": "ninetales",
+    "fastMove": "EMBER",
+    "chargedMoves": ["WEATHER_BALL_FIRE","ENERGY_BALL"]
+  },
+  {
+    "speciesId": "feraligatr",
+    "fastMove": "SHADOW_CLAW",
+    "chargedMoves": ["HYDRO_CANNON","ICE_BEAM"]
+  },
+  {
+    "speciesId": "quaquaval",
+    "fastMove": "LOW_KICK",
+    "chargedMoves": ["CLOSE_COMBAT","HYDRO_CANNON"]
   }
 ]};
